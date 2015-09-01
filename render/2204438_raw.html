@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]&gt; &lt;html class="no-js ie6 oldie" lang="en"&gt; &lt;![endif]-->
+<!--[if IE 7]&gt;    &lt;html class="no-js ie7 oldie" lang="en"&gt; &lt;![endif]-->
+<!--[if IE 8]&gt;    &lt;html class="no-js ie8 oldie" lang="en"&gt; &lt;![endif]-->
+<!--[if IE 9]&gt;    &lt;html class="no-js ie9 oldie" lang="en"&gt; &lt;![endif]-->
+<!--[if gt IE 8]&gt;&lt;!-->
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#">
+ <!--&lt;![endif]-->
+ <head>
+  <title>
+   Impressions by Montage Hotels &amp; Resorts | Explore the Latest Trends in Luxury Lifestyle
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="3TQLFcCwawLXHmL9h7PDk9QToMXNgtNcQq0DWhEo4To" name="google-site-verification"/>
+  <link href="http://montageimpressions.com/xmlrpc.php" rel="pingback"/>
+  <link href="/wp-content/themes/impressions/css/style1.css" rel="stylesheet"/>
+  <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css"/>
+  <link href="/wp-content/themes/impressions/css/jquery-ui.css" rel="stylesheet"/>
+  <link href="/wp-content/themes/impressions/css/style3.css" rel="stylesheet" type="text/css"/>
+  <script src="http://code.jquery.com/jquery-1.9.1.js">
+  </script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
+  </script>
+  <script src="/wp-content/themes/impressions/js/json3.min.js">
+  </script>
+  <script>
+   // global vars for reservations begin date and end date
+        var cur = -1, prv = -1, curM = -1, prvM = -1, curY = -1, prvY= -1;
+        var resCounter = false;
+        var prevDate = {y:-1, m:-1, d:-1, int: -1}, curDate = {y:-1, m:-1, d:-1, int: -1}, startDate = {y:-1, m:-1, d:-1, int: -1}, endDate = {y:-1, m:-1, d:-1, int: -1};
+        $(function() {
+		
+	var hotelPage = '';
+	var adultsCount = 1;
+	var childrenCount = 0;
+	var alertstop = false;
+	
+	var availInProperty = {  };
+	
+	blockedDates = [];
+	
+	jQuery('#reserve_button').addClass('prevented').fadeTo(400,0.4);
+	jQuery('#reserve_button').click(function (e){
+		if(jQuery(this).hasClass('prevented')){
+			e.preventDefault();
+		}
+	});
+	
+	function showHotelFields() {
+		jQuery('#venues').addClass('hidden');
+		jQuery('#reserv_dining_params').hide(0);
+		jQuery('#reserve_content .reserve_content_current').fadeOut(400, function () {
+			jQuery(this).removeClass('reserve_content_current');
+			jQuery('#reserve_content_hotel').fadeIn(600).addClass('reserve_content_current');
+		})
+		jQuery('#reserve_button').val('Check availability')
+		jQuery('#reserv_summary').show(0);
+		jQuery('#reserv_persons').show(0);
+		alertstop = false;
+	}
+	function showDiningFields() {
+		alertstop = true;
+		jQuery('#reserv_summary').hide(0);
+		jQuery('#reserv_persons').hide(0);
+		jQuery('#reserve_button').val('Check availability')
+		jQuery('#reserv_dining_params').show(0);
+		jQuery('#reserve_content .reserve_content_current').fadeOut(400, function () {
+			jQuery(this).removeClass('reserve_content_current');
+			jQuery('#reserve_content_dining').fadeIn(600).addClass('reserve_content_current');
+		})
+		jQuery('#venues').removeClass('hidden');
+	}
+	function showSpaFields() {
+		alertstop = true;
+		jQuery('#venues').addClass('hidden');
+		jQuery('#reserv_summary').hide(0);
+		jQuery('#reserv_dining_params').hide(0);
+		jQuery('#reserv_persons').hide(0);
+		jQuery('#reserve_content .reserve_content_current').fadeOut(400, function () {
+			jQuery(this).removeClass('reserve_content_current');
+			jQuery('#reserve_content_spa').fadeIn(600).addClass('reserve_content_current');
+		})
+		jQuery('#reserve_button').val('Request Spa Montage Reservation').removeClass('prevented').fadeTo(400,1);
+	}
+	function updateNights() {
+		if ( (jQuery('#start_date').val() != '') &amp;&amp; (jQuery('#end_date').val() != '') ) {
+			var dateBegin = new Date(jQuery('#start_date').val());
+			var dateEnd = new Date(jQuery('#end_date').val());
+			var msDay = 60*60*24*1000;
+			var daysBetween = Math.floor((dateEnd - dateBegin) / msDay);
+			jQuery('#summary_nights').text(daysBetween);
+			jQuery('#reserve_button').removeClass('prevented').fadeTo(400,1);
+		}
+	}
+	
+	jQuery('#property').on('change', function(){
+		var hotelNumber = parseInt(jQuery('#property').val());
+		var reservType = parseInt(jQuery('#reserv_type').val());
+		//if we deleted options when swithced to kapalua, we need to restore them
+		if (jQuery('#reserv_type &gt; option').length == 1) {
+			jQuery('#reserv_type').append($("&lt;option&gt;&lt;/option&gt;").attr("value",2).text('Dining Reservation')); 
+			jQuery('#reserv_type').append($("&lt;option&gt;&lt;/option&gt;").attr("value",3).text('Spa Reservation')); 
+			jQuery('#reserv_type').selectBox('refresh');
+		}
+		switch( hotelNumber ) {
+			//case 0: hotelPage = ''; break;
+			/*
+			case 1: hotelPage = 'https://mbh.montagehotels.com/'; break; // Beverly
+			case 2: hotelPage = 'https://mdv.montagehotels.com/'; break; // Deer
+			case 3: hotelPage = 'https://mlb.montagehotels.com/'; break; // Laguna
+			*/
+			case 1: hotelPage = 'beverlyhills'; break; // Beverly
+			case 2: hotelPage = 'deervalley'; break; // Deer
+			case 3: hotelPage = 'lagunabeach'; break; // Laguna
+			case 4: // Kapalua Bay
+				hotelPage = 'kapaluabay';
+				jQuery('#reserv_type &gt; option').remove();
+				jQuery('#reserv_type').append($("&lt;option&gt;&lt;/option&gt;").attr("value",1).text('Hotel Reservation')); 
+				jQuery('#reserv_type').selectBox('refresh');
+				break; 
+			case 5: // Laguna
+				hotelPage = 'palmettobluff';
+				jQuery('#reserv_type &gt; option').remove();
+				jQuery('#reserv_type').append($("&lt;option&gt;&lt;/option&gt;").attr("value",1).text('Hotel Reservation')); 
+				jQuery('#reserv_type').selectBox('refresh');
+				break; 
+		}
+		jQuery('#reserv_type').selectBox('value',1);
+		showHotelFields();
+		getDays();
+	});
+
+	jQuery('#reserv_type').on('change', function(){
+		var hotelNumber = parseInt(jQuery('#property').val());
+		var reservType = parseInt(jQuery('#reserv_type').val());
+		jQuery('#venues').find('a.selectBox-dropdown').hide();
+		if (reservType == 1) /*Hotel*/{
+			showHotelFields();
+		} else if (reservType == 2) /*dining*/ {
+			switch( hotelNumber ) {
+				//case 0: hotelPage = ''; break;
+				case 1: //beverly
+					jQuery('#venues_beverly').next('.selectBox-dropdown').show(0);
+					break; 
+				case 2: //deer
+					jQuery('#venues_deer').next('.selectBox-dropdown').show(0);
+					break; 
+				case 3: //laguna
+					jQuery('#venues_laguna').next('.selectBox-dropdown').show(0);
+					break; 
+				/*case 4: //kapalua
+					jQuery('#venues_laguna').selectBox().removeClass('hidden');
+					break; */
+			}
+			showDiningFields();
+			jQuery('#reserve_button').removeClass('prevented').fadeTo(400,1);
+		} else if (reservType == 3) /*spa*/ {
+			showSpaFields();
+		}
+	});
+	
+	jQuery('#adults_count').on('change', function(){
+		var adultsNumber = parseInt(jQuery('#adults_count').val());
+		var hotelNumber = parseInt(jQuery('#property').val());
+		var reservType = parseInt(jQuery('#reserv_type').val());
+		if (reservType==1) {
+			getDays();
+		}
+		var children_count = parseInt(jQuery('#children_count').val());
+		if ( (children_count &lt; 0) || (isNaN(parseFloat(children_count))) ) children_count = 0;
+		if ( (adultsNumber &lt; 0) || (isNaN(parseFloat(adultsNumber))) ) adultsNumber = 0;
+		var guests_count = adultsNumber + children_count;
+		jQuery('#summary_guests').text(guests_count);
+	});
+	
+	jQuery('#children_count').on('change', function(){
+		var childrenNumber = parseInt(jQuery('#children_count').val());
+		var hotelNumber = parseInt(jQuery('#property').val());
+		var reservType = parseInt(jQuery('#reserv_type').val());
+		if (reservType==1) {
+			getDays();
+		}
+		var adults_count = parseInt(jQuery('#adults_count').val());
+		if ( (adults_count &lt; 0) || (isNaN(parseFloat(adults_count))) ) adults_count = 0;
+		if ( (childrenNumber &lt; 0) || (isNaN(parseFloat(childrenNumber))) ) childrenNumber = 0;
+		var guests_count = childrenNumber + adults_count;
+		jQuery('#summary_guests').text(guests_count);
+	});
+	
+	function getDays() {
+		if(hotelPage != '') {
+			var currentYear = (new Date()).getFullYear();
+			var nextYear = currentYear + 5;
+			
+			jQuery('#rangepicker').datepick('disable');
+			jQuery('#reserve_button').addClass('prevented').fadeTo(400,0.4);
+			
+			if(jQuery('#checkAvailLoader').length == 0) {
+				jQuery('.selectboxes').next().next().append('&lt;div id="checkAvailLoader"&gt;&lt;img src="https://mbh.montagehotels.com/images/load.gif" alt="" /&gt;&lt;/div&gt;').fadeTo(0,0).fadeTo(400,1);
+			} else {
+				jQuery('#checkAvailLoader').css('z-index','9999').fadeTo(400,1);
+			}
+			
+			var req = jQuery.get('/get-dates.php', 
+			{
+				'hotel_page': hotelPage,
+				'adults_count': adultsCount,
+				'children_count': childrenCount,
+				'current_year': currentYear,
+				'next_year': nextYear
+			},
+			function(data){
+				var answer = JSON.parse(data);
+				if(answer.success == true) {
+					jQuery('#rangepicker').datepick("destroy");
+					jQuery('#rangepicker').fadeTo(0,0);
+					jQuery('#rangepicker').datepick({
+						rangeSelect: true, changeMonth: false, showOtherMonths: true, 
+						firstDay: 1, monthsToShow: 2,
+						prevText:'', nextText:'', todayText: '',
+						format: 'mm/dd/yyyy',
+						minDate: new Date(),
+						onSelect: function(dates) {
+							if(jQuery('#reserve_button').hasClass('prevented')) {
+								jQuery('#reserve_button').removeClass('prevented').fadeTo(400,1);
+							}
+							if(dates[0] != dates[1]) {
+								for(var i=0, l=blockedDates.length; i&lt;l; i++) {
+									var d = blockedDates[i].split('-');
+									var year  = parseInt(d[0]);
+									var month = parseInt(d[1])-1;
+									var day   = parseInt(d[2]);
+									var blockedDate = new Date(year, month, day);
+									if(dates[0] &lt; blockedDate &amp;&amp; blockedDate &lt; dates[1]) {
+										jQuery('#reserve_button').addClass('prevented').fadeTo(400,0.4);
+										break;
+									}
+								}
+							}
+							jQuery('#reserve_button').click(function (e){
+								if(jQuery(this).hasClass('prevented')){
+									e.preventDefault();
+								}
+							});
+							if (dates[0]==dates[1]) {
+								var d = dates[0].getDate(),
+								m = dates[0].getMonth()+1,
+								y = dates[0].getFullYear();
+								jQuery('#start_date').val(m+'/'+d+'/'+y);
+								jQuery('#summary_arrival').text(m+'/'+d+'/'+y);
+								updateNights();
+							} else {
+								var d = dates[1].getDate(),
+								m = dates[1].getMonth()+1,
+								y = dates[1].getFullYear();
+								jQuery('#end_date').val(m+'/'+d+'/'+y);
+								jQuery('#summary_departure').text(m+'/'+d+'/'+y);
+								updateNights();
+							}
+						},
+						onDate: function(date, current){
+							var currentDate = jQuery.datepick.formatDate('yyyy-m-d', date);
+							blockedDates = answer.close.split(',');
+							if (jQuery.inArray(currentDate, blockedDates) != -1) {
+								return {
+									'title': 'This date is not available.',
+									'selectable': false,
+									'dateClass': 'disableDate'
+								};
+							}
+							return {};
+						}
+					});
+					jQuery('#checkAvailLoader').hide().css('z-index','-9999');
+					jQuery('#rangepicker').fadeTo(400,1);
+				} else {
+					if (!alertstop) { alert('No data available.'); }
+					jQuery('#checkAvailLoader').hide().css('z-index','-9999');
+				}
+			})
+			.fail(function() {
+				if (!alertstop) { alert("Bad connection. Please repeat procedure."); }
+				jQuery('#checkAvailLoader').hide().css('z-index','-9999');
+			})
+			.always(function() {
+				if(jQuery('#reserve_button').hasClass('prevented')){
+					jQuery('#reserve_button').removeClass('prevented').fadeTo(400,1);
+				}
+				jQuery('#rangepicker').datepick('enable');
+			});
+		}
+	}
+	
+	// -------------------------------------------------------------
+	
+	jQuery('#rangepicker').datepick({ 
+		rangeSelect: true, changeMonth: false, showOtherMonths: true, 
+		firstDay: 1, monthsToShow: 2,
+		prevText:'', nextText:'', todayText: '',
+		format: 'mm/dd/yyyy',
+		minDate: new Date(),
+		onSelect: function(dates) {
+			if (dates[0]==dates[1]) {
+				var d = dates[0].getDate(),
+				m = dates[0].getMonth()+1,
+				y = dates[0].getFullYear();
+				jQuery('#start_date').val(m+'/'+d+'/'+y);
+				jQuery('#summary_arrival').text(m+'/'+d+'/'+y);
+				updateNights();
+			} else {
+				var d = dates[1].getDate(),
+				m = dates[1].getMonth()+1,
+				y = dates[1].getFullYear();
+				jQuery('#end_date').val(m+'/'+d+'/'+y);
+				jQuery('#summary_departure').text(m+'/'+d+'/'+y);
+				updateNights();
+			}
+		}
+	});
+	
+	jQuery('#diningpicker').datepick({ 
+		rangeSelect: false, changeMonth: false, showOtherMonths: true, 
+		firstDay: 1, monthsToShow: 2,
+		prevText:'', nextText:'', todayText: '',
+		format: 'mm/dd/yyyy',
+		minDate: new Date(),
+		onSelect: function(dates) {
+			var d = dates[0].getDate(),
+				m = dates[0].getMonth()+1,
+				y = dates[0].getFullYear();
+			jQuery('#start_date').val(m+'/'+d+'/'+y);
+		}
+	});
+			
+	//jQuery('#rangepicker').datepick('disable');
+	
+	// -----------------------------------------------
+	
+    jQuery('#reserve_form').submit( function(event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+        var errors_text = '';
+
+		var step = 2; // if user hasn't picked any dates, we will direct him to 'Stay Dates' step
+		var start_date = jQuery('#start_date').val();
+			if (start_date == '') {
+				step = 1;
+			}
+		var end_date = jQuery('#end_date').val();
+			if (end_date == '') {
+				step = 1;
+			}
+		var adults = jQuery('#adults_count').val();
+			if (adults == 0) {
+				adults = 1;
+			}
+		var children = jQuery('#children_count').val();
+			if (children == -1) {
+				children = 0;
+			}
+		var location = '';
+		var domain = '';
+
+		if (errors_text != '') {
+			alert(' Some fields are not completed: '+errors_text);
+			return false;
+		} else {
+			var selected_property = parseInt(jQuery('#property').val());
+			if (selected_property==0) {
+				alert('Please select a property!');
+				return false;
+			} else {
+				var reservType = parseInt(jQuery('#reserv_type').val());
+				if (reservType==3) { /*spa*/
+					switch (selected_property) {
+						case 1: document.location = jQuery('#spa_link_beverly').val(); break; /*beverly*/
+						case 2: document.location = jQuery('#spa_link_deer').val(); break; /*deer*/
+						case 3: document.location = jQuery('#spa_link_laguna').val(); break; /*laguna*/
+					}
+				} else if (reservType==2) /*dining*/ {
+					switch (selected_property) {
+						case 1: restaurant_id = jQuery('#venues_beverly').val(); break; /*beverly*/
+						case 2: restaurant_id = jQuery('#venues_deer').val(); break; /*deer*/
+						case 3: restaurant_id = jQuery('#venues_laguna').val(); break; /*laguna*/
+					}
+					party_size = jQuery('#reserve-dining-size').val();
+					party_time = jQuery('#reserve-dining-time').val();
+					location = 'http://www.opentable.com/opentables.aspx?t=Single&amp;rid='+restaurant_id+'&amp;f=&amp;m=0&amp;p='+party_size+'&amp;d='+start_date+'+'+party_time;
+					document.location = location;
+				} else { /*hotel reservation*/
+					if ( selected_property==1 /*beverly*/ ) {
+						domain = 'https://www.montagehotels.com/booking/beverlyhills/';
+					} else
+					if ( selected_property==2 /*deer*/ ) {
+						domain = 'https://www.montagehotels.com/booking/deervalley/';
+					} else
+					if ( selected_property==3 /*laguna*/ ) {
+						domain = 'https://www.montagehotels.com/booking/lagunabeach/';
+					};
+					if (selected_property==4) /*kapalua*/ {
+						//domain = 'https://gc.synxis.com/rez.aspx?tps=fml&amp;step=1&amp;hotel=60457&amp;shell=OGGKB&amp;chain=10237&amp;template=OGGKB&amp;avcurrency=USD'+'&amp;adult='+adults+'&amp;arrive='+start_date+'&amp;depart='+end_date+'&amp;group=';
+						//document.location = domain;
+						domain = 'https://www.montagehotels.com/booking/kapaluabay/';
+					};
+					if (selected_property==5) /*palmetto*/ {
+						//domain = 'https://gc.synxis.com/rez.aspx?tps=fml&amp;step=1&amp;hotel=60302&amp;shell=HXDPB&amp;chain=10237&amp;template=HXDPB&amp;avcurrency=USD'+'&amp;adult='+adults+'&amp;child='+children+'&amp;arrive='+start_date+'&amp;depart='+end_date+'&amp;group=';
+						//document.location = domain;
+						domain = 'https://www.montagehotels.com/booking/palmettobluff/';
+					};
+					//if (selected_property==1 || selected_property==2 || selected_property==3 ) /*not synxis*/ {
+						var start_date2 = start_date.replace(/\//g,'-');
+						var end_date2 = end_date.replace(/\//g,'-');
+						location = domain + '?hotel=&amp;from=site&amp;arrive='+start_date2 /*+'06/16/2013'+*/
+							+'&amp;depart='+end_date2+'&amp;adult='+adults+'&amp;child='+children+'&amp;group=&amp;iata=#step='+step;
+						document.location = location;
+					//}
+				}
+			}
+		}
+        
+        return false;
+    } );
+});
+    function checkSubscribeForm(form) {
+        var filter=/^[a-z0-9_\-\.\+]+@[a-z0-9_\-\.]+\.[a-z]{2,4}$/i;
+        var emailElem = $(form).find('input.subscr_email')[0];
+        if (emailElem.value == 'E-mail Address' || emailElem.value == '' ) {
+            alert("Please enter email address.\n");
+            return false;
+        } else {
+            if (!filter.test(emailElem.value))
+            {
+                alert("Please enter a valid email address.\n");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+  </script>
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.10 - http://yoast.com/wordpress/seo/ -->
+  <meta content="Our digital editorial discusses the latest trends in luxury lifestyle topics ranging from fine art to culinary creations. Stay up to date with the most recent happenings with Montage Impressions." name="description"/>
+  <link href="http://montageimpressions.com/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Impressions by Montage Hotels and Resorts - Explore the Latest Trends in Luxury Lifestyle" property="og:title"/>
+  <meta content="http://montageimpressions.com/" property="og:url"/>
+  <meta content="Impressions by Montage Hotels and Resorts" property="og:site_name"/>
+  <!-- / Yoast WordPress SEO plugin. -->
+  <link href="http://montageimpressions.com/feed/" rel="alternate" title="Impressions by Montage Hotels and Resorts  Feed" type="application/rss+xml"/>
+  <link href="http://montageimpressions.com/comments/feed/" rel="alternate" title="Impressions by Montage Hotels and Resorts  Comments Feed" type="application/rss+xml"/>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&amp;subset=latin&amp;ver=3.5.1" id="google-font-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif&amp;ver=3.5.1" id="google-font-droid-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Arimo%3A400%2C700%2C400italic%2C700italic&amp;ver=3.5.1" id="google-font-arimo-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/external/bootstrap/css/bootstrap.css?ver=3.5.1" id="bootstrap-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/css/style.css?ver=1.0" id="theme-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/external/flexslider/flexslider.css?ver=3.5.1" id="flexslider-css-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/external/nivo-slider/nivo-slider.css?ver=3.5.1" id="nivo-slider-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/external/selectbox/jquery.selectbox.css?ver=3.5.1" id="selectbox-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/themes/impressions/external/datepick/jquery.datepick.css?ver=3.5.1" id="datepick-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/plugins/responsive-lightbox/assets/swipebox/source/swipebox.css?ver=3.5.1" id="responsive-lightbox-swipebox-front-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://montageimpressions.com/wp-content/plugins/taxonomy-images/style.css?ver=0.7.3" id="taxonomy-image-plugin-public-css" media="screen" rel="stylesheet" type="text/css"/>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js?ver=1" type="text/javascript">
+  </script>
+  <script src="http://montageimpressions.com/wp-includes/js/jquery/jquery.js?ver=1.8.3" type="text/javascript">
+  </script>
+  <script src="http://montageimpressions.com/wp-content/themes/impressions/external/fastclick-master/lib/fastclick.js?ver=1" type="text/javascript">
+  </script>
+  <script src="http://montageimpressions.com/wp-content/plugins/responsive-lightbox/assets/swipebox/source/jquery.swipebox.min.js?ver=3.5.1" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"res-fancybox","custom_events":"","activeGalleries":"1","animation":"1","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080"};
+/* ]]&gt; */
+  </script>
+  <script src="http://montageimpressions.com/wp-content/plugins/responsive-lightbox/js/front.js?ver=3.5.1" type="text/javascript">
+  </script>
+  <link href="http://montageimpressions.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://montageimpressions.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <meta content="WordPress 3.5.1" name="generator"/>
+  <!-- &lt;meta name="NextGEN" version="1.9.12" /&gt; -->
+  <style id="custom-background-css" type="text/css">
+   body.custom-background { background-color: #ffffff; }
+  </style>
+  <!-- Style rendered by the theme -->
+  <style>
+   .nivoSlider img {
+		height:auto !important;
+	}
+
+	#header-menu-wrap {
+		background-color:#a8996e;
+	}
+
+	.menu-mobile-toggle {
+		background-color:#a8996e;
+	}
+
+	.footer-back-wrap .container {
+		background-color:#a8996e;
+	}
+
+	ul.js-jquery-dropdown ul li a:hover {
+		background-color:#a8996e;
+	}
+
+	.sub-menu .current-menu-item a {
+		background-color:#a8996e !important;
+	}
+
+	.dropdown-menu a:hover {
+		background-color:#a8996e !important;
+		color:white !important;
+	}
+
+	.toggle-icon-hidden {
+		background-color:#a8996e !important;
+	}
+
+	.toggle-icon-visible {
+		background-color:#a8996e !important;
+	}
+
+	.content-toggle-code strong {
+		color:#a8996e !important;
+	}
+
+	.btn:hover {
+		background-color:#a8996e;
+		color:white !important;
+	}
+
+	.dropcap {
+		background-color:#a8996e;
+	}
+
+	.hightlight_background {
+		background-color:#a8996e;
+	}
+
+	.hightlight_noBackground {
+		color:#a8996e;
+		border-color:#a8996e;
+	}
+
+	.popover-title {
+		background-color:#a8996e !important;
+	}
+
+	blockquote {
+		border-color:#a8996e !important;
+	}
+
+	.entry-meta .author a {
+		color:#a8996e !important;
+	}
+
+	.entry-date {
+		color:#a8996e !important;
+	}
+
+	.post-source-via a {
+		color:#a8996e !important;
+	}
+
+	.author-wrap a {
+		color:#a8996e !important;
+	}
+
+	.author-link a {
+		color:#a8996e !important;
+	}
+
+	.gallery-item .gallery-caption {
+		background-color:#a8996e !important;
+	}
+@media (min-width: 1200px) {
+	.nivoSlider img {
+		height:375px !important;
+	}
+ }@media (max-width: 979px) {
+	.nivoSlider img {
+		height:auto !important;
+	}
+ }
+  </style>
+  <!-- /Style rendered by the theme -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41907571-1', 'montageimpressions.com');
+  ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">
+   setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/7567.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+  <script type="text/javascript">
+   window._tfa = window._tfa || [];
+_tfa.push({notify:"mark", type:"visitor"});
+  </script>
+  <script src="//cdn.taboola.com/libtrc/azds-sc/tfa.js">
+  </script>
+ </head>
+ <body class="home custom-background">
+  <!-- facebook like sdk -->
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- //facebook like sdk -->
+  <div id="header-menu-wrap">
+   <div class="container">
+    <div class="row">
+     <div class="span9">
+      <!-- The menu -->
+      <div class="logo">
+       <a href="/">
+        <img alt="" height="46" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/logo.png" width="102"/>
+       </a>
+      </div>
+      <div class="head-icons">
+       <a class="ic-home ic-home-active" href="/">
+        <span>
+        </span>
+       </a>
+      </div>
+      <div class="main-menu">
+       <ul class="js-jquery-dropdown">
+        <li class="page_item">
+         <a href="#">
+          Discover
+         </a>
+         <ul class="children">
+          <li class="page_item page-item-3">
+           <a href="http://montageimpressions.com/category/featured/experience/">
+            Experience
+           </a>
+          </li>
+          <li class="page_item page-item-4">
+           <a href="http://montageimpressions.com/category/featured/family/">
+            Family
+           </a>
+          </li>
+          <li class="page_item page-item-10">
+           <a href="http://montageimpressions.com/category/featured/savor/">
+            Savor
+           </a>
+          </li>
+          <li class="page_item page-item-11">
+           <a href="http://montageimpressions.com/category/featured/arts/">
+            Arts
+           </a>
+          </li>
+          <li class="page_item page-item-12">
+           <a href="http://montageimpressions.com/category/featured/balance/">
+            Balance
+           </a>
+          </li>
+          <li class="page_item page-item-14">
+           <a href="http://montageimpressions.com/category/featured/style/">
+            Style
+           </a>
+          </li>
+          <li class="page_item page-item-13">
+           <a href="http://montageimpressions.com/category/featured/comfort/">
+            Comfort
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="page_item page-item-15">
+         <a href="#">
+          Local
+         </a>
+         <ul class="children">
+          <li class="page_item page-item-18">
+           <a href="http://montageimpressions.com/local/beverly-hills/">
+            Beverly Hills
+           </a>
+          </li>
+          <li class="page_item page-item-20">
+           <a href="http://montageimpressions.com/local/deer-valley/">
+            Deer Valley
+           </a>
+          </li>
+          <li class="page_item page-item-95">
+           <a href="http://montageimpressions.com/local/laguna-beach/">
+            Laguna Beach
+           </a>
+          </li>
+          <li class="page_item page-item-2336">
+           <a href="http://montageimpressions.com/local/kapalua-bay/">
+            Kapalua Bay
+           </a>
+          </li>
+          <li class="page_item page-item-3941">
+           <a href="http://montageimpressions.com/local/palmetto-bluff/">
+            Palmetto Bluff
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="page_item page-item-29">
+         <a href="http://montageimpressions.com/memories/">
+          Memories
+         </a>
+        </li>
+        <li class="page_item" id="reservations_nav">
+         <a href="#">
+          RESERVATIONS
+         </a>
+         <div class="submenu w554" id="reservations">
+          <form action="" id="reserve_form" type="post">
+           <div class="res-close">
+            x
+           </div>
+           <div class="le">
+            <p class="le-title">
+             Select Destination:
+            </p>
+            <select id="property" name="property" style="width: 188px; margin-right: 0;">
+             <option selected="" value="1">
+              Beverly Hills
+             </option>
+             <option value="2">
+              Deer Valley
+             </option>
+             <option value="3">
+              Laguna Beach
+             </option>
+             <option value="4">
+              Kapalua Bay
+             </option>
+             <option value="5">
+              Palmetto Bluff
+             </option>
+            </select>
+            <p class="le-title">
+             Reservation type:
+            </p>
+            <select id="reserv_type" name="reserv_type" style="width: 188px;">
+             <option selected="" value="1">
+              Hotel Reservation
+             </option>
+             <option value="2">
+              Dining Reservation
+             </option>
+             <option value="3">
+              Spa Reservation
+             </option>
+            </select>
+            <div class="hidden" id="venues">
+             <p class="le-title">
+              Select Restaurant:
+             </p>
+             <select id="venues_beverly" name="venues_beverly" style="width: 188px;">
+              <option selected="" value="38644">
+               Scarpetta L.A.
+              </option>
+              <option value="38647">
+               The Rooftop Grill
+              </option>
+             </select>
+             <select id="venues_deer" name="venues_deer" style="width: 188px;">
+              <option selected="" value="54148">
+               Apex Restaurant
+              </option>
+             </select>
+             <select id="venues_laguna" name="venues_laguna" style="width: 188px;">
+              <option selected="" value="61942">
+               Loft
+              </option>
+              <option value="61945">
+               Studio
+              </option>
+              <option value="82630">
+               Holiday Events
+              </option>
+             </select>
+            </div>
+            <div class="reserv-persons" id="reserv_persons">
+             <p class="le-title" style="clear: both;">
+              Number of Guests:
+             </p>
+             <select id="adults_count" name="adults_count" style="width: 88px; float:left;">
+              <option selected="" value="">
+               Adults
+              </option>
+              <option value="1">
+               1
+              </option>
+              <option value="2">
+               2
+              </option>
+              <option value="3">
+               3
+              </option>
+              <option value="4">
+               4
+              </option>
+              <option value="5">
+               5
+              </option>
+              <option value="6">
+               6
+              </option>
+              <option value="7">
+               7
+              </option>
+              <option value="8">
+               8
+              </option>
+              <option value="9">
+               9
+              </option>
+              <option value="10">
+               10
+              </option>
+             </select>
+             <select id="children_count" name="children_count" style="width: 88px; float:left;">
+              <option selected="" value="">
+               Children
+              </option>
+              <option value="0">
+               0
+              </option>
+              <option value="1">
+               1
+              </option>
+              <option value="2">
+               2
+              </option>
+              <option value="3">
+               3
+              </option>
+             </select>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="reserv-persons" id="reserv_dining_params" style="display:none;">
+             <p class="le-title" style="clear: both;">
+              Arrival Time:Party Size:
+             </p>
+             <select id="reserve-dining-time" name="reserve-dining-time" style="width: 98px; float:left;">
+              <option selected="selected" value="06:00 AM">
+               06:00 AM
+              </option>
+              <option value="06:30 AM">
+               06:30 AM
+              </option>
+              <option value="07:00 AM">
+               07:00 AM
+              </option>
+              <option value="07:30 AM">
+               07:30 AM
+              </option>
+              <option value="08:00 AM">
+               08:00 AM
+              </option>
+              <option value="08:30 AM">
+               08:30 AM
+              </option>
+              <option value="09:00 AM">
+               09:00 AM
+              </option>
+              <option value="09:30 AM">
+               09:30 AM
+              </option>
+              <option value="10:00 AM">
+               10:00 AM
+              </option>
+              <option value="10:30 AM">
+               10:30 AM
+              </option>
+              <option value="11:00 AM">
+               11:00 AM
+              </option>
+              <option value="11:30 AM">
+               11:30 AM
+              </option>
+              <option value="12:00 PM">
+               12:00 PM
+              </option>
+              <option value="12:30 PM">
+               12:30 PM
+              </option>
+              <option value="1:00 PM">
+               1:00 PM
+              </option>
+              <option value="1:30 PM">
+               1:30 PM
+              </option>
+              <option value="2:00 PM">
+               2:00 PM
+              </option>
+              <option value="2:30 PM">
+               2:30 PM
+              </option>
+              <option value="3:00 PM">
+               3:00 PM
+              </option>
+              <option value="3:30 PM">
+               3:30 PM
+              </option>
+              <option value="4:00 PM">
+               4:00 PM
+              </option>
+              <option value="4:30 PM">
+               4:30 PM
+              </option>
+              <option value="5:00 PM">
+               5:00 PM
+              </option>
+              <option value="5:30 PM">
+               5:30 PM
+              </option>
+              <option value="6:00 PM">
+               6:00 PM
+              </option>
+              <option value="6:30 PM">
+               6:30 PM
+              </option>
+              <option value="7:00 PM">
+               7:00 PM
+              </option>
+              <option value="7:30 PM">
+               7:30 PM
+              </option>
+              <option value="8:00 PM">
+               8:00 PM
+              </option>
+              <option value="8:30 PM">
+               8:30 PM
+              </option>
+              <option value="9:00 PM">
+               9:00 PM
+              </option>
+              <option value="9:30 PM">
+               9:30 PM
+              </option>
+              <option value="10:00 PM">
+               10:00 PM
+              </option>
+             </select>
+             <select id="reserve-dining-size" name="reserve-dining-size" style="width: 78px; float:left;">
+              <option selected="selected" value="1">
+               1
+              </option>
+              <option value="2">
+               2
+              </option>
+              <option value="3">
+               3
+              </option>
+              <option value="4">
+               4
+              </option>
+              <option value="5">
+               5
+              </option>
+              <option value="6">
+               6
+              </option>
+              <option value="7">
+               7
+              </option>
+              <option value="8">
+               8
+              </option>
+              <option value="9">
+               9
+              </option>
+              <option value="10">
+               10
+              </option>
+              <option value="11">
+               11
+              </option>
+              <option value="12">
+               12
+              </option>
+              <option value="13">
+               13
+              </option>
+              <option value="14">
+               14
+              </option>
+              <option value="15">
+               15
+              </option>
+              <option value="16">
+               16
+              </option>
+              <option value="17">
+               17
+              </option>
+              <option value="18">
+               18
+              </option>
+              <option value="19">
+               19
+              </option>
+              <option value="20">
+               20
+              </option>
+             </select>
+            </div>
+            <div class="clear">
+            </div>
+            <table class="reserv-summary" id="reserv_summary">
+             <tr>
+              <td class="reserv-summary-title">
+               Arrival:
+              </td>
+              <td class="reserv-summary-value" id="summary_arrival">
+              </td>
+             </tr>
+             <tr>
+              <td class="reserv-summary-title">
+               Departure:
+              </td>
+              <td class="reserv-summary-value" id="summary_departure">
+              </td>
+             </tr>
+             <tr>
+              <td class="reserv-summary-title">
+               Guests:
+              </td>
+              <td class="reserv-summary-value" id="summary_guests">
+              </td>
+             </tr>
+             <tr>
+              <td class="reserv-summary-title">
+               Nights:
+              </td>
+              <td class="reserv-summary-value" id="summary_nights">
+              </td>
+             </tr>
+            </table>
+            <div id="spa_links" style="display:none;">
+             <input id="spa_link_beverly" type="hidden" value="http://www.spamontage.com/beverlyhills/beverly-hills-spa-appointments.php"/>
+             <input id="spa_link_deer" type="hidden" value="http://www.spamontage.com/deervalley/park-city-spa-appointments.php"/>
+             <input id="spa_link_laguna" type="hidden" value="http://www.spamontage.com/lagunabeach/laguna-beach-spa-appointments.php"/>
+            </div>
+           </div>
+           <div class="ri active-res-content">
+            <div class="reserve-content" id="reserve_content">
+             <div class="reserve_content_current" id="reserve_content_hotel">
+              <p class="le-title">
+               Please select arrival and departure dates:
+              </p>
+              <div id="rangepicker">
+              </div>
+             </div>
+             <div id="reserve_content_dining" style="display:none;">
+              <p class="le-title">
+               Select Reservation Date:
+              </p>
+              <div id="diningpicker">
+              </div>
+             </div>
+             <div id="reserve_content_spa" style="display:none;">
+              <p class="le-title">
+               Click Below to Request a Spa Reservation:
+              </p>
+             </div>
+            </div>
+            <div class="availability-wrap">
+             <input id="start_date" name="start_date" type="hidden" value=""/>
+             <input id="end_date" name="end_date" type="hidden" value=""/>
+             <input id="reserve_button" name="submit" type="submit" value="Check Availability"/>
+            </div>
+            <div class="ui-tabs-nav" style="display: none;">
+             <span class="ui-tabs-nav-item">
+              <a class="active-link" href="#" rel="reserve-beverly-hotel">
+               Hotel Reservation
+              </a>
+              |
+             </span>
+             <span class="ui-tabs-nav-item">
+              <a href="#" rel="reserve-beverly-dining">
+               Dining Reservation
+              </a>
+              |
+             </span>
+             <span class="ui-tabs-nav-item">
+              <a class="external-link" href="http://www.spamontage.com/beverlyhills/beverly-hills-spa-appointments.php" target="_blank">
+               Spa Reservation
+              </a>
+             </span>
+            </div>
+           </div>
+          </form>
+         </div>
+        </li>
+        <li class="page_item" id="signup_nav">
+         <a href="#signup">
+          SIGN UP
+         </a>
+         <div class="submenu w288">
+          <div class="e2ma_signup_form">
+           <div class="e2ma_signup_message">
+            <div>
+             Sign up below to receive new Montage Impressions updates.
+            </div>
+           </div>
+           <div class="e2ma_signup_form_container">
+            <form action="https://app.e2ma.net/app2/audience/signup/1741025/1718726/?v=a" method="post" onsubmit="return checkSubscribeForm(this)" target="_new">
+             <input name="prev_member_email" type="hidden"/>
+             <input name="source" type="hidden"/>
+             <input name="group_886214" type="hidden" value="886214"/>
+             <input name="private_set" type="hidden" value="{num_private}"/>
+             <div class="e2ma_signup_form_row">
+              <div class="e2ma_signup_form_element">
+               <input class="subscr_email" name="email" type="text" value="E-mail Address"/>
+              </div>
+             </div>
+             <div class="e2ma_signup_form_button_row">
+              <input class="e2ma_signup_form_button" name="Submit" type="submit" value="Subscribe"/>
+             </div>
+            </form>
+           </div>
+          </div>
+          <!--&lt;form method="post" action=""&gt;
+								&lt;p&gt;Signup below to receive new Montage Impressions updates. &lt;/p&gt;
+								&lt;input type="text" id="" value="E-mail Address" /&gt;
+								&lt;input type="submit" value="Subscribe" /&gt;
+							&lt;/form&gt;-->
+         </div>
+        </li>
+       </ul>
+      </div>
+      <div class="clearfix">
+      </div>
+     </div>
+     <div class="span3">
+      <!-- Search -->
+      <div class="dropdown blog-search">
+       <div class="dropdown-wrap">
+        <a class="dropdown-toggle needsclick" data-toggle="dropdown" href="#" id="search-drop" role="button">
+         <img alt="" class="needsclick td_retina" src="http://montageimpressions.com/wp-content/themes/impressions/images/header/search.png" width="23"/>
+        </a>
+        <div aria-labelledby="search-drop" class="dropdown-menu">
+         <form action="http://montageimpressions.com/" id="searchform" method="get" role="search">
+          <input class="span2" id="appendedInputButton" name="s" size="16" type="text"/>
+          <button class="btn" type="submit">
+           <img alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/header/search.png"/>
+          </button>
+         </form>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--&lt;div class="container header-wrap"&gt;
+         &lt;div class="row"&gt;
+            &lt;div class="span4 header-logo"&gt;
+                            &lt;/div&gt;
+            &lt;div class="span8 header-ad-box"&gt;
+                            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;-->
+  <div class="container page-wrapper">
+   <div class="row page-sidebar-right page-content-height">
+    <!-- #content -->
+    <div class="span8 content-left" id="content">
+     <div class="content-left-wrap">
+      <h1>
+       Impressions of Summer
+      </h1>
+      <div class="image-gallery" id="flip-gallery">
+       <div id="flip-image-urls" style="display:none;">
+        <div class="flip-img" rel="1">
+         /wp-content/gallery/flip/thumbs/thumbs_4_1.jpg
+        </div>
+        <div class="flip-img" rel="1">
+         /wp-content/gallery/flip/thumbs/thumbs_4_2.jpg
+        </div>
+        <div class="flip-img" rel="1">
+         /wp-content/gallery/flip/thumbs/thumbs_4_3.jpg
+        </div>
+        <div class="flip-img" rel="1">
+         /wp-content/gallery/flip/thumbs/thumbs_4_4.jpg
+        </div>
+        <div class="flip-img" rel="1">
+         /wp-content/gallery/flip/thumbs/thumbs_4_5.jpg
+        </div>
+        <div class="flip-img" rel="2">
+         /wp-content/gallery/flip/thumbs/thumbs_5_1.jpg
+        </div>
+        <div class="flip-img" rel="2">
+         /wp-content/gallery/flip/thumbs/thumbs_5_2.jpg
+        </div>
+        <div class="flip-img" rel="2">
+         /wp-content/gallery/flip/thumbs/thumbs_5_3.jpg
+        </div>
+        <div class="flip-img" rel="3">
+         /wp-content/gallery/flip/thumbs/thumbs_6_1.jpg
+        </div>
+        <div class="flip-img" rel="3">
+         /wp-content/gallery/flip/thumbs/thumbs_6_2.jpg
+        </div>
+        <div class="flip-img" rel="3">
+         /wp-content/gallery/flip/thumbs/thumbs_6_3.jpg
+        </div>
+        <div class="flip-img" rel="3">
+         /wp-content/gallery/flip/thumbs/thumbs_6_4.jpg
+        </div>
+        <div class="flip-img" rel="4">
+         /wp-content/gallery/flip/thumbs/thumbs_1_1.jpg
+        </div>
+        <div class="flip-img" rel="4">
+         /wp-content/gallery/flip/thumbs/thumbs_1_2.jpg
+        </div>
+        <div class="flip-img" rel="4">
+         /wp-content/gallery/flip/thumbs/thumbs_1_3.jpg
+        </div>
+        <div class="flip-img" rel="5">
+         /wp-content/gallery/flip/thumbs/thumbs_2_1.jpg
+        </div>
+        <div class="flip-img" rel="5">
+         /wp-content/gallery/flip/thumbs/thumbs_2_2.jpg
+        </div>
+        <div class="flip-img" rel="5">
+         /wp-content/gallery/flip/thumbs/thumbs_2_3.jpg
+        </div>
+        <div class="flip-img" rel="5">
+         /wp-content/gallery/flip/thumbs/thumbs_2_4.jpg
+        </div>
+        <div class="flip-img" rel="6">
+         /wp-content/gallery/flip/thumbs/thumbs_7_1.jpg
+        </div>
+        <div class="flip-img" rel="6">
+         /wp-content/gallery/flip/thumbs/thumbs_7_2.jpg
+        </div>
+        <div class="flip-img" rel="6">
+         /wp-content/gallery/flip/thumbs/thumbs_7_3.jpg
+        </div>
+        <div class="flip-img" rel="6">
+         /wp-content/gallery/flip/thumbs/thumbs_7_4.jpg
+        </div>
+        <div class="flip-img" rel="7">
+         /wp-content/gallery/flip/thumbs/thumbs_3_1.jpg
+        </div>
+        <div class="flip-img" rel="7">
+         /wp-content/gallery/flip/thumbs/thumbs_3_2.jpg
+        </div>
+        <div class="flip-img" rel="7">
+         /wp-content/gallery/flip/thumbs/thumbs_3_3.jpg
+        </div>
+        <div class="flip-img" rel="7">
+         /wp-content/gallery/flip/thumbs/thumbs_3_4.jpg
+        </div>
+       </div>
+       <a class="bigImg" href="http://montageimpressions.com/category/featured/experience/" rel="1" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_4_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_4_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_4_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_4_1.jpg)">
+        </span>
+        <span class="txt">
+         Experience
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/family/" rel="2" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_5_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_5_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_5_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_5_1.jpg)">
+        </span>
+        <span class="txt">
+         Family
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/savor/" rel="3" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_6_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_6_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_6_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_6_1.jpg)">
+        </span>
+        <span class="txt">
+         Savor
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/arts/" rel="4" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_1_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_1_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_1_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_1_1.jpg)">
+        </span>
+        <span class="txt">
+         Arts
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/balance/" rel="5" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_2_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_2_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_2_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_2_1.jpg)">
+        </span>
+        <span class="txt">
+         Balance
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/style/" rel="6" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_7_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_7_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_7_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_7_1.jpg)">
+        </span>
+        <span class="txt">
+         Style
+        </span>
+       </a>
+       <a class="smImg" href="http://montageimpressions.com/category/featured/comfort/" rel="7" style="background:url(/wp-content/gallery/flip/thumbs/thumbs_3_1.jpg) center center no-repeat">
+        <span class="flip-card">
+         <span class="front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_3_1.jpg)">
+         </span>
+         <span class="back">
+         </span>
+        </span>
+        <span class="flip-card-back">
+         <span class="top">
+         </span>
+         <span class="bottom" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_3_1.jpg)">
+         </span>
+        </span>
+        <span class="flip-card-front" style="background-image:url(/wp-content/gallery/flip/thumbs/thumbs_3_1.jpg)">
+        </span>
+        <span class="txt">
+         Comfort
+        </span>
+       </a>
+       <div class="clearfix">
+       </div>
+      </div>
+      <div class="block2col">
+       <div class="item">
+        <h2>
+         <a href="http://montageimpressions.com/awards-season-2015-review-with-joe-katz/" title="Red Carpet Styles of 2015">
+          Red Carpet Styles of 2015
+         </a>
+        </h2>
+        <a href="http://montageimpressions.com/awards-season-2015-review-with-joe-katz/" title="Red Carpet Styles of 2015">
+         <img alt="Red Carpet Styles" class="attachment-featured wp-post-image" height="150" src="http://montageimpressions.com/wp-content/uploads/2015/02/celebrity-styles.jpg" width="372"/>
+        </a>
+        <p class="name">
+         As award season continues, a number of superb styles have risen to the top, from Amal Clooneys  ...
+        </p>
+       </div>
+       <div class="item">
+        <h2>
+         <a href="http://montageimpressions.com/gear-guide-2015-ski-equipment-from-compass-sports/" title="2015 Ski Gear Guide: Atomic &amp; More">
+          2015 Ski Gear Guide: Atomic &amp; More
+         </a>
+        </h2>
+        <a href="http://montageimpressions.com/gear-guide-2015-ski-equipment-from-compass-sports/" title="2015 Ski Gear Guide: Atomic &amp; More">
+         <img alt="Gear Guide" class="attachment-featured wp-post-image" height="150" src="http://montageimpressions.com/wp-content/uploads/2015/02/Gear-Guide.jpg" width="372"/>
+        </a>
+        <p class="name">
+         With 2015 ski season hitting high gear, itsa greattime for an update on the industrys ...
+        </p>
+       </div>
+      </div>
+      <h2 class="latest_header">
+       Latest Articles
+      </h2>
+      <div class="index-articles">
+       <!-- .post -->
+       <article class="post-11318 post type-post status-publish format-standard hentry category-arts category-experience tag-activities tag-art tag-events tag-festival tag-seafood tag-vacation tag-winter post" id="post-11318">
+        <div class="img">
+         <a href="http://montageimpressions.com/winters-coolest-events/">
+          <img alt="Winter's Hottest Events" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/Winters-Hottest-Events.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/winters-coolest-events/" rel="bookmark">
+           Film, Music and Local Flavor: A Guide to Winters Coolest Events
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <!-- .post -->
+       <article class="post-11447 post type-post status-publish format-standard hentry category-balance tag-events tag-feature tag-fitness tag-travel post" id="post-11447">
+        <div class="img">
+         <a href="http://montageimpressions.com/a-year-of-wellness-fitness-events-around-montage/">
+          <img alt="Fitness Events" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/Fitness-Events.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/a-year-of-wellness-fitness-events-around-montage/" rel="bookmark">
+           Wellness 365: Fitness Events Around Montage
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <div class="clearfix">
+       </div>
+       <!-- .post -->
+       <article class="post-11387 post type-post status-publish format-standard hentry category-style tag-fashion tag-feature tag-interview tag-trends post" id="post-11387">
+        <div class="img">
+         <a href="http://montageimpressions.com/early-2015-fashion-with-mary-alice-haney/">
+          <img alt="Fashion Feature" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/fashion-feature.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/early-2015-fashion-with-mary-alice-haney/" rel="bookmark">
+           Early 2015 Fashion with Mary Alice Haney
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <!-- .post -->
+       <article class="post-11138 post type-post status-publish format-standard hentry category-savor tag-feature tag-recipes post" id="post-11138">
+        <div class="img">
+         <a href="http://montageimpressions.com/gourmet-super-bowl-recipes/">
+          <img alt="Super Bowl Recipes" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/Super-Bowl-Recipes.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/gourmet-super-bowl-recipes/" rel="bookmark">
+           Gourmet Super Bowl Recipes
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <div class="clearfix">
+       </div>
+       <!-- .post -->
+       <article class="post-10838 post type-post status-publish format-standard hentry category-arts tag-activities tag-art tag-events tag-feature tag-winter post" id="post-10838">
+        <div class="img">
+         <a href="http://montageimpressions.com/2015-sundance-film-festival/">
+          <img alt="Sundance Feature" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/sundance-feature.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/2015-sundance-film-festival/" rel="bookmark">
+           10 Films to See at Sundance 2015
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <!-- .post -->
+       <article class="post-10396 post type-post status-publish format-standard hentry category-savor tag-dining tag-feature tag-recipes post" id="post-10396">
+        <div class="img">
+         <a href="http://montageimpressions.com/much-ado-about-truffles-part-ii/">
+          <img alt="Truffles with Craig Strong" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/truffle2-feature.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/much-ado-about-truffles-part-ii/" rel="bookmark">
+           Much Ado About Truffles, Part II
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <div class="clearfix">
+       </div>
+       <!-- .post -->
+       <article class="post-10320 post type-post status-publish format-standard hentry category-experience tag-feature tag-skiing tag-winter post" id="post-10320">
+        <div class="img">
+         <a href="http://montageimpressions.com/skiing-deer-valley/">
+          <img alt="Shannon Bahrke" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/Shannon-Bahrke-Featured.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/skiing-deer-valley/" rel="bookmark">
+           Skiing like Olympic Medalist Shannon Bahrke
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <!-- .post -->
+       <article class="post-10347 post type-post status-publish format-standard hentry category-comfort tag-feature tag-technology tag-trends post" id="post-10347">
+        <div class="img">
+         <a href="http://montageimpressions.com/top-10-gadgets-of-2014/">
+          <img alt="Top Gadgets of 2014" class="attachment-thumb wp-post-image" height="28" src="http://montageimpressions.com/wp-content/uploads/2015/01/gadgets-2014.jpg" width="70"/>
+         </a>
+        </div>
+        <header>
+         <h2 class="name">
+          <a href="http://montageimpressions.com/top-10-gadgets-of-2014/" rel="bookmark">
+           Top 10 Gadgets of 2014
+          </a>
+         </h2>
+        </header>
+        <footer class="clearfix">
+        </footer>
+       </article>
+       <!-- /.post -->
+       <div class="clearfix">
+       </div>
+       <div class="pagination">
+        <img alt="" class="pagination-disabled td_retina" src="http://montageimpressions.com/wp-content/themes/impressions/images/footer/arrow-back.png" width="38"/>
+        <a href="http://montageimpressions.com/page/2/">
+         <img alt="" class="td_retina" src="http://montageimpressions.com/wp-content/themes/impressions/images/footer/arrow-next.png" width="38"/>
+        </a>
+       </div>
+      </div>
+     </div>
+     <!-- the footer -->
+     <div class="bot-sep" style="height: 5px;">
+     </div>
+     <div class="soc-likes">
+      <div class="soc-like">
+       <div class="fb-like" data-layout="button_count" data-send="false" data-show-faces="false" data-width="140">
+       </div>
+      </div>
+      <div class="soc-like">
+       <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?lang=en&amp;count=horizontal" style="width:130px; height:20px;">
+       </iframe>
+      </div>
+      <div class="soc-like soc-pinterest">
+       <a data-pin-config="beside" data-pin-do="buttonPin" href="//pinterest.com/pin/create/button/?url=http://montageimpressions.com/top-10-gadgets-of-2014/&amp;media=http://montageimpressions.com/wp-content/themes/impressions/images/site/pinterest.png&amp;description=pin%20it!">
+        <img src="//assets.pinterest.com/images/pidgets/pin_it_button.png"/>
+       </a>
+      </div>
+      <div class="soc-like">
+       <!-- Place this tag where you want the +1 button to render. -->
+       <div class="g-plusone" data-size="medium">
+       </div>
+      </div>
+      <div class="clearfix">
+      </div>
+      <!-- twitter button js -->
+      <script>
+       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      </script>
+      <!-- pinterest js -->
+      <script src="//assets.pinterest.com/js/pinit.js" type="text/javascript">
+      </script>
+      <!-- google +1 js -->
+      <script type="text/javascript">
+       (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                &lt;/script&gt;
+            &lt;/div&gt;
+			            &lt;div id="footer" class="footer-left"&gt;
+                &lt;div class="txt"&gt;
+                        &lt;div class="txt-b"&gt;
+                                Impressions
+                        &lt;/div&gt;					
+                &lt;/div&gt;				
+                &lt;div class="social"&gt;
+                      &lt;a href="http://twitter.com/montagehotels" target="_blank"&gt;&lt;img width="16" height="16" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/twitter.png"&gt;&lt;/a&gt;
+                        &lt;a href="https://www.facebook.com/MontageHotels" target="_blank"&gt;&lt;img width="13" height="17" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/soc2.gif"&gt;&lt;/a&gt;
+                        &lt;a href="http://instagram.com/montagehotels" target="_blank"&gt;&lt;img width="16" height="16" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/instagram.png"&gt;&lt;/a&gt;
+                        &lt;a href="http://www.youtube.com/user/MontageHotels" target="_blank"&gt;&lt;img width="16" height="16" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/youtube.png"&gt;&lt;/a&gt;
+                        &lt;a href="http://pinterest.com/montagehotels/"&gt;&lt;img width="14" height="17" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/soc5.gif"&gt;&lt;/a&gt;
+                        &lt;a href="http://rebelmouse.com/montagehotels/"&gt;&lt;img width="16" height="16" alt="" src="http://montageimpressions.com/wp-content/themes/impressions/images/site/rebel.png"&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="copy"&gt;
+                        
+                &lt;/div&gt;
+                &lt;div class="footer-main"&gt;
+                    &lt;div class="footer-logo"&gt;
+                                            &lt;/div&gt;
+                    
+                    &lt;div class="footer-menu"&gt;
+                                            &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="clearfix"&gt;&lt;/div&gt;
+                
+                
+                
+                &lt;div class="row footer-bottom"&gt;
+                    &lt;div class="half-grid footer-copy"&gt;&lt;/div&gt;
+                    &lt;div class="half-grid footer-icons"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt; 
+            &lt;!-- /#footer --&gt;                        &lt;/div&gt;
+                        
+                        
+                        &lt;!-- #sidebar --&gt;
+                        &lt;div id="sidebar" class="span4 widget-area"&gt;
+                            &lt;h3 class="side-title"&gt;TODAY AT MONTAGE&lt;/h3&gt;
+                            &lt;aside class="widget ScrollInfoWidget"&gt;        &lt;div class=" affix-top sidebar-scroll-widget" data-offset-top="10"&gt;
+            &lt;div id="content-scroll-header"&gt;				&lt;p class="side-select-title"&gt;Select destination:&lt;/p&gt;				&lt;select id="around-select" name="as" style="width: 316px;"&gt;					&lt;option value="1" selected&gt;Beverly Hills&lt;/option&gt;					&lt;option value="2"&gt;Deer Valley&lt;/option&gt;					&lt;option value="3"&gt;Laguna Beach&lt;/option&gt;					&lt;option value="4"&gt;Kapalua Bay&lt;/option&gt;				&lt;option value="5"&gt;Palmetto Bluff&lt;/option&gt;				&lt;/select&gt;                            &lt;/div&gt;
+           
+            
+            &lt;div class="content-scroll-inner-wrap " tabindex="5000" &gt;
+                &lt;div class="content-scroll-inner"&gt; &lt;!-- used for hover --&gt;
+                  
+                    &lt;div class="side-tab side-tab-current" id="side-tab1"&gt;
+                                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/dinel-a-restaurant-week-2/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/01/dine-la.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="dineL.A. Restaurant Week"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/dinel-a-restaurant-week-2/" rel="bookmark" title="dineL.A. Restaurant Week"&gt;
+                        dineL.A. Restaurant Week                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Scarpetta&lt;br /&gt;July 13-26                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/happy-hour-at-scarpetta/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/05/happy-hour-scarpetta.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Happy Hour at Scarpetta"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/happy-hour-at-scarpetta/" rel="bookmark" title="Happy Hour at Scarpetta"&gt;
+                        Happy Hour at Scarpetta                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Beverly Hills&lt;br /&gt;Monday - Saturday | 4pm - 7pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/fitness-wellness-classes/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/05/fitness-classes.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Fitness &amp; Wellness Classes"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/fitness-wellness-classes/" rel="bookmark" title="Fitness &amp; Wellness Classes"&gt;
+                        Fitness &amp; Wellness Classes                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Spa Montage Beverly Hills&lt;br /&gt; Fitness Center | Daily                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/live-entertainment-at-parq-bar/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/05/parq-bar.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Live Entertainment at Parq Bar"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/live-entertainment-at-parq-bar/" rel="bookmark" title="Live Entertainment at Parq Bar"&gt;
+                        Live Entertainment at Parq Bar                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Beverly Hills&lt;br /&gt;Nightly | Parq Bar                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/rooftop-cabana-packages/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/07/The-Rooftop-Pool-Cabana.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Rooftop Cabana Packages"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/rooftop-cabana-packages/" rel="bookmark" title="Rooftop Cabana Packages"&gt;
+                        Rooftop Cabana Packages                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    The Rooftop&lt;br /&gt; 9am - Sunset                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/beverly-hills"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;&lt;h3 class="widget-title"&gt;Around Montage&lt;/h3&gt;            &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/kebmo/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/07/keb-mo.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="KebMo"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/kebmo/" rel="bookmark" title="KebMo"&gt;
+                        KebMo                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    The Saban Theatre&lt;br /&gt;July 15 | 8pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/ipalpiti-soloists-french-night/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/07/iPalpiti.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="iPalpiti Soloists: French Night"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/ipalpiti-soloists-french-night/" rel="bookmark" title="iPalpiti Soloists: French Night"&gt;
+                        iPalpiti Soloists: French Night                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Greystone Mansion&lt;br /&gt; July 22                 &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/rent/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/05/rent.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="RENT"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/rent/" rel="bookmark" title="RENT"&gt;
+                        RENT                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Saban Theatre&lt;br /&gt;July 16 - 26                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/ottmar-liebert/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/07/Ottmar-Liebert.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Ottmar Liebert"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/ottmar-liebert/" rel="bookmark" title="Ottmar Liebert"&gt;
+                        Ottmar Liebert                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    The Saban Theatre&lt;br /&gt; August 1                 &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/sunday-movie-nights-2/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/07/sunday-movie-nights.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Sunday Movie Nights"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/sunday-movie-nights-2/" rel="bookmark" title="Sunday Movie Nights"&gt;
+                        Sunday Movie Nights                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Sunday Movie Nights returns in 2015 for a third season of hits! Movies will be shown on a 20-foot in                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/beverly-hills"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;                    &lt;/div&gt;
+
+                    &lt;div class="side-tab" id="side-tab2"&gt;
+                        &lt;h3 class="widget-title"&gt;Around Montage&lt;/h3&gt;            &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/montage-to-moab/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/09/montage-to-moab.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Montage to Moab"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/montage-to-moab/" rel="bookmark" title="Montage to Moab"&gt;
+                        Montage to Moab                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage to Moab                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/deer-valley"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;                    &lt;/div&gt;
+
+                    &lt;div class="side-tab" id="side-tab3"&gt;
+                                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/lugano-prive/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/07/Jewelers.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Lugano Prive"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/lugano-prive/" rel="bookmark" title="Lugano Prive"&gt;
+                        Lugano Prive                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Lugano Prive &lt;br /&gt; The Ultimate Gift                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/live-entertainment-at-the-lobby-lounge/" style="background:url(http://montageimpressions.com/wp-content/uploads/2013/11/Untitled-3.png) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Live Entertainment at the Lobby Lounge"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/live-entertainment-at-the-lobby-lounge/" rel="bookmark" title="Live Entertainment at the Lobby Lounge"&gt;
+                        Live Entertainment at the Lobby Lounge                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Lobby Lounge &lt;br /&gt; Daily and Nightly | 1pm - 1am                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/peak-into-the-wine-cellar-at-studio/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/01/wine-pour.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Peak into the Wine Cellar at Studio"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/peak-into-the-wine-cellar-at-studio/" rel="bookmark" title="Peak into the Wine Cellar at Studio"&gt;
+                        Peak into the Wine Cellar at Studio                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Studio Restaurant &lt;br /&gt;  Tuesday - Sunday | 5pm-10pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/mind-body-yoga-workshops/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/01/yoga-workshops.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Mind Body Yoga Workshops"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/mind-body-yoga-workshops/" rel="bookmark" title="Mind Body Yoga Workshops"&gt;
+                        Mind Body Yoga Workshops                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Spa Montage &lt;br /&gt;  Saturdays and Sundays                 &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/lobby-lounge-cocktails/" style="background:url(http://montageimpressions.com/wp-content/uploads/2013/11/Untitled-3.png) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Cocktails in the Lobby Lounge"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/lobby-lounge-cocktails/" rel="bookmark" title="Cocktails in the Lobby Lounge"&gt;
+                        Cocktails in the Lobby Lounge                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Lobby Lounge&lt;br/&gt;Daily | 10:30am - 1am                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/laguna-beach"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;&lt;h3 class="widget-title"&gt;Around Montage&lt;/h3&gt;            &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/local-farmers-market/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/01/mlb-farmers-market.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Local Farmer&#8217;s Market"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/local-farmers-market/" rel="bookmark" title="Local Farmer&#8217;s Market"&gt;
+                        Local Farmer&#8217;s Market                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Laguna Beach Certified Farmer's Market&lt;br /&gt; Laguna Beach | Saturdays, 8am-12pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/laughter-yoga/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/07/MLB-Fitness-e1422913431830.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Laughter Yoga"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/laughter-yoga/" rel="bookmark" title="Laughter Yoga"&gt;
+                        Laughter Yoga                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Main Beach, Laguna Beach&lt;br /&gt; Sunday-Friday, 8am and Saturday, 10am                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/live-blues/" style="background:url(http://montageimpressions.com/wp-content/uploads/2015/01/live-blues-mlb.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Live Blues"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/live-blues/" rel="bookmark" title="Live Blues"&gt;
+                        Live Blues                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Live Blues Wednesdays &lt;br /&gt; Mozambique | Wednesdays, 7pm-10pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/whale-watching/" style="background:url(http://montageimpressions.com/wp-content/uploads/2013/12/whale-festival.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Whale Watching"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/whale-watching/" rel="bookmark" title="Whale Watching"&gt;
+                        Whale Watching                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Dana Point Harbor&lt;br /&gt;Daily                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/laguna-beach"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;                    &lt;/div&gt;
+                            
+                    &lt;div class="side-tab" id="side-tab4"&gt;
+                                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/keiki-o-kaaina-adventures/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/10/keiki-adventures.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Keiki o Ka&#8217;aina Adventures"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/keiki-o-kaaina-adventures/" rel="bookmark" title="Keiki o Ka&#8217;aina Adventures"&gt;
+                        Keiki o Ka&#8217;aina Adventures                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Kapalua Bay&lt;br/&gt; Every Monday                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/kapalua-exploration/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/10/Kapalua-Exploration.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Kapalua Exploration"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/kapalua-exploration/" rel="bookmark" title="Kapalua Exploration"&gt;
+                        Kapalua Exploration                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Kapalua Bay &lt;br/&gt; Every Tuesday                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/wet-and-wild/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/10/wet-wild.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Wet and Wild"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/wet-and-wild/" rel="bookmark" title="Wet and Wild"&gt;
+                        Wet and Wild                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Kapalua Bay &lt;br/&gt; Every Wednesday                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/aloha-friday/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/10/aloha-friday.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Aloha Friday"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/aloha-friday/" rel="bookmark" title="Aloha Friday"&gt;
+                        Aloha Friday                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Kapalua Bay&lt;br/&gt; Every Friday                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/turtle-tales/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/10/Keiki-o-Kaaina-Adventures.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Turtle Tales"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/turtle-tales/" rel="bookmark" title="Turtle Tales"&gt;
+                        Turtle Tales                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    Montage Kapalua Bay&lt;br/&gt; Every Thursday                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/kapalua-bay"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;                    &lt;/div&gt;
+                            
+                    &lt;div class="side-tab" id="side-tab5"&gt;
+                                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/farmers-market-cruise-14/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/farmers-market-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Farmer&#8217;s Market Cruise"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/farmers-market-cruise-14/" rel="bookmark" title="Farmer&#8217;s Market Cruise"&gt;
+                        Farmer&#8217;s Market Cruise                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    The Inn at Palmetto Bluff&lt;br/&gt;July 9 | 2:00pm - 4:30pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/porching-23/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/porching-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="Porching"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/porching-23/" rel="bookmark" title="Porching"&gt;
+                        Porching                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    The Inn at Palmetto Bluff&lt;br/&gt;July 10-11 | 4:00pm - 6:00pm                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/palmetto-bluff"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;&lt;h3 class="widget-title"&gt;Around Montage&lt;/h3&gt;            &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-xanadu/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/xanadu-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="The Arts Center of Coastal Carolina Presents: Xanadu"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-xanadu/" rel="bookmark" title="The Arts Center of Coastal Carolina Presents: Xanadu"&gt;
+                        The Arts Center of Coastal Carolina Presents: Xanadu                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    14 Shelter Cove Lane, Hilton Head&lt;br/&gt;June 17- July 26                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-gypsy/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/gullah-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="The Arts Center of Coastal Carolina Presents: The Gullah Kinfolk &#8211; &#8220;The Circle Unbroken&#8221;"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-gypsy/" rel="bookmark" title="The Arts Center of Coastal Carolina Presents: The Gullah Kinfolk &#8211; &#8220;The Circle Unbroken&#8221;"&gt;
+                        The Arts Center of Coastal Carolina Presents: The Gullah Kinfolk &#8211; &amp;#822 ...                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    14 Shelter Cove Lane, Hilton Head&lt;br/&gt;August 5-6 | 8:00 p.m.                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-the-gullah-kinfolk-the-circle-unbroken/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/beatles-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="The Arts Center of Coastal Carolina Presents: Yesterday &#038; Today: The Interactive Beatles Experience"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-the-gullah-kinfolk-the-circle-unbroken/" rel="bookmark" title="The Arts Center of Coastal Carolina Presents: Yesterday &amp; Today: The Interactive Beatles Experience"&gt;
+                        The Arts Center of Coastal Carolina Presents: Yesterday &#038; Today: The Inte ...                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    14 Shelter Cove Lane, Hilton Head&lt;br/&gt;August 12-13 | 8:00 p.m.                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+                    &lt;div class="art-post art-smallimg-text"&gt;
+                                    &lt;a href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-masters-of-soul/" style="background:url(http://montageimpressions.com/wp-content/uploads/2014/12/masters-322x122.jpg) center center no-repeat; display: block; float: left; margin: 0 10px 5px 0; width: 70px; height: 70px; /*width: 320px; height: 120px;*/" title="The Arts Center of Coastal Carolina Presents: Masters of Soul"&gt;&lt;/a&gt;
+                                    &lt;a class="art-desc" href="http://montageimpressions.com/the-arts-center-of-coastal-carolina-presents-masters-of-soul/" rel="bookmark" title="The Arts Center of Coastal Carolina Presents: Masters of Soul"&gt;
+                        The Arts Center of Coastal Carolina Presents: Masters of Soul                &lt;/a&gt;
+                &lt;div class="art-subdesc"&gt;
+                    14 Shelter Cove Lane, Hilton Head&lt;br/&gt;August 21-22 | 8:00 p.m.                &lt;/div&gt;
+				&lt;div class="clearfix"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="more-events"&gt;&lt;a href="/local/palmetto-bluff"&gt;Click for More Events&lt;/a&gt;&lt;/div&gt;                    &lt;/div&gt;
+                            
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;  
+          
+        &lt;/aside&gt;&lt;aside class="widget ngg_images"&gt;&lt;h3 class="widget-title"&gt;Memories&lt;/h3&gt;
+&lt;div class="ngg-widget entry-content"&gt;
+
+&lt;ul class="memories-list"&gt;&lt;li&gt;&lt;a href="http://montageimpressions.com/memories/" title="Contributed by @djduckworth" &gt;&lt;img style="width: 130px; height: 130px;" src="http://montageimpressions.com/wp-content/gallery/memories/thumbs/thumbs_04436470206b11e3bfae22000a9e0782_7.jpg" width="130" height="130" title="Contributed by @djduckworth" alt="Contributed by @djduckworth" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://montageimpressions.com/memories/" title="Contributed by @reachalana" &gt;&lt;img style="width: 130px; height: 130px;" src="http://montageimpressions.com/wp-content/gallery/memories/thumbs/thumbs_11328028_1593725300893374_482575694_n.jpg" width="130" height="130" title="Contributed by @reachalana" alt="Contributed by @reachalana" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://montageimpressions.com/memories/" title="Contributed by @shannonbahrke" &gt;&lt;img style="width: 130px; height: 130px;" src="http://montageimpressions.com/wp-content/gallery/memories/thumbs/thumbs_1971552_858965710812553_267515675_n.jpg" width="130" height="130" title="Contributed by @shannonbahrke" alt="Contributed by @shannonbahrke" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://montageimpressions.com/memories/" title="Contributed by @staceroooo" &gt;&lt;img style="width: 130px; height: 130px;" src="http://montageimpressions.com/wp-content/gallery/memories/thumbs/thumbs_10979518_763982443679418_1841388259_n.jpg" width="130" height="130" title="Contributed by @staceroooo" alt="Contributed by @staceroooo" /&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;&lt;/div&gt;
+&lt;ul class="tags"&gt;&lt;li&gt;&lt;a href="/memories/"&gt;#montagememory&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/aside&gt;&lt;aside class="widget widget_text"&gt;&lt;h3 class="widget-title"&gt;Local&lt;/h3&gt;			&lt;div class="textwidget"&gt;                                                    &lt;div class="subsr-form"&gt;
+                                                        &lt;div class="e2ma_signup_message"&gt;    
+                                                            &lt;div&gt;Sign up below to receive new Montage Impressions updates.&lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                        &lt;div class="e2ma_signup_form_container"&gt;
+                                                            &lt;form action="https://app.e2ma.net/app2/audience/signup/1741025/1718726/?v=a" onsubmit="return checkSubscribeForm(this)" method="post" target="_new"&gt;
+                                                                            &lt;input type="hidden" name="prev_member_email"&gt;
+                                                                            &lt;input type="hidden" name="source"&gt;
+                                                                            &lt;input type="hidden" value="886214" name="group_886214"&gt;
+                                                                            &lt;input type="hidden" value="{num_private}" name="private_set"&gt;
+                                                                            &lt;div class="e2ma_signup_form_row"&gt;
+                                                                              &lt;div class="e2ma_signup_form_element"&gt;&lt;input type="text" class="subscr_email" name="email" value="youremail@domain.com"&gt;&lt;/div&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;div class="e2ma_signup_form_button_row"&gt;
+                                                                                    &lt;input type="submit" {disabled}="" value="Subscribe" name="Submit" class="e2ma_signup_form_button"&gt;
+                                                                            &lt;/div&gt;
+                                                              &lt;/form&gt;
+                                                      &lt;/div&gt;
+                                                    &lt;/div&gt;&lt;/div&gt;
+		&lt;/aside&gt;                            
+                   
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                        
+        
+        
+
+
+
+                
+        &lt;script type='text/javascript' src='http://montageimpressions.com/wp-content/themes/impressions/js/site.js?ver=1'&gt;
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/selectbox/jquery.selectBox.min.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/datepick/jquery.datepick.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/bootstrap/js/bootstrap.min.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/jquery.backstretch.min.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/jquery.easing.1.3.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/jquery.ui.totop.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/jquery.mobilemenu.min.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/bootstrap-affix.js?ver=1" type="text/javascript">
+      </script>
+      <script src="http://montageimpressions.com/wp-content/themes/impressions/external/jquery.nicescroll.js?ver=1" type="text/javascript">
+      </script>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

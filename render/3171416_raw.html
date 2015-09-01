@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script>
+   var url=document.URL;
+	if (url.indexOf("?") &gt; -1 )
+	{
+window.location = "http://www.snoovies.com/vault/#/page0-filmid";
+}
+var hash = window.location.hash
+var filmidProvided = hash.indexOf('filmid');
+var pageTagProvided = hash.indexOf('page');
+if (filmidProvided &amp;&amp; !pageTagProvided)
+{
+	var filmid = hash.substr(filmidProvided+6);
+	window.location = "http://www.snoovies.com/vault/#/page0-filmid"+filmid;
+
+}
+  </script>
+  <meta charset="utf-8"/>
+  <title>
+   Snoovies Vault
+  </title>
+  <link href="img/favicon.ico" rel="shortcut icon"/>
+  <link href="img/icon-iphone.png" rel="apple-touch-icon"/>
+  <link href="img/icon-for-ipad.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link href="img/icon-for-iphone-retina.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link href="img/icon-for-ipad-retina.png" rel="apple-touch-icon" sizes="152x152"/>
+  <meta content="Snoovies Vault" name="apple-mobile-web-app-title"/>
+  <meta content="RDC Media Ltd." name="author"/>
+  <meta content="snoovies, shorts, short films, films, indie, independent, festival, magazine, movie, movies, app" name="keywords"/>
+  <meta content="http://www.snoovies.com/images/avatar.jpg" property="og:image"/>
+  <meta content="The best short films handpicked for you to enjoy effortlessly" name="description"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <link href="css/reveal.css" rel="stylesheet"/>
+  <link href="css/snoovies.css" rel="stylesheet"/>
+  <link href="css/addtohomescreen.css" rel="stylesheet"/>
+  <link href="css/theme/sky.css" id="theme" rel="stylesheet"/>
+  <!-- For syntax highlighting -->
+  <link href="lib/css/zenburn.css" rel="stylesheet"/>
+  <script src="js/snoovies.js">
+  </script>
+  <script src="js/addtohomescreen.js">
+  </script>
+  <script src="http://connect.facebook.net/en_US/all.js">
+  </script>
+  <script>
+   //iOS problems, iOS6 loops certain functions sometimes and private mode breaks the app in Safari
+		var storageTestKey = 'sTest',
+    	storage = window.sessionStorage;
+		window.functionCount = 0;
+
+		try 
+		{
+  			storage.setItem(storageTestKey, 'test');
+  			storage.removeItem(storageTestKey);
+			if(window.innerHeight &gt; window.innerWidth){
+   				 alert("Snoovies works best in landscape orientation");
+			}
+		} 
+		catch (e) 
+		{
+  		if (e.code == DOMException.QUOTA_EXCEEDED_ERR &amp;&amp; storage.length == 0) {
+    	// private mode
+		alert("Snoovies Vault cannot run if your browser is in private mode. Please disable private mode or add Snoovies Vault to your home screen to use it.");
+  		} else {
+    	throw e;
+  		}
+		
+		}
+		addToHomescreen();
+  </script>
+  <!--[if lt IE 9]&gt;
+		&lt;script src="lib/js/html5shiv.js"&gt;&lt;/script&gt;
+		&lt;![endif]-->
+  <!-- Google Analytics -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-44455570-2', 'auto');
+ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+ </head>
+ <body>
+  <div class="reveal">
+   <!-- Any section element inside of this container is displayed as a slide -->
+   <div class="slides" id="pagecontent">
+    <section>
+     <section data-state="#">
+      <img src="img/logo.png"/>
+      <div id="homepage-slide1">
+      </div>
+      <small>
+       <div class="loading">
+        loading...
+       </div>
+      </small>
+     </section>
+     <section id="about">
+      <div id="homepage-slide2">
+      </div>
+      <img alt="Down arrow" height="238" src="img/arrow.png" width="178"/>
+     </section>
+     <section>
+      <div id="homepage-slide3">
+      </div>
+      <img alt="Down arrow" height="238" src="img/arrow.png" width="178"/>
+     </section>
+     <section>
+      <div id="homepage-slide4">
+      </div>
+      <img alt="Down arrow" height="238" src="img/arrow.png" width="178"/>
+     </section>
+     <section>
+      <div id="homepage-slide5">
+      </div>
+      <img alt="Side arrow" height="238" src="img/arrow.png" style="-webkit-transform: rotate(270deg);transform:rotate(270deg);-ms-transform:rotate(270deg);" width="178"/>
+     </section>
+    </section>
+   </div>
+  </div>
+  <script src="lib/js/head.min.js">
+  </script>
+  <script src="js/reveal.js">
+  </script>
+  <script>
+   //initialize Facebook SDK
+		initializeFB();
+		
+		//listen for when the site has processed language content to then download structure
+  			document.addEventListener('contentReady', function()
+			{
+	  
+	  			console.log('content is ready');
+				
+				//get menu structure
+				getStructure();
+	  
+  			}, false); 
+		//listen for when the site has processed structure to then build menus
+			document.addEventListener('structureReady', function()
+			{
+				console.log('page structure is ready');
+				//document.addEventListener('fbReady', function()
+					//{
+									
+				//build homepage
+				createHomepage(5);
+				parseMenuContent();
+				parseFilmContent();
+				
+				//create main menu
+				initializeReveal();
+				manageLoading();
+				var event = document.createEvent( "HTMLEvents", 1, 2 );
+				event.initEvent( 'loaded', true, true );
+				document.dispatchEvent( event );
+				var event = document.createEvent( "HTMLEvents", 1, 2 );
+				event.initEvent( 'loading', true, true );
+				document.dispatchEvent( event );
+
+				manageSlides(function()
+				{ 
+		
+					//create main menu
+					createMainMenu(4);
+			
+					//create structure
+					createSubMenu('filmsmenu', 6);	
+			
+					//check if the user is logged in to determine what to do with the sign in menu and to store the users collection
+					checkFBLoginState(function (response){
+					
+						if (response.status === "connected")
+							{			
+								createSubMenu('signinmenu', 0);
+							}
+						else 
+						{
+							//todo: add twitter option here, slides already exist in database and structure
+							createSubMenu('signinmenu', 0);
+							
+						}
+					});
+
+					createSubMenu('moodmenu', 5);
+					//installationmenu replaced with magazine install. slides already exist in database and structure
+					createSubMenu('installationmenu',0);
+					createSubMenu('contactmenu',0);
+
+					
+					//create queues
+					createFilmQueue('all','surprisemenu', 0);
+					createFilmQueue('category','magazinemenu', 6);
+					createFilmQueue('collection', 'collectionmenu', null);
+					createFilmQueue('history', 'historymenu', null);
+
+
+					prepareMoodFilmQueues(5);
+					prepareSearch();
+		
+				});
+				}, false); 
+
+  
+  		//	}, false); 
+
+	//Get the page content based on language. Currently only English but in the future add language detector here
+		getContent('en');
+		//get specific film id where applicable
+
+		if (filmidProvided &gt; -1)
+			//the page must have been opened as a film share, so open the film provided
+			{
+				var filmid = hash.substr(filmidProvided+6);
+				//var stateObj = { film: "filmid" };
+				//history.replaceState(stateObj, null, "index.html");
+				console.log("a filmid was provided, waiting for caching to display this film");
+				document.addEventListener("cached", function(event) 
+				{
+					showSingleFilm(filmid);
+					Reveal.addEventListener('#', function() 
+					{
+						console.log('Refreshing page');
+						reloadPage();
+					} );
+				});
+			}
+		else 
+			//manage loading events to disable slide navigation while loading
+			{
+				document.addEventListener("cached", function(event) 
+				{
+		
+					var event = document.createEvent( "HTMLEvents", 1, 2 );
+					event.initEvent( 'loaded', true, true );
+					document.dispatchEvent( event );	
+				
+				});
+		
+			}
+  </script>
+  <div id="menucontent" style="display: none;">
+   <script>
+   </script>
+  </div>
+  <div id="filmcontent" style="display: none;">
+   <script>
+   </script>
+  </div>
+ </body>
+</html>

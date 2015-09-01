@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]&gt;      &lt;html class="no-js lt-ie9 lt-ie8 lt-ie7"&gt; &lt;![endif]-->
+<!--[if IE 7]&gt;         &lt;html class="no-js lt-ie9 lt-ie8"&gt; &lt;![endif]-->
+<!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9"&gt; &lt;![endif]-->
+<!--[if gt IE 8]&gt;&lt;!-->
+<!--/ Adding language locale country to the HTML tag /-->
+<html class="no-js en en_CA ca" dir="ltr" lang="en-CA" xmlns="http://www.w3.org/1999/xhtml">
+ <!--&lt;![endif]-->
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+  <meta content="More than 50 percent of email is opened on a mobile device, so brands should take the time to ensure their email marketing is mobile-friendly. With a few simple steps and some validation, a company can make emails look incredible on any device." name="description"/>
+  <meta content="18 Key Hacks to Make Your Email Mobile-Friendly " property="og:title"/>
+  <meta content="Salesforce Canada Blog" property="og:site_name"/>
+  <meta content="blog" property="og:type"/>
+  <meta content="https://www.salesforce.com/ca/blog/2015/01/mobile-friendly-email.html" property="og:url"/>
+  <meta content="More than 50 percent of email is opened on a mobile device, so brands should take the time to ensure their email marketing is mobile-friendly. With a few simple steps and some validation, a company can make emails look incredible on any device." property="og:description"/>
+  <meta content="https://www.salesforce.com/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01bb07d9fbf1970.jpg" property="og:image"/>
+  <meta content="ca" property="og:locale"/>
+  <meta content="206247976178570" property="fb:app_id"/>
+  <meta content="626698407" property="fb:admins"/>
+  <meta content="www.salesforce.com" name="twitter:domain"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="https://www.salesforce.com/ca/blog/2015/01/mobile-friendly-email.html" name="twitter:url"/>
+  <meta content="18 Key Hacks to Make Your Email Mobile-Friendly " name="twitter:title"/>
+  <meta content="More than 50 percent of email is opened on a mobile device, so brands should take the time to ensure their email marketing is mobile-friendly. With a few simple steps and some validation, a company can make emails look incredible on any device." name="twitter:description"/>
+  <link href="https://www.salesforce.com/ca/blog/2015/01/mobile-friendly-email.html" rel="canonical"/>
+  <link href="https://www.salesforce.com/ca/blog/2015/01/mobile-friendly-email.html" hreflang="en-ca" rel="alternate"/>
+  <script type="text/javascript">
+   var _sf_startpt=(new Date()).getTime(); var _sf_async_config={};var sfdcLocale="en_CA";
+var fb="https://connect.facebook.net/" +sfdcLocale + "/all.js#xfbml=1&amp;appid=" + "206247976178570"
+  </script>
+  <!--/*  Code added by Deloitte ends*/-->
+  <script src="/etc/clientlibs/granite/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/granite/utils.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/granite/jquery/granite.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/foundation/jquery.min.js" type="text/javascript">
+  </script>
+  <link rel="icon" type="image/vnd.microsoft.icon"/>
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <title>
+   18 Key Hacks to Make Your Email Mobile-Friendly  - Salesforce Canada Blog
+  </title>
+  <link href="/etc/designs/blogs/images/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="/etc/designs/blogs/images/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+  <link href="/etc/designs/blogs/images/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <link href="/etc/designs/blogs/images/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+  <link href="/etc/designs/blogs/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="/etc/designs/blogs/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/ca/blog/" rel="start" title="Home"/>
+  <link href="/etc/designs/blogs/publishlibs.min.css" rel="stylesheet" type="text/css"/>
+  <!--&lt;script
+	src="//assets.adobedtm.com/7089d7be7dacc457a8233ff9a3a1a83c5d80ff74/satelliteLib-dfd117906e2f4d9db8fd9d507d9a2b3ebb5ce6fa-staging.js"&gt;
+&lt;/script&gt;-->
+  <script type="text/javascript">
+   var sfPageData = sfPageData || {};
+	//Not supporting other context
+    sfPageData.locale = "ca";
+ 	sfPageData.blogMeta =  "Mobile";
+    sfPageData.pageCloud =  "No\x20Cloud";
+  </script>
+  <!--  Start add from HI-FI HTML -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]&gt;
+    &lt;script src="/etc/designs/blogs/publishlibs/source/js/ie8-min.js"&gt;&lt;/script&gt;
+    &lt;![endif]-->
+  <meta/>
+  <script src="/etc/designs/blogs/framework.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/analytics-top.min.js" type="text/javascript">
+  </script>
+ </head>
+ <!--/ Checking for the redirect URL configured in page properties /-->
+ <!--/ Display body content if redirect URL is not configured  /-->
+ <body>
+  <!-- Adding client context for analytics -->
+  <script src="/etc/clientlibs/foundation/shared.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/granite/underscore.min.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/foundation/personalization/kernel.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("\x2Fetc\x2Fsegmentation");
+        CQ_Analytics.ClientContextUtils.init("\x2Fetc\x2Fclientcontext\x2Fsfdc", "\x2Fcontent\x2Fblogs\x2Fca\x2Fen\x2F2015\x2F01\x2Fmobile\x2Dfriendly\x2Demail");
+
+        
+    });
+  </script>
+  <div class="page-wrap">
+   <!-- Desktop Header Element -->
+   <!-- ** hidden on devices -->
+   <header class="header-main hidden-xs hidden-sm" role="banner">
+    <div class="top-nav">
+     <div class="container-fluid container-width-md">
+      <nav class="top-nav--links" role="navigation">
+       <a class="top-nav--links_item hidden-xs" target="_blank">
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item pull-right hidden-xs" href="https://www.salesforce.com/form/contact/contactme.jsp?d=70130000000lpG5&amp;internal=true" target="_blank">
+       </a>
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/" target="_blank">
+        What is Salesforce?
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/customers/" target="_blank">
+        Who uses Salesforce?
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="https://www.salesforce.com/ca/form/signup/testdrive.jsp" target="_blank">
+        View Demos
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/crm/editions-pricing.jsp?d=70130000000t0wK&amp;internal=true" target="_blank">
+        Free Trial
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="https://success.salesforce.com/" target="_blank">
+        Resource Centre
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item pull-right hidden-xs" href="https://www.salesforce.com/form/contact/contactme.jsp?d=70130000000lpG5&amp;internal=true" target="_blank">
+       </a>
+      </nav>
+     </div>
+    </div>
+    <div class="header">
+     <div class="container-fluid container-width-md">
+      <div id="site-logo">
+       <a class="sf-lockup" href="/ca/blog/">
+        <span class="sf-lockup_logo">
+         <img alt="Salesforce.com Blog" id="logo" src="/content/dam/blogs/logo/logo-company.png"/>
+        </span>
+        <h1 class="sf-lockup_title">
+         Canada Blog
+        </h1>
+       </a>
+      </div>
+      <div class="search-container" id="desktopsearch">
+       <form action="/ca/blog/search.html" id="cse-search-box" method="get" name="cse-search-box">
+        <input name="cx" type="hidden" value="007946504037312675699:sjdvnv1b3wc"/>
+        <input name="cof" type="hidden" value="FORID:11;NB:1"/>
+        <input autocomplete="off" class="text" id="searchtext" maxlength="100" name="q" placeholder="Search" spellcheck="false" type="text"/>
+        <input id="search-submit" src="/etc/designs/blogs/images/search-form-btn-gray.gif" type="image" value="Search"/>
+       </form>
+       <script type="text/javascript">
+        jQuery(function(){
+    com.salesforce.www.App.wireModule('search-autocomplete', {
+        cseId:      "007946504037312675699:sjdvnv1b3wc"
+        ,txtNoResults:  "No\x20results\x20found" + '&hellip;'
+        ,defaultText:   "Search\x20CA"
+    });
+});
+       </script>
+      </div>
+      <div id="blogNav">
+       <div>
+        <nav class="topic-nav">
+         <a class="topic-nav_item" href="/ca/blog/category/sales.html">
+          Sales
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/customer-service.html">
+          Customer Service
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/marketing.html">
+          Marketing
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/small-business.html">
+          Small Business
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/it.html">
+          IT
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/social.html">
+          Social
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/developer.html">
+          Developer
+         </a>
+         <a class="topic-nav_item" href="/ca/blog/category/community.html">
+          Community
+         </a>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <!-- End Desktop Header Element -->
+   <!-- Mobile Header Element -->
+   <header class="header-mobile visible-xs-block visible-sm-block">
+    <div class="header-mobile_nav">
+     <div class="pull-left">
+      <div id="site-logo">
+       <a class="sf-lockup" href="/ca/blog/">
+        <span class="sf-lockup_logo">
+         <img alt="Salesforce.com Blog" id="logo" src="/content/dam/blogs/logo/logo-company.png"/>
+        </span>
+        <h1 class="sf-lockup_title">
+         Canada Blog
+        </h1>
+       </a>
+      </div>
+     </div>
+     <div class="pull-right">
+      <a class="icon icon-mobile_search" data-trigger="search" href="#">
+       <i class="icon-search">
+       </i>
+       Search CA
+      </a>
+      <a class="icon icon-mobile_menu" data-trigger="menu" href="#">
+       <i class="icon-list">
+       </i>
+       Menu
+      </a>
+     </div>
+    </div>
+    <div class="search-mobile">
+     <form action="/ca/blog/search.html" class="search-mobile_form" id="cse-search-box" method="get" name="cse-search-box">
+      <input name="cx" type="hidden" value="007946504037312675699:sjdvnv1b3wc"/>
+      <input name="cof" type="hidden" value="FORID:11;NB:1"/>
+      <input autocomplete="off" class="text" id="searchtext" maxlength="100" name="q" placeholder="Search" spellcheck="false" type="text"/>
+      <input id="search-mobile_button" type="submit" value="Search CA"/>
+     </form>
+     <script type="text/javascript">
+      jQuery(function(){
+	com.salesforce.www.App.wireModule('search-autocomplete', {
+        cseId:      "007946504037312675699:sjdvnv1b3wc"
+        ,txtNoResults:  "No\x20results\x20found" + '&hellip;'
+        ,defaultText:   "Search\x20CA"
+    });
+});
+     </script>
+    </div>
+   </header>
+   <!-- End Mobile Header Element -->
+   <main class="page-content">
+    <div>
+     <div class="container-fluid container-width-md top-20">
+      <div class="row">
+       <article class="post col-xs-12 col-md-8 width100">
+        <header class="post-header">
+         <div>
+          <h1 class="post-header_title">
+           18 Key Hacks to Make Your Email Mobile-Friendly
+          </h1>
+         </div>
+         <div>
+          <p class="post-header_meta">
+           <span class="post-header_meta-date">
+            January 14, 2015
+           </span>
+           <span class="post-header_meta-author">
+            By
+            <a href="/ca/blog/authors/salesforce-canada.html" rel="author" title="Posts by Salesforce Canada">
+             Salesforce Canada
+            </a>
+           </span>
+           <span class="post-header_meta-category">
+            in
+            <a href="/ca/blog/category/mobile.html">
+             Mobile
+            </a>
+           </span>
+          </p>
+         </div>
+        </header>
+        <section class="post-social _top clearfix hidden-xs">
+         <div>
+          <div>
+           <div class="post-social_top-btn social-btn-facebook">
+            <div>
+             <fb:like font="arial" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" layout="button_count" show_faces="false">
+             </fb:like>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-twitter">
+            <div>
+             <a class="twitter-share-button" counturl="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-count="horizontal" data-related="salesforce" data-url="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-via="salesforce" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html">
+              Tweet
+             </a>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-google">
+            <div>
+             <g:plusone callback="OmniConfig.trackGooglePlus" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" size="medium">
+             </g:plusone>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-linkedin">
+            <div>
+             <script data-counter="right" data-url="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" type="IN/Share">
+             </script>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="post-social _top visible-xs-block hidden-md">
+         <div>
+          <div>
+           <div class="post-social_top-btn social-btn-facebook">
+            <div>
+             <div class="fb-like" data-action="like" data-href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-layout="box_count" data-share="false" data-show-faces="false">
+             </div>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-twitter">
+            <div>
+             <a class="post-social_top-btn twitter-share-button" data-count="vertical" data-via="salesforce" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html">
+              Tweet
+             </a>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-google">
+            <div>
+             <div class="g-plusone" data-annotation="bubble" data-count="true" data-href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-size="tall" data-width="300">
+             </div>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-linkedin">
+            <div>
+             <script data-counter="top" type="IN/Share">
+             </script>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="post-content clearfix">
+         <p>
+          <img alt="18 Key Hacks to Make Your Email Mobile-Friendly " border="0" class="asset asset-image at-xid-6a01a511c63c50970c01bb07d9fbf1970d image-full img-responsive" src="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01bb07d9fbf1970.jpg" style="max-width: 945px !important;" title="18 Key Hacks to Make Your Email Mobile-Friendly "/>
+         </p>
+         <p>
+          Everyone loves mobile. For years now, mobile has been the up-and-comer for on-the-go reading and searching. While all types of devices are used to access the web,
+          <a href="https://litmus.com/blog/mobile-opens-hit-record-high-of-47">
+           47 to 60 percent of email
+          </a>
+          is read on a mobile device. It's more important than ever for brands to figure out how to make their emails as mobile-friendly as possible.
+         </p>
+         <p>
+          Correctly rendering email across a variety of devices and email clientsGmail looks different than Outlook, different than Hotmail, etc.can be a difficult process.
+          <a href="https://litmus.com/blog/saving-email-for-later-opens-across-devices-environments">
+           Ninety seven percent of emails are only opened once
+          </a>
+          , so that means one chance to impress. While creating mobile-friendly emails, it's important to remember that device does not equal email client. For example, on an iPhone 6, there are several different email client apps and browsers, which can be used to open email.
+         </p>
+         <p>
+          <a class="asset-img-link" href="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01b7c7364a3c970.jpg" style="display: inline;">
+           <img alt="Jump Start: Most Popular E-mail Clients" border="0" class="asset asset-image at-xid-6a01a511c63c50970c01b7c7364a3c970b image-full img-responsive" src="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01b7c7364a3c970.jpg" title="Jump Start: Most Popular E-mail Clients"/>
+          </a>
+         </p>
+         <p>
+          While industry trends are helpful, the best practice is for each brand to dive into their own analytics to glean what email clients and devices customers use to read email.
+         </p>
+         <p>
+          Unfortunately, not every email service provider or web analytics (if sending traffic back to a site) will provide accurate metrics about email clients and devices. As an alternative, a brand can take a look at customer demographics or personas. For example, a technology company with a tech savvy audience will want to focus on recent Android and iPhone devices. But a traditional B2B construction company may see its customers use the corporate favorite, Outlook. That may differ from a B2C fast fashion brand that targets customers with lower incomes who may use cheaper Android or even Windows phones. The construction company may even choose not to focus on making email mobile-friendly, while both the tech company and fast fashion brand can't afford to ignore mobile-friendly email.
+         </p>
+         <p>
+          A brand should focus on the top three to five email clients most popular with customers, especially if trying to prove mobile-friendly email marketing will help the company's revenue and goals.
+         </p>
+         <h3>
+          <b>
+           First Step: Pick the Best Mobile Code Format
+          </b>
+         </h3>
+         <p>
+          Coding can be scary. But it's very important to understand the three different types of email code design: mobile first, flexible layout, and responsive design. Email coding is particularly unique in that all code must be inline and can't call any external files, except images. Many coders compare it to the way websites were built in 1996: all inline and all tables.
+         </p>
+         <p>
+          <b>
+           Mobile first
+          </b>
+          puts mobile friendliness above everything. From beginning to final send, this email is tailored for the mobile user. It's likely all links are driven to a mobile-friendly site. This is best used for those who see almost all their customers come in via mobile traffic. Mobile first sacrifices desktop design, and emails can look awkward on larger screens.
+         </p>
+         <p>
+          <b>
+           Flexible layouts
+          </b>
+          are great when a brand is less sure of the degree that mobile may impact email marketing. They are also easier to code, which is helpful if internal resources are limited. Flexible layouts look great from the smallest phone to largest screen. The downside: Flexible layouts limit a brand's design opportunities and require simplicity, considering emails look the same across all email clients.
+         </p>
+         <p>
+          <b>
+           Responsive design
+          </b>
+          is the most complex to pull off properly, but delivers the best design results. Through code, it tailors itself to a device and client. If a customer checks the responsive email on their phone, they may see a simple call to action (CTA), but if they open it on a desktop, there may be more images, longer text, and multiple CTAs. Responsive design uses inline media queries. Media queries can be intensive, but pay off in the end for a brand looking to
+          <a href="https://litmus.com/blog/the-how-to-guide-to-responsive-email-design-infographic">
+           ramp up its email marketing program
+          </a>
+          . Responsive design's major downside is that it requires more coding knowledge, work, and ability to keep up with technology changes and trends.
+         </p>
+         <h3>
+          <b>
+           Layout Hacks: Make an Appeal to All Email Clients
+          </b>
+         </h3>
+         <p>
+          <b>
+          </b>
+          1. Set the width at 600 pixels.
+         </p>
+         <p>
+          For the best crossovers on email clients, email width should be set at a maximum of 600 to 650 pixels. While this won't cover the smallest of screens, this size will look nice on almost all devices. (Note: This is not a best practice if going truly responsive.) To take it one step further, add a minimum width of 300 pixels to accommodate narrow screen sizes.
+         </p>
+         <p>
+          <a class="asset-img-link" href="/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da2685970.jpg" style="display: inline;">
+           <img alt="Size Matters: Screen Size By Device" border="0" class="asset asset-image at-xid-6a00e54ee3905b883301bb07da2685970d image-full img-responsive" src="/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da2685970.jpg"/>
+          </a>
+          <br/>
+         </p>
+         <p>
+          2. Use a single column layout.
+         </p>
+         <p>
+          For ease of design, keep email layouts as simple as possible. A single column layout is most flexible across clients and devices. Two columns can be used if there's a good business case. Avoid complex magazine-style layouts with multiple columns since these rarely look appealing on anything but a desktop. And too many columns will distract customers or lead them to ignore important CTAs.
+         </p>
+         <p>
+          3. Ditch paragraph spacing for old-fashioned tables.
+         </p>
+         <p>
+          Both Outlook and Hotmail strip out paragraph and margin spacing from code. This means neatly-spaced text will bunch together. Instead, code emails in tables and use padding to add the extra space.
+         </p>
+         <p>
+          4. Add white space at 15 percent.
+         </p>
+         <p>
+          White space allows the eye to quickly scan and better digest information. Poorly rendered email on mobile can cause strain just to read the information, which translates to a negative emotion associated with the sending brand. By adding padding of 15 percent, the eye has room to move and relax around the text and images. This leaves more customer brain power to digest the email's message.
+         </p>
+         <p>
+          5. Push the font size bigger.
+         </p>
+         <p>
+          Similar to white space, increasing font size helps
+          <a href="http://iopscience.iop.org/1742-6596/364/1/012115/pdf/1742-6596_364_1_012115.pdf">
+           improve comprehension
+          </a>
+          and makes reading easier. Many mobile devices, such as the iPhone, automatically resize tiny text. Others leave people pinching and expanding their screens to make fonts readable. A minimum font size of 14 pixels for body text and 22 pixels for headers is a good rule of thumb. (Traditional word processing set fonts as points, which should be avoided as it causes fuzziness when mobile users zoom in.)
+         </p>
+         <p>
+          To take it a step further, set the font using em or percent coding to be even more mobile-friendly. Setting fonts as either of these will help them scale to different screen sizes. Make sure to
+          <a href="http://kyleschaeffer.com/development/css-font-size-em-vs-px-vs-pt-vs/">
+           choose what will work best for customers
+          </a>
+          , especially if emails are copy-heavy.
+         </p>
+         <h3>
+          <b>
+           Image Hacks: Make Them Look Right and Load Correctly
+          </b>
+         </h3>
+         <p>
+          1. Use the best type of image for email.
+         </p>
+         <p>
+          For crisp colors and small image sizes, JPGs are the best image file type. They'll make sure a brand's images look sharp and load quickly. If an email requires animation, GIFs are best. If it needs transparency, PNGs are the way to go.
+         </p>
+         <p>
+          2. Remove image "junk" and optimize for load times.
+         </p>
+         <p>
+          Emails are loaded on all types of devices and hooked into all types of networks. If visitors to a website expect it to load in two seconds and if
+          <a href="http://www.slideshare.net/jcolman/seo-site-speed-and-battlestar-galactica-searchfest-2012-11735155">
+           40 percent
+          </a>
+          will abandon a site that doesn't load in three seconds, how long will those clicking on a brand's email wait?
+         </p>
+         <p>
+          While there are many complex ways to make an image file size smaller, there are a few easy hacks. Most graphic programs allow for file size adjusting. Make sure to ditch meta information about images such as color profiles and creator information. Photoshop has an easy save for web button. To make image size even smaller, they can be put through programs like
+          <a href="https://imageoptim.com/">
+           ImageOptim
+          </a>
+          ,
+          <a href="https://tinypng.com/">
+           TinyPNG
+          </a>
+          , or
+          <a href="http://www.jpegmini.com/">
+           JPEGmini
+          </a>
+          .
+         </p>
+         <p>
+          3. Let the code adjust images to screen size.
+         </p>
+         <p>
+          While adjusting images to appear clean and crisp at any size, it's important images scale with screen sizes. A simple code hack is to add style="width:100%;" to any img tag. Adjust the percent as needed for the space.
+         </p>
+         <p>
+          4. Keep images from popping out horizontally.
+         </p>
+         <p>
+          A brand also doesn't want images popping out beyond an email width. Using the above width code will cover most all email clients, but adding min-width: 100%; will stop any errant images.
+         </p>
+         <p>
+          <a class="asset-img-link" href="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01b7c7364b65970.jpg" style="display: inline;">
+           <img alt="Code Hacks to Keep Images From Popping Out Horizontally" border="0" class="asset asset-image at-xid-6a01a511c63c50970c01b7c7364b65970b image-full img-responsive" src="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01b7c7364b65970.jpg" title="Code Hacks to Keep Images From Popping Out Horizontally"/>
+          </a>
+         </p>
+         <p>
+          5. Display alt text when an image doesn't load.
+         </p>
+         <p>
+          While always best practice for accessibility and website SEO, adding alt text to images is imperative for email marketing. Many clients load images automatically, but some don't. In those image placeholders, a brand wants text describing what the customer should see. This can also help if a customer's Internet bandwidth isn't strong enough to load images.
+         </p>
+         <p>
+          <a class="asset-img-link" href="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01bb07d9fd66970.jpg" style="display: inline;">
+           <img alt="Make Room For Alt Text" border="0" class="asset asset-image at-xid-6a01a511c63c50970c01bb07d9fd66970d image-full img-responsive" src="/content/dam/blogs/legacy/2015/01/6a01a511c63c50970c01bb07d9fd66970.jpg" title="Make Room For Alt Text"/>
+          </a>
+         </p>
+         <h3>
+          <b>
+           Feature Hacks: Make That Click Happen
+          </b>
+         </h3>
+         <p>
+          <b>
+          </b>
+          1. Use preheaders to give the proper preview.
+         </p>
+         <p>
+          Most email clients give a preview of the email content, but how many marketing emails just show text along the lines of: "Email not displaying correctly? See it here." That's a terrible experience for customers and can negatively effect the brand's opening rates. Luckily, it's pretty easy to
+          <a href="http://blog.sendblaster.com/2014/02/05/how-to-create-a-perfect-email-preheader/">
+           code these very important 75 characters
+          </a>
+          .
+         </p>
+         <p>
+          2. Keep emails short and sweet.
+         </p>
+         <p>
+          Shorter, focused emails see much higher click rates. Ditching graphics, even a brands logo, puts the CTA in the forefront. While this is a radical focus on readability, brands have seen up to a
+          <u>
+           146% increase on conversion
+          </u>
+          doing this.
+         </p>
+         <p>
+          In the age of skimming, it's vital to reduce the copy for better readability. Bullet points instead of a long paragraph of text can help solve this. Be direct. Emails with too many CTAs distract readers from a brands main message. The best emails only have one CTA and no more than three.
+         </p>
+         <p>
+          3. Optimize CTA buttons for tap-ability.
+         </p>
+         <p>
+          Let customers easily click on a brand's CTA by optimizing for tap-ability. There's nothing worse for a customer than not being able to click on a link or clicking on the wrong one. Make CTA buttons at least 44 x 44 pixels to optimize for sloppy swiping and tapping on a phone.
+         </p>
+         <h3>
+          <b>
+           Accessibility Hacks: Make It Enjoyable for Everyone
+          </b>
+         </h3>
+         <p>
+          <b>
+          </b>
+          1. Use highly contrasting colors for visual accessibility.
+         </p>
+         <p>
+          Every smartphone owner knows bright screens kill battery life. Many people dim screens to save power, but muddy colors can make emails completely unreadable. Not to mention, a brand wants to make sure everyone, including people with visual disabilities, can access their content. Use highly contrasting colors for maximum viewability. Test visual accessibility on emails and websites using free software, such as
+          <a href="http://www.eclipse.org/actf/downloads/tools/aDesigner/index.php">
+           aDesigner
+          </a>
+          . This software allows anyone to see what a page looks like under a variety of conditions and for those with specific visual impairments, such as low light, color blindness, blurred vision, and age-related macular degeneration.
+         </p>
+         <p>
+          2. Use media queries to change experience.
+         </p>
+         <p>
+          Customer experience is what mobile optimization is all about. For example, almost every marketing email's opening line reads something like Having trouble viewing this e-mail? View it in your browser. On a smartphone, this takes up precious real estate. Through media queries, a brand can specify that longer messages show on desktops and shorter ones, such as View in browser appear on smaller screens.
+         </p>
+         <p>
+          3. Use a flexbox solution since media queries don't always work.
+         </p>
+         <p>
+          Unfortunately, some major email clients like Gmail for iPhone and Android, Mailbox for iPhone, Windows Phone 7 and 8, and Yahoo! for iPhone and Android don't support media queries. With Gmail ranked as the second leading email client, it's even more important to realize media queries don't solve everything. Instead, a brand can use
+          <a href="http://labs.actionrocket.co/the-hybrid-coding-approach">
+           a flexbox approach
+          </a>
+          that is a hybrid of responsive and flexible layouts.
+         </p>
+         <p>
+          4. Worried about coding? Get a template.
+         </p>
+         <p>
+          Luckily, there are email coders out there who are happy to share their resources to get one started:
+          <a href="http://codepen.io/actionrocket/pen/EoCLH">
+           CodePen
+          </a>
+          ,
+          <a href="http://mobile.bazaarvoice.com/uxdd/handbook.php?article=email-intro">
+           BazaarVoice
+          </a>
+          , and
+          <a href="https://litmus.com/blog/our-favorite-responsive-and-mobile-email-resources">
+           Litmus' favorite templates
+          </a>
+          . Don't be afraid to experiment and test. New trends and designs in mobile happen every day.
+         </p>
+         <p>
+          5. Direct readers somewhere mobile friendly.
+         </p>
+         <p>
+          It's great to optimize emails, but customers are going to be sad if they end with a poor experience on a brand's website. Make sure all links point to places that are also easily accessible on a variety of devices.
+         </p>
+         <h3>
+          <b>
+           Test, Test, Test, and Improve
+          </b>
+         </h3>
+         <p>
+          It's important to test different variations on email to make sure it works for a brand's specific customers. Besides sending test emails before sending to the masses, don't forget there are tools to help. Email marketing software companies including
+          <a href="https://litmus.com/">
+           Litmus
+          </a>
+          ,
+          <a href="https://www.emailonacid.com/">
+           Email on Acid
+          </a>
+          , and
+          <a href="https://putsmail.com/">
+           PutsMail
+          </a>
+          allow a brand to view emails in just about every email client. These tools save time and energy to make mobile-friendly improvements. Not everyone has access to every device and email client, after all.
+         </p>
+         <p>
+          Creating more mobile-friendly email marketing is a solid business move. As a channel, email puts brands in touch with customers and community members directly. View email as the one-to-one message it was always intended to be. Make it accessible and see opens, click-through-rates, and conversions soar.
+         </p>
+         <div style="text-align: center;">
+          <div style="textalign: center;">
+           <a href="https://www.salesforce.com/ca/crm/?d=70130000000iCdr">
+            <img alt="CRM DEMO" border="0" class="asset assetimage at-xid-6a00e54ee3905b883301bb07ae15b0970d imagefull imgresponsive" src="/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07ae15b0970.jpg" title="CRM DEMO"/>
+           </a>
+          </div>
+         </div>
+         <div style="text-align: center;">
+          <div style="textalign: center;">
+           <h3>
+            Share 18 Key Hacks to Make Your Email Mobile-Friendly Infographic On Your Site
+           </h3>
+           <p>
+            <textarea onclick="this.focus();this.select()" style="width: 540px; height: 150px;">
+             &lt;p&gt;&lt;strong&gt;Click To Enlarge&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href='http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html'&gt;&lt;img src="http://salesforce.com/blog/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da0294970.jpg" _rte_src="http://salesforce.com/blog/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da0294970.jpg" alt="http://salesforce.com/blog/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da0294970.jpg" width='600px' border='0' /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Via &lt;a href="https://www.salesforce.com/ca/crm/" _rte_href="https://www.salesforce.com/ca/crm/"&gt;Salesforce&lt;/a&gt;&lt;/p&gt;
+            </textarea>
+           </p>
+          </div>
+          <img src="/content/dam/blogs/legacy/2015/01/6a00e54ee3905b883301bb07da0294970.jpg" width="240"/>
+         </div>
+         <h4>
+          About the Author
+         </h4>
+         <p>
+          <a class="asset-img-link" href="/content/dam/blogs/legacy/2015/02/6a00e54ee3905b883301bb07e85e37970.jpg" style="float: left;">
+           <img alt="F" src="/content/dam/blogs/legacy/2015/02/6a00e54ee3905b883301bb07e85e37970.jpg" style="margin: 0px 5px 5px;" title="F" width="132px"/>
+          </a>
+          <i>
+           <a href="http://sliverofice.com/">
+            Erica McGillivray
+           </a>
+           spends a ridiculous amount of time being geeky, both professionally and personally. At Moz, she's the senior community manager, wrangling 500,000+ people and co-running their annual conference
+           <a href="http://moz.com/mozcon">
+            MozCon
+           </a>
+           . Erica also is a founder of
+           <a href="http://www.geekgirlcon.com/">
+            GeekGirlCon
+           </a>
+           , is a published author, and has a comic book collection that's an earthquake hazard. Follow her at
+           <a href="http://twitter.com/emcgillivray">
+            @emcgillivray
+           </a>
+           .
+          </i>
+         </p>
+         <p>
+         </p>
+         <p>
+         </p>
+        </section>
+        <section class="post-social _bottom hidden-xs clearfix">
+         <div>
+          <div>
+           <div class="post-social_top-btn social-btn-facebook">
+            <div>
+             <fb:like font="arial" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" layout="button_count" show_faces="false">
+             </fb:like>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-twitter">
+            <div>
+             <a class="twitter-share-button" counturl="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-count="horizontal" data-related="salesforce" data-url="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" data-via="salesforce" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html">
+              Tweet
+             </a>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-google">
+            <div>
+             <g:plusone callback="OmniConfig.trackGooglePlus" href="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" size="medium">
+             </g:plusone>
+            </div>
+           </div>
+           <div class="post-social_top-btn social-btn-linkedin">
+            <div>
+             <script data-counter="right" data-url="http://blogs.salesforce.com/ca/2015/01/mobile-friendly-email.html" type="IN/Share">
+             </script>
+            </div>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="post-related-posts clearfix">
+         <div class="post-related-posts_header">
+         </div>
+         <h3 class="post-related-posts_header-title">
+          Other Stories
+         </h3>
+         <div class="row">
+          <article class="post-related_post col-xs-12 col-sm-4 col-md-4">
+           <figure class="post-related_post-thumbnail col-xs-4 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/04/telus-smb-business-apps.html" title="What TELUS Can Teach SMBs About Selling With Business Apps">
+             <img alt="What TELUS Can Teach SMBs About Selling With Business Apps" src="/content/dam/blogs/legacy/2015/04/6a00e54ee3905b883301b7c7696ecc970.jpg"/>
+            </a>
+           </figure>
+           <div class="post-related_post-details col-xs-8 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/04/telus-smb-business-apps.html" title="What TELUS Can Teach SMBs About Selling With Business Apps">
+             What TELUS Can Teach SMBs About Selling With Business Apps
+            </a>
+            <p class="post-related_post-meta visible-xs-block">
+             <span class="post-meta the-author">
+              By
+              <a href="/ca/blog/authors/salesforce-canada.html" rel="author" title="Posts by Salesforce Canada">
+               Salesforce Canada
+              </a>
+             </span>
+             | Apr 17, 2015
+            </p>
+           </div>
+          </article>
+          <article class="post-related_post col-xs-12 col-sm-4 col-md-4">
+           <figure class="post-related_post-thumbnail col-xs-4 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/03/canadian-sales-pros-should-start-using-apps.html" title="3 Compelling Reasons Canadian Sales Pros Should Start Using Apps">
+             <img alt="3 Compelling Reasons Canadian Sales Pros Should Start Using Apps" src="/content/dam/blogs/legacy/2015/03/6a00e54ee3905b883301bb0805d19c970.jpg"/>
+            </a>
+           </figure>
+           <div class="post-related_post-details col-xs-8 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/03/canadian-sales-pros-should-start-using-apps.html" title="3 Compelling Reasons Canadian Sales Pros Should Start Using Apps">
+             3 Compelling Reasons Canadian Sales Pros Should Start Using Apps
+            </a>
+            <p class="post-related_post-meta visible-xs-block">
+             <span class="post-meta the-author">
+              By
+              <a href="/ca/blog/authors/salesforce-canada.html" rel="author" title="Posts by Salesforce Canada">
+               Salesforce Canada
+              </a>
+             </span>
+             | Mar 13, 2015
+            </p>
+           </div>
+          </article>
+          <article class="post-related_post col-xs-12 col-sm-4 col-md-4">
+           <figure class="post-related_post-thumbnail col-xs-4 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/03/content-audit.html" title="How to Conduct a Basic, DIY Content Audit">
+             <img alt="How to Conduct a Basic, DIY Content Audit" src="/content/dam/blogs/legacy/2015/03/6a00e54ee3905b883301b7c7578b97970.jpg"/>
+            </a>
+           </figure>
+           <div class="post-related_post-details col-xs-8 col-sm-12 col-md-12">
+            <a href="/ca/blog/2015/03/content-audit.html" title="How to Conduct a Basic, DIY Content Audit">
+             How to Conduct a Basic, DIY Content Audit
+            </a>
+            <p class="post-related_post-meta visible-xs-block">
+             <span class="post-meta the-author">
+              By
+              <a href="/ca/blog/authors/salesforce-canada.html" rel="author" title="Posts by Salesforce Canada">
+               Salesforce Canada
+              </a>
+             </span>
+             | Mar 03, 2015
+            </p>
+           </div>
+          </article>
+         </div>
+        </section>
+        <div class="mobile-advert visible-xs-block clearfix">
+        </div>
+       </article>
+       <!--*/ Sidebar */-->
+       <!--*/ End Sidebar */-->
+      </div>
+     </div>
+    </div>
+    <footer class="footer">
+     <div class="container-fluid container-width-md hidden-xs hidden-sm">
+      <div class="row centered">
+       <nav class="footer-nav">
+        <a class="footer-nav_item" href="/ca/blog/category/sales.html">
+         Sales
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/customer-service.html">
+         Customer Service
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/marketing.html">
+         Marketing
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/small-business.html">
+         Small Business
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/it.html">
+         IT
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/social.html">
+         Social
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/developer.html">
+         Developer
+        </a>
+        <a class="footer-nav_item" href="/ca/blog/category/community.html">
+         Community
+        </a>
+       </nav>
+      </div>
+      <div class="row footer-copyright centered">
+       <p>
+        1-800-NO-SOFTWARE - 1-800-667-6389
+       </p>
+       <p>
+         20002015 salesforce.com, inc.
+        <a href="https://www.salesforce.com/company/legal/intellectual.jsp">
+         All Rights Reserved.
+        </a>
+        <a>
+        </a>
+        Various trademarks held by their respective owners.
+       </p>
+       <p>
+        Salesforce.com Canada Corporation, 10 Bay Street, Suite 400 Toronto, ON, M5J 2R8 Canada
+       </p>
+      </div>
+     </div>
+     <div class="container-fluid container-width-md visible-xs visible-sm">
+      <nav class="mobile-footer-nav">
+       <a class="top-nav--links_item" data-trigger="pagetop" href="#">
+        Top of Page
+       </a>
+       <a class="top-nav--links_item hidden-xs" target="_blank">
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item pull-right hidden-xs" href="https://www.salesforce.com/form/contact/contactme.jsp?d=70130000000lpG5&amp;internal=true" target="_blank">
+       </a>
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/" target="_blank">
+        What is Salesforce?
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/customers/" target="_blank">
+        Who uses Salesforce?
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="https://www.salesforce.com/ca/form/signup/testdrive.jsp" target="_blank">
+        View Demos
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="http://www.salesforce.com/ca/crm/editions-pricing.jsp?d=70130000000t0wK&amp;internal=true" target="_blank">
+        Free Trial
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item hidden-xs" href="https://success.salesforce.com/" target="_blank">
+        Resource Centre
+       </a>
+       <!-- /* Contact us overlay is included in this component as the last entry */-->
+       <a class="top-nav--links_item pull-right hidden-xs" href="https://www.salesforce.com/form/contact/contactme.jsp?d=70130000000lpG5&amp;internal=true" target="_blank">
+       </a>
+      </nav>
+      <div class="row centered">
+       <p>
+         2013
+        <a href="http://www.salesforce.com">
+         Salesforce.com
+        </a>
+        , Inc.All Rights Reserved.
+       </p>
+       <p>
+        <a href="https://www.salesforce.com/company/legal/intellectual.jsp">
+         Terms of Use
+        </a>
+        /
+        <a href="https://www.salesforce.com/company/legal/intellectual.jsp">
+         Privacy Policy
+        </a>
+       </p>
+      </div>
+     </div>
+    </footer>
+   </main>
+  </div>
+  <section class="mobile-drawer">
+   <header class="mobile-drawer_header">
+    <a href="/ca/blog/">
+     Canada Blog
+    </a>
+   </header>
+   <nav class="mobile-drawer_nav">
+   </nav>
+  </section>
+  <div aria-hidden="true" aria-labelledby="Contact Us" class="modal fade" id="modal-contact" role="dialog" tabindex="-1">
+   <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-body" style="position: relative;">
+      <button class="close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        
+       </span>
+       <span class="sr-only">
+        Close
+       </span>
+      </button>
+      <iframe allowtransparency="true" class="wufoo-form-container" frameborder="0" height="425" id="wufooFormz7x3p3" scrolling="no" src="//sfdcblog.wufoo.com/embed/z7x3p3/def/embedKey=z7x3p3867243&amp;entsource=&amp;referrer=%3Awuslashwuslashblogs.salesforce.comwuslash" style="width: 100%; border: none">
+       &lt;a
+						href="//sfdcblog.wufoo.com/forms/z7x3p3/" title="html
+						form"&gt;Fill out my Wufoo form!&lt;/a&gt;
+      </iframe>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+   !function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
+					.test(d.location) ? 'http' : 'https';
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = p + '://platform.twitter.com/widgets.js';
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, 'script', 'twitter-wjs');
+  </script>
+  <script src="/etc/designs/blogs/publishlibs.min.js" type="text/javascript">
+  </script>
+  <script src="https://platform.linkedin.com/in.js" type="text/javascript">
+  </script>
+  <script>
+   var script = document.createElement('script');
+	    script.src = fb;
+	    document.write(script.outerHTML);
+  </script>
+  <script src="https://apis.google.com/js/plusone.js" type="text/javascript">
+  </script>
+  <script src="https://platform.stumbleupon.com/1/widgets.js" type="text/javascript">
+  </script>
+  <script src="/etc/clientlibs/analytics-bottom.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   (function() {
+			function loadChartbeat() {
+				window._sf_endpt = (new Date()).getTime();
+				var e = document.createElement('script');
+				e.setAttribute('language', 'javascript');
+				e.setAttribute('type', 'text/javascript');
+				e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+				document.body.appendChild(e);
+			}
+			;
+			var oldonload = window.onload;
+			window.onload = (typeof window.onload != 'function') ? loadChartbeat
+					: function() {
+						oldonload();
+						loadChartbeat();
+					};
+		})();
+  </script>
+  <!--&lt;script type="text/javascript"&gt;_satellite.pageBottom();&lt;/script&gt;-->
+ </body>
+ <!--/ Display below content if proper redirect URL is configured  /-->
+</html>

@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]&gt;&lt;html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=en&gt;&lt;![endif]-->
+<!--[if IE 7]&gt;&lt;html class="no-js lt-ie9 lt-ie8" lang=en&gt;&lt;![endif]-->
+<!--[if IE 8]&gt;&lt;html class="no-js lt-ie9" lang=en&gt;&lt;![endif]-->
+<!--[if gt IE 8]&gt;&lt;!-->
+<html lang="en">
+ <!--&lt;![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="wercker blog - automation driven development" name="description"/>
+  <meta content="wercker, continuous delivery, continuous integration, cloud, automation, pipelines, continuous development, continuous deployment" name="keywords"/>
+  <meta content="wercker" name="author"/>
+  <title>
+   Microsoft Windows and .NET launched in wercker-labs
+  </title>
+  <link href="/images/favicon.ico" rel="shortcut icon"/>
+  <script src="/javascripts/lib/custom.modernizr.js">
+  </script>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300italic,300,600,700" rel="stylesheet"/>
+  <link href="//fonts.googleapis.com/css?family=Merriweather:400italic,400,300,700" rel="stylesheet"/>
+  <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
+  <link href="/stylesheets/site.css" media="all" rel="stylesheet"/>
+  <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.2/keen.min.js">
+  </script>
+  <script>
+   // Include the Keen IO library for Event Tracking
+    var client = new Keen({
+      projectId: "54d09b5359949a5f26b75fa4",
+      writeKey:"25ca6a1eefdd4b3541ab7a6600153dc901a1eb0b6f2eba36a15a69acb2e12fad948e78312de7555a7f6a9ff718a0d129d2c3dd5223d09710f4fde015951a5e58e4f9c55e4d49d1bedfc973d4a2f4c82682a9c0ecf884bb841e400c47f58bb0f0677293f38d1192ff1852b37db9f1e052",
+      readKey: "anything" // not used; not needed for data collection
+    });
+  </script>
+ </head>
+ <body id="blog">
+  <div id="main" role="main">
+   <section class="nav-sticky" style="background-color: #;">
+    <div class="">
+     <div class="flex-outer navbar-container">
+      <div class="flex-inner">
+       <div class="navbar-logo">
+        <a href="/">
+         <span class="logo-full">
+          <svg height="32px" version="1.1" viewbox="0 0 120 32" width="120px" xmlns="http://www.w3.org/2000/svg">
+           <g class="logo-group" fill="red">
+            <path d="M34.7652027 23.4 L28.3989865 9.9 L30.7441216 9.9 L34.7558784 18.6 L39.2575 9.3 L43.4579054 18.6 L47.7711486 9.9 L50.1161486 9.9 L43.4483108 23.4 L39.2575 14.1 L34.7652027 23.4" fill="#1B2028">
+            </path>
+            <path d="M59.7872297 14.8 C59.2316892 12.7 57.8 11.5 56.1 11.5 C54.3252027 11.5 52.9 12.7 52.4 14.8 L59.7872297 14.8 L59.7872297 14.8 Z M52.2719595 16.6 C52.2719595 19.2 53.9 21.1 56.4 21.1 C58.0076351 21.1 59 20.6 60.2 19.5 L61.6802027 20.7 C60.2957432 22.2 58.7 23.1 56.4 23.1 C52.6393919 23.1 49.9 20.3 49.9 16.3 C49.8893919 12.4 52.6 9.6 56.1 9.6 C59.5896622 9.6 62.1 12.3 62.2 16.6 L52.2719595 16.6 L52.2719595 16.6 Z" fill="#1B2028">
+            </path>
+            <path d="M64.1856081 9.9 L66.4834459 9.9 L66.4834459 11.9 C67.7265541 10.3 69 9.6 70.4 9.6 C71.1170946 9.6 71.7 9.8 72.3 10.2 L71.2299324 12.1 C70.7211486 11.8 70.2 11.7 69.7 11.7 C67.9619595 11.7 66.5 13.4 66.5 15.7 L66.4834459 22.8 L64.1856081 22.8 L64.1856081 9.9" fill="#1B2028">
+            </path>
+            <path d="M82.2392568 12.8 C81.4197973 12.1 80.3 11.7 79.2 11.7 C76.7296622 11.7 74.7 13.8 74.7 16.3 C74.7335811 18.9 76.7 21 79.2 21 C80.5346622 21 81.8 20.4 82.6 19.4 L84.3016892 20.7 C83.0677703 22.1 81.2 23.1 79.2 23.1 C75.4491216 23.1 72.4 20.1 72.4 16.3 C72.4256081 12.6 75.4 9.6 79.2 9.6 C80.9868243 9.6 82.6 10.3 83.8 11.5 L82.2392568 12.8" fill="#1B2028">
+            </path>
+            <path d="M86.1226351 3.6 L88.4106081 3.6 L88.4106081 15.1 L93.7410135 9.9 L96.745473 9.9 L90.4914189 16 L97.0657432 22.8 L94.0989865 22.8 L88.4106081 16.9 L88.4106081 22.8 L86.1226351 22.8 L86.1226351 3.6" fill="#1B2028">
+            </path>
+            <path d="M106.853041 14.8 C106.29723 12.7 104.9 11.5 103.1 11.5 C101.390878 11.5 99.9 12.7 99.5 14.8 L106.853041 14.8 L106.853041 14.8 Z M99.3381757 16.6 C99.3381757 19.2 100.9 21.1 103.5 21.1 C105.072635 21.1 106.1 20.6 107.3 19.5 L108.746014 20.7 C107.361149 22.2 105.8 23.1 103.5 23.1 C99.7053378 23.1 97 20.3 97 16.3 C96.9553378 12.4 99.7 9.6 103.1 9.6 C106.655203 9.6 109.2 12.3 109.3 16.6 L99.3381757 16.6 L99.3381757 16.6 Z" fill="#1B2028">
+            </path>
+            <path d="M111.520608 9.9 L113.818446 9.9 L113.818446 11.9 C115.062095 10.3 116.3 9.6 117.7 9.6 C118.452095 9.6 119 9.8 119.6 10.2 L118.565338 12.1 C118.056689 11.8 117.5 11.7 117.1 11.7 C115.296824 11.7 113.8 13.4 113.8 15.7 L113.818446 22.8 L111.520608 22.8 L111.520608 9.9" fill="#1B2028">
+            </path>
+            <path d="M0 7.1 L0 16.6 L2.22231629 16.6 L2.22231629 8.4 L11.9994612 2.6 L21.7781455 8.4 L21.7781455 18.8 C21.7781455 20.4 21.2 21.7 20.2 23.1 C17.7823786 26.4 13.4 28.8 12 29.5 C10.6222316 28.8 6.6 26.6 4 23.5 L16.8880337 23.5 C17.8217852 22.6 18.1 22.3 18.9 21.2 L0.308941525 21.2 C2.11548748 27.6 12 32.1 12 32.1 C11.9974601 32.1 21.9 27.7 23.7 21.2 C23.8883993 20.5 24 19.6 24 18.8 L24 7.1 L11.9994612 0.1 L0 7.1 L0 7.1 Z" fill="#000000">
+            </path>
+            <path d="M6.19539365 10.3 L17.6277556 10.3 L17.6277556 12.2 L6.19539365 12.2 L6.19539365 10.3 L6.19539365 10.3 Z" fill="#000000">
+            </path>
+            <path d="M5.23987074 13.7 L18.5774736 13.7 L18.5774736 15.6 L5.23987074 15.6 L5.23987074 13.7 L5.23987074 13.7 Z" fill="#000000">
+            </path>
+            <path d="M5 17 L18.3376028 17 L18.3376028 18.9 L5 18.9 L5 17 L5 17 Z" fill="#000000">
+            </path>
+            <path d="M9.28881316 7 L14.5286839 7 L14.5286839 8.9 L9.28881316 8.9 L9.28881316 7 L9.28881316 7 Z" fill="#000000">
+            </path>
+           </g>
+          </svg>
+         </span>
+         <span class="logo-small">
+          <svg height="32px" version="1.1" viewbox="0 0 26 32" width="26px" xmlns="http://www.w3.org/2000/svg">
+           <g class="logo-group" fill="red">
+            <path d="M0 7.1 L0 16.6 L2.22231629 16.6 L2.22231629 8.4 L11.9994612 2.6 L21.7781455 8.4 L21.7781455 18.8 C21.7781455 20.4 21.2 21.7 20.2 23.1 C17.7823786 26.4 13.4 28.8 12 29.5 C10.6222316 28.8 6.6 26.6 4 23.5 L16.8880337 23.5 C17.8217852 22.6 18.1 22.3 18.9 21.2 L0.308941525 21.2 C2.11548748 27.6 12 32.1 12 32.1 C11.9974601 32.1 21.9 27.7 23.7 21.2 C23.8883993 20.5 24 19.6 24 18.8 L24 7.1 L11.9994612 0.1 L0 7.1 L0 7.1 Z" fill="#000000">
+            </path>
+            <path d="M6.19539365 10.3 L17.6277556 10.3 L17.6277556 12.2 L6.19539365 12.2 L6.19539365 10.3 L6.19539365 10.3 Z" fill="#000000">
+            </path>
+            <path d="M5.23987074 13.7 L18.5774736 13.7 L18.5774736 15.6 L5.23987074 15.6 L5.23987074 13.7 L5.23987074 13.7 Z" fill="#000000">
+            </path>
+            <path d="M5 17 L18.3376028 17 L18.3376028 18.9 L5 18.9 L5 17 L5 17 Z" fill="#000000">
+            </path>
+            <path d="M9.28881316 7 L14.5286839 7 L14.5286839 8.9 L9.28881316 8.9 L9.28881316 7 L9.28881316 7 Z" fill="#000000">
+            </path>
+           </g>
+          </svg>
+         </span>
+        </a>
+       </div>
+       <div class="navbar-signup">
+        <a class="button-nav_signup" href="https://app.wercker.com/users/new/" id="signup-nav-sub">
+         Sign up
+        </a>
+       </div>
+       <ul class="navbar">
+        <li>
+         <a class="navbar-item" href="//devcenter.wercker.com/learn/basics/introduction.html">
+          Learn
+         </a>
+        </li>
+        <li>
+         <a class="navbar-item" href="//devcenter.wercker.com/quickstarts/index.html">
+          Quickstarts
+         </a>
+        </li>
+        <li>
+         <a class="navbar-item" href="//devcenter.wercker.com/docs/index.html">
+          Docs
+         </a>
+        </li>
+        <li>
+         <a class="navbar-item" href="//devcenter.wercker.com/api/index.html">
+          API
+         </a>
+        </li>
+        <li>
+         <a class="navbar-item" href="//blog.wercker.com/docs">
+          Blog
+         </a>
+        </li>
+        <li>
+         <a class="navbar-item navbar-item_right" href="https://app.wercker.com/sessions/new">
+          Log in
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="flex-outer header header_" style="background-color: #;">
+    <header class="flex-inner" style="background-image: url('../../..');">
+     <div class="header-title">
+      <h1 style="color: #;">
+       Microsoft Windows and .NET launched in wercker-labs
+      </h1>
+      <div class="profile-picture">
+       <img alt="Wouter Mooij" src="https://secure.gravatar.com/avatar/37936f9de593de18c525a8e2f5707834?d=identicon&amp;s=60"/>
+       by
+       <a href="">
+        Wouter Mooij
+       </a>
+       -
+       <span class="article-date">
+        Oct 25 2013
+       </span>
+      </div>
+      <div class="tags">
+       <ul>
+        <li>
+         <a href="/tags/windows.html">
+          windows
+         </a>
+        </li>
+        <li>
+         <a href="/tags/net.html">
+          .net
+         </a>
+        </li>
+        <li>
+         <a href="/tags/dotnet.html">
+          dotnet
+         </a>
+        </li>
+        <li>
+         <a href="/tags/c.html">
+          c#
+         </a>
+        </li>
+        <li>
+         <a href="/tags/azure.html">
+          azure
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </header>
+   </section>
+   <section class="flex-outer">
+    <div class="flex-inner">
+     <div class="flex-outer">
+      <aside class="article">
+       <h3>
+        NOTE: Windows is longer supported on wercker and this post is deprecated
+       </h3>
+       <p>
+        I am very pleased to announce that were launching Microsoft Windows support at wercker! In this post I quickly want to share the details of this environment. Try it and share your feedback!
+       </p>
+       <p>
+        <img alt="wercker loves windows" src="/images/posts/windows/wercker-ms.jpg"/>
+       </p>
+       <h2>
+        Introducing wercker-labs
+       </h2>
+       <p>
+        At wercker were constantly upgrading our software to better suit your needs. In accordance with Continuous Delivery, we like to keep our changes small and release them quickly. But sometimes we need some more feedback before we can integrate new features into wercker. Weve created wercker-labs as label for these new features. Anything released under wercker-labs can change very fast, but you can expect the same level of support that youre accustomed to on wercker.
+       </p>
+       <p>
+        We need you for your feedback, so please send us your issues, rants, love, or better yet: pull requests!
+       </p>
+       <h2>
+        wercker-labs/windows box
+       </h2>
+       <p>
+        Were very happy that the first box that were launching is a Microsoft Windows Server 2008 R2 SP1 Datacenter 64-bit box with SQL 2008 R2 Web.
+       </p>
+       <p>
+        On the box weve installed a lot of software to help you build, test and deploy .NET solutions. You can check the details page for an overview:
+       </p>
+       <p>
+        <a href="https://app.wercker.com/#applications/526138951c260dab440001a8/tab/details">
+         wercker-labs/windows
+        </a>
+       </p>
+       <p>
+        If you need anything else, please let us know!
+       </p>
+       <h2>
+        Steps for wercker-labs/windows
+       </h2>
+       <p>
+        Our goal is to make building, testing and deploy .NET solutions as easy as possible. Therefore weve created some
+        <a href="//devcenter.wercker.com/articles/steps/">
+         steps
+        </a>
+        to help you.
+       </p>
+       <h3>
+        wercker-labs/nuget
+       </h3>
+       <p>
+        If youre using NuGet, you can use
+        <code>
+         wercker-labs/nuget
+        </code>
+        to install your packages. By default all packages.config files will be installed in package/.
+       </p>
+       <p>
+        Check the details page for more information and configuration options:
+       </p>
+       <p>
+        <a href="https://app.wercker.com/#applications/52623205f4a7b1d05a00240b/tab/details">
+         wercker-labs/nuget
+        </a>
+       </p>
+       <h3>
+        wercker-labs/msbuild
+       </h3>
+       <p>
+        To build your solution, you can use MsBuild and the
+        <code>
+         wercker-labs/msbuild
+        </code>
+        step. By default the solution in the root of your repository is used.
+       </p>
+       <p>
+        Check the details page for more information and configuration options:
+       </p>
+       <p>
+        <a href="https://app.wercker.com/#applications/526231a7f4a7b1d05a002397/tab/details">
+         wercker-labs/msbuild
+        </a>
+       </p>
+       <h3>
+        wercker-labs/dotnet-test
+       </h3>
+       <p>
+        Weve created the
+        <code>
+         wercker-labs/dotnet-test
+        </code>
+        to support as many testing libraries and frameworks as possible. By default all projects containing the word 'test are tested. Gallio is used as testrunner.
+       </p>
+       <p>
+        Check the details page for more information and configuration options:
+       </p>
+       <p>
+        <a href="https://app.wercker.com/#applications/526231e0f4a7b1d05a0023dc/tab/details">
+         wercker-labs/dotnet-test
+        </a>
+       </p>
+       <h3>
+        wercker-labs/azure-ftp-deploy
+       </h3>
+       <p>
+        If you want to deploy your code to Windows Azure, you can use the
+        <code>
+         wercker-labs/azure-ftp-deploy
+        </code>
+        step. It supports the simple use case of uploading your compiled code to Windows Azure via FTP.
+       </p>
+       <p>
+        Check the details page for more information:
+        <a href="https://app.wercker.com/#applications/52691aa3d64894582a010e31/tab/details">
+         wercker-labs/azure-ftp-deploy
+        </a>
+       </p>
+       <h2>
+        Default wercker.yml
+       </h2>
+       <p>
+        Wercker analyses your code to determine what kind of application you are working on. The de facto way of setting up your build and deploy pipeline is via the
+        <a href="//devcenter.wercker.com/articles/werckeryml/">
+         wercker.yml file
+        </a>
+       </p>
+       <p>
+        If there is a
+        <em>
+         .sln
+        </em>
+        , or solution file, in the root of your repository, then the default wercker.yml will be used:
+       </p>
+       <pre class="highlight text">
+        box: wercker-labs/windows
+build:
+  steps:
+    - wercker-labs/nuget
+    - wercker-labs/msbuild
+    - wercker-labs/dotnet-test
+       </pre>
+       <p>
+        If you dont use Nuget packages and/or have any tests, these steps will be skipped.
+       </p>
+       <h2>
+        A complete example
+       </h2>
+       <p>
+        To show you how easy it is to build, test and deploy a .NET solution, weve created a simple MVC application.
+       </p>
+       <h3>
+        SimpleAppNet
+       </h3>
+       <p>
+        The solution consists of two projects. SimpleApp.Web is a default MVC application and SimpleApp.UnitTests contains the default unit tests for SimpleApp.Web.
+       </p>
+       <p>
+        You can check out the code (or fork it!)
+        <a href="https://github.com/wercker-labs/dotnet-simple-app">
+         here
+        </a>
+       </p>
+       <h3>
+        Build
+       </h3>
+       <p>
+        If we just want to build the code, we can use this
+        <em>
+         wercker.yml
+        </em>
+        .
+       </p>
+       <pre class="highlight text">
+        box: wercker-labs/windows
+build:
+  steps:
+    - wercker-labs/msbuild
+       </pre>
+       <p>
+        The
+        <code>
+         wercker-labs/msbuild
+        </code>
+        steps will detect the solution in the root of the repository and will build it with the default configuration.
+       </p>
+       <h3>
+        Test
+       </h3>
+       <p>
+        To add tests to wercker, we need to add
+        <code>
+         wercker-labs/dotnet-test
+        </code>
+        to the wercker.yml file.
+       </p>
+       <pre class="highlight text">
+        box: wercker-labs/windows
+build:
+  steps:
+    - wercker-labs/msbuild
+    - wercker-labs/dotnet-test
+       </pre>
+       <p>
+        The
+        <code>
+         wercker-labs/dotnet-test
+        </code>
+        step will scan all projects, and when a project with test in the name is found, it will run the tests contained within that project.
+       </p>
+       <h3>
+        Windows Azure
+       </h3>
+       <p>
+        We want to deploy to Windows Azure and before we can do that, we need to create a website and get the publish profile.
+       </p>
+       <ul>
+        <li>
+         Go to Windows Azure https://manage.windowsazure.com.
+        </li>
+        <li>
+         Create a new web site.
+        </li>
+        <li>
+         On the dashboard, download the publish profile.
+        </li>
+        <li>
+         Open the file in your favorite text editor.
+        </li>
+        <li>
+         Find the publishProfile element with publishMethod=FTP.
+        </li>
+        <li>
+         Get publishUrl, userName and userPWD.
+        </li>
+       </ul>
+       <p>
+        Now weve setup Windows Azure and got the information we need to deploy to it.
+       </p>
+       <h3>
+        Deploy with wercker
+       </h3>
+       <p>
+        To deploy you need to create a deploy target on wercker. Go to the Settings tab of your application. Use Add deploy target and Custom deploy to create one. Name it anyway you like it, e.g.
+        <em>
+         staging
+        </em>
+        or
+        <em>
+         production
+        </em>
+        . To keep your password safe, we create a new variable by clicking + Add new variable. Use AZURE_PASSWORD as the name, copy the content of userPWD you found in your publish profile, check protected and click ok. Now click Save to actually save your deploy target.
+       </p>
+       <p>
+        By default, wercker packages all files to use for deployment. But we only need the files from the SimpleApp.Web directory. We create an extra step in the build pipeline to make this work. Were using rsync for this:
+        <code>
+         rsync -avz SimpleApp.Web/ $WERCKER_OUTPUT_DIR/
+        </code>
+        .
+       </p>
+       <p>
+        Now all you need to do is add
+        <code>
+         wercker-labs/azure-ftp-deploy
+        </code>
+        to your deploy pipeline and configure the url, username and password.
+       </p>
+       <p>
+        After youve done this, your wercker.yml should look as follows:
+       </p>
+       <pre class="highlight text">
+        box: wercker-labs/windows
+build:
+  steps:
+    - wercker-labs/msbuild
+    - wercker-labs/dotnet-test
+    - script:
+        name: Copy to output
+        code: rsync -avz SimpleApp.Web/ $WERCKER_OUTPUT_DIR/
+deploy:
+  steps:
+    - wercker-labs/azure-ftp-deploy:
+        publish-url: ftp://waws-prod-blu-003.ftp.azurewebsites.windows.net/site/wwwroot
+        username: test\\\$test
+        password: $AZURE_PASSWORD
+       </pre>
+       <p>
+        Its important to note that, because were using environment variables, you need to escape the
+        <code>
+         \
+        </code>
+        and
+        <code>
+         $
+        </code>
+        characters in the username by prefixing it with a
+        <code>
+         \
+        </code>
+        .
+       </p>
+       <p>
+        If you pushed your changes, you can now deploy this build using the deploy button.
+       </p>
+       <h2>
+        Resources
+       </h2>
+       <p>
+        Here are the resources related to this sample project:
+       </p>
+       <ul>
+        <li>
+         <a href="https://github.com/wercker-labs/dotnet-simple-app">
+          Sample project source code at GitHub
+         </a>
+        </li>
+        <li>
+         <a href="https://app.wercker.com/#applications/526138951c260dab440001a8/tab/details">
+          Windows box at wercker directory
+         </a>
+        </li>
+        <li>
+         <a href="https://app.wercker.com/#applications/526231a7f4a7b1d05a002397/tab/details">
+          MsBuild step at wercker directory
+         </a>
+        </li>
+        <li>
+         <a href="https://app.wercker.com/#applications/52623205f4a7b1d05a00240b/tab/details">
+          NuGet step at wercker directory
+         </a>
+        </li>
+        <li>
+         <a href="https://app.wercker.com/#applications/526231e0f4a7b1d05a0023dc/tab/details">
+          .NET test step at wercker directory
+         </a>
+        </li>
+        <li>
+         <a href="https://app.wercker.com/#applications/52691aa3d64894582a010e31/tab/details">
+          Windows Azure FTP step at wercker directory
+         </a>
+        </li>
+       </ul>
+       <p>
+        Dont forget to send us your feedback! You can contact us via
+        <a href="//twitter.com/wercker">
+         twitter
+        </a>
+        and the feedback button on wercker or send us an email at
+        <em>
+         pleasemailus@wercker.com
+        </em>
+        .
+       </p>
+       <h2>
+        Earn some stickers of your own!
+       </h2>
+       <p>
+        Let us know about the applications you build with wercker. Dont forget to tweet out a screenshot of your first green build with
+        <strong>
+         #wercker
+        </strong>
+        and well send you some
+        <a href="//twitter.com/wercker">
+         @wercker
+        </a>
+        stickers.
+       </p>
+       <p>
+        Thanks for tuning in, and there will be more posts next week! Follow us on
+        <a href="//twitter.com/wercker">
+         twitter
+        </a>
+        as well to stay in the loop.
+       </p>
+       <div class="article-share">
+        <h3>
+         Share this post on:
+        </h3>
+        <div>
+         <span class="article-share-button article-share-button_twitter" href="https://twitter.com/wercker">
+          <span class="st_twitter" displaytext="Tweet">
+          </span>
+         </span>
+         <span class="article-share-button article-share-button_googleplus" href="https://plus.google.com/+Wercker/posts">
+          <span class="st_googleplus" displaytext="Google +">
+          </span>
+         </span>
+         <span class="article-share-button article-share-button_facebook" href="https://www.facebook.com/Wercker">
+          <span class="st_facebook" displaytext="Facebook">
+          </span>
+         </span>
+        </div>
+       </div>
+      </aside>
+      <aside class="sidebar">
+       <div class="section-sidebar">
+        <h5>
+         <a href="/archive.html">
+          Archive 
+         </a>
+        </h5>
+        <ol>
+         <li class="sidebar-li">
+          Tags
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/wercker.html">
+           wercker
+          </a>
+          (26)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/weekinreview.html">
+           weekinreview
+          </a>
+          (19)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/golang.html">
+           golang
+          </a>
+          (17)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/boxes.html">
+           boxes
+          </a>
+          (16)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/opendelivery.html">
+           opendelivery
+          </a>
+          (15)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ui.html">
+           ui
+          </a>
+          (12)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/deployment.html">
+           deployment
+          </a>
+          (10)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/python.html">
+           python
+          </a>
+          (9)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/docker.html">
+           docker
+          </a>
+          (9)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/design.html">
+           design
+          </a>
+          (9)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/nodejs.html">
+           nodejs
+          </a>
+          (8)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/steps.html">
+           steps
+          </a>
+          (7)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/heroku.html">
+           heroku
+          </a>
+          (6)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ruby.html">
+           ruby
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/django.html">
+           django
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/git.html">
+           git
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/github.html">
+           github
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/android.html">
+           android
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/announcement.html">
+           announcement
+          </a>
+          (5)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/javascript.html">
+           javascript
+          </a>
+          (4)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/s3.html">
+           s3
+          </a>
+          (4)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/structure.html">
+           structure
+          </a>
+          (4)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/postgis.html">
+           PostGIS
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/aws.html">
+           aws
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/cli.html">
+           cli
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/jekyll.html">
+           jekyll
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/rethinkdb.html">
+           rethinkdb
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/pipeline.html">
+           pipeline
+          </a>
+          (3)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/capistrano.html">
+           capistrano
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/maintenance.html">
+           maintenance
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/api.html">
+           api
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/couchdb.html">
+           couchdb
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/contributions.html">
+           contributions
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/dart.html">
+           dart
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/badges.html">
+           badges
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/funding.html">
+           funding
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/internals.html">
+           internals
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/php.html">
+           php
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/evangelism.html">
+           evangelism
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/flask.html">
+           flask
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/geodjango.html">
+           geodjango
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/redis.html">
+           redis
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/mongodb.html">
+           mongodb
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/mongoose.html">
+           mongoose
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/building.html">
+           building
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/tdd.html">
+           tdd
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/codecoverage.html">
+           codecoverage
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/buildsteps.html">
+           buildsteps
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/gocov.html">
+           gocov
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/linuxcontainers.html">
+           linuxcontainers
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/notifications.html">
+           notifications
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/gigaom.html">
+           gigaom
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/compass.html">
+           compass
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/paas.html">
+           paas
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/security.html">
+           security
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/sass.html">
+           sass
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ewok.html">
+           ewok
+          </a>
+          (2)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/database.html">
+           database
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/documentation.html">
+           documentation
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/devopsdays.html">
+           devopsdays
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/conference.html">
+           conference
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/amsterdam.html">
+           amsterdam
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/devcenter.html">
+           devcenter
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/email.html">
+           email
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/fortrabbit.html">
+           fortrabbit
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/vagrant.html">
+           vagrant
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/logo.html">
+           logo
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/lookandfeel.html">
+           lookandfeel
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ansible.html">
+           ansible
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/drupal.html">
+           drupal
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/blog.html">
+           blog
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/sidebar.html">
+           sidebar
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/organization.html">
+           organization
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/campfire.html">
+           campfire
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/browser.html">
+           browser
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/development.html">
+           development
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ux.html">
+           ux
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/menu-bar.html">
+           menu bar
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/css3.html">
+           css3
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/css-animation.html">
+           css-animation
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/product-design.html">
+           product design
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/node.html">
+           node
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/seedround.html">
+           seedround
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/heartbleed.html">
+           heartbleed
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/local.html">
+           local
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/devmode.html">
+           devmode
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/suchdevwow.html">
+           suchdevwow
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/kubernetes.html">
+           kubernetes
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/minimal.html">
+           minimal
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/coreos.html">
+           coreos
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/quay.html">
+           quay
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/scratch.html">
+           scratch
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/testing.html">
+           testing
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/hipchat.html">
+           hipchat
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/chrome.html">
+           chrome
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/css.html">
+           css
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/animation.html">
+           animation
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/marketplace.html">
+           marketplace
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/build.html">
+           build
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/bundler.html">
+           bundler
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/endpoint.html">
+           endpoint
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/autodeployment.html">
+           autodeployment
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/feature.html">
+           feature
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/awards.html">
+           awards
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/puppet.html">
+           puppet
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/flow.html">
+           flow
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/rails.html">
+           rails
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/provisioning.html">
+           provisioning
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/status.html">
+           status
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/svg.html">
+           svg
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/retina.html">
+           retina
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/rails4.html">
+           rails4
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/gems.html">
+           gems
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/termie.html">
+           termie
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/hires.html">
+           hires
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/services.html">
+           services
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/builds.html">
+           builds
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/filter.html">
+           filter
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/collaboration.html">
+           collaboration
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/organizations.html">
+           organizations
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/logging.html">
+           logging
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/logs.html">
+           logs
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/dartlang.html">
+           dartlang
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/selenium.html">
+           selenium
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/werckeryml.html">
+           werckeryml
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/riak.html">
+           riak
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ricon-2013.html">
+           ricon 2013
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/box.html">
+           box
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/service.html">
+           service
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/middleman.html">
+           middleman
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/open-source.html">
+           open source
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ux-design-foundation.html">
+           ux design foundation
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/statistics.html">
+           statistics
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/node-js.html">
+           Node.js
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/addon.html">
+           addon
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/cloud.html">
+           cloud
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/meteor.html">
+           meteor
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/caching.html">
+           caching
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/pullrequests.html">
+           pullrequests
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/rvm.html">
+           RVM
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/digitalocean.html">
+           digitalocean
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/deploykeys.html">
+           deploykeys
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/modules.html">
+           modules
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/private-repositories.html">
+           private repositories
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/redhat.html">
+           redhat
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/openshift.html">
+           openshift
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/continuous-deployment.html">
+           continuous deployment
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/dokku.html">
+           dokku
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/digital-ocean.html">
+           digital ocean
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/api.html">
+           API
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ssh.html">
+           ssh
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/pypi.html">
+           pypi
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/registrations.html">
+           registrations
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/chef.html">
+           chef
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/osx.html">
+           osx
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/mac.html">
+           mac
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/node-webkit.html">
+           node-webkit
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/fabric.html">
+           fabric
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/ec2.html">
+           ec2
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/developers.html">
+           developers
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/xmas.html">
+           xmas
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/releases.html">
+           releases
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/assets.html">
+           assets
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/windows.html">
+           windows
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/net.html">
+           .net
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/dotnet.html">
+           dotnet
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/c.html">
+           c#
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/azure.html">
+           azure
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/appengine.html">
+           AppEngine
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/tutorial.html">
+           tutorial
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/go.html">
+           Go
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/hapi.html">
+           hapi
+          </a>
+          (1)
+         </li>
+         <li class="sidebar-li_sub">
+          <a href="/tags/phusion-passenger.html">
+           phusion passenger
+          </a>
+          (1)
+         </li>
+        </ol>
+       </div>
+      </aside>
+     </div>
+    </div>
+   </section>
+  </div>
+  <section class="flex-outer footer">
+   <footer class="flex-inner">
+    <div class="footer-content">
+     <div class="footer-logo">
+      <img class="logo_base" src="/images/logo-wercker.svg"/>
+      <h4 class="footer-logo-payoff">
+       Automation-driven development
+      </h4>
+     </div>
+     <div class="footer-signup">
+      <a class="button-footer_signup" href="https://app.wercker.com/users/new/" id="signup-footer-sub">
+       Sign up and get started 
+      </a>
+     </div>
+     <div class="footer-social">
+      <span>
+       Follow us on
+      </span>
+      <a class="footer-social-icon" href="https://twitter.com/wercker">
+       <img class="logo_base" src="/images/icon-twitter.svg"/>
+      </a>
+      <a class="footer-social-icon" href="https://plus.google.com/+Wercker/posts">
+       <img class="logo_base" src="/images/icon-googleplus.svg"/>
+      </a>
+      <a class="footer-social-icon" href="https://www.facebook.com/Wercker">
+       <img class="logo_base" src="/images/icon-facebook.svg"/>
+      </a>
+      <a class="footer-newsletter" href="//www.wercker.com/newsletter" id="newsletter-join">
+       Join the developer newsletter 
+      </a>
+     </div>
+    </div>
+    <div class="footer-links">
+     <ul>
+      <li>
+       Copyright 2015 wercker
+      </li>
+      <li>
+       <a href="mailto:pleasemailus@wercker.com">
+        Contact &amp; support
+       </a>
+      </li>
+      <li>
+       <a href="//www.wercker.com/about">
+        About
+       </a>
+      </li>
+      <li>
+       <a href="//www.wercker.com/downloads">
+        Downloads
+       </a>
+      </li>
+      <li>
+       <a href="//www.wercker.com/terms">
+        Terms
+       </a>
+      </li>
+      <li>
+       <a href="//www.wercker.com/security">
+        Security
+       </a>
+      </li>
+     </ul>
+    </div>
+   </footer>
+  </section>
+  <script src="/javascripts/lib/jquery.js">
+  </script>
+  <script src="/javascripts/lib/theater.min.js">
+  </script>
+  <script src="/javascripts/metrics.js">
+  </script>
+  <script src="/javascripts/simple-sticky-nav.js">
+  </script>
+  <script src="/javascripts/typing-header.js">
+  </script>
+  <script>
+   var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28568056-1']);
+    _gaq.push(['_setDomainName', 'blog.wercker.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script>
+   (function(d, t) {
+          var g = d.createElement(t),
+              s = d.getElementsByTagName(t)[0];
+          g.src = '//hnbutton.appspot.com/static/hn.min.js';
+          s.parentNode.insertBefore(g, s);
+      }(document, 'script'));
+  </script>
+  <script>
+   var switchTo5x=true;
+  </script>
+  <script src="//w.sharethis.com/button/buttons.js">
+  </script>
+  <script>
+   stLight.options({publisher: "00bacff4-9758-400f-b937-50cae880fa74", doNotHash: true, doNotCopy: true, hashAddressBar: false});
+  </script>
+ </body>
+</html>

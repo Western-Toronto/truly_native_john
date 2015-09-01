@@ -1,0 +1,2501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html dir="ltr" version="XHTML+RDFa 1.0" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+ <head profile="http://www.w3.org/1999/xhtml/vocab">
+  <!--DNS prefetch-->
+  <meta content="on" http-equiv="x-dns-prefetch-control"/>
+  <link href="http://a.visual.ly" rel="dns-prefetch"/>
+  <link href="http://marketplace.visual.ly" rel="dns-prefetch"/>
+  <link href="http://static-api-visually.netdna-ssl.com" rel="dns-prefetch"/>
+  <link href="http://static-api.visually.netdna-cdn.com" rel="dns-prefetch"/>
+  <link href="http://thumbnails.visually.netdna-cdn.com" rel="dns-prefetch"/>
+  <script src="//cdn.optimizely.com/js/7986417.js">
+  </script>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"XA4CVldACgAFUFJVAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;&amp;t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f&gt;d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;&amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;&amp;"function"==typeof console.log&amp;&amp;(i.console=!0,-1!==n.indexOf("dev")&amp;&amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;&amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;&amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;&amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;&amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&amp;&amp;(t(1),t(2),"addEventListener"in window&amp;&amp;t(3),window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)&amp;&amp;t(4),s=!0)}i.on("fn-start",function(){s&amp;&amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;&amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;&amp;!this.thrown&amp;&amp;c&gt;0&amp;&amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&amp;&amp;window.performance.timing&amp;&amp;window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&amp;&amp;(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&amp;&amp;r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&amp;&amp;(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;&amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;&amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;&amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;&amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;&amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;&amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;&amp;(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&amp;&amp;(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;&amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;&amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;&amp;t instanceof ArrayBuffer&amp;&amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;&amp;t instanceof Blob&amp;&amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;&amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;&amp;"xpid"in NREUM.loader_config&amp;&amp;this.sameOrigin&amp;&amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;&amp;o){var f=n(o);f&amp;&amp;(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;&amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;&amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;&amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c&gt;u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;&amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;!this.xhrGuids[n]&amp;&amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;this.xhrGuids[n]&amp;&amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;&amp;("onload"===n&amp;&amp;(this.onload=!0),("load"===(t[0]&amp;&amp;t[0].type)||this.onload)&amp;&amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;&amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;&amp;o[1]&amp;&amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;&amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;&amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;&amp;e.port===n.port&amp;&amp;e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;&amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;&amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&amp;&amp;t.licenseKey&amp;&amp;t.applicationID&amp;&amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&amp;&amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;&amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;&amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&gt;o?0:o);++r&lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&amp;&amp;"function"==typeof t&amp;&amp;t.apply&amp;&amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&amp;&amp;r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c&lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&amp;&amp;(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);
+  </script>
+  <meta content="visually" name="twitter:site"/>
+  <meta content="Arc Flash" name="twitter:title"/>
+  <meta content="http://thumbnails-visually.netdna-ssl.com/arc-flash-the-most-lethal-threat_52817cb3c7b88_h750.jpg" name="twitter:image"/>
+  <link href="http://visual.ly/sites/all/themes/visually2/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <meta content="Infographic, data visualization, twitter infographic, twitter visualization, twitter data, " name="keywords"/>
+  <meta content="photo" name="twitter:card"/>
+  <meta content="Arc flash accidents cause 80% of professional electrical injuries that occur in the U. S. each year. Over 2,000 workers a year, or 5 a day, fall victi" name="description"/>
+  <meta content="on" http-equiv="x-dns-prefetch-control"/>
+  <meta content="Drupal 7 (http://drupal.org)" name="Generator"/>
+  <link href="//thumbnails-visually.netdna-ssl.com" rel="dns-prefetch"/>
+  <link href="/arc-flash" rel="canonical"/>
+  <link href="/node/93688" rel="shortlink"/>
+  <meta content="http://thumbnails-visually.netdna-ssl.com/arc-flash-the-most-lethal-threat_52817cb3c7b88_w250_h250.jpg" property="og:image"/>
+  <title>
+   Arc Flash | Visual.ly
+  </title>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_J7nmVJGzp1q96_HHHSpON4xA372WErFI3rkoYtVTksU.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_Ithmjuj4ePlnkLrL_GIuS3TsGEoCIelrKOCUPBOfhJ8.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_lbN08eplWUYhTO5Ase4zizMIwKLmLkZTqJLsuNOdHtk.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_wvJxilmmUx1cSCXz84iyHXVwRWYgeG70V2Fx5MCrfKk.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css" media="print" rel="stylesheet" type="text/css"/>
+  <link href="http://visual.ly/sites/default/files/cdn/css/http/css_6IZO3REyirgND4R0twE5_Uz-qivOmqptCWmeXbDDT2o.css" media="all" rel="stylesheet" type="text/css"/>
+  <!--[if lte IE 7]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://visual.ly/sites/default/files/cdn/css/http/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU_ie.css.css" media="all" /&gt;
+&lt;![endif]-->
+  <!--[if IE 6]&gt;
+&lt;link type="text/css" rel="stylesheet" href="http://visual.ly/sites/default/files/cdn/css/http/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU_ie6.css.css" media="all" /&gt;
+&lt;![endif]-->
+  <link href="https://plus.google.com/110336639060205258328" rel="publisher"/>
+  <script type="text/javascript">
+   Visually = {};
+  	Visually.Constants = {};
+  	Visually.Widget = {};
+  	Visually.Constants.BaseUrl = "http://visual.ly";
+  	Visually.Constants.MarketplaceBaseUrl = "https://marketplace.visual.ly";
+  	Visually.Constants.LoggedIn = 0;
+  	Visually.Constants.CurrentUrl = "node/93688";
+  	Visually.Constants.ThemePath = "sites/all/themes/visually2";
+  	Visually.Constants.ApiUrl = "http://a.visual.ly";
+  	Visually.Constants.IsAdmin = false;
+  </script>
+  <script src="https://apis.google.com/js/plusone.js" type="text/javascript">
+   {"parsetags": "explicit"}
+  </script>
+  <script src="http://visual.ly/sites/default/files/js/js_YG98FuAkznGpfUVD7la3EObWLhNr4zOIqZcdXzZxHVI.js" type="text/javascript">
+  </script>
+  <script src="http://visual.ly/sites/default/files/js/js_cmatdOMjdHdn1WlLauJrdx3KuHg0tZznPFoj7r64ZhQ.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+VisApi = { Constants:{ ApiUrl: 'http://a.visual.ly', SiteUrl: 'http://visual.ly', MarketUrl: 'https://marketplace.visual.ly'}};
+//--&gt;&lt;!]]&gt;
+  </script>
+  <script src="http://visual.ly/sites/default/files/js/js_gw84uABQy-_TXMT_a8bBp1IImV5Iw602v1XiKklljs8.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+
+		jQuery(document).ready(function() {
+			jQuery('.right-wrapper .sticky-stats-dummy-placeholder').stickyScroll({'parent':'#block-system-main','paddingTop' : 0, 'stop': false, 'position' : 'absolute'});
+			jQuery('.left-wrapper .credits').stickyScroll({'parent':'.left-wrapper','paddingTop' : 0, 'stop': false});
+
+			new Visually.IgPage.Views.Main();
+			new Visually.IgEdit.Views.Main();
+		});
+
+//--&gt;&lt;!]]&gt;
+  </script>
+  <script src="http://visual.ly/sites/default/files/js/js_qMlA0ufUg7quQPTaJrIMLvgsNAheNJc_fR9uU4Qp3DU.js" type="text/javascript">
+  </script>
+  <script src="//b2c-msm.marketo.com/jsloader/9377dc22-58cb-45ea-9980-e7d56ae22b32/loader.php.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+stLight.options({publisher: '797eda87-b060-4347-99ed-5a966198602c', doNotHash: false, doNotCopy: false, hashAddressBar: false});
+//--&gt;&lt;!]]&gt;
+  </script>
+  <script src="http://a.visual.ly/media/js/vendor/jquery.cookie.js" type="text/javascript">
+  </script>
+  <script src="http://a.visual.ly/media/js/base.js" type="text/javascript">
+  </script>
+  <script src="http://visual.ly/sites/default/files/js/js_FgdTFy3u9RtO-fiX5Uagjb8Se2tDtlOSpKUUCFDdb2s.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   &lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"visually2","theme_token":"3XdCorkTEqah3KgPIsTbUN-pgWmL6W_hQAdi2_oCMCI","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/fancybox\/jquery.fancybox-1.3.4.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/vendor\/underscore_backbone.min.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/vendor\/fileuploader.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/vendor\/jquery.autocomplete.min.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/base.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/validation.js":1,"0":1,"sites\/all\/themes\/visually2\/media\/js\/vendor\/catcomplete.js":1,"sites\/all\/themes\/visually2\/media\/js\/infographic.js":1,"sites\/all\/themes\/visually2\/media\/js\/filter.js":1,"sites\/all\/themes\/visually2\/media\/js\/vendor\/zeroclip.js":1,"1":1,"sites\/all\/themes\/visually2\/media\/js\/vendor\/jquery.stickyScroll.js":1,"sites\/all\/themes\/visually2\/media\/js\/infographic_singlepage.js":1,"sites\/all\/themes\/visually2\/media\/js\/infographic_edit.js":1,"sites\/all\/themes\/visually2\/media\/js\/infographic_responsive.js":1,"sites\/all\/themes\/visually2\/media\/js\/vendor\/jquery.dd.min.js":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"\/\/b2c-msm.marketo.com\/jsloader\/9377dc22-58cb-45ea-9980-e7d56ae22b32\/loader.php.js":1,"2":1,"http:\/\/a.visual.ly\/media\/js\/vendor\/jquery.cookie.js":1,"http:\/\/a.visual.ly\/media\/js\/base.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/submit.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/like_widget.js":1,"http:\/\/visual.ly\/sites\/all\/themes\/visually2\/media\/js\/free_template_popup.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/fancybox\/jquery.fancybox-1.3.4.css":1,"sites\/all\/themes\/visually2\/media\/css\/layout.css":1,"sites\/all\/themes\/visually2\/media\/css\/style.css":1,"sites\/all\/themes\/visually2\/media\/css\/colors.css":1,"sites\/all\/themes\/visually2\/media\/css\/base.css":1,"sites\/all\/themes\/visually2\/media\/css\/colorbox.css":1,"sites\/all\/themes\/visually2\/media\/css\/fileuploader.css":1,"sites\/all\/themes\/visually2\/media\/css\/jquery.Jcrop.css":1,"sites\/all\/themes\/visually2\/media\/css\/jquery.autocomplete.css":1,"sites\/all\/themes\/visually2\/media\/css\/print.css":1,"sites\/all\/themes\/visually2\/media\/css\/free_template_popup.css":1,"sites\/all\/themes\/visually2\/media\/css\/infographics_page_style.css":1,"sites\/all\/themes\/visually2\/media\/css\/social_style.css":1,"sites\/all\/themes\/visually2\/media\/css\/infographic_edit.css":1,"sites\/all\/themes\/visually2\/media\/css\/infographics_style.css":1,"sites\/all\/themes\/visually2\/media\/css\/dd.css":1,"sites\/all\/themes\/visually2\/css\/ie.css":1,"sites\/all\/themes\/visually2\/css\/ie6.css":1}}});
+//--&gt;&lt;!]]&gt;
+  </script>
+  <script type="text/javascript">
+   var _gaq=_gaq||[];
+     _gaq.push(['_setAccount','UA-22512436-1']);
+     _gaq.push(['_setDomainName','.visual.ly']);
+     _gaq.push(['_addIgnoredRef', 'visual.ly']);
+     _gaq.push(['_addIgnoredRef', 'visual.ly']);
+     // Optimizely Universal Analytics Integration code
+     window.optimizely = window.optimizely || [];
+     window.optimizely.push('activateUniversalAnalytics');
+
+     _gaq.push(['_trackPageview']);
+
+     (function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();
+  </script>
+  <script src="/sites/all/themes/visually2/media/js/vendor/jquery.cookie.js" type="text/javascript">
+  </script>
+  <!--[if IE]&gt;
+		&lt;script type="text/javascript" src="http://visual.ly/sites/all/themes/visually2/media/js/vendor/jquery.placeholder.js"&gt;&lt;/script&gt;	
+	&lt;script type="text/javascript"&gt; jQuery(document).ready(function(){ jQuery('input, textarea').placeholder(); }); &lt;/script&gt;
+&lt;![endif]-->
+  <!-- Start Integrate Bizible-->
+  <script async="" data-attach-secure-forms="true" id="bizible-settings" src="//cdn.bizible.com/_biz-a.js" type="text/javascript">
+  </script>
+  <!-- End Integrate Bizible-->
+  <script>
+   (function() {
+			var _fbq = window._fbq || (window._fbq = []);
+			if (!_fbq.loaded) {
+				var fbds = document.createElement('script');
+				fbds.async = true;
+				fbds.src = '//connect.facebook.net/en_US/fbds.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(fbds, s);
+				_fbq.loaded = true;
+			}
+			_fbq.push(['addPixelId', '323621644457813']);
+		})();
+		window._fbq = window._fbq || [];
+		window._fbq.push(['track', 'PixelInitialized', {}]);
+  </script>
+ </head>
+ <body>
+  <noscript>
+   <img alt="" height="1" src="https://www.facebook.com/tr?id=323621644457813&amp;ev=PixelInitialized" style="display:none" width="1"/>
+  </noscript>
+  <div id="fb-root">
+  </div>
+  <script>
+   jQuery(document).ready(function() {
+      new Visually.jsBootstrap.Views.Main();
+      Visually.Widgets.Like();
+      jQuery(document).on('click', '.fake-wrapper .facebook', function(){
+          _gaq.push(['_trackEvent', 'Sign Up', 'Facebook', 'Facebook header bar'])
+      });
+
+  });
+  </script>
+  <div id="eyebrow">
+   <div class="wrapper hidden">
+    <span class="content">
+     test
+    </span>
+    <div class="close">
+    </div>
+   </div>
+   <div class="newsletter-validation" style="display: none">
+    <div class="fake-wrapper green">
+     <span class="content">
+      Your e-mail has been confirmed. Thanks for subscribing.
+     </span>
+     <div class="close">
+     </div>
+    </div>
+    <p>
+     In the meantime, why not register to share and discover more visual content? It'll take just a few seconds.
+    </p>
+    <div>
+     <div class="wrap">
+      <input data-validate="required email" name="mail" placeholder="E-mail" type="text"/>
+     </div>
+     <div class="wrap">
+      <input data-validate="required" name="first-name" placeholder="First Name" type="text"/>
+     </div>
+     <div class="wrap">
+      <input data-validate="required" name="last-name" placeholder="Last Name" type="text"/>
+     </div>
+     <div class="wrap">
+      <input data-validate="required minlength=3 maxlength=255" name="username" placeholder="Enter Username" type="text"/>
+     </div>
+     <div class="wrap">
+      <input class="password1" data-validate="required minlength=6 maxlength=255" name="password" placeholder="Enter Password" type="password"/>
+     </div>
+     <div class="wrap">
+      <input data-validate="required minlength=6 maxlength=255 confirm_password" name="verify_password" placeholder="Confirm Password" type="password"/>
+     </div>
+    </div>
+    <div>
+     <input class="pink" disabled="disabled" id="join_visually" type="button" value="Join visual.ly"/>
+     <input class="blue" id="cancel_join" type="button" value="Not right now, thanks!"/>
+    </div>
+   </div>
+  </div>
+  <!--div class='featured-banner'&gt;&lt;a href='https://marketplace.visual.ly/?source=eyebrow' style='font-weight: bold;'&gt;&lt;span id="marketplace_onboarding"&gt;&lt;/span&gt;&lt;img src='http://visual.ly/sites/all/themes/visually2/images/misc/featured-banner-icon.png' align="absmiddle" style="margin-top:-2px;"/&gt;&lt;/a&gt;&lt;img src='http://visual.ly/sites/all/themes/visually2/images/delete.png' align="absmiddle" style="position:absolute;right: 9px;top:11px;font-weight:bold;"/&gt;&lt;/div-->
+  <script type="text/javascript">
+   _gaq.push(['_setCustomVar',
+		   1,                //1.  Required parameter.
+		  'usertype',   // The name of the custom variable.  Required parameter.
+		  'visitor',      // Sets the value of "User Type" to "Member" or "Visitor" depending on status.  Required parameter.
+		   1             // Sets the scope to session-level.  Optional parameter.
+	]);
+  </script>
+  <script type="text/javascript">
+   _gaq.push(['_setCustomVar',
+        1,                //1.  Required parameter.
+        'nodeViews',   // The name of the custom variable.  Required parameter.
+        'nodeViews',      // Sets the value of "User Type" to "Member" or "Visitor" depending on status.  Required parameter.
+        2             // Sets the scope to session-level.  Optional parameter.
+    ]);
+  </script>
+  <div id="page-wrapper">
+   <div class="node-page" id="page">
+    <div class="region region-header">
+     <div class="block block-visually2-frontend" id="block-visually2-frontend-header-menu-block">
+      <h2 class="element-invisible">
+       Header
+      </h2>
+      <div class="content">
+       <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700,900" property="link" rel="stylesheet" type="text/css"/>
+       <script src="https://static-api-visually.netdna-ssl.com/media/js/js.php?v=3.4.8.0&amp;media=vendor/jquery.cookie.js" type="text/javascript">
+       </script>
+       <script src="https://static-api-visually.netdna-ssl.com/media/js/js.php?v=3.4.8.0&amp;media=base.js,header.js,header_modal.js,fblogin.js" type="text/javascript">
+       </script>
+       <link href="https://static-api-visually.netdna-ssl.com/media/css/css.php?v=3.4.8.0&amp;media=header.css" property="link" rel="stylesheet"/>
+       <script src="https://static-visually.netdna-ssl.com/js/validation.js?v=3.4.8.0" type="text/javascript">
+       </script>
+       <script async="" src="//cdn.bizible.com/scripts/bizible.js" type="text/javascript">
+       </script>
+       <script>
+        jQuery(document).ready(function(){window._headerJS=new VisApi.Header.Views.Main();window._headerModalJS=new VisApi.HeaderModal.Views.Main();});
+       </script>
+       <script type="text/javascript">
+        (function(d,s,id,debug){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}
+js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk',false));
+       </script>
+       <script>
+        VisApi.FacebookLogin.init({facebookAppId:271307069610125,facebookChannelUrl:'//localhost/channel.html',fbLoginImgPath:"/sites/all/themes/visually2/images/fblogin/"});window.fbAsyncInit=function(){VisApi.FacebookLogin.fbLibraryInit();}
+       </script>
+       <div id="header-top">
+        <div class="content-wrapper">
+         <div class="solid" id="main-menu-content">
+          <div class="left-content">
+           <div class="menu-box logo">
+            <a class="visually-logo" href="https://visual.ly">
+            </a>
+           </div>
+           <div class="menu-box menu-dropdown" id="creative-services">
+            <div class="bordered">
+            </div>
+            <p class="menu-arrow">
+             Creative Services
+            </p>
+            <div class="sub-menu-container">
+             <ul class="child">
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/ebooks">
+                eBooks
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/video">
+                Video
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/infographics">
+                Infographics
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/presentations">
+                Presentations
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/micro-content">
+                Social Media
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/creative-services/web-experiences">
+                Web Experiences
+               </a>
+              </li>
+              <li class="serv-and-price">
+               <a class="main-menu-child-link serv-and-price" href="https://visual.ly/creative-services">
+                All Services and Pricing
+               </a>
+              </li>
+             </ul>
+            </div>
+           </div>
+           <div class="menu-box menu-link menu-link-logout">
+            <div class="bordered">
+            </div>
+            <a class="main-menu-link" href="https://visual.ly/how-it-works">
+             How It Works
+            </a>
+           </div>
+           <div class="menu-box menu-link menu-link-logout pricing">
+            <div class="bordered">
+            </div>
+            <a class="main-menu-link with-margin" href="https://visual.ly/creative-services" id="homepage_community">
+             Pricing
+            </a>
+           </div>
+          </div>
+          <div class="right-content">
+           <div class="menu-box menu-user-info">
+            <div class="menu-user-sale">
+             <p class="sales">
+              Sales : 1 (855) 968 3282
+             </p>
+            </div>
+            <div class="menu-user-login">
+             <a class="unsigned" href="https://visual.ly/user/login?destination=http%3A%2F%2Fvisual.ly%2Farc-flash" id="header_login">
+              LOGIN
+             </a>
+            </div>
+            <div style="display: none;">
+             <a class="unsigned signup" href="https://visual.ly/user/register?destination=http%3A%2F%2Fvisual.ly%2Farc-flash" id="header_signup">
+              Sign Up
+             </a>
+            </div>
+           </div>
+           <div class="menu-box menu-dropdown">
+            <div class="bordered">
+            </div>
+            <p class="menu-arrow">
+             Resources
+            </p>
+            <div class="sub-menu-container">
+             <ul class="child">
+              <li>
+               <a class="main-menu-child-link" href="https://visual.ly/view">
+                Community
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="http://hub.visual.ly">
+                Content Hub
+               </a>
+              </li>
+              <li>
+               <a class="main-menu-child-link" href="http://blog.visual.ly">
+                Blog
+               </a>
+              </li>
+             </ul>
+            </div>
+           </div>
+           <div class="menu-box menu-link">
+            <a class="main-menu-link" href="https://visual.ly/apply">
+             For Creatives
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="without-secondary-menu" id="header">
+     <div class="section clearfix">
+     </div>
+    </div>
+    <!-- /.section, /#header -->
+    <div class="region region-content">
+     <div class="block block-system" id="block-system-main">
+      <div class="content">
+       <script type="text/javascript">
+        jQuery(document).ready(function(){
+    var oldCB = window.fbAsyncInit;
+    window.fbAsyncInit = function(){
+        if(typeof oldCB === 'function'){
+            oldCB();
+        }
+        FB.Event.subscribe('comment.create', function(response) {
+			Visually.Widgets.ReportComment(93688, response.commentID, 1);
+        });
+
+        FB.Event.subscribe('comment.remove', function(response) {
+			Visually.Widgets.ReportComment(93688, response.commentID, 0);
+        });
+	};
+});
+       </script>
+       <div about="/arc-flash" class="node node-infograph node-promoted clearfix" id="node-93688" typeof="sioc:Item foaf:Document">
+        <div class="sections">
+         <div class="left-wrapper">
+          <div class="clear">
+          </div>
+          <div class="credits">
+           <div class="social float-left">
+            <div class="share float-left align">
+             <span class="shares">
+              3
+             </span>
+             SHARES
+            </div>
+            <div class="float-left vertical-line">
+            </div>
+            <div class="cf_widgetLoader cf_w_727889423ce8449db080f625567513cd">
+            </div>
+            <div class="facebook float-left align cf_socialicons cf_clickable">
+             <span class="mkto_facebook_large cf_socialicon cf_facebook" id="share-with-facebook" st_processed="yes">
+              <span class="share-on-button-text">
+               Share on
+              </span>
+              <span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;">
+               <span class="stLarge" style="background-image:url(http://w.sharethis.com/images/facebook_32.png);">
+               </span>
+              </span>
+             </span>
+            </div>
+            <div class="twitter float-left align">
+             <span class="mkto_twitter_large" id="share-with-twitter" st_url="http://visual.ly/arc-flash?utm_source=Community&amp;utm_medium=SocialMedia&amp;utm_campaign=TweetShare" st_via="visually #Visually #infographic">
+              <span class="share-on-button-text">
+               Share on
+              </span>
+              <span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;">
+               <span class="stLarge" style="background-image: url(http://w.sharethis.com/images/twitter_32.png);">
+               </span>
+              </span>
+             </span>
+            </div>
+            <div class="repost float-left align">
+             <span class="st_repost_large">
+              <span class="stButton embeded-code">
+               <span class="share-on-button-text">
+                Repost
+               </span>
+               <span class="stLarge">
+               </span>
+              </span>
+             </span>
+            </div>
+            <div class="boxes align float-left">
+             <div class="box float-left first">
+              <span class="mkto_linkedin_large" id="share-with-linkedin" st_processed="yes">
+               <span class="stButton" style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;">
+                <span class="stLarge" style="background-image: url(http://w.sharethis.com/images/linkedin_32.png);">
+                </span>
+               </span>
+              </span>
+             </div>
+             <div class="box float-left ">
+              <span class="st_pinterest_large">
+              </span>
+             </div>
+             <div class="box float-left ">
+              <span class="st_stumbleupon_large">
+              </span>
+             </div>
+             <div class="box float-left">
+              <span class="st_googleplus_large">
+              </span>
+             </div>
+            </div>
+            <div class="box float-left align">
+             <a class="more">
+              <span class="minus hidden">
+               
+              </span>
+              <span class="plus">
+               +
+              </span>
+             </a>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+           <div class="float-right align fav-button">
+            <a class="like like_or_follow state_0" data-nid="93688" data-state="0" data-state_label_0="Fave" data-state_label_1="Fave" data-state_label_2="Fave" data-uid="259159" href="javascript:void(0);">
+             <p class="icon">
+             </p>
+             <span class="state">
+              Fave
+             </span>
+            </a>
+           </div>
+           <div class="float-right follow hidden">
+            <a class="avatar like_or_follow follow state_0" data-state="0" data-state_label_0="Follow" data-state_label_1="Following" data-state_label_2="Unfollow" data-uid="259159" href="" id="ig_follow_user" style="position: relative;" value="Follow">
+             <img class="profile-picture" height="25" src="/sites/default/files/pictures/picture-259159-1377643079_w25_h25.jpg" width="25"/>
+             <span style="color: #ef5093;font-weight: 400;position: absolute;margin-top: 5px;width: 70px">
+              + Follow
+             </span>
+            </a>
+           </div>
+           <div class="vertical-line float-right fav-vertical-line">
+           </div>
+           <div class="clear">
+           </div>
+          </div>
+          <div class="infographic">
+           <div class="link-wrapper">
+            <a class="ig_link infographic" data-href="http://thumbnails-visually.netdna-ssl.com/arc-flash-the-most-lethal-threat_52817cb3c7b88.jpg" data-ig-type="infographic" href="javascript:void(0)">
+             <div class="hover-overlay">
+              <p>
+              </p>
+             </div>
+             <img alt="Arc Flash Infographic" border="0" src="http://thumbnails-visually.netdna-ssl.com/arc-flash-the-most-lethal-threat_52817cb3c7b88_w1500.jpg" style="max-width: 1500px;"/>
+            </a>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="bottom-buttons">
+            <a class="embeded-code" href="javascript:void(0);">
+             <span class="icon">
+             </span>
+             Embed this visual
+            </a>
+           </div>
+           <div class="community_ad">
+            <span>
+             Engaging Infographics
+            </span>
+            <p>
+             Visually provides on-demand access to the world's top designers and copywriters.
+            </p>
+            Learn More About
+            <a href="http://visual.ly/creative-services/infographics?source=community&amp;utm_campaign=nodepage&amp;utm_source=info_ad">
+             Visually Infographics
+            </a>
+           </div>
+           <div class="clear">
+           </div>
+           <div id="ig-comments">
+            <script>
+             (function (d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id))
+						return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;appId=169497536481455";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div id="fb-root">
+            </div>
+            <fb:comments href="http://visual.ly/arc-flash" num_posts="3" width="700">
+            </fb:comments>
+           </div>
+           <div class="clear">
+           </div>
+           <!--a class='dy_unit navigate center' href='http://visual.ly/node/'&gt;Next Infographic&lt;/a-->
+           <!--a class='dy_unit navigate prev' href='http://visual.ly/node/'&gt;Previous Infographic&lt;/a-->
+          </div>
+          <div class="clear">
+          </div>
+          <script>
+           //window._auxFilterData = [];
+		//window._auxFilterData['page'] = 1;
+		//window._infiniteUrl = "http://visual.ly/node/93688/related";
+          </script>
+          <div class="related">
+           <div class="view-mode clearfix dy_unit v3-design" id="unknown_graphic">
+            <div class="view-mode-wrapper responsive">
+             <div class="v3-grid-item infographic viewmode-item not-shown" data-nid="197081">
+              <a class="v3_ig_image" href="http://visual.ly/holiday-party-hazards-0">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="Holiday Party Hazards Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/holiday-party-hazards_548768e9eb2a0_w450_h300.jpg"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_197081" href="http://visual.ly/holiday-party-hazards-0">
+                 Holiday Party Hazards
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/swcorprel" class="username" datatype="" href="/users/swcorprel" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 swcorprel
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 175
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item infographic viewmode-item not-shown" data-nid="56609">
+              <a class="v3_ig_image" href="http://visual.ly/lafarge-sr11-health-safety">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="Lafarge SR11 Health &amp; Safety Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/lafarge-sr11-health--safety_50940e2c59d39_w450_h300.jpg"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_56609" href="http://visual.ly/lafarge-sr11-health-safety">
+                 Lafarge SR11 Health &amp; Safety
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/perialis" class="username" datatype="" href="/users/perialis" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 perialis
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 252
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item interactive viewmode-item not-shown" data-nid="106940">
+              <a class="v3_ig_image" href="http://visual.ly/world-happiness-vs-world-income">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="World Happiness vs World Income  Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/WorldHappinessvsWorldIncome_52f3af5087b49_w450_h300.JPG"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_106940" href="http://visual.ly/world-happiness-vs-world-income">
+                 World Happiness vs World Income
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/mattsiltala-0" class="username" datatype="" href="/users/mattsiltala-0" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 Matt_Siltala
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 903
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 4
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item interactive viewmode-item not-shown" data-nid="182836">
+              <a class="v3_ig_image" href="http://visual.ly/san-diego-ca-bicycle-accident-interactive-map">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="San Diego, CA Bicycle Accident Interactive Map Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/san-diego-ca-bicycle-accident-interactive-map-thumbnail_542f0b4a594c4_w450_h300.png"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_182836" href="http://visual.ly/san-diego-ca-bicycle-accident-interactive-map">
+                 San Diego, CA Bicycle Accident Interactive Map
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/kiernan" class="username" datatype="" href="/users/kiernan" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 kiernan
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 295
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 1
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item presentation viewmode-item not-shown" data-nid="176641">
+              <a class="v3_ig_image" href="http://visual.ly/electricians-london">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="Electricians London Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/electricians-london_540ef9e796913_w450_h300.png"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_176641" href="http://visual.ly/electricians-london">
+                 Electricians London
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/eavessamuel" class="username" datatype="" href="/users/eavessamuel" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 eavessamuel
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 69
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 1
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item video viewmode-item not-shown" data-nid="146294">
+              <a class="v3_ig_image" href="http://visual.ly/5-ways-cut-commercial-building-energy-costs-gold-star-electrical">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="5 Ways to Cut Commercial Building Energy Costs | Gold Star Electrical  Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/5-ways-to-cut-commercial-building-energy-costs--gold-star-electrical_53a84b7378314_w450_h300.jpg"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_146294" href="http://visual.ly/5-ways-cut-commercial-building-energy-costs-gold-star-electrical">
+                 5 Ways to Cut Commercial Building Energy Costs | Gold Star Electrical
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/lgdg" class="username" datatype="" href="/users/lgdg" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 LGDG
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 92
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="v3-grid-item video viewmode-item not-shown" data-nid="146293">
+              <a class="v3_ig_image" href="http://visual.ly/5-reasons-you-shouldnt-hire-unlicensed-electrician">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <img alt="5 Reasons You Shouldn't Hire an Unlicensed Electrician  Infographic" data-original="http://thumbnails-visually.netdna-ssl.com/default_infographic.jpg" src="http://thumbnails-visually.netdna-ssl.com/5-reasons-you-shouldnt-hire-an-unlicensed-electrician_53a84ae7a1d3c_w450_h300.jpg"/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v3_ig_title">
+                <a class="infographic_anchor_146293" href="http://visual.ly/5-reasons-you-shouldnt-hire-unlicensed-electrician">
+                 5 Reasons You Shouldn't Hire an Unlicensed Electrician
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+                added by
+                <a about="/users/lgdg" class="username" datatype="" href="/users/lgdg" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                 LGDG
+                </a>
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                 92
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                 0
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div id="ig_preloader">
+              <img src="/sites/all/themes/visually2/media/images/preloader.gif"/>
+             </div>
+             <script>
+              jQuery(document).ready(function() {
+				Visually.GraphicsList = [{'id' : '0', 'nid' : '197081', 'aspect' : '0'},{'id' : '1', 'nid' : '56609', 'aspect' : '0'},{'id' : '2', 'nid' : '106940', 'aspect' : '0'},{'id' : '3', 'nid' : '182836', 'aspect' : '0'},{'id' : '4', 'nid' : '176641', 'aspect' : '0'},{'id' : '5', 'nid' : '146294', 'aspect' : '0'},{'id' : '6', 'nid' : '146293', 'aspect' : '0'}];
+				new Visually.Responsive.Views.Main();
+			});
+             </script>
+             <div class="v3-grid-item viewmode-item" data-nid="" id="clone">
+              <a class="v3_ig_image" href="">
+               <div class="hover-overlay">
+                <p>
+                </p>
+               </div>
+               <div class="preloader">
+                <p>
+                </p>
+               </div>
+               <div class="staff-pick-badge">
+               </div>
+               <img alt="" src=""/>
+              </a>
+              <div class="v3_ig_info">
+               <div class="v2_ig_edit">
+                <a class="edit" href="">
+                 <span>
+                 </span>
+                 Edit
+                </a>
+                <a class="delete" href="">
+                 <span>
+                 </span>
+                 Delete
+                </a>
+               </div>
+               <div class="v3_ig_title">
+                <a class="" href="">
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="v3_ig_author">
+               </div>
+               <div class="v3_stats">
+                <p class="views float-left">
+                 <span class="icon">
+                 </span>
+                </p>
+                <p class="likes float-left">
+                 <span class="icon">
+                 </span>
+                </p>
+                <p class="comments float-left">
+                 <span class="icon">
+                 </span>
+                </p>
+                <p class="type float-right">
+                </p>
+               </div>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="clear">
+          </div>
+         </div>
+         <div class="right-wrapper">
+          <div class="info">
+           <div class="sticky-stats">
+            <div style="position: relative;">
+             <h1>
+              Arc Flash
+             </h1>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="data">
+             shared by
+             <span rel="sioc:has_creator">
+              <a about="/users/travers808" class="username" datatype="" href="/users/travers808" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+               travers808
+              </a>
+             </span>
+             on Nov 12, 2013 in
+             <span>
+              <a href="http://visual.ly/science-infographics">
+               Science
+              </a>
+             </span>
+            </div>
+            <div class="sticky-stats-dummy-placeholder">
+             <div style="position: relative;">
+              <p class="sticky-stats-dummy-placeholder-title">
+               Arc Flash
+              </p>
+             </div>
+             <div class="clear">
+             </div>
+             <div class="data">
+              shared by
+              <span rel="sioc:has_creator">
+               <a about="/users/travers808" class="username" datatype="" href="/users/travers808" property="foaf:name" title="View user profile." typeof="sioc:UserAccount" xml:lang="">
+                travers808
+               </a>
+              </span>
+              on Nov 12, 2013 in
+              <span>
+               <a href="http://visual.ly/science-infographics">
+                Science
+               </a>
+              </span>
+             </div>
+            </div>
+           </div>
+           <div class="stats">
+            <p>
+             <span class="float-left">
+              1,815
+              <span class="details-text">
+               views
+              </span>
+             </span>
+            </p>
+            <p>
+             <span>
+              1
+              <span class="details-text">
+               fave
+              </span>
+             </span>
+            </p>
+            <p class="last">
+             <span class="float-right">
+              0
+              <span class="details-text">
+               comments
+              </span>
+             </span>
+            </p>
+            <div class="clear">
+            </div>
+           </div>
+           <div class="description">
+            <span class="short-description">
+             Arc flash accidents cause 80% of professional electrical injuries that occur in the U. S. each year. Over 2,000 workers a year, or 5 a day, fall victim to arc flash. Implementing best practices to avo...
+            </span>
+            <span class="hidden description-more">
+             id arc flash accidents can decrease injuries considerably.
+            </span>
+           </div>
+           <div class="tags">
+            Tags:
+            <span>
+             <a href="http://visual.ly/tag/career-0">
+              career
+             </a>
+             ,
+             <a href="http://visual.ly/tag/electric">
+              electric
+             </a>
+             ,
+             <a href="http://visual.ly/tag/danger">
+              danger
+             </a>
+             ,
+             <a href="http://visual.ly/tag/safety">
+              safety
+             </a>
+            </span>
+           </div>
+           <div class="source">
+            Source:
+            <span>
+             <a href="http://www.americantrainco.com/infographic/arc-flash-safety.aspx" rel="nofollow" target="_blank">
+              http://www.a...afety.aspx
+             </a>
+            </span>
+           </div>
+           <div class="rank">
+            Rank:
+            <span>
+             254 of 1320 in
+             <a href="http://visual.ly/science-infographics">
+              Science
+             </a>
+            </span>
+           </div>
+           <div class="publisher-info">
+            <hr/>
+            <div class="published-by">
+             Published by
+            </div>
+            <div class="publisher-avatar-name-wrapper without-avatar ">
+             <div class="publisher-name-wrapper clearfix">
+              <a href="http://www.americantrainco.com/" target="_blank">
+               <span class="publisher-name">
+                American Trainco
+               </span>
+              </a>
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+           <div class="box first">
+            <hr/>
+            <h4>
+             Designed By
+            </h4>
+            <a href="http://visual.ly/users/travers808">
+             travers808
+            </a>
+           </div>
+           <a class="suggest" href="/contact">
+            Did you work on this visual? Claim credit!
+           </a>
+           <div class="clear">
+           </div>
+          </div>
+         </div>
+         <div class="clear">
+         </div>
+        </div>
+        <div class="clear">
+        </div>
+       </div>
+       <div style="display: none;">
+        <div id="hidden_image_preloader">
+        </div>
+        <div class="color-lightbox" id="embed-code-dialog">
+         <p class="embed-code-dialog-title">
+          Embed Code
+         </p>
+         <div class="switch " data-action="Normal">
+          <span class="switch-icon">
+          </span>
+          <span class="switch-text">
+           Switch to Wordpress Code
+          </span>
+         </div>
+         <div class="switch-line ">
+         </div>
+         <div class="embed-dialog-title">
+          <span class="copy-icon">
+          </span>
+          <span class="text" data-active="Copied" data-inactive="Click below to copy">
+           Click below to copy
+          </span>
+         </div>
+         <textarea class="embed-textarea" data-type="non-wordpress" id="ig-embed-code">
+          &lt;div class='visually_embed'&gt;&lt;img class='visually_embed_infographic' src='' alt='Arc Flash' /&gt;&lt;div class='visually_embed_cycle'&gt;&lt;span&gt;by &lt;/span&gt;&lt;a target='_blank' href='http://visual.ly/users/travers808?utm_source=visually_embed'&gt;travers808&lt;/a&gt;. &lt;br/&gt;&lt;/div&gt;&lt;script type='text/javascript' src='http://a.visual.ly/api/embed/93688?width=540' class='visually_embed_script' id='visually_embed_script_93688'&gt;&lt;/script&gt;&lt;/div&gt;
+         </textarea>
+         <textarea class="embed-code hidden embed-textarea" data-type="wordpress">
+          &lt;div class='visually_embed'&gt;&lt;iframe width='1' height='1' style='width: 1px !important; height: 1px !important; position: absolute;left: -100px !important;' src='http://visual.ly/track.php?q=http://visual.ly/arc-flash&amp;slug=arc-flash'&gt;&lt;/iframe&gt;&lt;a href="http://visual.ly/arc-flash/?utm_source=visually_embed"&gt;&lt;img class='visually_embed_infographic' src='http://visual.ly/node/image/93688?_w=540' alt='Arc Flash' /&gt;&lt;/a&gt;&lt;div class='visually_embed_cycle'&gt;&lt;span&gt;by &lt;/span&gt;&lt;a target='_blank' href='http://visual.ly/users/travers808?utm_source=visually_embed'&gt;travers808&lt;/a&gt;. &lt;br/&gt;&lt;/div&gt;&lt;/div&gt;
+         </textarea>
+         <div class="embed-code-size-edit-wrap">
+          <span>
+           Customize size
+          </span>
+          <input class="embed-size width" data-original="900" data-reference="embed_0" type="text" value="540"/>
+          <span class="icon-x">
+          </span>
+          <input class="embed-size height" data-original="3870" data-reference="embed_0" type="text" value="2322"/>
+         </div>
+         <div class="clear">
+         </div>
+        </div>
+       </div>
+       <iframe height="1" src="http://a.visual.ly/api/node/view?pdb=1&amp;nid=93688" style="visibility:hidden;width:1px;height:1px" width="1">
+       </iframe>
+      </div>
+     </div>
+    </div>
+    <div id="newsletter-footer" style="display: none;">
+     <p class="newsletter-footer-get-notified">
+      Get Notified of New Infographics
+     </p>
+     <form action="">
+      <input data-validate="required email" name="email" placeholder="Email Address" type="text"/>
+      <!--		&lt;input type="text" name="first-name" placeholder="First name" /&gt;
+            &lt;input type="text" name="last-name" placeholder="Last name" /&gt;-->
+      <input name="subscribe" type="submit" value="Subscribe"/>
+     </form>
+     <div class="close">
+     </div>
+    </div>
+    <div style="display: none">
+     <div id="newsletter-confirmation">
+      <div class="newsletter-confirmation-header">
+       Thank you for subscribing to the Visually newsletter.
+      </div>
+      <div class="newsletter-confirmation-text">
+       Just one last thing: we've sent you an email asking you to confirm your subscription.
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     jQuery(document).ready(function() {
+        new Visually.Views.GeneralView();
+        var submit = new Visually.Submit.Views.Main();
+        if (jQuery('body').hasClass('page-user-register')) {
+            var SiteRegisterPageView = new Visually.Submit.Views.SiteRegisterPageView();
+        }
+    });
+    </script>
+    <script type="text/javascript">
+     jQuery(document).ready(function() {
+//        new Visually.Apply.Views.Main();
+        Backbone.history.start();
+    });
+    </script>
+   </div>
+   <!-- Quantcast Tag -->
+   <script type="text/javascript">
+    var _qevents = _qevents || [];
+
+    (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+    })();
+
+    _qevents.push({
+        qacct: "p-Whgs1X9C4d_WW"
+    });
+   </script>
+   <noscript>
+    <div style="display:none;">
+     <img alt="Quantcast" border="0" height="1" src="//pixel.quantserve.com/pixel/p-Whgs1X9C4d_WW.gif" width="1"/>
+    </div>
+   </noscript>
+   <!-- End Quantcast tag -->
+   <div id="footer-wrapper">
+    <div class="section">
+     <div id="footer">
+      <div class="region region-footer">
+       <div class="block block-visually2-frontend" id="block-visually2-frontend-footer-menu-block">
+        <div class="content">
+         <noscript>
+          <img alt="" height="1" src="https://www.facebook.com/tr?id=323621644457813&amp;ev=PixelInitialized" style="display:none" width="1"/>
+         </noscript>
+         <script src="https://static-api-visually.netdna-ssl.com/media/js/js.php?v=3.4.8.0&amp;media=footer.js,vendor/bounce.js,vendor/mobilecheck.js,custom-quote-lead-form.js" type="text/javascript">
+         </script>
+         <link href="https://static-api-visually.netdna-ssl.com/media/css/css.php?v=3.4.8.0&amp;media=footer.css,lead-form.css,custom-quote.css" property="style" rel="stylesheet"/>
+         <div style="display: none;">
+          <div id="uploader-template">
+           <div class="qq-uploader submit-area">
+            <div class="qq-upload-button">
+             <div class="button">
+              <div class="icon">
+              </div>
+              <span>
+               Upload
+              </span>
+             </div>
+             <p>
+              Accepted formats : JPG, JPEG, GIF, PNG, PDF
+             </p>
+            </div>
+            <ul class="qq-upload-list hidden">
+            </ul>
+           </div>
+          </div>
+          <div class="submit-step region-content" id="visually-submit-step1">
+           <p class="visually-submit-step1-subtitle">
+            Select the type of visual content
+            <br/>
+            you want to share
+           </p>
+           <div class="step-options">
+            <div class="step">
+             <div class="submit-step1-static step-option" data-type="static">
+             </div>
+            </div>
+            <div class="step">
+             <div class="submit-step1-video step-option" data-type="video">
+             </div>
+            </div>
+            <div class="step">
+             <div class="submit-step1-presentation step-option last" data-type="presentation">
+             </div>
+            </div>
+            <div class="step">
+             <div class="submit-step1-interactive step-option" data-type="interactive">
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="submit-step region-content" id="visually-submit-step3">
+           <p class="title visually-submit-step3-title">
+           </p>
+           <div class="step-options">
+            <div class="top-thumb-warp">
+             <div class="wrap">
+              <div class="upload-area hidden" id="uploader">
+              </div>
+              <div class="upload-area hidden" id="thumbGrabber">
+               <div class="qq-uploader submit-area">
+                <span class="enter-url">
+                 <span data-default-message="Enter URL" data-presentation-message="Enter SlideShare URL">
+                  Clickto Enter URL
+                 </span>
+                 <span class="video-options-desc">
+                  We support Vimeo &amp; Youtube
+                 </span>
+                </span>
+                <input class="hidden" data-default-message="Enter URL" data-presentation-message="Enter SlideShare URL" id="ig-url" name="url" placeholder="Enter URL" type="text"/>
+                <input class="blue hidden" type="button" value="Grab"/>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="top-error-message hidden">
+            </div>
+            <input class="title required" data-validate="required" id="submit_title" placeholder="Title" type="text"/>
+            <textarea class="description required" data-validate="required minlength=60" id="submit_description" placeholder="Describe your project">
+            </textarea>
+            <p class="counter">
+             60 characters minimum
+             <span class="counter invalid">
+              (0)
+             </span>
+            </p>
+            <div class="relative">
+             <input class="tag-add" placeholder="Add Tag" type="text"/>
+             <input class="add-tag blue" type="button" value="+ ADD"/>
+            </div>
+            <div class="tags">
+             <div class="tag template">
+              <span class="tag-name">
+              </span>
+              <span class="remove">
+              </span>
+             </div>
+            </div>
+            <div class="cat">
+             <select class="category" data-validate="select">
+              <option disabled="disabled" selected="selected" value="-1">
+               Select a category
+              </option>
+              <option value="3930">
+               Animals
+              </option>
+              <option value="54">
+               Business
+              </option>
+              <option value="42">
+               Computers
+              </option>
+              <option value="45">
+               Economy
+              </option>
+              <option value="3429">
+               Education
+              </option>
+              <option value="48">
+               Entertainment
+              </option>
+              <option value="3419">
+               Environment
+              </option>
+              <option value="56">
+               Food
+              </option>
+              <option value="15707">
+               Gaming
+              </option>
+              <option value="3929">
+               Geography
+              </option>
+              <option value="44">
+               Health
+              </option>
+              <option value="78444">
+               History
+              </option>
+              <option value="78445">
+               Home
+              </option>
+              <option value="1105">
+               How To
+              </option>
+              <option value="79336">
+               Human Rights
+              </option>
+              <option value="57">
+               Humor
+              </option>
+              <option value="55">
+               Lifestyle
+              </option>
+              <option value="1106">
+               Love and Sex
+              </option>
+              <option value="80679">
+               Olympics
+              </option>
+              <option value="43">
+               Other
+              </option>
+              <option value="53">
+               Politics
+              </option>
+              <option value="50">
+               Science
+              </option>
+              <option value="1104">
+               Social Media
+              </option>
+              <option value="52">
+               Sports
+              </option>
+              <option value="46">
+               Technology
+              </option>
+              <option value="3680">
+               Transportation
+              </option>
+              <option value="15708">
+               Travel
+              </option>
+             </select>
+            </div>
+            <div class="lang">
+             <select class="language dynamic-language">
+             </select>
+            </div>
+            <div class="relative">
+             <input class="source-url" id="submit-source-url" placeholder="Add Source URL" type="text"/>
+            </div>
+            <div class="credits-title">
+             Who worked on this project ?
+            </div>
+            <div class="relative credits-wrap">
+             <div class="publisher-wrap credit">
+              <div class="credit-title">
+               Publisher
+              </div>
+              <input class="credit-name" data-type="publisher" placeholder="Name" type="text"/>
+              <input class="credit-web" placeholder="Enter URL" type="text"/>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="designer-wrap credit">
+              <div class="credit-title">
+               Designer
+              </div>
+              <input class="credit-name" data-type="designer" placeholder="Name" type="text"/>
+              <input class="credit-web" placeholder="Enter URL" type="text"/>
+              <div class="clear">
+              </div>
+             </div>
+             <div class="extra-credits">
+              <div class="developer-wrap credit">
+               <div class="credit-title">
+                Developer
+               </div>
+               <input class="credit-name" data-type="developer" placeholder="Name" type="text"/>
+               <input class="credit-web" placeholder="Enter URL" type="text"/>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="animator-wrap credit">
+               <div class="credit-title">
+                Animator
+               </div>
+               <input class="credit-name" data-type="animator" placeholder="Name" type="text"/>
+               <input class="credit-web" placeholder="Enter URL" type="text"/>
+               <div class="clear">
+               </div>
+              </div>
+              <div class="journalist-wrap credit">
+               <div class="credit-title">
+                Journalist
+               </div>
+               <input class="credit-name" data-type="journalist" placeholder="Name" type="text"/>
+               <input class="credit-web" placeholder="Enter URL" type="text"/>
+               <div class="clear">
+               </div>
+              </div>
+             </div>
+             <span class="more-credits-open" data-state="closed" data-state-closed="+ Add More Credits" data-state-open="- Hide Credits">
+              + Add More Credits
+             </span>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="private">
+             <span class="make-private">
+              Make Private
+             </span>
+             <div class="password-protected hidden credit">
+              <input class="password1" data-type="password" name="password" placeholder="Add password" type="password"/>
+              <input data-type="confirm_password" data-validate="confirm_password" name="verify_password" placeholder="Confirm password" type="password"/>
+             </div>
+            </div>
+            <form id="upload-ig-form">
+             <div class="custom-form-captcha" id="upload-ig-captcha">
+              <script type="text/javascript">
+               var RecaptchaOptions={theme:'clean'};
+              </script>
+              <script src="https://www.google.com/recaptcha/api/challenge?k=6LeojdgSAAAAAJxfJS9dyppfLTBViVvyPUFU8XH7" type="text/javascript">
+              </script>
+              <noscript>
+               <iframe height="300" src="https://www.google.com/recaptcha/api/noscript?k=6LeojdgSAAAAAJxfJS9dyppfLTBViVvyPUFU8XH7" width="500">
+               </iframe>
+               <br/>
+               <textarea cols="40" name="recaptcha_challenge_field" rows="3">
+               </textarea>
+               <input name="recaptcha_response_field" type="hidden" value="manual_challenge"/>
+              </noscript>
+             </div>
+            </form>
+           </div>
+           <div class="step-actions">
+            <a class="button pink next-button">
+             Submit
+            </a>
+            <div class="clear">
+            </div>
+           </div>
+          </div>
+          <div class="submit-step region-content" id="visually-submit-final-step">
+           <div class="step-options">
+            This is the final step
+           </div>
+           <div class="step-actions">
+            <a class="button blue float-right">
+             Close
+            </a>
+            <div class="clear">
+            </div>
+           </div>
+          </div>
+         </div>
+         <script>
+          jQuery(document).ready(function(){window._footerJS=new VisApi.Footer.Views.Main();});
+         </script>
+         <a href="http://pages.visual.ly/EB_2015-02_Ebooks_HowToCreateCompellingEbooksRequestPage.html" target="_blank">
+          <div id="wrapp-ebook-footer">
+           <div id="ebook-footer">
+           </div>
+           <div id="ebook-logo">
+           </div>
+           <div id="ebook-text-button">
+            <p>
+             VIEW AND DOWNLOAD OUR NEW EBOOK
+            </p>
+           </div>
+           <div id="ebook-text">
+            <h4>
+             HOW TO CREATE COMPELLING EBOOKS
+            </h4>
+            <h3>
+             That People Will Actually Want to Read!
+            </h3>
+           </div>
+          </div>
+         </a>
+         <div id="footer-mobile">
+          <a href="http://m.visual.ly">
+           HOW IT WORKS
+          </a>
+         </div>
+         <div class="footer-placeholder">
+          <div id="sticky-footer">
+           <a href="javascript:void(0);">
+            <div class="icon">
+            </div>
+            MORE VISUALLY
+           </a>
+          </div>
+          <div class="footer-wrapper">
+           <div class="content">
+            <div class="menus-wrapper">
+             <div class="menu">
+              <div class="menu-name">
+               PRODUCTS
+              </div>
+              <ul class="menu-list">
+               <li>
+                <a href="https://visual.ly/creative-services/infographics">
+                 Infographics
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/creative-services/video">
+                 Videos
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/creative-services/web-experiences">
+                 Web Experiences
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/creative-services/presentations">
+                 Presentations
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/creative-services/micro-content">
+                 Social Media
+                </a>
+               </li>
+              </ul>
+             </div>
+             <div class="menu">
+              <div class="menu-name">
+               RESOURCES
+              </div>
+              <ul class="menu-list">
+               <li>
+                <a href="https://visual.ly/view">
+                 Community
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/apply">
+                 For Creatives
+                </a>
+               </li>
+               <li>
+                <a href="http://blog.visual.ly">
+                 Blog
+                </a>
+               </li>
+               <li>
+                <a href="http://hub.visual.ly">
+                 Content Hub
+                </a>
+               </li>
+               <li>
+                <a href="http://help.visual.ly">
+                 Help Center
+                </a>
+               </li>
+              </ul>
+             </div>
+             <div class="menu">
+              <div class="menu-name">
+               ABOUT US
+              </div>
+              <ul class="menu-list">
+               <li>
+                <a href="https://visual.ly/how-it-works">
+                 How It Works
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/about">
+                 About Us
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/about/jobs">
+                 Jobs
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/contact">
+                 Contact Us
+                </a>
+               </li>
+               <li>
+                <a href="https://visual.ly/terms">
+                 Terms of Use
+                </a>
+               </li>
+              </ul>
+             </div>
+             <hr/>
+             <div class="help">
+              <script>
+               function obscureSalesMail(){document.location.href="mailto:sales@visual.ly";}
+              </script>
+              Questions? Call us at
+              <a class="phone" href="tel:18559683282">
+               +1 (855) 968-3282
+              </a>
+              or email us at
+              <a href="javascript:void(0)" onclick="obscureSalesMail();">
+               sales
+               <span>
+                @
+               </span>
+               <span style="display:none;">
+                lo;rem1&amp;ips*.um
+               </span>
+               <span>
+                vis
+               </span>
+               <span>
+                ual
+               </span>
+               <span>
+                .
+               </span>
+               ly
+               <span style="display:none;">
+                l'orem1&amp;ips*.um
+               </span>
+              </a>
+              .
+              <br/>
+              Can't find what you're looking for? Try our
+              <a href="https://visual.ly/site-map">
+               sitemap.
+              </a>
+             </div>
+            </div>
+            <div class="social-wrapper">
+             <ul class="social-list">
+              <li>
+               <a href="https://www.facebook.com/visually" target="_blank">
+                <div class="icon facebook">
+                </div>
+                Follow Us on Facebook
+               </a>
+              </li>
+              <li>
+               <a href="https://twitter.com/Visually" target="_blank">
+                <div class="icon twitter">
+                </div>
+                Follow Us on Twitter
+               </a>
+              </li>
+              <li>
+               <div class="icon newsletter">
+               </div>
+               <form>
+                <input name="email" placeholder="Subscribe to the Newsletter" type="text"/>
+                <input name="subscribe" type="submit" value="GO"/>
+               </form>
+              </li>
+             </ul>
+             <div class="extra-social">
+              <span>
+               Find us also
+              </span>
+              <ul class="extra-social-list">
+               <li>
+                <a class="pinterest" href="http://www.pinterest.com/therealvisually/" target="_blank">
+                </a>
+               </li>
+               <li>
+                <a class="gplus" href="https://plus.google.com/+Visually" target="_blank">
+                </a>
+               </li>
+               <li>
+                <a class="youtube" href="https://www.youtube.com/user/visually" target="_blank">
+                </a>
+               </li>
+              </ul>
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+           <div class="footer">
+            <a href="https://visual.ly" id="footer-logo">
+            </a>
+            <div class="copyright">
+             Copyright 2015
+            </div>
+            <div class="version">
+             3.2.6
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+          </div>
+         </div>
+         <script type="text/javascript">
+          var google_conversion_id=970938072;var google_custom_params=window.google_tag_params;var google_remarketing_only=true;
+         </script>
+         <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+         </script>
+         <noscript>
+          <div style="display:inline;">
+           <img alt="" height="1" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/970938072/?value=0&amp;guid=ON&amp;script=0" style="border-style:none;" width="1"/>
+          </div>
+         </noscript>
+         <div style="display:none">
+          <div id="ebook-graphic-success">
+           <span>
+            To download the Ultimate Video Playbook, please check your email for the link.
+           </span>
+          </div>
+          <div id="ebook-graphic-fail">
+           <span>
+            Could not subscribe you at the moment! Perhaps you are already subscribed.
+           </span>
+          </div>
+          <div class="custom-quote" data-contact-id="" id="custom-quote-lead-form">
+           <div class="lead-section" style="width: 950px;">
+            <div class="phone-section">
+             For an Account Executive, call
+             <span>
+              1 (855) 968-3282
+             </span>
+            </div>
+            <div class="left-section">
+             <p class="section-title">
+              Receive a Custom Quote
+             </p>
+             <form>
+              <input class="hidden" name="destination" value=""/>
+              <div>
+               <label class="field-name left-field small-field">
+                First Name
+                <input class="lead-style required" data-validate="required" name="FirstName"/>
+               </label>
+               <label class="field-name right-field small-field">
+                Last Name
+                <input class="lead-style required" data-validate="required" name="LastName"/>
+               </label>
+               <div class="clear">
+               </div>
+              </div>
+              <div>
+               <label class="field-name left-field small-field">
+                Phone
+                <input class="lead-style required" data-validate="required phone" name="Phone"/>
+               </label>
+               <label class="field-name right-field small-field">
+                Email
+                <input class="lead-style required" data-validate="email required" name="Email"/>
+               </label>
+               <div class="clear">
+               </div>
+              </div>
+              <label class="field-name large-field">
+               Company Name
+               <input class="lead-style required" data-validate="required" name="Company"/>
+              </label>
+              <label class="field-name large-field">
+               Your Project
+               <span class="gray-text">
+                (optional)
+               </span>
+               <textarea class="lead-style" name="pi__comments__c" placeholder="Please give us a brief description of your creative project.">
+               </textarea>
+              </label>
+              <a class="talk-to-us custom-quote-lead-submit" href="https://visual.ly/creative-services/quote">
+               Contact
+Visually
+              </a>
+             </form>
+            </div>
+            <div class="vertical-line">
+            </div>
+            <div class="right-section">
+             <span class="section-logo">
+             </span>
+             <hr class="horizontal-line"/>
+             <p class="section-description">
+              On-Demand Creative Services
+             </p>
+             <div class="left-container">
+              <div class="service-item">
+               <span class="service-icon video-icon">
+               </span>
+               <span class="service-name">
+                Video
+               </span>
+               <p class="service-price">
+                Starting at $6,250
+               </p>
+              </div>
+              <div class="service-item">
+               <span class="service-icon presentations-icon">
+               </span>
+               <span class="service-name">
+                Presentations
+               </span>
+               <p class="service-price">
+                Starting at $1,600
+               </p>
+              </div>
+              <div class="service-item">
+               <span class="service-icon web-experiences-icon">
+               </span>
+               <span class="service-name">
+                Web Experiences
+               </span>
+               <p class="service-price">
+                Starting at $10,000
+               </p>
+              </div>
+             </div>
+             <div class="right-container">
+              <div class="service-item">
+               <span class="service-icon infographics-icon">
+               </span>
+               <span class="service-name">
+                Infographics
+               </span>
+               <p class="service-price">
+                Starting at $1,995
+               </p>
+              </div>
+              <div class="service-item">
+               <span class="service-icon social-media-icon">
+               </span>
+               <span class="service-name">
+                Social Media
+               </span>
+               <p class="service-price">
+                Starting at $595
+               </p>
+              </div>
+              <div class="service-item">
+               <span class="service-icon ebooks-icon">
+               </span>
+               <span class="service-name">
+                eBooks
+               </span>
+               <p class="service-price">
+                Starting at $1,600
+               </p>
+              </div>
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+          </div>
+          <div class="custom-quote-thanks" id="custom-quote-thanks-lead-form">
+           <div class="custom-quote-thanks-container" style="display: block;width: 790px;&gt;">
+            <span class="custom-quote-thanks-title">
+             Thanks
+            </span>
+            <span class="custom-quote-thanks-icon">
+            </span>
+            <span class="custom-quote-thanks-message">
+             A Visually account executive will reach out to you
+             <br/>
+             within one business day.
+            </span>
+            <form>
+             <div class="select custom-quote-thanks-find">
+              <input class="hidden" name="destination" value=""/>
+              <select class="select-contact-style" id="find-out" name="find-out">
+               <option data-id="-1" disabled="" selected="" style="display: none;" value="">
+                How did you hear about
+us?
+               </option>
+               <option id="press" value="Google or another search engine">
+                Google or another search engine
+               </option>
+               <option id="search" value="Event">
+                Event
+               </option>
+               <option id="referral" value="Friend/Referral">
+                Friend/Referral
+               </option>
+               <option id="fan" value="Social Media(Twitter, Facebook, etc.)">
+                Social Media (Twitter, Facebook,
+etc.)
+               </option>
+               <option id="social-media" value="I saw Visually's work online">
+                I saw Visually's work online
+               </option>
+               <option id="other-source" value="Other">
+                Other
+               </option>
+              </select>
+              <span class="select-arrow">
+              </span>
+             </div>
+             <input class="talk-to-us custom-quote-thanks-submit" type="submit" value="Submit"/>
+            </form>
+           </div>
+          </div>
+          <div id="contact-dialog">
+           <p class="contact-dialog-title">
+            We'll put together the perfect team to help you tell your story.
+           </p>
+           <form action="#" class="clearfix contact-dialog" method="POST">
+            <div class="two-wrappers">
+             <div class="wrap">
+              <input class="contact-style required" data-validate="required" name="first_name" placeholder="First Name" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-validate="required" name="last_name" placeholder="Last name" type="text"/>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="two-wrappers">
+             <div class="wrap">
+              <input class="contact-style required" data-validate="required" name="company" placeholder="Company name" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-validate="required email" name="email" placeholder="Work Email" type="text"/>
+             </div>
+             <div class="clear">
+             </div>
+            </div>
+            <div class="wrap">
+             <input class="contact-style required" data-validate="required phone" name="phone" placeholder="Phone number" type="text"/>
+            </div>
+            <div class="wrap">
+             <input class="contact-style" name="jobTitle" placeholder="Job title" type="text"/>
+            </div>
+            <div class="clear">
+            </div>
+            <input name="prospect_source" type="hidden" value="get started contact us form"/>
+            <input name="source_lead" type="hidden" value="get started contact us form"/>
+            <div class="select">
+             <select class="select-contact-style required" data-validate="required" id="company_size" name="company_size">
+              <option data-id="-1" disabled="" selected="" value="">
+               How many employees work for your company?
+              </option>
+              <option value="1-10">
+               1-10
+              </option>
+              <option value="11-50">
+               11-50
+              </option>
+              <option value="51-200">
+               51-200
+              </option>
+              <option value="201-500">
+               201-500
+              </option>
+              <option value="501-1000">
+               501-1000
+              </option>
+              <option value="1001-5000">
+               1001-5000
+              </option>
+              <option value="5001-10,000">
+               5001-10,000
+              </option>
+              <option value="10,000+">
+               10,000+
+              </option>
+             </select>
+             <span class="select-arrow">
+             </span>
+            </div>
+            <div class="select">
+             <select class="select-contact-style required" data-validate="required" id="budget-contact" name="budget">
+              <option data-id="-1" disabled="" selected="" value="">
+               What is your budget for this project?
+              </option>
+              <option value="$1k-$5k">
+               $1k-$5k
+              </option>
+              <option value="$5k-$10k">
+               $5k-$10k
+              </option>
+              <option value="$10k-$20k">
+               $10k-$20k
+              </option>
+              <option value="$20k+">
+               $20k+
+              </option>
+              <option value="Budget not yet determined">
+               Budget not yet determined
+              </option>
+             </select>
+             <span class="select-arrow">
+             </span>
+            </div>
+            <div class="select hidden">
+             <select name="option">
+              <option>
+               What are you looking for?
+              </option>
+              <option value="infographic">
+               Static Infograhic
+              </option>
+              <option value="motiongraphic">
+               Video
+              </option>
+              <option value="interactive">
+               Interactive Visualization
+              </option>
+             </select>
+            </div>
+            <div class="wrap">
+             <textarea class="required contact-style" data-validate="required" name="nature" placeholder="Describe your Project">
+             </textarea>
+            </div>
+            <input class="submit-contact button" data-action="submit" disabled="disabled" name="submit-lead" type="button" value="Submit"/>
+            <div class="clear">
+            </div>
+           </form>
+          </div>
+          <div class="contact-us" id="contact-us-complete">
+           <p class="contact-us-complete-title">
+            Thank you for your interest in the Visually Marketplace. We will be in touch regarding your inquiry very
+soon.
+           </p>
+           <div class="contact-row" id="find-out-wrapper">
+            <p class="find-out-subtitle">
+             How did you hear about us?
+            </p>
+            <input class="designer-contact-dialog" type="hidden"/>
+            <input class="page-contact-dialog" type="hidden"/>
+            <input class="lead-contact-dialog" type="hidden"/>
+            <input class="format-contact-dialog" type="hidden"/>
+            <div class="select">
+             <select class="select-contact-style" id="find-out-contact" name="find-out">
+              <option data-id="-1" disabled="" selected="" value="">
+               Please choose
+              </option>
+              <option id="press-contact" value="Google or another search engine">
+               Google or another search engine
+              </option>
+              <option id="search-contact" value="Event">
+               Event
+              </option>
+              <option id="referral-contact" value="Friend/Referral">
+               Friend/Referral
+              </option>
+              <option id="fan-contact" value="Social Media(Twitter, Facebook, etc.)">
+               Social Media( Twitter, Facebook,
+etc.)
+              </option>
+              <option id="social-media-contact" value="I saw Visually's work online">
+               I saw Visually's work online
+              </option>
+              <option id="other-source-contact" value="Other">
+               Other
+              </option>
+             </select>
+             <span class="select-arrow">
+             </span>
+            </div>
+            <input id="find-out-submit" name="find-out-submit" type="button" value="Submit"/>
+           </div>
+           <p id="find-out-thanks" style="display: none;">
+            Thank you!
+           </p>
+          </div>
+         </div>
+         <div id="visually-olark-full-wrapper">
+          <script data-cfasync="false" type="text/javascript">
+           window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){f[z]=function(){(a.s=a.s||[]).push(arguments)};var a=f[z]._={},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){f[z]("call",n,arguments)}})(c.methods[q])}
+a.l=c.loader;a.i=nt;a.p={0:+new Date};a.P=function(u){a.p[u]=new Date-a.p[0]};function s(){a.P(r);f[z](r)}
+f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){hd="head";return["&lt;",hd,"&gt;&lt;/",hd,"&gt;&lt;",i,' onl'+'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"&gt;&lt;/",i,"&gt;"].join("")}
+var i="body",m=d[i];if(!m){return setTimeout(ld,100)}
+a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}
+b.allowTransparency="true";v[j](b);try{b.contentWindow[g].open()}catch(w){c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}
+try{var t=b.contentWindow[g];t.write(p());t.close()}catch(x){b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}
+a.P(2)};ld()};nt()})({loader:"static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});olark.identify('3959-433-10-3966');olark('api.chat.onOperatorsAway',function(){jQuery('#habla_offline_submit_input').click(function(){olark('api.visitor.getDetails',function(details){var data={'first_name':details.fullName,'last_name':details.fullName,'email':details.emailAddress,'prospect_source':"Olark Chat",'prospect_source_url':VisApi.Constants.SiteUrl+'/olark','description':jQuery('#habla_offline_body_input').val()};olark('api.visitor.updateCustomFields',data);var marketo=VisApi.Helpers.getMarketo(data);VisApi.Helpers.saveLeadToMarketo(marketo);});});});olark('api.chat.onCommandFromOperator',function(event){if(event.command.name==='lead'){var comments=event.command.nickname+' '+new Date($.now())+':'+event.command.name;olark('api.visitor.getDetails',function(details){var data={'first_name':details.fullName,'last_name':details.fullName,'email':details.emailAddress,'prospect_source':"Olark Chat",'prospect_source_url':VisApi.Constants.SiteUrl+'/olark','description':comments};olark('api.visitor.updateCustomFields',data);var marketo=VisApi.Helpers.getMarketo(data);VisApi.Helpers.saveLeadToMarketo(marketo);});}});olark('api.box.onHide',function(){jQuery.cookie("hideOlark","1",{expires:1,path:'/',domain:'visual.ly'});});&lt;/script&gt; &lt;script&gt;jQuery(document).ready(function(){if(jQuery.cookie("hideOlark")!=1){window.olark('api.box.show');}});
+          </script>
+          <noscript>
+           <a href="https://www.olark.com/site/3959-433-10-3966/contact" target="_blank" title="Contact us">
+            Questions?
+Feedback?
+           </a>
+           powered by
+           <a href="http://www.olark.com?welcome" title="Olark live chat software">
+            Olark live
+chat software
+           </a>
+          </noscript>
+         </div>
+         <div id="bounce-popup" style="display: none">
+          <a id="fancybox-close" style="display: inline;">
+          </a>
+          <a href="http://pages.visual.ly/EB_2015-02_Ebooks_HowToCreateCompellingEbooksRequestPage.html" target="_blank">
+           <img alt="Newsletter Popup Image" id="ebook-img" src="//a.visual.ly/media/images/ebook/Popup.jpg"/>
+          </a>
+         </div>
+         <div class="hidden">
+          <div id="header-modal">
+           <div class="close">
+           </div>
+           <div class="account-management">
+            <div class="create-account submit-button-project">
+             <p class="login-title">
+              Start creating, sharing &amp; exploring great visuals today!
+             </p>
+             <p>
+              Have an account?
+              <a class="submit_project_login" href="javascript:void(0);">
+               Log-in here.
+              </a>
+             </p>
+             <div class="social">
+              <div class="facebook">
+               <a class="facebook-modal" data-signin-text="Sign in with Facebook" data-signup-text="Sign up with Facebook" href="javascript:void(0)">
+                <div class="icon">
+                </div>
+                <span>
+                 Sign in with Facebook
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="or-line">
+              <span class="line">
+              </span>
+              <span class="or-text">
+               OR
+              </span>
+              <span class="line">
+              </span>
+             </div>
+             <a href="javascript:void(0);" id="create-account">
+              Create an Account
+             </a>
+             <div class="create-account-form">
+              <form data-action="https://visual.ly/ajax/register" data-destination="%destination%" method="POST">
+               <div class="wrap">
+                <input class="required" data-name="Email Address" data-validate="required email" name="email" placeholder="Email Address" type="text"/>
+               </div>
+               <div class="two-wrappers">
+                <div class="wrap">
+                 <input class="required" data-name="First Name" data-validate="required" name="first-name" placeholder="First Name" type="text"/>
+                </div>
+                <div class="wrap">
+                 <input class="required" data-name="Last Name" data-validate="required" name="last-name" placeholder="Last Name" type="text"/>
+                </div>
+                <div class="clear">
+                </div>
+               </div>
+               <div class="wrap">
+                <input class="required" data-name="Username" data-validate="required minlength=3 maxlength=255" name="username" placeholder="Username" type="text"/>
+               </div>
+               <div class="wrap">
+                <input class="required" data-name="Password" data-validate="required minlength=6 maxlength=255" name="password" placeholder="Password" type="password"/>
+               </div>
+               <div class="wrap">
+                <input class="required" data-name="Confirm Password" data-validate="required minlength=6 maxlength=255" name="verify_password" placeholder="Confirm Password" type="password"/>
+               </div>
+               <input name="role" type="hidden" value=""/>
+               <div class="user-roles">
+                <p class="user-roles-subtitle">
+                 Which role describes you best?
+                </p>
+                <div class="relative select">
+                 <select class="select-contact-style required-select select-role-id" data-validate="required-select" id="role" name="role_id">
+                  <option value="-1">
+                   Select a Role
+                  </option>
+                  <option value="22">
+                   Brand
+                  </option>
+                  <option value="23">
+                   Marketer
+                  </option>
+                  <option value="24">
+                   PR/Communications
+                  </option>
+                  <option value="6">
+                   Publisher
+                  </option>
+                  <option value="7">
+                   Designer
+                  </option>
+                  <option value="8">
+                   Journalist
+                  </option>
+                  <option value="9">
+                   Animator
+                  </option>
+                  <option value="10">
+                   Developer
+                  </option>
+                  <option value="5">
+                   Fan
+                  </option>
+                 </select>
+                 <span class="select-arrow">
+                 </span>
+                </div>
+               </div>
+               <input data-action="submit" disabled="" id="submit-simple" name="submit-simple" type="button" value="Submit"/>
+               <div class="clear">
+               </div>
+              </form>
+             </div>
+            </div>
+            <div class="login-account">
+             <p class="login-title">
+              LOGIN TO YOUR VISUALLY ACCOUNT
+             </p>
+             <p>
+              Dont't have an account?
+              <a class="signup-link" href="javascript:void(0);">
+               Create one
+              </a>
+             </p>
+             <div class="social">
+              <div class="facebook">
+               <a class="facebook-modal" data-signin-text="Sign in with Facebook" data-signup-text="Sign up with Facebook" href="javascript:void(0)">
+                <div class="icon">
+                </div>
+                <span>
+                 Sign in with Facebook
+                </span>
+               </a>
+              </div>
+             </div>
+             <div class="or-line">
+              <span class="line">
+              </span>
+              <span class="or-text">
+               OR
+              </span>
+              <span class="line">
+              </span>
+             </div>
+             <div class="login-account-form">
+              <form data-action="https://visual.ly/ajax/login" data-destination="%destination%" method="POST">
+               <div class="wrap">
+                <input class="required" data-validate="required minlength=3 maxlength=255" name="username" placeholder="Enter your email address or username" tabindex="1" type="text"/>
+               </div>
+               <div class="wrap password">
+                <input class="required" data-validate="required minlength=6 maxlength=255" name="password" placeholder="Password" tabindex="2" type="password"/>
+               </div>
+               <div class="forgot-password-wrap">
+                Forgot your username or password?
+                <a class="user-reset-password" href="javascript:void(0);" tabindex="4">
+                 Click
+here
+                </a>
+               </div>
+               <input data-action="submit" disabled="" id="login-manually" name="op" tabindex="3" type="button" value="Log In"/>
+              </form>
+             </div>
+            </div>
+           </div>
+           <div class="create-social-facebook" id="create-social-facebook">
+            <p class="create-social-facebook-title">
+             Almost there! Just some small &amp; final details.
+            </p>
+            <form class="with-role" data-action="https://visual.ly/ajax/register" data-destination="%destination%" method="POST">
+             <div class="avatar">
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-name="First Name" data-validate="required" name="first_name" placeholder="First Name" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-name="Last name" data-validate="required" name="last_name" placeholder="Last name" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-name="Email Address" data-validate="required email" name="email" placeholder="Email Address" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="password1 contact-style required" data-name="Password" data-validate="required minlength=6 maxlength=255" name="password" placeholder="Password" type="password"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-name="Confirm Password" data-validate="required confirm_password minlength=6 maxlength=255" name="verify_password" placeholder="Confirm Password" type="password"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style required" data-name="Username" data-validate="required minlength=3 maxlength=255" name="username" placeholder="Username" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style" name="website" placeholder="Website" type="text"/>
+             </div>
+             <div class="wrap">
+              <input class="contact-style" name="location" placeholder="Location" type="text"/>
+             </div>
+             <div class="clear">
+             </div>
+             <input class="contact-style" name="role" type="hidden" value=""/>
+             <div class="user-roles">
+              <p class="user-roles-subtitle2">
+               Which role describes you best?
+              </p>
+              <div class="relative">
+               <select id="role-facebook" name="role_id">
+                <option value="5">
+                 Fan
+                </option>
+                <option value="7">
+                 Designer
+                </option>
+                <option value="8">
+                 Journalist
+                </option>
+                <option value="9">
+                 Animator
+                </option>
+                <option value="10">
+                 Developer
+                </option>
+                <option value="6">
+                 Publisher
+                </option>
+                <option value="22">
+                 Brand
+                </option>
+                <option value="23">
+                 Marketer
+                </option>
+                <option value="24">
+                 PR/Communications
+                </option>
+               </select>
+              </div>
+             </div>
+             <input data-action="submit" disabled="disabled" id="submit-facebook" name="submit-facebook" type="button" value="Submit"/>
+             <div class="clear">
+             </div>
+            </form>
+           </div>
+           <div class="create-social-facebook-link">
+            <div class="main-message">
+             <span class="email">
+             </span>
+             already has a Visually account,
+             <br/>
+             please choose one of the following options.
+            </div>
+            <div class="main-wrapper left float-left">
+             <p class="facebook-link-text">
+              You can link your Visually and Facebook accounts here.
+             </p>
+             <div class="button-wrapper">
+              <input class="facebook-btn medium" type="button" value="   Link your Facebook Account"/>
+              <input class="facebook-link-password" placeholder="Current Visually Password" type="password"/>
+              <br/>
+             </div>
+            </div>
+            <div class="main-wrapper right float-right">
+             <p class="mail-link-text">
+              Ignore Facebook signup and log in with
+              <span class="email">
+              </span>
+             </p>
+             <div class="button-wrapper">
+              <input class="mail-login" type="button" value="  Log in with your email"/>
+             </div>
+            </div>
+            <div class="clear">
+            </div>
+           </div>
+           <div id="forgot-password">
+            <p class="forgot-password-title">
+             Reset your Visually password
+            </p>
+            <form action="//visual.ly/ajax/password">
+             <div>
+              <div class="forgot-password-text">
+               Enter your username or e-mail address
+              </div>
+              <input class="contact-style" name="username" placeholder="Username or e-mail" type="text"/>
+             </div>
+             <div>
+              <input class="submit-forgot" name="reset" type="submit" value="Submit"/>
+             </div>
+            </form>
+           </div>
+          </div>
+         </div>
+         <script>
+          jQuery(document).ready(function(){if((mobilecheck()==true)||(navigator.userAgent.match(/iPad/i)!=null)){jQuery('body').addClass('mobile');}});
+         </script>
+         <script type="text/javascript">
+          function getUserCityCookie(){var userCity=jQuery.cookie("vly__user_city");if(typeof userCity=="undefined"){userCity="";}
+return userCity;}
+function getUserCityGeoIp(){if(typeof(geoip_city)=="function"){return geoip_city();}
+return"";}
+function loadUserCityGeoIp(){loadGeoIpMaxMind();}
+function loadGeoIpMaxMind(){jQuery.getScript("//j.maxmind.com/js/geoip.js",onGeoIpMaxMindLoaded);}
+function onGeoIpMaxMindLoaded(){jQuery.cookie("vly__user_city",getUserCityGeoIp(),{path:'/'});}
+function loadUserCity(){if(getUserCityCookie()==""){loadUserCityGeoIp();}}
+         </script>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- /#footer -->
+    </div>
+   </div>
+   <!-- /.section, /#footer-wrapper -->
+  </div>
+  <!-- /#page, /#page-wrapper -->
+  <div id="back-to-top">
+  </div>
+  <div id="hidden-util">
+  </div>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b00adbfd2b","applicationID":"2354377","transactionName":"NFBRNUNVCBUCWxFeVw0acgJFXQkITFYKU108RVIGVGsQDwZP","queueTime":0,"applicationTime":647,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}
+  </script>
+ </body>
+</html>

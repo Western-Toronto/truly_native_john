@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--$Id: page.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+<!-- www.roopletheme.com -->
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Welcome to the United States Taekwondo Academy | United States Tae Kwon Do Academy
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="US Taekwondo Academy" name="copyright"/>
+  <meta content="United States Tae Kwon Do Academy | Quality Martial Arts Instruction, Quality Results!" name="DC.Title"/>
+  <meta content="USTA is a martial arts school with two locations in Richardson and Allen, Texas, lead by two 6th-degree black belt master instructors who teach adults and children tae kwon do, self defense, jujitsu, and arnis -USTA is in Dallas DFW USA" name="description"/>
+  <meta content="martial arts,karate,taekwondo,self-defense,black belt,jujitsu,arnis,weapons,sparring,white belt,yellow belt,green belt,blue belt,red belt,ninja,richardson,allen,dallas,dfw,plano,garland,texas,tae kwon do,self defense,fitness" name="keywords"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="32.945324;-96.693142" name="geo.position"/>
+  <meta content="32.945324,-96.693142" name="ICBM"/>
+  <link href="/files/bealestreet_favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <style media="all" type="text/css">
+   @import "/./modules/modules/calendar/calendar.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/modules/cck/content.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/modules/date/date.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/modules/event/event.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/node/node.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/system/defaults.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/system/system.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_attribute/uc_attribute.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_file/uc_file.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_order/uc_order.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_product/uc_product.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_roles/uc_roles.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_store/uc_store.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubercart/uc_taxes/uc_taxes.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/ubrowser/ubrowser.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/user/user.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/modules/calendar/calendar.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/modules/modules/cck/fieldgroup.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/themes/bealestreet/style.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/themes/bealestreet/css/blue.css";
+  </style>
+  <style media="all" type="text/css">
+   @import "/themes/bealestreet/css/suckerfish_blue.css";
+  </style>
+  <script src="/misc/jquery.js" type="text/javascript">
+  </script>
+  <script src="/misc/drupal.js" type="text/javascript">
+  </script>
+  <script src="/themes/bealestreet/js/suckerfish.js" type="text/javascript">
+  </script>
+  <script src="/themes/bealestreet/js/jquery.pngFix.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   Drupal.extend({ settings: { "base_path": "/" } });
+  </script>
+  <script type="text/javascript">
+  </script>
+  <style type="text/css">
+   #page {
+			width : 850px;
+		}
+
+      	.topBlock, .bottomBlock, .middleWrapper {
+			width : 880px;
+		}
+  </style>
+  <style type="text/css">
+   #sidebar-left {
+          width : 170px;
+        }
+  </style>
+  <style type="text/css">
+   #sidebar-right {
+          width : 210px;
+        }
+  </style>
+  <style type="text/css">
+   body {
+           font-family : Arial, Verdana, sans-serif;
+         }
+  </style>
+  <!--[if lte IE 6]&gt;
+&lt;script type="text/javascript"&gt; 
+    $(document).ready(function(){ 
+        $(document).pngFix(); 
+    }); 
+&lt;/script&gt; 
+&lt;![endif]-->
+  <script src="http://www.ustacademy.com/themes/bealestreet/js/pickstyle.js" type="text/javascript">
+  </script>
+ </head>
+ <body>
+  <div class="page">
+   <div class="topWrapper">
+    <div class="topBlock">
+     <div id="masthead">
+      <div class="clear-block" id="header">
+       <div class="mastheadRight">
+        <div class="mastheadLeft">
+         <form action="/search/node" id="search-theme-form" method="post">
+          <div>
+           <div class="container-inline" id="search">
+            <div class="form-item">
+             <input class="form-text" id="edit-search-theme-form-keys" maxlength="128" name="search_theme_form_keys" size="15" title="Enter the terms you wish to search for." type="text" value=""/>
+            </div>
+            <input class="form-submit" id="edit-submit" name="op" type="submit" value="Search"/>
+            <input id="edit-search-theme-form" name="form_id" type="hidden" value="search_theme_form"/>
+           </div>
+          </div>
+         </form>
+         <div id="logo-title">
+          <a href="/" title="Home">
+           <img alt="Home" id="logo" src="/files/bealestreet_logo.png"/>
+          </a>
+         </div>
+         <!-- /logo-title -->
+         <div id="name-and-slogan">
+         </div>
+         <!-- /name-and-slogan -->
+        </div>
+        <!-- /mastheadLeft -->
+       </div>
+       <!-- /mastheadRight -->
+      </div>
+      <!-- /header -->
+     </div>
+     <!-- /masthead -->
+    </div>
+    <!-- /topBlock -->
+   </div>
+   <!-- /topWrapper -->
+   <div class="middleWrapper">
+    <div class="middleBlock">
+     <div class="menu withprimary " id="navigation">
+      <div class="clear-block" id="primary">
+       <!-- ?php print theme('menu_links', $primary_links); ? -->
+      </div>
+     </div>
+     <!-- /navigation -->
+     <div class="clear-block" id="suckerfishmenu">
+      <!--$Id: block.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+      <!-- www.roopletheme.com -->
+      <div class="block block-menu" id="block-menu-2">
+       <h2 class="title">
+       </h2>
+       <div class="content">
+        <ul class="menu">
+         <li class="leaf">
+          <a href="/">
+           Home
+          </a>
+         </li>
+         <li class="leaf">
+          <a href="http://www.ustacademy.com/do-you-offer-martial-arts-videos" title="Download your Self-Defense &amp; Forms">
+           Videos
+          </a>
+         </li>
+         <li class="expanded">
+          <a href="/classes" title="Martial Arts and Workout Programs">
+           Classes
+          </a>
+          <ul class="menu">
+           <li class="leaf">
+            <a href="/tae-kwon-do" title="Korean Martial Arts">
+             Tae Kwon Do
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/arnis" title="Weapons Training">
+             Arnis
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/jujitsu" title="Japan't ancient art of combat">
+             Jujitsu
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/little-ninjas" title="Small Children's Classes">
+             Little Ninjas
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/kenjutsu-japanese-sword-training" title="Japanese Sword Training">
+             Kenjutsu- Japanese Sword
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/leadership-program" title="Special Winning Attitude Team">
+             Leadership Program
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/class-schedule" title="See days and times for USTA classes">
+             Class Schedule
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="leaf">
+          <a href="/event">
+           Events Calendar
+          </a>
+         </li>
+         <li class="leaf">
+          <a href="http://photos.ustacademy.com/">
+           Photos
+          </a>
+         </li>
+         <li class="expanded">
+          <a href="/about-us-tae-kwon-do-academy" title="Learn more about our martial arts school">
+           About USTA
+          </a>
+          <ul class="menu">
+           <li class="leaf">
+            <a href="/why-usta" title="Discover why USTA is THE choice for martial arts training!">
+             Why USTA
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/our-mission" title="We are on a quest to be our best!">
+             Our Mission
+            </a>
+           </li>
+           <li class="expanded">
+            <a href="/master-instructors" title="Learn more about who will be teaching you martial arts">
+             Master Instructors
+            </a>
+            <ul class="menu">
+             <li class="leaf">
+              <a href="/master-fouad-atoun" title="Master Fouad Atoun - 6th. Degree Black Belt">
+               Master Fouad Atoun
+              </a>
+             </li>
+             <li class="leaf">
+              <a href="/master-ezzedeen-alsharif" title="Master Ezzedeen Alsharif 6th Degree Black Belt">
+               Master Ezzedeen Alsharif
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li class="leaf">
+            <a href="/assistant-instructors">
+             Assistant Instructors
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/testimonials" title="See what students and parents are saying about USTA!">
+             Testimonials
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/category/content/newsletter" title="Get the latest updates and information from USTA">
+             Newsletters
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/category/content/press-releases" title="News about USTA">
+             Black Belt Essays/ Press Release
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="expanded">
+          <a href="/frequently-asked-questions" title="Frequently Asked Questions">
+           FAQ
+          </a>
+          <ul class="menu">
+           <li class="leaf">
+            <a href="/do-you-teach-children" title="Absolutely! Enroll Your Child TODAY!">
+             Do you teach children?
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/can-i-join-class-my-child" title="Yes! In fact, we strongly encourage it...">
+             Can I join a class with my child?
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/why-different-martial-arts" title="The more you know, the better...">
+             Why different martial arts?
+            </a>
+           </li>
+           <li class="leaf">
+            <a href="/do-you-offer-martial-arts-videos" title="Videos serve a vital supportive role in martial arts development">
+             Do you offer martial arts videos?
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="leaf">
+          <a href="/get-started-today" title="USTA enrollment process">
+           Get Started!
+          </a>
+         </li>
+         <li class="leaf">
+          <a href="/pro-shop" title="See what we have to offer in our martial arts shop at USTA.">
+           Pro Shop
+          </a>
+         </li>
+         <li class="leaf">
+          <a href="/contact" title="Call or email us using our online form">
+           Contact Us
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <iframe frameborder="0" height="100" marginheight="0" marginwidth="0" scrolling="no" src="http://ustacademy.com/header/rid.php?=random" width="850">
+     </iframe>
+     <div id="middlecontainer">
+      <table border="0" cellpadding="0" cellspacing="0" id="content">
+       <tr>
+        <td id="sidebar-left">
+         <!--$Id: block.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+         <!-- www.roopletheme.com -->
+         <div class="block block-block" id="block-block-2">
+          <h2 class="title">
+          </h2>
+          <div class="content">
+           <p align="center">
+            <a href="http://www.ustacademy.com/get-started-today">
+             <img alt="CALL NOW!" border="1" class="" src="http://www.ustacademy.com/files/freeuniform3.gif"/>
+            </a>
+           </p>
+          </div>
+         </div>
+         <!--$Id: block.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+         <!-- www.roopletheme.com -->
+         <div class="block block-user" id="block-user-0">
+          <h2 class="title">
+           Student Login
+          </h2>
+          <div class="content">
+           <form action="/welcome-united-states-taekwondo-academy?destination=node%2F3957" id="user-login-form" method="post">
+            <div>
+             <div class="form-item">
+              <label for="edit-name">
+               Username:
+               <span class="form-required" title="This field is required.">
+                *
+               </span>
+              </label>
+              <input class="form-text required" id="edit-name" maxlength="60" name="name" size="15" type="text" value=""/>
+             </div>
+             <div class="form-item">
+              <label for="edit-pass">
+               Password:
+               <span class="form-required" title="This field is required.">
+                *
+               </span>
+              </label>
+              <input class="form-text required" id="edit-pass" maxlength="60" name="pass" size="15" type="password"/>
+             </div>
+             <input class="form-submit" id="edit-submit" name="op" type="submit" value="Log in"/>
+             <input id="edit-user-login-block" name="form_id" type="hidden" value="user_login_block"/>
+             <div class="item-list">
+             </div>
+            </div>
+           </form>
+          </div>
+         </div>
+         <!--$Id: block.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+         <!-- www.roopletheme.com -->
+         <div class="block block-block" id="block-block-3">
+          <h2 class="title">
+          </h2>
+          <div class="content">
+           <p>
+            <a href="http://www.ustacademy.com/user/password">
+             Recover Password
+            </a>
+           </p>
+          </div>
+         </div>
+        </td>
+        <td valign="top">
+         <div id="main">
+          <h1 class="title">
+           Welcome to the United States Taekwondo Academy
+          </h1>
+          <div class="tabs">
+          </div>
+          <!--$Id: node.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
+          <!-- www.roopletheme.com -->
+          <div class="node">
+           <span class="submitted">
+           </span>
+           <span class="taxonomy">
+           </span>
+           <div class="content clear-block clear">
+            <p>
+             <span style="line-height: 125%; font-size: 10pt">
+              On behalf of the students, staff &amp; family members of the United States TaeKwonDo Academy, allow us to welcome you to our site
+              <img align="right" alt="U.S. Tae Kwon Do Academy" hspace="5" src="http://www.ustacademy.com/files/home002_0.jpg" vspace="5"/>
+              .We takegreat pride in the accomplishments of our students and we hope that you will decide to expand your Martial Arts journey with us.The USTA met the approval of the World TaeKwonDo Federation located in Korea and it is authorized by the United States TaeKwonDo Federation.USTAholds the privilege of being the only Martial Arts school in the city of Richardsonand the city of Allenauthorized by the ISD to offer PE Credits for Jr. High and High school students attending 5 hours of TaeKwonDo Classes a week.
+             </span>
+            </p>
+            <p>
+             <span style="line-height: 125%; font-size: 10pt">
+              Our sole purpose is to teach students from all walks of life martial arts for self defense and self improvement in a friendly and safe environment.
+             </span>
+             <span style="line-height: 125%; font-size: 10pt">
+              USTA teaches self-defense for all ages, including a full training program of Japanese Jujitsu self defense, Arnis, TaeKwonDo, &amp; Kenjitsue (Japanese Samurai Sword).
+             </span>
+            </p>
+            <p>
+             <span style="line-height: 125%; font-size: 10pt">
+              Unlike many martial artists who have only studied one discipline, Master Atoun and Master Alsharif are fortunate to have been exposed to a variety of styles and can offer an unbiased comparison. When people ask us why we teach various styles of Martial Arts, we answer,Simply because, one style of martial arts does not work for all situations!.We offer a much more honest service by teaching skills that actually hold up under pressure, and we do it while sharing the physical fitness and positive character benefits for which martial arts training has become famous.
+             </span>
+            </p>
+            <p>
+            </p>
+            <p>
+             <iframe allowfullscreen="" frameborder="0" height="345" src="http://www.youtube.com/embed/2B9SKS6yIBw" title="YouTube video player" width="560">
+             </iframe>
+            </p>
+            <p>
+             <span style="line-height: 125%; font-size: 10pt">
+              <strong>
+               <font color="#ffffff">
+                Richardson 972 238-7073 / Allen 469 632-0828. Schedule your free, no obligation martial arts consultation.
+               </font>
+              </strong>
+             </span>
+            </p>
+           </div>
+           <div class="links clear-block clear">
+            
+            <ul class="links inline">
+             <li class="first last print">
+              <a class="print-page print" href="/print/3957" title="Display a printer-friendly version of this page.">
+               Printer-friendly version
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <!-- /middleBlock -->
+   </div>
+   <!-- /middleWrapper -->
+   <div class="bottomWrapper">
+    <div class="bottomBlock">
+     <div class="clear-block" id="footer-wrapper">
+      <div class="footer-right">
+       <div class="footer-left">
+        <div id="footer">
+         <a href="http://www.ustacademy.com/sitemap">
+          Site Map
+         </a>
+         |
+         <a href="http://www.ustacademy.com/privacy-policy">
+          Privacy Policy
+         </a>
+         |
+         <a href="http://www.ustacademy.com/terms-and-conditions">
+          Terms &amp; Conditions
+         </a>
+         |
+         <a href="http://www.ustacademy.com/copyright-notice">
+          Copyright 2012 USTA
+         </a>
+         <br/>
+         <!-- a href="http://www.roopletheme.com" title="RoopleTheme!"&gt;&lt;img src="/themes/bealestreet/roopletheme.png" alt="RoopleTheme"/&gt;&lt;/a -->
+        </div>
+       </div>
+       <!-- /footer-left -->
+      </div>
+      <!-- /footer-right -->
+     </div>
+     <!-- /footer-wrapper -->
+    </div>
+    <!-- /bottomBlock -->
+   </div>
+   <!-- /bottomWrapper -->
+  </div>
+  <!-- /page -->
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   _uacct = "UA-3139396-1";
+urchinTracker();
+  </script>
+ </body>
+</html>

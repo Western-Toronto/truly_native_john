@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+ <head>
+  <!--&lt;meta charset="UTF-8" /&gt;-->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <title>
+   PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015 - Intertech Blog
+  </title>
+  <link href="http://www.intertech.com/Blog/xmlrpc.php" rel="pingback"/>
+  <!-- favicon -->
+  <!--
+		&lt;link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700" /&gt;
+		-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700" rel="stylesheet" type="text/css"/>
+  <!-- scripts and wp_head() here -->
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.4 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="noodp,noydir" name="robots"/>
+  <meta content="I put together a quick PhoneGap tutorial video to provide you with evidence and perhaps some inspiration for hybrid mobile app development." name="description"/>
+  <link href="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015 - Intertech Blog" property="og:title"/>
+  <meta content="I put together a quick PhoneGap tutorial video to provide you with evidence and perhaps some inspiration for hybrid mobile app development." property="og:description"/>
+  <meta content="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/" property="og:url"/>
+  <meta content="Intertech Blog" property="og:site_name"/>
+  <meta content="Apache Cordova,CSS,HTML,Hybrid App,JavaScript,PhoneGap,Windows Phone" property="article:tag"/>
+  <meta content="Mobile" property="article:section"/>
+  <meta content="2015-03-19T05:00:33+00:00" property="article:published_time"/>
+  <meta content="2015-03-16T14:23:11+00:00" property="article:modified_time"/>
+  <meta content="2015-03-16T14:23:11+00:00" property="og:updated_time"/>
+  <meta content="http://cdn.intertech.com/Blog/wp-content/uploads/2015/02/VisualStudio-Plus-PhoneGap.png" property="og:image"/>
+  <!-- / Yoast WordPress SEO plugin. -->
+  <link href="http://www.intertech.com/Blog/feed/" rel="alternate" title="Intertech Blog  Feed" type="application/rss+xml"/>
+  <link href="http://www.intertech.com/Blog/comments/feed/" rel="alternate" title="Intertech Blog  Comments Feed" type="application/rss+xml"/>
+  <link href="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/feed/" rel="alternate" title="Intertech Blog  PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015 Comments Feed" type="application/rss+xml"/>
+  <link href="http://cdn.intertech.com/Blog/wp-content/plugins/mailchimp//css/flick/flick.css?ver=4.0.5" id="flick-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.intertech.com/Blog/?mcsf_action=main_css&amp;ver=4.0.5" id="mailchimpSF_main_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <!--[if IE]&gt;
+&lt;link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://cdn.intertech.com/Blog/wp-content/plugins/mailchimp/css/ie.css?ver=4.0.5' type='text/css' media='all' /&gt;
+&lt;![endif]-->
+  <link href="http://cdn.intertech.com/Blog/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.6.8" id="crayon-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://cdn.intertech.com/Blog/wp-content/themes/rework/theme/compressed/theme.min.css?ver=1417801708" id="pe_theme_compressed-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://cdn.intertech.com/Blog/wp-content/themes/rework/style.css?ver=1418327648" id="pe_theme_init-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/postratings-css.css?ver=1.79" id="wp-postratings-css" media="all" rel="stylesheet" type="text/css"/>
+  <!-- This site uses the Yoast Google Analytics plugin v5.1.2 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-325338-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+  </script>
+  <!-- / Yoast Google Analytics -->
+  <script src="http://cdn.intertech.com/Blog/wp-includes/js/jquery/jquery.js?ver=1.11.1" type="text/javascript">
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var obj_lz = {"ifd_pixel":"50","ifd_duration":"1000"};
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/Advanced_lazyload.js?ver=advacned" type="text/javascript">
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4" type="text/javascript">
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/mailchimp//js/datepicker.js?ver=4.0.5" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.8","is_admin":"0","ajaxurl":"http:\/\/www.intertech.com\/Blog\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.6.8" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var peContactForm = {"url":"http%3A%2F%2Fwww.intertech.com%2FBlog%2Fwp-admin%2Fadmin-ajax.php"};
+var peNewsletter = {"url":"http%3A%2F%2Fwww.intertech.com%2FBlog%2Fwp-admin%2Fadmin-ajax.php"};
+var peFallBackPlayer = {"url":"http%3A%2F%2Fwww.intertech.com%2FBlog%2Fwp-content%2Fthemes%2Frework%2Fframework%2Fjs%2Fvideo%2Fjarisplayer.swf"};
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/themes/rework/theme/compressed/theme.min.js?ver=1367859755" type="text/javascript">
+  </script>
+  <link href="http://www.intertech.com/Blog/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://cdn.intertech.com/Blog/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <meta content="WordPress 4.0.5" name="generator"/>
+  <link href="http://www.intertech.com/Blog/?p=5896" rel="shortlink"/>
+  <script type="text/javascript">
+   jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+  </script>
+  <style type="text/css">
+   .sfs-subscriber-count { width: 88px; overflow: hidden; height: 26px; color: #424242; font: 9px Verdana, Geneva, sans-serif; letter-spacing: 1px; }
+.sfs-count { width: 86px; height: 17px; line-height: 17px; margin: 0 auto; background: #ccc; border: 1px solid #909090; border-top-color: #fff; border-left-color: #fff; }
+.sfs-count span { display: inline-block; height: 11px; line-height: 12px; margin: 2px 1px 2px 2px; padding: 0 2px 0 3px; background: #e4e4e4; border: 1px solid #a2a2a2; border-bottom-color: #fff; border-right-color: #fff; }
+.sfs-stats { font-size: 6px; line-height: 6px; margin: 1px 0 0 1px; word-spacing: 2px; text-align: center; text-transform: uppercase; }
+  </style>
+  <style type="text/css">
+   ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+  </style>
+  <script type="text/javascript">
+   window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://www.intertech.com/Blog/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.5.2';
+	window._wp_rp_post_id = '5896';
+	window._wp_rp_num_rel_posts = '6';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'PhoneGap+Tutorial%3A+Building+a+Camera+App+with+PhoneGap+and+Visual+Studio+2015';
+	window._wp_rp_post_tags = ['apache+cordova', 'phonegap', 'hybrid+app', 'css', 'windows+phone', 'javascript', 'html', 'visual+studio', 'web+development', 'mobile', 'camera', 'mobil', 'apach', 'plugin', 'studio', 'web', 'tool', 'app', 'video', 'visual', 'cordova', 'hybrid', 'set', 'tutori', 'game'];
+	window._wp_rp_promoted_content = true;
+  </script>
+  <script async="" src="https://wprp.zemanta.com/static/js/loader.js?version=3.5.2" type="text/javascript">
+  </script>
+  <link href="http://cdn.intertech.com/Blog/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/vertical-m.css?version=3.5.2" rel="stylesheet"/>
+  <!--[if (gte IE 6)&amp;(lte IE 8)]&gt;&lt;script type="text/javascript" src="http://cdn.intertech.com/Blog/wp-content/themes/rework/js/selectivizr-min.js"&gt;&lt;/script&gt;&lt;![endif]-->
+  <style type="text/css">
+   body,p,input[type="text"],textarea,input[type="submit"],input[type="reset"],input[type="button"],button,.button,#navigation a{font-family:'Open Sans';}h1{font-family:'Open Sans';}h2{font-family:'Open Sans';}h3{font-family:'Open Sans';}h4{font-family:'Open Sans';}h5{font-family:'Open Sans';}h6{font-family:'Open Sans';}
+  </style>
+  <style type="text/css">
+   a:hover{color:#7fb3e0;}a&gt;*:hover{color:#7fb3e0;}#navigation a:hover{color:#7fb3e0;}#navigation .hover&gt;a{color:#7fb3e0;}#navigation .current&gt;a{color:#7fb3e0;}#navigation ul{background-color:#7fb3e0;}#back-top a:hover{background-color:#7fb3e0;}.page-title-inner .accent{color:#7fb3e0;}.blog-carousel .comments:hover{color:#7fb3e0;}.jcarousel-prev:hover{background-color:#7fb3e0;}.jcarousel-prev:focus{background-color:#7fb3e0;}.jcarousel-prev:active{background-color:#7fb3e0;}#project-wrapper-alt .jcarousel-next:hover{background-color:#7fb3e0;}#project-wrapper-alt .jcarousel-next:focus{background-color:#7fb3e0;}#project-wrapper-alt .jcarousel-next:active{background-color:#7fb3e0;}.work-more a:hover{color:#7fb3e0;}.team-member:hover{border-bottom-color:#7fb3e0;}.member-info h4{color:#7fb3e0;}.member-social-links a:hover{color:#7fb3e0;}.service-icon{background-color:#7fb3e0;}.pricing-table-extended .level-max .header {background-color:#7fb3e0;}.pricing-table-simple .level-max h2{color:#7fb3e0;}.pricing-table-simple .level-max h2 span{color:#7fb3e0;}.on a{color:#7fb3e0;}#tabs li a:hover{border-top-color:#7fb3e0;}#tabs li.active a{border-top-color:#7fb3e0;}#tabs li.active a:hover{color:#7fb3e0;}.error{background-color:#7fb3e0;}blockquote .person .accent{color:#7fb3e0;}.post-meta .author a{color:#7fb3e0;}.post-meta .date a:hover{color:#7fb3e0;}.post-meta .tags a:hover{color:#7fb3e0;}.post-meta .comments a:hover{color:#7fb3e0;}.post-entry a{color:#7fb3e0;}.pagination .current{background-color:#7fb3e0;}.pagination a:hover{color:#7fb3e0;}.comment .author .reply:hover{color:#7fb3e0;}.post-block{background-color:#7fb3e0;}.post-more a:hover{color:#7fb3e0;}.project-feed-filter a:hover{color:#7fb3e0;}.project-feed-filter .current{color:#7fb3e0;}.project-item .overlay{background-color:#7fb3e0;background-color:rgba(127,179,224,0.75);}.project-item:hover .project-title{background-color:#7fb3e0;}.project-nav .prev:hover{background-color:#7fb3e0;}.project-nav .next:hover{background-color:#7fb3e0;}.project-nav .back:hover{background-color:#7fb3e0;}.widget.widget_categories li a:hover{color:#7fb3e0;}#footer .widget_categories li a:hover{color:#7fb3e0;}#footer .widget_recent_entries a:hover{color:#7fb3e0;}.twitter-feed a:hover{color:#7fb3e0;}#sidebar .twitter-feed a{color:#7fb3e0;}.photo-stream a:hover{outline-color:#7fb3e0;}#footer a:hover{color:#7fb3e0;}#footer .twitter-feed a:hover{color:#7fb3e0;}.flexslider:hover .flex-next:hover{background-color:#7fb3e0;}.flexslider:hover .flex-prev:hover{background-color:#7fb3e0;}#lang_sel ul ul li:hover a{background-color:#7fb3e0;}#lang_sel_list a:hover span{color:#7fb3e0;}
+  </style>
+  <style type="text/css">
+   #navigation a{
+color: #264385;
+}
+
+.post-entry ol, .post-entry ul {
+display: block;
+list-style-type: disc;
+margin: 0 1em;
+padding-left: 40px;
+margin-bottom: 15px;
+font-size: 14px;
+}
+
+.post-entry ol{
+list-style-type: decimal;
+}
+
+.flex-caption {
+bottom: 16px;
+background-color:transparent;
+width: 323px;
+left: 458px;
+}
+
+.red {
+background: #ec4c1a;
+background: -webkit-linear-gradient(#ec4c1a,#a32700);
+background: -moz-linear-gradient(#ec4c1a,#a32700);
+background: -ms-linear-gradient(#ec4c1a,#a32700);
+background: -o-linear-gradient(#ec4c1a,#a32700);
+background: -webkit-gradient(#ec4c1a,#a32700);
+background: linear-gradient(#ec4c1a,#a32700);
+background: #c1c1c1;
+background: -moz-linear-gradient(top, #c1c1c1 0%, #e5e5e5 32%, #e2e2e2 65%, #bbbdc1 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1c1c1), color-stop(32%,#e5e5e5), color-stop(65%,#e2e2e2), color-stop(100%,#bbbdc1));
+background: -webkit-linear-gradient(top, #c1c1c1 0%,#e5e5e5 32%,#e2e2e2 65%,#bbbdc1 100%);
+background: -o-linear-gradient(top, #c1c1c1 0%,#e5e5e5 32%,#e2e2e2 65%,#bbbdc1 100%);
+background: -ms-linear-gradient(top, #c1c1c1 0%,#e5e5e5 32%,#e2e2e2 65%,#bbbdc1 100%);
+background: linear-gradient(to bottom, #c1c1c1 0%,#e5e5e5 32%,#e2e2e2 65%,#bbbdc1 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1c1c1', endColorstr='#bbbdc1',GradientType=0 );
+}
+
+input.red{color: #264385;}
+@media screen and (max-width: 1185px) {
+  #socialBar {
+    display: none;
+  }
+}
+
+input[type="text"], input[type="password"], textarea {
+border: 1px solid #ddd;
+}
+
+.breadcrumbs{
+top: -35px;
+position: relative;
+}
+
+.breadcrumbs &gt; div{
+display: inline;
+}
+
+.ratings{
+color: #959595;
+display: inline-block;
+margin-right: 15px;
+width: auto;
+}
+
+.post-ratings img{
+display: inline-block;
+top: 2px;
+position: relative;
+}
+.post-ratings-text{position: absolute;}
+.post-ratings-loading img{
+display: inline-block;
+position: relative;
+top: 4px;
+}
+
+.post-meta .date, .post-meta .tags, .post-meta .comments {
+padding-bottom: 0;
+}
+
+.post-entry {
+margin-top: 20px;
+}
+
+@media all and (max-width: 1185px)
+{
+    div#socialBar &gt; div &gt; div.addthis_toolbox
+    {
+        display: none;
+    }
+}
+  </style>
+  <script type="text/javascript">
+   jQuery(window).load(function () {
+    jQuery.get("http://www.intertech.com/ShareBar", null, function (data) {
+        jQuery("body").append(data);
+    });
+        });
+  </script>
+ </head>
+ <body class="single single-post postid-5896 single-format-standard">
+  <!-- Main Container -->
+  <div id="body-wrapper">
+   <!-- Header -->
+   <div class="container clearfix" id="header">
+    <a href="http://www.intertech.com" id="logo">
+     <img alt="logo" imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2013/05/interlogo.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif"/>
+    </a>
+    <!--main nav-->
+    <ul id="navigation">
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2311" id="menu-item-2311">
+      <a href="http://www.intertech.com/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/', 'Home']);">
+       Home
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1225" id="menu-item-1225">
+      <a href="http://www.intertech.com/Blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Blog/', 'Blog']);" title="Intertechs Latest Technology Blog Posts">
+       Blog
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1233" id="menu-item-1233">
+      <a href="http://www.intertech.com/Training" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Training', 'Training']);" title="Intertech Training">
+       Training
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1234" id="menu-item-1234">
+      <a href="http://www.intertech.com/Consulting" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Consulting', 'Consulting']);" title="Intertech Consulting">
+       Consulting
+      </a>
+     </li>
+     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621" id="menu-item-1621">
+      <a href="http://www.intertech.com/Blog/about-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Blog/about-us/', 'About Us']);" title="About Intertech">
+       About Us
+      </a>
+     </li>
+    </ul>
+    <!--wpml lang selection-->
+   </div>
+   <!-- /Header -->
+   <!-- Content -->
+   <div class="container clearfix" id="content">
+    <div style="width: 100%; height: 80px;">
+    </div>
+    <!-- Main Content -->
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+     <!-- RDFa Breadcrumbs Plugin by Mallikarjun Yawalkar -->
+     <div class="breadcrumb breadcrumbs">
+      <div class="rdfa-breadcrumb">
+       <div xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span class="breadcrumbs-title">
+        </span>
+        <span typeof="v:Breadcrumb">
+         <a class="home" href="http://www.intertech.com/Blog/" property="v:title" rel="v:url">
+          Blog
+         </a>
+        </span>
+        <span class="separator">
+         
+        </span>
+        <span typeof="v:Breadcrumb">
+         <a href="http://www.intertech.com/Blog/category/mobile/" property="v:title" rel="v:url" title="Mobile">
+          Mobile
+         </a>
+        </span>
+        <span class="separator">
+         
+        </span>
+        PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015
+       </div>
+      </div>
+     </div>
+     <!-- RDFa Breadcrumbs Plugin by Mallikarjun Yawalkar -->
+    </div>
+    <!-- /Breadcrumbs -->
+    <div id="main">
+     <!--post-->
+     <div class="post single clearfix">
+      <a href="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/">
+       <h1>
+        PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015
+       </h1>
+      </a>
+      <ul class="post-meta">
+       <li class="author">
+        By
+        <a href="http://www.intertech.com/Blog/author/tom-faltesek/" rel="author" title="Posts by Tom Faltesek">
+         Tom Faltesek
+        </a>
+        <a href="https://plus.google.com/106859297669139524081" plugin="Google Plus Authorship" rel="author" title="Google Plus Profile for +">
+         +
+        </a>
+       </li>
+       <li class="date">
+        March 19, 2015
+       </li>
+       <li class="tags">
+        <a href="http://www.intertech.com/Blog/tag/apache-cordova/" rel="tag">
+         Apache Cordova
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/css/" rel="tag">
+         CSS
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/html/" rel="tag">
+         HTML
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/hybrid-app/" rel="tag">
+         Hybrid App
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/javascript/" rel="tag">
+         JavaScript
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/phonegap/" rel="tag">
+         PhoneGap
+        </a>
+        
+        <a href="http://www.intertech.com/Blog/tag/windows-phone/" rel="tag">
+         Windows Phone
+        </a>
+       </li>
+       <li class="comments">
+        <a href="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/#comments">
+         <span class="dsq-postid" data-dsqidentifier="5896 http://www.intertech.com/Blog/?p=5896">
+          2
+         </span>
+         Comments
+        </a>
+       </li>
+       <li class="ratings">
+        <div class="post-ratings" data-nonce="ab8d8539a5" id="post-ratings-5896" itemscope="" itemtype="http://schema.org/Article">
+         <img alt="1 Star" id="rating_5896_1" onclick="rate_post();" onkeypress="rate_post();" onmouseout="ratings_off(5, 0, 0);" onmouseover="current_rating(5896, 1, '1 Star');" src="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/stars/rating_on.gif" style="cursor: pointer; border: 0px;" title="1 Star"/>
+         <img alt="2 Stars" id="rating_5896_2" onclick="rate_post();" onkeypress="rate_post();" onmouseout="ratings_off(5, 0, 0);" onmouseover="current_rating(5896, 2, '2 Stars');" src="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/stars/rating_on.gif" style="cursor: pointer; border: 0px;" title="2 Stars"/>
+         <img alt="3 Stars" id="rating_5896_3" onclick="rate_post();" onkeypress="rate_post();" onmouseout="ratings_off(5, 0, 0);" onmouseover="current_rating(5896, 3, '3 Stars');" src="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/stars/rating_on.gif" style="cursor: pointer; border: 0px;" title="3 Stars"/>
+         <img alt="4 Stars" id="rating_5896_4" onclick="rate_post();" onkeypress="rate_post();" onmouseout="ratings_off(5, 0, 0);" onmouseover="current_rating(5896, 4, '4 Stars');" src="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/stars/rating_on.gif" style="cursor: pointer; border: 0px;" title="4 Stars"/>
+         <img alt="5 Stars" id="rating_5896_5" imageholder="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/stars/rating_on.gif" onclick="rate_post();" onkeypress="rate_post();" onmouseout="ratings_off(5, 0, 0);" onmouseover="current_rating(5896, 5, '5 Stars');" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="cursor: pointer; border: 0px;" title="5 Stars"/>
+         <meta content="PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015" itemprop="name"/>
+         <meta content="A few years ago I spent some time exploring PhoneGap (Apache Cordova), but my interest was diverted towards mobile and single page web applications. However, the recent release of the Visual Studio To..." itemprop="description"/>
+         <meta content="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/" itemprop="url"/>
+         <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" style="display: none;">
+          <meta content="5" itemprop="bestRating"/>
+          <meta content="5" itemprop="ratingValue"/>
+          <meta content="6" itemprop="ratingCount"/>
+         </div>
+        </div>
+        <div class="post-ratings-loading" id="post-ratings-5896-loading">
+         <img alt="Loading..." class="post-ratings-image" height="16" imageholder="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/images/loading.gif" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" title="Loading..." width="16"/>
+         Loading...
+        </div>
+       </li>
+      </ul>
+      <div class="post-entry">
+       <a href="http://www.intertech.com/Blog/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015/">
+        <img class="image" imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2015/02/VisualStudio-Plus-PhoneGap-680x224.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif"/>
+       </a>
+       <p>
+        A few years ago I spent some time exploring PhoneGap (Apache Cordova), but my interest was diverted towards mobile and single page web applications. However, the recent release of the Visual Studio Tools for Apache Cordova caught my attention. Front-end web developers can easily leverage their powers to create cross-platform, hybrid mobile applications without much spin up time. The new Visual Studio integration with Apache Cordova lowers the barrier to entry that much more for Visual Studio users. We no longer have to worry about setting up a hodgepodge of tools and emulators. With Visual Studio 2015 (and 2013 Update 4) we can jump right in and have an application deployed to our devices in minutes.
+       </p>
+       <p>
+        If youre a front-end web developer whos a bit late to the hybrid mobile app game like me, dont fret. Theres still time for you to give it a shot and its easier than ever now to get started. I put together a quick PhoneGap tutorialvideo to provide you with evidence and perhaps some inspiration.
+       </p>
+       <p>
+        The PhoneGap tutorial video willcover:
+       </p>
+       <ul>
+        <li>
+         Visual Studio/Apache Cordova Prerequisites
+        </li>
+        <li>
+         Starting a new Apache Cordova project
+        </li>
+        <li>
+         Integrating a common PhoneGap native plugin:
+         <a href="http://plugins.cordova.io/#/package/org.apache.cordova.camera" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://plugins.cordova.io/#/package/org.apache.cordova.camera', 'The Camera']);" rel="nofollow" target="_blank" title="PhoneGap Camer Plugin Documentation">
+          The Camera
+         </a>
+        </li>
+        <li>
+         Deploying to a Windows Phone 8.1
+        </li>
+       </ul>
+       <p>
+       </p>
+       <p>
+        <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/RSWEgorgm6g" width="560">
+        </iframe>
+       </p>
+       <p>
+        There you have it. In less than fifteenminutes we managed to create and deploy a hybrid app that uses device-specific hardware (the camera). Its not pretty or complex, but the point is that three years ago we (definitely me!) may have spent a Saturday to achieve the same results.
+       </p>
+       <p>
+        Im hoping that Ive left you pumped up and ready to make some apps. The URLs I referenced in the video can be found below. Happy coding!
+       </p>
+       <p>
+        For Visual Studio 2013 users:
+       </p>
+       <ul>
+        <li>
+         <a href="http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#d-visual-studio-2013-update" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#d-visual-studio-2013-update', 'Update 4 Download']);" rel="nofollow" target="_blank" title="Visual Studio 2013 Update 4">
+          Update 4 Download
+         </a>
+        </li>
+        <li>
+         <a href="http://www.microsoft.com/en-us/download/details.aspx?id=42675" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.microsoft.com/en-us/download/details.aspx?id=42675', 'Apache Cordova Tools Extension Download']);" rel="nofollow" target="_blank" title="Click to download the Apache Cordova Tools Extension.">
+          Apache Cordova Tools Extension Download
+         </a>
+        </li>
+       </ul>
+       <p>
+        For Visual Studio 2015 users:
+       </p>
+       <ul>
+        <li>
+         <a href="http://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs', 'Visual Studio 2015 CTP Download']);" rel="nofollow" target="_blank" title="Click here to download the Visual Studio 2015 CTP">
+          Visual Studio 2015 CTP Download
+         </a>
+        </li>
+        <li>
+         Make sure you check the Apache Cordova Tools box during the installation process.
+        </li>
+       </ul>
+       <p>
+        <a href="https://msdn.microsoft.com/library/windows/apps/ff769508(v=vs.105).aspx" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://msdn.microsoft.com/library/windows/apps/ff769508(v=vs.105).aspx', 'Guide to register your Windows Phone.']);" rel="nofollow" target="_blank" title="Learn how to register your Windows Phone.">
+         Guide to register your Windows Phone.
+        </a>
+       </p>
+       <div class="wp_rp_wrap wp_rp_vertical_m" id="wp_rp_first">
+        <div class="wp_rp_content">
+         <h3 class="related_post_title">
+          More from Intertech
+         </h3>
+         <ul class="related_post wp_rp">
+          <li data-poid="in-6117" data-position="0" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/assessment-phonegap-vs-native/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/assessment-phonegap-vs-native/', '']);">
+            <img alt="Assessment: PhoneGap vs Native?" height="150" src="http://cdn.intertech.com/Blog/wp-content/uploads/2015/04/PhoneGap-Assessment-150x150.png" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/assessment-phonegap-vs-native/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/assessment-phonegap-vs-native/', 'Assessment: PhoneGap vs Native?']);">
+            Assessment: PhoneGap vs Native?
+           </a>
+          </li>
+          <li data-poid="in-2187" data-position="1" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/encapsulation-in-javascript/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/encapsulation-in-javascript/', '']);">
+            <img alt="Encapsulation in JavaScript" height="150" src="http://cdn.intertech.com/Blog/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/6.jpg" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/encapsulation-in-javascript/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/encapsulation-in-javascript/', 'Encapsulation in JavaScript']);">
+            Encapsulation in JavaScript
+           </a>
+          </li>
+          <li data-poid="in-6237" data-position="2" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/windows-phone-ionic-cordova-viewport-issue/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/windows-phone-ionic-cordova-viewport-issue/', '']);">
+            <img alt="Targeting Windows Phone with Cordova &amp; Ionic: Viewport Issue" height="150" src="http://cdn.intertech.com/Blog/wp-content/uploads/2015/05/enemies-wp-no-fix-screenshot-150x150.png" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/windows-phone-ionic-cordova-viewport-issue/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/windows-phone-ionic-cordova-viewport-issue/', 'Targeting Windows Phone with Cordova &amp; Ionic: Viewport Issue']);">
+            Targeting Windows Phone with Cordova &amp; Ionic: Viewport Issue
+           </a>
+          </li>
+          <li data-poid="in-389" data-position="3" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/intertech-oxygen-blast-understanding-jquery/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/intertech-oxygen-blast-understanding-jquery/', '']);">
+            <img alt="Intertech Oxygen Blast: Understanding JQuery" height="150" src="http://cdn.intertech.com/Blog/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/1.jpg" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/intertech-oxygen-blast-understanding-jquery/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/intertech-oxygen-blast-understanding-jquery/', 'Intertech Oxygen Blast: Understanding JQuery']);">
+            Intertech Oxygen Blast: Understanding JQuery
+           </a>
+          </li>
+          <li data-poid="in-3206" data-position="4" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/the-advantages-of-developing-hmtl5-apps/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/the-advantages-of-developing-hmtl5-apps/', '']);">
+            <img alt="The advantages of developing HMTL5 apps" height="150" src="http://cdn.intertech.com/Blog/wp-content/uploads/choosing-to-develop-for-html5-will-allow-it-teams-to-conserve-their-reso_1434_552124_0_1140_300-150x150.jpg" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/the-advantages-of-developing-hmtl5-apps/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/the-advantages-of-developing-hmtl5-apps/', 'The advantages of developing HMTL5 apps']);">
+            The advantages of developing HMTL5 apps
+           </a>
+          </li>
+          <li data-poid="in-5712" data-position="5" data-post-type="none">
+           <a class="wp_rp_thumbnail" href="http://www.intertech.com/Blog/json-service-mocks/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/json-service-mocks/', '']);">
+            <img alt="JSON Service Mocks" height="150" imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2015/01/jsonmock-150x150.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" width="150"/>
+           </a>
+           <a class="wp_rp_title" href="http://www.intertech.com/Blog/json-service-mocks/" onclick="_gaq.push(['_trackEvent', 'outbound-article-int', 'http://www.intertech.com/Blog/json-service-mocks/', 'JSON Service Mocks']);">
+            JSON Service Mocks
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!--end post-->
+     <div id="disqus_thread">
+      <div id="dsq-content">
+       <ul id="dsq-comments">
+        <li class="comment even thread-even depth-1" id="dsq-comment-4231">
+         <div class="dsq-comment-header" id="dsq-comment-header-4231">
+          <cite id="dsq-cite-4231">
+           http://www.visualstudio.com/en-us/explore/cordova-vs.aspx
+           <span id="dsq-author-user-4231">
+            ryanjsalva
+           </span>
+          </cite>
+         </div>
+         <div class="dsq-comment-body" id="dsq-comment-body-4231">
+          <div class="dsq-comment-message" id="dsq-comment-message-4231">
+           <p>
+            Hi, Tom. This is Ryan J. Salva from the Visual Studio Tools for Apache Cordova product team. Thanks for the write-up and demo video. It looks great! If you have any feedback on the product, wed love to hear from you. Find me on twitter at @ryanjsalva or @vscordovatools  especially if you find yourself using the tools for a significant project. As you know, were still in the early days of the product and want to hear feedback from developers so we can focus on the right features for our first RTM release. Happy coding!
+           </p>
+          </div>
+         </div>
+        </li>
+        <!-- #comment-## -->
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-4262">
+         <div class="dsq-comment-header" id="dsq-comment-header-4262">
+          <cite id="dsq-cite-4262">
+           <span id="dsq-author-user-4262">
+            Stephanie Kaiser
+           </span>
+          </cite>
+         </div>
+         <div class="dsq-comment-body" id="dsq-comment-body-4262">
+          <div class="dsq-comment-message" id="dsq-comment-message-4262">
+           <p>
+            This was a great video  exactly what I needed to see.  Thanks for sharing!
+           </p>
+          </div>
+         </div>
+        </li>
+        <!-- #comment-## -->
+       </ul>
+      </div>
+     </div>
+    </div>
+    <!-- /Main Content -->
+    <!-- Sidebar -->
+    <div id="sidebar">
+     <!-- Sidebar -->
+     <div id="sidebar">
+      <div class="widget widget_mailchimpsf_widget">
+       <h3>
+        Subscribe to our Blog
+       </h3>
+       <style>
+        .widget_mailchimpsf_widget .widget-title {
+		line-height: 1.4em;
+		margin-bottom: 0.75em;
+	}
+	#mc_subheader {
+		line-height: 1.25em;
+		margin-bottom: 18px;
+	}
+	.mc_merge_var {
+		margin-bottom: 1.0em;
+	}
+	.mc_var_label,
+	.mc_interest_label {
+		display: block;
+		margin-bottom: 0.5em;
+	}
+	.mc_input {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.mc_input.mc_phone {
+		width: auto;
+	}
+	select.mc_select {
+		margin-top: 0.5em;
+		width: 100%;
+	}
+	.mc_address_label {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+		display: block;
+	}
+	.mc_address_label ~ select {
+		width: 100%;		
+	}
+	.mc_list li {
+		list-style: none;
+		background: none !important;
+	}
+	.mc_interests_header {
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_interest label,
+	.mc_interest input {
+		margin-bottom: 0.4em;
+	}
+	#mc_signup_submit {
+		margin-top: 1.5em;
+		width: 80%;
+	}
+	#mc_unsub_link a {
+		font-size: 0.75em;
+	}
+	#mc_unsub_link {
+		margin-top: 1.0em;
+	}
+	.mc_header_address,
+	.mc_email_format {
+		display: block;
+		font-weight: bold;
+		margin-top: 1.0em;
+		margin-bottom: 0.5em;
+	}
+	.mc_email_options {
+		margin-top: 0.5em;
+	}
+	.mc_email_type {
+		padding-left: 4px;
+	}
+       </style>
+       <div id="mc_signup">
+        <form action="#mc_signup" id="mc_signup_form" method="post">
+         <input id="mc_submit_type" name="mc_submit_type" type="hidden" value="html"/>
+         <input name="mcsf_action" type="hidden" value="mc_submit_signup_form"/>
+         <input id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" type="hidden" value="3326b2e50e"/>
+         <div class="mc_form_inside">
+          <div class="updated" id="mc_message">
+          </div>
+          <!-- /mc_message -->
+          <div class="mc_merge_var">
+           <label class="mc_var_label mc_header mc_header_email" for="mc_mv_EMAIL">
+            Email Address
+           </label>
+           <input class="mc_input" id="mc_mv_EMAIL" name="mc_mv_EMAIL" placeholder="" size="18" type="text"/>
+          </div>
+          <!-- /mc_merge_var -->
+          <div style="display:none;">
+          </div>
+          <div style="display:none;">
+          </div>
+          <div style="display:none;">
+          </div>
+          <div style="display:none;">
+          </div>
+          <div class="mc_signup_submit">
+           <input class="button" id="mc_signup_submit" name="mc_signup_submit" type="submit" value="Subscribe"/>
+          </div>
+          <!-- /mc_signup_submit -->
+         </div>
+         <!-- /mc_form_inside -->
+        </form>
+        <!-- /mc_signup_form -->
+       </div>
+       <!-- /mc_signup_container -->
+      </div>
+      <div class="widget widget_text">
+       <h3>
+        Connect with Us
+       </h3>
+       <div class="textwidget">
+        <p class="connect">
+         <a href="http://feeds.feedburner.com/intertech/xgZI" rel="alternate" title="Subscribe to my feed" type="application/rss+xml">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/rss-e1399297029808.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="width: auto; height: auto; opacity: 1;"/>
+         </a>
+         <a href="https://twitter.com/IntertechInc" title="Follow us on Twitter">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/twitter-e1399297077823.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border: 0px; width: auto; height: auto; opacity: 1;"/>
+         </a>
+         <a href="https://www.facebook.com/Intertech" title="Like us on Facebook">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/facebook-e1399296749601.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border: 0px; width: auto; height: auto; opacity: 1;"/>
+         </a>
+         <br/>
+         <a href="https://www.youtube.com/user/IntertechTraining" title="Follow us on YouTube">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/youtube-e1399297117722.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border: 0px; width: auto; height: auto; opacity: 1;"/>
+         </a>
+         <a href="https://plus.google.com/+IntertechInc/posts" rel="publisher" title="Follow us on Google+">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/googleplus-e1399296849739.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border: 0px; width: auto; height: auto; opacity: 1;"/>
+         </a>
+         <a href="https://www.linkedin.com/company/intertech" title="Join us on LinkedIn">
+          <img imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2014/05/linkedin-e1399296884129.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border: 0px; width: auto; height: auto; opacity: 1;"/>
+         </a>
+        </p>
+        <style>
+         .connect {
+            text-align: center;
+        }
+            .connect a {
+                display: inline-block;
+                opacity: 0.7;
+                margin: 0 10px;
+            }
+        .connect a:hover {
+            opacity: 1;
+        }
+        .burner {
+            border: 1px solid #ccc;
+            padding: 3px;
+            text-align: center;
+        }
+
+            .burner input[type='text'] {
+                display: inline-block;
+            }
+
+            .burner input[type='submit'] {
+                display: inline-block;
+                background-color: #888;
+            }
+
+            .burner input[type='submit']:hover {
+                display: inline-block;
+                background-color: #555;
+            }
+        </style>
+       </div>
+      </div>
+      <div class="widget widget_search">
+       <form action="http://www.intertech.com/Blog/" class="form-inline" id="searchform" method="get" role="search">
+        <input class="search" default-value="Search" id="s" name="s" type="text" value="Search"/>
+       </form>
+      </div>
+      <div class="widget widget_recent_entries">
+       <h3>
+        Recent Posts
+       </h3>
+       <ul>
+        <li>
+         <a href="http://www.intertech.com/Blog/intertech-awards-stem-scholarship-to-stanford-student/">
+          Intertech Awards STEM Scholarship to Stanford Student
+         </a>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/new-employee-introduction-phil-d/">
+          New Employee Introduction  Phil D.
+         </a>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/dev-digest-week-of-june-15th/">
+          Dev Digest  Week of June 15th
+         </a>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/most-read-net-java-mobile-blog-posts/">
+          Most Read .NET, Java, &amp; Mobile Blog Posts
+         </a>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/can-business-save-the-world-effective-csr/">
+          Can Business Save the World? Effective CSR
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget related_offering">
+       <script>
+        var relatedBlogInfo = [];
+	    	jQuery(window).load(function() {
+		    	relatedBlogInfo.NumberOfLinks = 5;
+		    	relatedBlogInfo.BlogPost = "PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015";
+		    	relatedBlogInfo.Categories = ["Mobile","Visual Studio","Web Development"];
+		    	relatedBlogInfo.Difficulty = "None";
+
+	    	jQuery.get("http://www.intertech.com/Blog/wp-content/plugins/Related_Offerings/Related_Offerings.html", 
+	          function(data)
+	          {
+	          	var id = "#relatedTraining1722";
+	            jQuery(id).append(data);
+              	GetRelatedOfferings(id, 'http://www.Intertech.com/Training/GetRelated', 'Training');
+	          });
+
+		    });
+       </script>
+       <div id="relatedTraining1722">
+        <h3>
+         Related Training
+        </h3>
+       </div>
+       <style>
+        #relatedTraining1722			{
+				overflow: hidden;
+				height: 0px;
+				opacity: 0;
+				-moz-transition: opacity 0.4s ease, height 0.4s ease;
+		        -o-transition: opacity 0.4s ease, height 0.4s ease;
+		        -webkit-transition: opacity 0.4s ease, height 0.4s ease;
+		        transition: opacity 0.4s ease, height 0.4s ease;
+			}
+
+			#relatedTraining1722.visible
+			{
+				height: auto;
+				opacity: 1;
+			}
+
+			#relatedTraining1722 ul li
+        {
+        margin: 0 0 9px;
+        }
+
+        .widget ul.special li a {
+        padding: 2px 2%;
+        width: 96%;
+        display: inline-block;
+        background-color: #7fb3e0;
+        border-radius: 3px;
+        font-size: 9pt;
+        color: #fff;
+        -moz-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+        }
+
+        .widget ul.special li ul li {
+        color: #1d4587;
+        font-weight: bold;
+        }
+
+        .widget ul.special li a:hover
+        {
+        opacity: 0.7;
+        }
+
+        .widget ul.special li a &gt; span:hover
+        {
+          color: #333;
+        }
+       </style>
+      </div>
+      <div class="widget related_offering">
+       <script>
+        var relatedBlogInfo = [];
+	    	jQuery(window).load(function() {
+		    	relatedBlogInfo.NumberOfLinks = 5;
+		    	relatedBlogInfo.BlogPost = "PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015";
+		    	relatedBlogInfo.Categories = ["Mobile","Visual Studio","Web Development"];
+		    	relatedBlogInfo.Difficulty = "None";
+
+	    	jQuery.get("http://www.intertech.com/Blog/wp-content/plugins/Related_Offerings/Related_Offerings.html", 
+	          function(data)
+	          {
+	          	var id = "#relatedConsulting2029";
+	            jQuery(id).append(data);
+              	GetRelatedOfferings(id, 'http://www.Intertech.com/Consulting/GetRelated', 'Consulting');
+	          });
+
+		    });
+       </script>
+       <div id="relatedConsulting2029">
+        <h3>
+         Related Consulting
+        </h3>
+       </div>
+       <style>
+        #relatedConsulting2029			{
+				overflow: hidden;
+				height: 0px;
+				opacity: 0;
+				-moz-transition: opacity 0.4s ease, height 0.4s ease;
+		        -o-transition: opacity 0.4s ease, height 0.4s ease;
+		        -webkit-transition: opacity 0.4s ease, height 0.4s ease;
+		        transition: opacity 0.4s ease, height 0.4s ease;
+			}
+
+			#relatedConsulting2029.visible
+			{
+				height: auto;
+				opacity: 1;
+			}
+
+			#relatedConsulting2029 ul li
+        {
+        margin: 0 0 9px;
+        }
+
+        .widget ul.special li a {
+        padding: 2px 2%;
+        width: 96%;
+        display: inline-block;
+        background-color: #7fb3e0;
+        border-radius: 3px;
+        font-size: 9pt;
+        color: #fff;
+        -moz-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+        }
+
+        .widget ul.special li ul li {
+        color: #1d4587;
+        font-weight: bold;
+        }
+
+        .widget ul.special li a:hover
+        {
+        opacity: 0.7;
+        }
+
+        .widget ul.special li a &gt; span:hover
+        {
+          color: #333;
+        }
+       </style>
+      </div>
+      <div class="widget rel-post-widget">
+       <h3>
+        Related Posts
+       </h3>
+       <ul>
+        <li class="related-post-item">
+         <a class="post-title" href="http://www.intertech.com/Blog/encapsulation-in-javascript/" rel="bookmark" title="Permanent Link to Encapsulation in JavaScript">
+          Encapsulation in JavaScript
+         </a>
+         <p class="post-date">
+          14 Aug 2013
+         </p>
+        </li>
+       </ul>
+      </div>
+      <div class="widget widget_categories">
+       <h3>
+        Categories
+       </h3>
+       <ul>
+        <li class="cat-item cat-item-2">
+         <a href="http://www.intertech.com/Blog/category/net/">
+          .NET
+         </a>
+        </li>
+        <li class="cat-item cat-item-3">
+         <a href="http://www.intertech.com/Blog/category/agile-scrum/">
+          Agile / Scrum
+         </a>
+        </li>
+        <li class="cat-item cat-item-4">
+         <a href="http://www.intertech.com/Blog/category/android/">
+          Android
+         </a>
+        </li>
+        <li class="cat-item cat-item-5">
+         <a href="http://www.intertech.com/Blog/category/asp-net/">
+          ASP.NET
+         </a>
+        </li>
+        <li class="cat-item cat-item-7">
+         <a href="http://www.intertech.com/Blog/category/c-sharp/">
+          C#
+         </a>
+        </li>
+        <li class="cat-item cat-item-8">
+         <a href="http://www.intertech.com/Blog/category/career-advice/">
+          Career Advice
+         </a>
+        </li>
+        <li class="cat-item cat-item-9">
+         <a href="http://www.intertech.com/Blog/category/cloud-computing/">
+          Cloud Computing
+         </a>
+        </li>
+        <li class="cat-item cat-item-10">
+         <a href="http://www.intertech.com/Blog/category/database/">
+          Database
+         </a>
+        </li>
+        <li class="cat-item cat-item-11">
+         <a href="http://www.intertech.com/Blog/category/eclipse/">
+          Eclipse
+         </a>
+        </li>
+        <li class="cat-item cat-item-1">
+         <a href="http://www.intertech.com/Blog/category/uncategorized/">
+          General
+         </a>
+        </li>
+        <li class="cat-item cat-item-12">
+         <a href="http://www.intertech.com/Blog/category/ios-ipad-iphone/">
+          iOS / iPad / iPhone
+         </a>
+        </li>
+        <li class="cat-item cat-item-13">
+         <a href="http://www.intertech.com/Blog/category/java/">
+          Java
+         </a>
+        </li>
+        <li class="cat-item cat-item-6">
+         <a href="http://www.intertech.com/Blog/category/business/">
+          Leadership
+         </a>
+        </li>
+        <li class="cat-item cat-item-14">
+         <a href="http://www.intertech.com/Blog/category/mobile/">
+          Mobile
+         </a>
+        </li>
+        <li class="cat-item cat-item-15">
+         <a href="http://www.intertech.com/Blog/category/sharepoint/">
+          SharePoint
+         </a>
+        </li>
+        <li class="cat-item cat-item-16">
+         <a href="http://www.intertech.com/Blog/category/silverlight/">
+          Silverlight
+         </a>
+        </li>
+        <li class="cat-item cat-item-17">
+         <a href="http://www.intertech.com/Blog/category/soa-web-services/">
+          SOA / Web Services
+         </a>
+        </li>
+        <li class="cat-item cat-item-18">
+         <a href="http://www.intertech.com/Blog/category/source-control/">
+          Source Control
+         </a>
+        </li>
+        <li class="cat-item cat-item-19">
+         <a href="http://www.intertech.com/Blog/category/spring-framework/">
+          Spring Framework
+         </a>
+        </li>
+        <li class="cat-item cat-item-20">
+         <a href="http://www.intertech.com/Blog/category/sqlserver/">
+          SQL Server
+         </a>
+        </li>
+        <li class="cat-item cat-item-21">
+         <a href="http://www.intertech.com/Blog/category/tfs/">
+          Team Foundation Server
+         </a>
+        </li>
+        <li class="cat-item cat-item-22">
+         <a href="http://www.intertech.com/Blog/category/testing-qa/">
+          Testing / QA
+         </a>
+        </li>
+        <li class="cat-item cat-item-23">
+         <a href="http://www.intertech.com/Blog/category/visual-basic/">
+          Visual Basic
+         </a>
+        </li>
+        <li class="cat-item cat-item-24">
+         <a href="http://www.intertech.com/Blog/category/visual-studio/">
+          Visual Studio
+         </a>
+        </li>
+        <li class="cat-item cat-item-25">
+         <a href="http://www.intertech.com/Blog/category/web-development/">
+          Web Development
+         </a>
+        </li>
+        <li class="cat-item cat-item-26">
+         <a href="http://www.intertech.com/Blog/category/windows-azure/">
+          Windows Azure
+         </a>
+        </li>
+        <li class="cat-item cat-item-27">
+         <a href="http://www.intertech.com/Blog/category/windows-store-apps/">
+          Windows Store Apps
+         </a>
+        </li>
+        <li class="cat-item cat-item-28">
+         <a href="http://www.intertech.com/Blog/category/wpf/">
+          WPF
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget widget_archive">
+       <h3>
+        Archives
+       </h3>
+       <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+        <option value="">
+         Select Month
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/06/">
+         June 2015 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/05/">
+         May 2015 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/04/">
+         April 2015 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/03/">
+         March 2015 (15)
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/02/">
+         February 2015 (15)
+        </option>
+        <option value="http://www.intertech.com/Blog/2015/01/">
+         January 2015 (13)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/12/">
+         December 2014 (13)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/11/">
+         November 2014 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/10/">
+         October 2014 (16)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/09/">
+         September 2014 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/08/">
+         August 2014 (14)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/07/">
+         July 2014 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/06/">
+         June 2014 (4)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/05/">
+         May 2014 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/04/">
+         April 2014 (7)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/03/">
+         March 2014 (13)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/02/">
+         February 2014 (5)
+        </option>
+        <option value="http://www.intertech.com/Blog/2014/01/">
+         January 2014 (22)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/12/">
+         December 2013 (25)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/11/">
+         November 2013 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/10/">
+         October 2013 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/09/">
+         September 2013 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/08/">
+         August 2013 (7)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/07/">
+         July 2013 (6)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/06/">
+         June 2013 (6)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/05/">
+         May 2013 (7)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/04/">
+         April 2013 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/03/">
+         March 2013 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/02/">
+         February 2013 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2013/01/">
+         January 2013 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/12/">
+         December 2012 (14)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/11/">
+         November 2012 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/10/">
+         October 2012 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/09/">
+         September 2012 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/08/">
+         August 2012 (7)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/07/">
+         July 2012 (5)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/06/">
+         June 2012 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/05/">
+         May 2012 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/04/">
+         April 2012 (6)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/03/">
+         March 2012 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/02/">
+         February 2012 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2012/01/">
+         January 2012 (5)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/12/">
+         December 2011 (14)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/11/">
+         November 2011 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/10/">
+         October 2011 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/09/">
+         September 2011 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/08/">
+         August 2011 (18)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/07/">
+         July 2011 (18)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/06/">
+         June 2011 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/05/">
+         May 2011 (12)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/04/">
+         April 2011 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/03/">
+         March 2011 (6)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/02/">
+         February 2011 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2011/01/">
+         January 2011 (6)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/12/">
+         December 2010 (11)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/11/">
+         November 2010 (24)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/10/">
+         October 2010 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/09/">
+         September 2010 (19)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/08/">
+         August 2010 (10)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/07/">
+         July 2010 (9)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/06/">
+         June 2010 (21)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/05/">
+         May 2010 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/04/">
+         April 2010 (14)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/03/">
+         March 2010 (15)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/02/">
+         February 2010 (8)
+        </option>
+        <option value="http://www.intertech.com/Blog/2010/01/">
+         January 2010 (9)
+        </option>
+       </select>
+      </div>
+     </div>
+     <!-- /Sidebar -->
+    </div>
+    <!-- /Sidebar -->
+   </div>
+   <!-- /Content -->
+   <!-- Footer -->
+   <div id="footer">
+    <div class="container clearfix">
+     <div class="one-fourth footer">
+      <div class="widget pethemewidgetreworkinfo">
+       <a class="logo" href="http://www.intertech.com/Blog" title="Home">
+        <img alt="logo" imageholder="http://cdn.intertech.com/Blog/wp-content/uploads/2013/05/Transparent-Blog-Footer-Logo-176x36-05092013.png" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif"/>
+       </a>
+       <p>
+        Practical insights, tips, and examples from Instructors Who Consult. Consultants Who Teach.
+       </p>
+      </div>
+     </div>
+     <div class="one-fourth footer">
+      <div class="widget widget_nav_menu">
+       <h3>
+        Browse Site
+       </h3>
+       <div class="menu-footer-nav-container">
+        <ul class="menu" id="menu-footer-nav">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1316" id="menu-item-1316">
+          <a href="http://www.intertech.com" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com', 'Intertech Home']);" title="Intertechs Main Site">
+           Intertech Home
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1312" id="menu-item-1312">
+          <a href="http://www.intertech.com/Blog/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Blog/', 'Latest Posts']);" title="Intertechs Latest Blog Posts">
+           Latest Posts
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1315" id="menu-item-1315">
+          <a href="http://www.intertech.com/Training/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Training/', 'Training Services']);" title="Intertechs Live Instructor Led Training Courses">
+           Training Services
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1314" id="menu-item-1314">
+          <a href="http://www.intertech.com/Consulting/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Consulting/', 'Consulting Services']);" title="Intertechs Consulting Services">
+           Consulting Services
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620" id="menu-item-1620">
+          <a href="http://www.intertech.com/Blog/about-us/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.intertech.com/Blog/about-us/', 'About Us']);" title="About Intertech">
+           About Us
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="one-fourth footer">
+      <div class="widget pethemewidgetreworkhtml">
+       <h3>
+        Contact Details
+       </h3>
+       <p>
+        1575 Thomas Center Dr
+        <br/>
+        Eagan, MN 55122
+       </p>
+       <p>
+        Training:
+        <a href="tel:6512887100">
+         651-288-7100
+        </a>
+        <br/>
+        Consulting:
+        <a href="tel:6512887001">
+         651-288-7001
+        </a>
+        <br/>
+        General:
+        <a href="tel:6512887000">
+         651-288-7000
+        </a>
+        <br/>
+        Toll Free:
+        <a href="tel:8008669884">
+         800-866-9884
+        </a>
+        <br/>
+        Fax:
+        <a href="tel:6512881250">
+         651-288-1250
+        </a>
+        <br/>
+       </p>
+      </div>
+     </div>
+     <div class="one-fourth last last footer">
+      <div class="widget widget_recent_entries">
+       <h3>
+        Recent Posts
+       </h3>
+       <ul>
+        <li>
+         <a href="http://www.intertech.com/Blog/intertech-awards-stem-scholarship-to-stanford-student/">
+          Intertech Awards STEM Scholarship to Stanford Student
+         </a>
+         <span class="post-date">
+          June 23, 2015
+         </span>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/new-employee-introduction-phil-d/">
+          New Employee Introduction  Phil D.
+         </a>
+         <span class="post-date">
+          June 22, 2015
+         </span>
+        </li>
+        <li>
+         <a href="http://www.intertech.com/Blog/dev-digest-week-of-june-15th/">
+          Dev Digest  Week of June 15th
+         </a>
+         <span class="post-date">
+          June 19, 2015
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="info container clearfix">
+     <!-- Copyright -->
+     <ul class="copyright">
+      <li>
+        2015 Intertech, Inc. All rights reserved
+      </li>
+     </ul>
+     <!-- /Copyright -->
+     <!-- Social Links -->
+     <ul class="social-links">
+     </ul>
+     <!-- /Social Links -->
+    </div>
+   </div>
+   <!-- /Footer -->
+  </div>
+  <!-- /Main Container -->
+  <!-- Back to Top -->
+  <div id="back-top">
+   <a href="#top">
+   </a>
+  </div>
+  <!-- /Back to Top -->
+  <script type="text/javascript">
+   jQuery(window).load(function () {
+		jQuery.ajax({
+			url: 'http://www.intertech.com/Offers/GetOffer',
+        	type: 'POST',
+        	data: '{"categories":["Mobile","Visual Studio","Web Development"],"difficulty":"None"}',
+          dataType: 'json',
+          contentType: 'application/json; charset=UTF-8',
+          success: function (data) {
+          	var ad = jQuery.parseJSON(data.d);
+          	if (ad === null)
+          		ad = data;
+          	jQuery('.smallAdWidget').text(ad.url);
+          	jQuery('.smallOffer').attr("href", ad.url);
+          	jQuery('.smallOfferText').text(ad.name);
+          	jQuery('#small-offer-container').toggle('slow');
+          }
+        });
+
+        	jQuery.ajax({
+		url: 'http://www.intertech.com/Offers/GetOffer',
+        	type: 'POST',
+        	data: '{"categories":["Mobile","Visual Studio","Web Development"],"difficulty":"None"}',
+          dataType: 'json',
+          contentType: 'application/json; charset=UTF-8',
+          success: function (data) {
+          	var ad = jQuery.parseJSON(data.d);
+          	if (ad === null)
+          		ad = data;
+          	var temp = jQuery('#ad-template').html().replace('{Offer-Title}', ad.name).replace('#{Offer-Link}', ad.url).replace('{Offer-Image}', ad.image).replace('{Offer-PageContent}', ad.PageContent);
+            jQuery('#ad-template').html(temp);
+
+            jQuery("[data-OfferImage]").each(function () {
+            	jQuery(this).attr('src', jQuery(this).data('offerimage'))
+            });
+            jQuery('div.post.single.clearfix').after(jQuery("#ad-template").html());
+          }
+        });
+	});
+  </script>
+  <style>
+   #ad-template {
+		display: none;
+	}
+
+	  .inter-ad
+  {
+    float:  left;
+    position: relative;
+  }
+
+  .inter-ad .left
+  {
+    float: left; 
+    width: 340px; 
+    padding-bottom: 50px;
+    position: relative;
+  }
+  .inter-ad .left &gt; div
+  {
+    position: absolute;
+    top: 100%;
+  }
+  .inter-ad h3
+  {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .inter-ad a
+  {
+    background-color: #7fb3e0;
+    padding: 5px 20px;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .inter-ad a:hover
+  {
+    background-color: #264385;
+  }
+  .inter-ad ul
+  {
+    list-style: disc;
+  }
+  .inter-ad img
+  {
+    box-shadow: 3px 3px rgba(0,0,0, 0.3);
+  }  
+
+ @media all and (max-width: 959px)
+{
+   .inter-ad .left&gt;div
+    {
+          position: relative;
+    }
+}
+  </style>
+  <div id="ad-template">
+   <div class="inter-ad">
+    <h3>
+     {Offer-Title}
+    </h3>
+    <div class="left">
+     <img data-offerimage="{Offer-Image}"/>
+    </div>
+    <div class="left">
+     <div class="ad-content">
+      {Offer-PageContent}
+      <br/>
+      <a href="#{Offer-Link}">
+       Click Here
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+    var google_conversion_id = 1067522706;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]&gt; */
+  </script>
+  <script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript">
+  </script>
+  <noscript>
+   <div style="display:inline;">
+    <img alt="" height="1" imageholder="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1067522706/?value=0&amp;guid=ON&amp;script=0" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="border-style:none;" width="1"/>
+   </div>
+  </noscript>
+  <script src="http://cdn.intertech.com/Blog/wp-includes/js/comment-reply.min.js?ver=4.0.5" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var ratingsL10n = {"plugin_url":"http:\/\/www.intertech.com\/Blog\/wp-content\/plugins\/wp-postratings","ajax_url":"http:\/\/www.intertech.com\/Blog\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 post at a time.","image":"stars","image_ext":"gif","max":"5","show_loading":"1","show_fading":"1","custom":"0"};
+var ratings_mouseover_image=new Image();ratings_mouseover_image.src=ratingsL10n.plugin_url+"/images/"+ratingsL10n.image+"/rating_over."+ratingsL10n.image_ext;;
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/wp-postratings/postratings-js.js?ver=1.79" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.0.5","language":"","remote_auth_s3":"W10= a65f9a63b1f1c4f27bf0c7639c5726e37733228c 1435190327","api_key":"QyNNpAQ8Kn0mBDB2HMI9Ry4ko0MzZHG4UUYc7Ny0cDzl8prmDxJ3nI4YqH0VSdKv","sso":{"name":"Intertech Blog","button":false,"url":"http:\/\/www.intertech.com\/Blog\/wp-login.php","logout":"http:\/\/www.intertech.com\/Blog\/wp-login.php?action=logout","width":"800","height":"700"}},"disqusIdentifier":"5896 http:\/\/www.intertech.com\/Blog\/?p=5896","disqusShortname":"intertechblog","disqusTitle":"PhoneGap Tutorial: Building a Camera App with PhoneGap and Visual Studio 2015","disqusUrl":"http:\/\/www.intertech.com\/Blog\/phonegap-tutorial-building-a-camera-app-with-phonegap-and-visual-studio-2015\/","options":{"manualSync":false},"postId":"5896"};
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.0.5" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var countVars = {"disqusShortname":"intertechblog"};
+/* ]]&gt; */
+  </script>
+  <script src="http://cdn.intertech.com/Blog/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.0.5" type="text/javascript">
+  </script>
+  <div id="socialBar">
+  </div>
+  <script>
+   (function () {
+    var _fbq = window._fbq || (window._fbq = []);
+    if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+    }
+    _fbq.push(['addPixelId', '318544764994824']);
+})();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
+  </script>
+  <noscript>
+   <img alt="" height="1" imageholder="https://www.facebook.com/tr?id=318544764994824&amp;ev=PixelInitialized" src="http://cdn.intertech.com/Blog/wp-content/plugins/advanced-lazy-load/shade.gif" style="display:none" width="1"/>
+  </noscript>
+ </body>
+</html>
+<!-- Dynamic page generated in 0.381 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-06-24 18:58:47 -->

@@ -1,0 +1,4022 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]&gt; &lt;html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie7 lte8 lte9 " lang="en-au"&gt; &lt;![endif]-->
+<!--[if IE 8]&gt; &lt;html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie8 lte8 lte9 " lang="en-au"&gt; &lt;![endif]-->
+<!--[if IE 9]&gt; &lt;html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie9 lte9 " lang="en-au"&gt; &lt;![endif]-->
+<!--[if gt IE 9]&gt;&lt;!-->
+<html class="" lang="en-au">
+ <!--&lt;![endif]-->
+ <head>
+  <script type="text/javascript">
+   var mDomains = ["smh.com.au", "theage.com.au", "watoday.com.au", "brisbanetimes.com.au", "canberratimes.com.au",
+            "essentialkids.com.au", "essentialbaby.com.au", "dailylife.com.au", "businessday.com.au", "goodfood.com.au",
+            "news.domain.com.au"]
+        if (exists(mDomains, function(substring) {return contains(document.domain, substring)})
+                &amp;&amp; isSmartPhone(navigator.userAgent) &amp;&amp; !contains(document.cookie, "iphone_redirect=false")) {
+            var currentLocation = document.location.href;
+            if (!contains(currentLocation, "/lifestyle/cuisine") &amp;&amp; !contains(currentLocation, "/business/markets")) {
+                if (contains(currentLocation, "www.")) {
+                    currentLocation = currentLocation.replace("www.", "m.");
+                    window.location = currentLocation;
+                }
+                if (contains(currentLocation, "media.")) {
+                    currentLocation = currentLocation.replace("media.", "m.media.");
+                    window.location = currentLocation;
+                }
+                if (contains(currentLocation, "news.domain")) {
+                    currentLocation = currentLocation.replace("news.domain", "m.news.domain");
+                    window.location = currentLocation;
+                }
+            }
+        }
+
+        /**
+         * Returns a &lt;code&gt;Boolean&lt;/code&gt; indicating whether or not the user agent represents a smart phone.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function isSmartPhone(userAgent) {
+            return ((matchesSmartPhoneUserAgentRegularExpressions(userAgent)) &amp;&amp;
+                    (!matchesTabletUserAgentRegularExpressions(userAgent)));
+        }
+
+        /**
+         * Returns a &lt;code&gt;Boolean&lt;/code&gt; indicating whether or not the specified user agent represents a smart phone.
+         * If any of the regular expressions are updated then they should be updated in
+         * &lt;code&gt;SmartPhoneHelper.java&lt;/code&gt;.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function matchesSmartPhoneUserAgentRegularExpressions(userAgent) {
+            var smartPhoneUserAgentRegularExpressions = ["^Mozilla/5.0.*iPhone.*", "^Mozilla/5.0.*iPod.*",
+                "^Mozilla/5.0.*Android [1-3].*", "^Mozilla/5.0.*SymbianOS/9.*", "^Mozilla/5.0.*Symbian/3.*",
+                "^Mozilla/5.0.*Mobile Safari/.*5[2-3][0-9].*", ".*Dolfin/[1-2].[0-9].*", "^Mozilla/[4-5].0.*Windows Phone OS 7.[0-5].*", "^Opera/9.*Android; Opera Mini.*"];
+            return userAgentMatchesAnyOf(userAgent, smartPhoneUserAgentRegularExpressions);
+        }
+
+        /**
+         * Returns a &lt;code&gt;Boolean&lt;/code&gt; indicating whether or not the specified user agent represents a tablet. If any
+         * of the regular expressions are updated then they should be updated in &lt;code&gt;SmartPhoneHelper.java&lt;/code&gt;.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a tablet; otherwise false.
+         */
+        function matchesTabletUserAgentRegularExpressions(userAgent) {
+            var tableUserAgentRegularExpressions = ["^Mozilla/5.0.*iPad.*", "^Mozilla/5.0.*GT-P1000.*",
+                "^Mozilla/5.0.*GT-P7500.*", "^Mozilla/5.0.*MZ601.*", "^Mozilla/5.0.*Transformer TF101.*"];
+            return userAgentMatchesAnyOf(userAgent, tableUserAgentRegularExpressions);
+        }
+
+        /**
+         * Determines whether any of the elements match the predicate
+         *
+         * @param elements a collection of elements to check
+         * @param predicate function taking a single element and returning true when that element matches, false otherwise
+         * @return {Boolean}
+         */
+        function exists(elements, predicate) {
+            var index = 0;
+            for (; index &lt; elements.length; index++) {
+                if (predicate(elements[index])) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /**
+         * Determines whether {string} contains {substring}
+         *
+         * @param string
+         * @param substring
+         * @return {Boolean}
+         */
+        function contains(string, substring) {
+            return string.indexOf(substring) != -1
+        }
+
+        /**
+         * Determines whether the user agent matches any of the expressions defined by {patterns}
+         *
+         * @param userAgent the User Agent value of the browser
+         * @param patterns the expression patterns to match against
+         * @return {Boolean}
+         */
+        function userAgentMatchesAnyOf(userAgent, patterns) {
+            if ((userAgent) &amp;&amp; (userAgent.length &gt; 0)) {
+                return exists(patterns, function(pattern) {return userAgent.match(pattern)})
+            }
+            return false;
+        }
+  </script>
+  <title>
+   When your unborn twin is your children's mother
+  </title>
+  <script type="text/javascript">
+   var titanEnabled = true;
+
+var digitalData = {
+    page: {
+        pageInfo: {
+            pageID: '5127858',
+            pageName: 'When your unborn twin is your children\'s mother',
+            brand: 'ebaby',
+            generator: 'DC',
+            author: 'Letitia Rowlands',
+            effectiveDate: '2014-02-05T04:53:25Z',
+            issueDate: '2014-02-03T02:57:16Z',
+            sysEnv: 'desktop'
+        },
+        category: {
+            pageType: 'Article',
+            primaryCategory: 'lifestyle',
+            subCategory1: 'nutritionandwellbeing',
+            subCategory2: '',
+            subCategory3: '',
+            subCategory4: ''
+        },
+        social: {
+            fbAppIdForGA: '216314111748839'
+        }
+    },
+    titan: {
+        adSite: 'ESSENTIALBABY',
+        adZone: 'lifestyle/nutritionandwellbeing',
+        adExclusions: [],
+        adKeyValues: {
+            csub: 'visitor',
+            cat: 'lifestyle',
+            cat1: 'nutritionandwellbeing',
+            ctype: 'article'
+        },
+        adSlots: ['adspot-728x90_468x60-pos-1','adspot-940x20-pos-1','adspot-120x50-pos-1','adspot-300x1515-pos-1','adspot-300x600_300x250-pos-1','adspot-149x170-pos-1','adspot-149x170-pos-2','adspot-300x250-pos-2','adspot-728x90_468x60-pos-2','adspot-1x1-pos-1','adspot-1x11-pos-1']
+    },
+    user: [
+        {
+            profile: [{
+                profileInfo: {
+                    profileID: ""
+                },
+                membershipType: 'visitor'
+            }]
+        }
+    ],
+    version: '1.0',
+    events: []
+};
+  </script>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="en" http-equiv="content-language"/>
+  <meta content="no" http-equiv="imagetoolbar"/>
+  <link href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" rel="canonical"/>
+  <link href="http://m.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" media="only screen and (max-width: 640px)" rel="alternate"/>
+  <meta content="noarchive,noodp,index" name="robots"/>
+  <meta content="ACAP allow-index" name="robots"/>
+  <meta content="ACAP allow-follow" name="robots"/>
+  <meta content="ACAP disallow-preserve" name="robots"/>
+  <meta content="ACAP allow-present prohibited-modification=annotation" name="robots"/>
+  <meta content="A mum faced the very real prospect of losing custody of her children - until it was proved that she had a rare medical condition which led to her sharing no DNA with her own babies." name="description"/>
+  <meta content="" name="keywords"/>
+  <meta content="Nutrition &amp; Wellbeing" name="news_keywords"/>
+  <meta content="5127858" name="cXenseParse:ffx-assetid"/>
+  <meta content="article" name="cXenseParse:ffx-assettype"/>
+  <meta content="3A0F8B0A5D246EFE15A2F9F975D1E623" name="msvalidate.01"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@essentialbaby" name="twitter:site"/>
+  <meta content="When your unborn twin is your children's mother" property="og:title"/>
+  <meta content="An amazing case from the archives gives a glimpse into the fascinating ways the human body can work." property="og:description"/>
+  <meta content="Essential Baby" property="og:site_name"/>
+  <meta content="article" property="og:type"/>
+  <meta content="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" property="og:url"/>
+  <meta content="http://images.essentialbaby.com.au/2014/02/03/5128166/scan-wide.jpg" property="og:image"/>
+  <meta content="216314111748839" property="fb:app_id"/>
+  <link href="http://resources.essentialbaby.com.au/common/media-common-1.0/css/output/7.54.2/common.skin.article.css/common.skin.article_min.css" media="screen,print" rel="stylesheet" type="text/css"/>
+  <link href="http://resources.essentialbaby.com.au/common/media-common-1.0/css/output/7.54.2/common.skin.eb.css/common.skin.eb_min.css" media="screen,print" rel="stylesheet" type="text/css"/>
+  <link href="http://resources.essentialbaby.com.au/common/media-common-1.0/css/output/7.54.2/skin.promotions.css/skin.promotions_min.css" media="screen,print" rel="stylesheet" type="text/css"/>
+  <link href="https://plus.google.com/+essentialbaby" rel="Publisher"/>
+  <!-- Initialise Google Analytics event queue -->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  </script>
+  <link href="http://www.essentialbaby.com.au/favicon.ico" rel="shortcut icon"/>
+  <script src="//assets.adobedtm.com/7d5ea80d054b96730162d0905d59678c4d2bf30c/satelliteLib-fc35eab6559a121532bab25bb77b90e6a30892b9.js">
+  </script>
+ </head>
+ <body class="article-template essentialbaby ">
+  <script type="text/javascript">
+   // &lt;![CDATA[
+	document.body.className += " scriptable";
+// ]]&gt;
+  </script>
+  <a class="skipLink" href="#nav">
+   Skip to navigation
+  </a>
+  <a class="skipLink" href="#content">
+   Skip to content
+  </a>
+  <div class="cA-helmet" id="sponsorLink_cA-helmet">
+   <div id="video-player-companion-ad-helmet">
+   </div>
+   <!-- id:video-player-companion-ad-helmet -->
+  </div>
+  <!-- id:sponsorLink_cA-helmet -->
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/html5shiv.js" type="text/javascript">
+  </script>
+  <div class="outerWrap">
+   <div class="wrap cfix">
+    <div class="nN-whiteStrip">
+     <ul class="linksLeft">
+      <li class="lEB">
+       <a href="http://www.essentialbaby.com.au" title="Essential Baby">
+        Essential Baby
+       </a>
+      </li>
+      <li class="lEK">
+       <a href="http://www.essentialkids.com.au" title="Essential Kids">
+        Essential Kids
+       </a>
+      </li>
+      <li class="lFAB last">
+       <a href="http://www.findababysitter.com.au/" title="Find A Babysitter">
+        Find A Babysitter
+       </a>
+      </li>
+     </ul>
+     <a class="logo" href="http://www.fairfax.com.au/">
+      Fairfax Media
+     </a>
+     <ul class="linksRight">
+      <li>
+       <a href="http://www.smh.com.au" onclick="linktop(this);">
+        News
+       </a>
+      </li>
+      <li>
+       <a href="http://www.domain.com.au/" onclick="linktop(this);">
+        Real Estate
+       </a>
+      </li>
+      <li>
+       <a href="http://www.drive.com.au/" onclick="linktop(this);">
+        Cars
+       </a>
+      </li>
+      <li>
+       <a href="http://www.adzuna.com.au" onclick="linktop(this);">
+        Jobs
+       </a>
+      </li>
+      <li>
+       <a href="http://www.rsvp.com.au/" onclick="linktop(this);">
+        Dating
+       </a>
+      </li>
+      <li>
+       <a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" onclick="linktop(this);">
+        Newsletters
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/" onclick="linktop(this);">
+        Essential Baby
+       </a>
+      </li>
+      <li>
+       <a href="http://www.tradingroom.com.au" onclick="linktop(this);">
+        Trading Room
+       </a>
+      </li>
+      <li>
+       <a href="http://www.weatherzone.com.au/" onclick="linktop(this);">
+        Weatherzone
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- class:nN-whiteStrip -->
+    <div class="header cfix" role="banner">
+     <div class="ad" id="adspot-728x90_468x60-pos-1" style="display:none;">
+      <script type="text/javascript">
+       var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-728x90_468x60-pos-1");
+      </script>
+     </div>
+     <p class="mh-logo">
+      <a href="http://www.essentialbaby.com.au" title="Essential Baby">
+       Essential Baby
+      </a>
+     </p>
+     <ul id="nav" role="navigation">
+      <div>
+      </div>
+      <li class=" nav-1 home">
+       <a href="http://www.essentialbaby.com.au/" title="Home">
+        Home
+       </a>
+      </li>
+      <li class=" nav-2 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/conception" title="Conception">
+        Conception
+       </a>
+       <div class="ddown col-3">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/prepare-for-pregnancy" title="Preparing for Pregnancy">
+            Preparing for Pregnancy
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/trying-to-conceive" title="Trying to Conceive">
+            Trying to Conceive
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/ovulation.html" title="Ovulation">
+            Ovulation
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/fertility" title="Fertility">
+            Fertility
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/ivf" title="IVF">
+            IVF
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/alternative-therapies" title="Alternative Fertility Treatments">
+            Alternative Fertility Treatments
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/adoption" title="Adoption &amp; Fostering">
+            Adoption &amp; Fostering
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/conception-blog" title="Conception Blog">
+            Conception Blog
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/ovulation-calculator" title="Ovulation Calculator">
+            Ovulation Calculator
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4>
+          Tools
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/eb-eggtimer-app" title="Conception App">
+            Conception App
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/conception/ovulation-calculator" title="Ovulation Calculator">
+            Ovulation Calculator
+           </a>
+          </li>
+          <li>
+           <a href="http://members.essentialbaby.com.au/index.php?showforum=31" title="Conception Forums">
+            Conception Forums
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/conception/ivf/finding-a-positive-path-through-ivf-20141020-118lzs.html" title="Finding a positive path through IVF">
+           <img alt="Having a glass-half-full approach to IVF can make a big difference to the experience. " height="93" src="http://images.essentialbaby.com.au/2014/10/20/5898700/Thumbnail62547544118m76image.related.thumbnail.320x214.118lzs.png1413764491356.jpg-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/conception/ivf/finding-a-positive-path-through-ivf-20141020-118lzs.html" title="Finding a positive path through IVF">
+             Finding a positive path through IVF
+            </a>
+           </h3>
+           <p>
+            Its not surprising that IVF is often seen as a negative journey towards the ultimate positive, but having a glass-half-full approach can make a big difference to the experience.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-3 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/pregnancy" title="Pregnancy">
+        Pregnancy
+       </a>
+       <div class="ddown col-3">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-essentials-guide" title="Baby Essentials Guide">
+            Baby Essentials Guide
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-symptoms" title="Pregnancy Symptoms">
+            Pregnancy Symptoms
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/morning-sickness" title="Morning Sickness">
+            Morning Sickness
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/stages-of-pregnancy" title="Stages of Pregnancy">
+            Stages of Pregnancy
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-nutrition-and-wellbeing" title="Nutrition &amp; Wellbeing">
+            Nutrition &amp; Wellbeing
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-health" title="Health">
+            Health
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/prepare-for-baby" title="Prepare for Baby">
+            Prepare for Baby
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-names" title="Baby Names">
+            Baby Names
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-blog" title="Pregnancy Blog">
+            Pregnancy Blog
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/due-date-calculator" title="Due Date Calculator">
+            Due Date Calculator
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnant-pause" title="Pregnant Pause">
+            Pregnant Pause
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4>
+          Tools
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/weekly-guide-to-pregnancy/app" title="Pregnancy Guide App">
+            Pregnancy Guide App
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/due-date-calculator" title="Due Date Calculator">
+            Due Date Calculator
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-names" title="Baby Names">
+            Baby Names
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=41" title="Pregnancy Forums">
+            Pregnancy Forums
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=43" title="Due in Group">
+            Due in Group
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-names/baby-name-checklist-20081126-6ide.html" title="Baby Names Checklist">
+            Baby Names Checklist
+           </a>
+          </li>
+          <li>
+           <a href="www.essentialbaby.com.au/birth/labour/packing-your-hospital-bag-20081124-6fwh.html" title="Hospital Bag Tips">
+            Hospital Bag Tips
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/pregnancy/morning-sickness/morning-sickness-in-late-pregnancy-the-facts-20140829-3ek89.html" title="Morning sickness in late pregnancy: the facts">
+           <img alt="a" height="93" src="http://images.essentialbaby.com.au/2014/08/29/5718254/Morning-thumb-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/pregnancy/morning-sickness/morning-sickness-in-late-pregnancy-the-facts-20140829-3ek89.html" title="Morning sickness in late pregnancy: the facts">
+             Morning sickness in late pregnancy: the facts
+            </a>
+           </h3>
+           <p>
+            Even though morning sickness often stops in the second trimester, it can just as easily start again.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-4 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/birth" title="Birth">
+        Birth
+       </a>
+       <div class="ddown col-3">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/birth-options" title="Birth Options">
+            Birth Options
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/birth-plan" title="Birth Plan">
+            Birth Plan
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/labour" title="Labour">
+            Labour
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/caesarean" title="Caesarean">
+            Caesarean
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/after-birth" title="After Birth">
+            After Birth
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/birth-stories" title="Birth Stories">
+            Birth Stories
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/birth/birth-announcements" title="Birth Announcements">
+            Birth Announcements
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4>
+          Tools
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/weekly-guide-to-pregnancy/app" title="Pregnancy Guide App">
+            Pregnancy Guide App
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-growth-chart" title="Baby Growth Chart">
+            Baby Growth Chart
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=248" title="Birth Forums">
+            Birth Forums
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-names" title="Baby Names">
+            Baby Names
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/pregnancy/baby-names/baby-name-checklist-20081126-6ide.html" title="Baby Name Checklist">
+            Baby Name Checklist
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/birth/birth-options/when-to-ask-for-an-epidural-20141110-11jhwe.html" title="When to ask for an epidural">
+           <img alt="Decisions about an epidural should be made by the labouring woman." height="93" src="http://images.essentialbaby.com.au/2014/11/10/5970186/Thumbnail6305545411jhxkimage.related.thumbnail.320x214.11jhwe.png1415563341844.jpg-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/birth/birth-options/when-to-ask-for-an-epidural-20141110-11jhwe.html" title="When to ask for an epidural">
+             When to ask for an epidural
+            </a>
+           </h3>
+           <p>
+            When to start epidural pain relief during labour and delivery should be up to the mother, researchers say.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-5 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/baby" title="Baby">
+        Baby
+       </a>
+       <div class="ddown col-3">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-stages-of-development" title="Stages of Development">
+            Stages of Development
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/caring-for-baby" title="Caring for Baby">
+            Caring for Baby
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/playtime-guide" title="Playtime Guide">
+            Playtime Guide
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/breastfeeding" title="Breastfeeding">
+            Breastfeeding
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-sleep" title="Baby Sleep">
+            Baby Sleep
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-food" title="Baby Food">
+            Baby Food
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-health" title="Baby Health">
+            Baby Health
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-education-and-play" title="Education &amp; Play">
+            Education &amp; Play
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-products" title="Baby Products">
+            Baby Products
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-blog" title="Baby Blog">
+            Baby Blog
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-growth-chart" title="Baby Growth Chart">
+            Baby Growth Chart
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4>
+          Tools
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/baby-growth-chart" title="Baby Growth Chart">
+            Baby Growth Chart
+           </a>
+          </li>
+          <li>
+           <a href="http://images.essentialbaby.com.au/file/2014/01/23/5099402/Your_breastfeeding_diary.pdf" title="Breastfeeding Diary">
+            Breastfeeding Diary
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/baby/first-year-guide" title="Babys First Year Guide">
+            Babys First Year Guide
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=50" title="Baby birth-6 m Forum">
+            Baby birth-6 m Forum
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=79" title="Baby 6-12 m Forum">
+            Baby 6-12 m Forum
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=164" title="Breastfeeding Forum">
+            Breastfeeding Forum
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/baby/playtime-guide" title="Playtime Guide">
+           <img alt="eb-fp-driver-thumb-walker" height="93" src="http://images.essentialbaby.com.au/2015/03/10/6337145/eb-fp-driver-thumb-walker-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/baby/playtime-guide" title="Playtime Guide">
+             Playtime Guide
+            </a>
+           </h3>
+           <p>
+            Play is critical for your baby's cognitive, social and physical development, not to mention lots of fun for both of you! Click here to find out how you can make the most of your baby's play time.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-6 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/toddler" title="Toddler">
+        Toddler
+       </a>
+       <div class="ddown col-3">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-stages-of-development" title="Stages of Development">
+            Stages of Development
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler" title="Caring for Toddler">
+            Caring for Toddler
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toilet-training" title="Toilet Training">
+            Toilet Training
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-health" title="Toddler Health">
+            Toddler Health
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-education-and-play" title="Education &amp; Play">
+            Education &amp; Play
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-products" title="Toddler Products">
+            Toddler Products
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-blog" title="Toddler Blog">
+            Toddler Blog
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-growth-chart" title="Toddler Growth Chart">
+            Toddler Growth Chart
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <h4>
+          Tools
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-growth-chart" title="Toddler Growth Chart">
+            Toddler Growth Chart
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/toddler/toddler-guide" title="Toddler Guide">
+            Toddler Guide
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=80" title="Toddler  12-24 m Forum">
+            Toddler  12-24 m Forum
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showforum=279" title="Toddler 24-36 m Forum">
+            Toddler 24-36 m Forum
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?showtopic=807082" title="Activities Forum">
+            Activities Forum
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/farewell-daytime-nap-20150519-gh52os.html" title="Farewell, daytime nap">
+           <img alt="&lt;i&gt;&lt;/i&gt;" height="93" src="http://images.essentialbaby.com.au/2015/05/19/6544800/Thumbnail996249052gh53dtimage.related.thumbnail.320x214.gh52os.png1432015058834.jpg-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/farewell-daytime-nap-20150519-gh52os.html" title="Farewell, daytime nap">
+             Farewell, daytime nap
+            </a>
+           </h3>
+           <p>
+            I've been in denial and I'm not too proud to beg, but it appears I must accept the fact that you have gone. I need to let you go.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-7 hasSubNav hasDropdown sections">
+       <a href="http://www.essentialbaby.com.au/life-style" title="Lifestyle">
+        Lifestyle
+       </a>
+       <div class="ddown col-2">
+        <div>
+         <h4>
+          Sections
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/current-affairs" title="Current Affairs">
+            Current Affairs
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents" title="Celebrity Parent News">
+            Celebrity Parent News
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/family-travel" title="Family Travel">
+            Family Travel
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/family-finances" title="Family Finances">
+            Family Finances
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/family-entertainment" title="Family Entertainment">
+            Family Entertainment
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/family-home" title="Family Home">
+            Family Home
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/being-dad" title="Being Dad">
+            Being Dad
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/feature-member" title="Feature Members">
+            Feature Members
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/photogalleries" title="EB Photo Galleries">
+            EB Photo Galleries
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/life-style/competitions" title="Competitions">
+            Competitions
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR" title="Get your FREE ticket to the Baby &amp; Toddler Show">
+           <img alt="eb-ebts-freeticket-thumb-sm" height="93" src="http://images.essentialbaby.com.au/2015/07/02/6657056/eb-ebts-freeticket-thumb-sm-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR" title="Get your FREE ticket to the Baby &amp; Toddler Show">
+             Get your FREE ticket to the Baby &amp; Toddler Show
+            </a>
+           </h3>
+           <p>
+            Get your free ticket to the Sydney Essential Baby &amp; Toddler Show for September 25-27 - register online now.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-8 hasSubNav hasDropdown ">
+       <a href="http://www.essentialbaby.com.au/wellbeing" title="Wellbeing">
+        Wellbeing
+       </a>
+       <div class="ddown col-2">
+        <div>
+         <h4>
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/wellbeing/mind-and-body" title="Mind &amp; Body">
+            Mind &amp; Body
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/wellbeing/beauty-and-fashion" title="Beauty &amp; Fashion">
+            Beauty &amp; Fashion
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/wellbeing/relationships" title="Relationships">
+            Relationships
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/wellbeing/nutrition-and-fitness" title="Nutrition &amp; Fitness">
+            Nutrition &amp; Fitness
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/winter" title="Winter">
+            Winter
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div>
+         <small>
+          Featured
+         </small>
+         <div class="cN-story">
+          <a href="http://www.essentialbaby.com.au/seasonal/keeping-your-childrens-immune-systems-strong-in-winter-20150610-ghkudx.html" title="Keeping your children's immune systems strong in winter">
+           <img alt="&lt;i&gt;&lt;/i&gt;" height="93" src="http://images.essentialbaby.com.au/2015/06/10/6603415/Thumbnail996984789ghkvcsimage.related.thumbnail.320x214.ghkudx.png1433918441171.jpg-140x93.jpg" width="140"/>
+          </a>
+          <div class="wof">
+           <h3>
+            <a href="http://www.essentialbaby.com.au/seasonal/keeping-your-childrens-immune-systems-strong-in-winter-20150610-ghkudx.html" title="Keep your child's immune systems strong">
+             Keep your child's immune systems strong
+            </a>
+           </h3>
+           <p>
+            Winter is a season notorious for colds and flu, but there are a few ways we can boost our family members' immune systems.
+           </p>
+          </div>
+         </div>
+         <!-- class:cN-story -->
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+      <li class=" nav-9">
+       <a href="http://www.essentialbaby.com.au/Essential-Baby-Events" title="Events">
+        Events
+       </a>
+      </li>
+      <li class=" nav-10 hasSubNav hasDropdown ">
+       <a href="http://www.essentialbaby.com.au/forums/" title="Forums">
+        Forums
+       </a>
+       <div class="ddown right col-1">
+        <div>
+         <h4>
+         </h4>
+         <ul>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/" title="Forums">
+            Forums
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?/blogs/" title="Member Blogs">
+            Member Blogs
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?/blog/5068-eb-product-panel/" title="Product Reviews">
+            Product Reviews
+           </a>
+          </li>
+          <li>
+           <a href="http://www.essentialbaby.com.au/forums/index.php?act=Login&amp;CODE=00" title="Log In">
+            Log In
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <!-- class:ddown -->
+      </li>
+     </ul>
+     <ul class="breadcrumb">
+      <li>
+       You are here:
+      </li>
+      <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+       <a href="http://www.essentialbaby.com.au" itemprop="url">
+        <span itemprop="title">
+         Home
+        </span>
+       </a>
+      </li>
+      <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+       <a href="http://www.essentialbaby.com.au/life-style" itemprop="url">
+        <span itemprop="title">
+         Life Style
+        </span>
+       </a>
+      </li>
+      <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+       <a class="last" href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing" itemprop="url">
+        <span itemprop="title">
+         Nutrition &amp; Wellbeing
+        </span>
+       </a>
+      </li>
+     </ul>
+     <div class="cN-searchBox cfix">
+      <form action="http://www.essentialbaby.com.au/execute_search.html" method="get">
+       <h2>
+        Search essentialbaby:
+       </h2>
+       <label for="search">
+        <input id="search" name="text" onfocus="this.value='';" placeholder="Search here..." type="text"/>
+       </label>
+       <h3>
+        Search in:
+       </h3>
+       <ul class="ddown" id="ddown">
+        <li>
+         <a class="selected" href="#">
+          EssentialBaby
+         </a>
+         <div class="srch-wrap">
+          <div>
+          </div>
+          <ul class="cfix">
+           <li class="first">
+            <a href="#">
+             EssentialBaby
+            </a>
+           </li>
+          </ul>
+         </div>
+         <!-- class:srch-wrap -->
+        </li>
+       </ul>
+       <input name="ss" type="hidden" value="EssentialBaby"/>
+       <input class="btnSubmit" type="submit" value="Search"/>
+      </form>
+     </div>
+     <!-- class:cN-searchBox cfix -->
+    </div>
+    <!-- class:header -->
+    <div class="ad ad adPageTop" id="adspot-940x20-pos-1" style="display:none;">
+     <script type="text/javascript">
+      var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-940x20-pos-1");
+     </script>
+    </div>
+    <div class="span-16 article" id="content" itemscope="" itemtype="http://schema.org/Article">
+     <div class="cT-returnToSite">
+     </div>
+     <h1 class="cN-headingPage" itemprop="name">
+      When your unborn twin is your children's mother
+     </h1>
+     <span class="gone">
+      Nutrition &amp; Wellbeing
+     </span>
+     <div class="meta hnews">
+      <dl>
+       <dt class="hiddenVisually">
+        Date
+       </dt>
+       <dd class="updated dtstamp">
+        <time datetime="February 5, 2014" itemprop="datePublished">
+         February 5, 2014
+        </time>
+       </dd>
+      </dl>
+      <ul class="tools">
+       <li class="reading collectorHidden" style="display:none">
+        (1)
+       </li>
+       <li class="comments">
+        <a href="#comments">
+         Comments
+         <strong>
+          8
+         </strong>
+        </a>
+       </li>
+      </ul>
+      <div class="author">
+       <div class="cT-headshot">
+        <div>
+         <a href="http://www.essentialbaby.com.au/life-style/by/Letitia-Rowlands">
+          <img alt="Letitia Rowlands" height="90" src="http://images.essentialbaby.com.au/2013/11/28/4964184/letitia_127x127.jpg" title="Letitia Rowlands" width="90"/>
+         </a>
+        </div>
+        <h3 class="authorName">
+         <a href="http://www.essentialbaby.com.au/life-style/by/Letitia-Rowlands" itemprop="author" rel="author">
+          Letitia Rowlands
+         </a>
+        </h3>
+        <h4 class="authorTitle">
+         Writer
+        </h4>
+        <p class="authorBlog">
+         <a href="http://www.essentialbaby.com.au/life-style/by/Letitia-Rowlands">
+          View more articles from
+          <span class="author-name">
+           Letitia Rowlands
+          </span>
+         </a>
+        </p>
+        <p class="authorFollow">
+         <span class="twitter">
+          <a data-show-count="false" data-show-screen-name="false" href="http://twitter.com/@RowlandsLetitia">
+           Follow Letitia on Twitter
+          </a>
+         </span>
+         <span class="googleplus">
+          <a data-show-count="false" data-show-screen-name="false" href="https://plus.google.com/116710611676101506324/post">
+           Follow Letitia on Google+
+          </a>
+         </span>
+        </p>
+       </div>
+       <!-- class:cT-headshot -->
+      </div>
+      <!-- class:author -->
+      <p class="lead" itemprop="description">
+       An amazing case from the archives gives a glimpse into the fascinating ways the human body can work.
+      </p>
+      <ul class="social sponsored cfix">
+       <!--We need to call this as a dynamic component, to many variants meant i had to start hacking it for different sections -->
+       <li class="tweet">
+        <a class="twitter-share-button" data-count="horizontal" data-text="When your unborn twin is your children's mother" data-url="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-via="essentialbaby" href="http://twitter.com/share" onclick="trackShare('twitter')">
+         Twitter
+        </a>
+       </li>
+       <li class="fblike">
+        <div class="fb-share-button" data-href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-type="button_count">
+        </div>
+       </li>
+       <li class="gplus">
+        <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-onstartinteraction="gplusCallback">
+        </div>
+       </li>
+       <li class="pinterest" onclick="trackShare('pinterest')">
+        <a class="pin-it-button pinteonclick=" href="http://pinterest.com/pin/create/button/?url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html&amp;media=http://images.essentialbaby.com.au/2014/02/03/5128166/scan-wide.jpg&amp;description=scan wide">
+         Pin It
+        </a>
+       </li>
+       <li class="reddit">
+        <a href="http://www.reddit.com/submit?url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html&amp;title=When your unborn twin is your children's mother" onclick="trackShare('reddit')">
+         submit to reddit
+        </a>
+       </li>
+       <li class="email">
+        <a data-emailsociallink="true" data-emailurl="/action/emailToFriend?id=5127858" href="/action/emailToFriend?id=5127858" onclick="trackShare('email')" rel="nofollow" title="Email to a friend">
+         Email article
+        </a>
+       </li>
+       <li class="print">
+        <a data-printsociallink="true" data-printurl="/action/printArticle?id=5127858" href="/action/printArticle?id=5127858" onclick="trackShare('print')" rel="nofollow" title="Print this story">
+         Print
+        </a>
+       </li>
+       <li class="reprint">
+        <a href="http://rightsportal.copyright.com.au/pages/republicationpage.aspx?publisher=fxj&amp;publication=ESB&amp;author=Letitia Rowlands&amp;title=When your unborn twin is your children's mother&amp;publicationdate=05/02/2014&amp;url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" onclick="trackShare('reprint')" rel="nofollow" target="_blank" title="Reprints and permissions">
+         Reprints &amp; permissions
+        </a>
+       </li>
+       <script type="text/javascript">
+        window.fbAsyncInit = function() {
+        FB.Event.subscribe('edge.create', function(href, widget) {
+            trackShare('facebook');
+        });
+    };
+
+    function linkedInShare() {
+        trackShare('linkedin');
+    }
+
+    function gplusCallback(args) {
+        if (args.type === 'confirm') {
+            trackShare('gplus');
+        }
+    }
+
+    function trackShare(eVar25) {
+        var beforeLinkTrackVars = s.linkTrackVars;
+        var beforeLinkTrackEvents = s.linkTrackEvents;
+        var beforeEvents = s.events;
+        var beforeEVar25 = s.eVar25;
+
+        s=s_gi(s_account);
+        s.linkTrackVars='eVar25,events';
+        s.linkTrackEvents='event19';
+        s.events='event19';
+        s.eVar25=eVar25;
+        s.tl(true,'o','social share');
+
+        // Reset the vars as the state will continue across subsequent requests
+        s.linkTrackVars=beforeLinkTrackVars;
+        s.linkTrackEvents=beforeLinkTrackEvents;
+        s.events=beforeEvents;
+        s.eVar25=beforeEVar25;
+
+
+    }
+       </script>
+       <li class="socSponsor">
+        <div class="ad" id="adspot-120x50-pos-1" style="display:none;">
+         <script type="text/javascript">
+          var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-120x50-pos-1");
+         </script>
+        </div>
+       </li>
+      </ul>
+     </div>
+     <!-- class:meta hnews -->
+     <!--honey pot ad inserted via trickyness-->
+     <div class="ad adSpot-textBox">
+      <ins class="adsbygoogle" id="googleAds">
+      </ins>
+     </div>
+     <!-- class:ad adSpot-textBox -->
+     <div class="articleBody" itemprop="articleBody">
+      <!-- cT-imageLandscape -->
+      <div class="cT-imageLandscape">
+       <img alt="scan wide" itemprop="image" src="http://images.essentialbaby.com.au/2014/02/03/5128166/scan-wide-620x349.jpg"/>
+      </div>
+      <p>
+       How would you feel if you fell pregnant naturally, carried your baby for nine months then gave birth to your child, only to be told you were not their biological mother?
+      </p>
+      <p>
+       In addition, you risked losing custody of all three of your children and were facing charges of welfare fraud for ever claiming to be their parent.
+      </p>
+      <p>
+       That's exactly what happened to US woman Lydia Fairchild when the pregnant mother of two sought financial support from the government following the breakdown of her relationship with her children's father.
+      </p>
+      <!-- cT-imagePortrait -->
+      <div class="cT-imagePortrait">
+       <img alt="DNA mystery solved ... Lydia Fairchild and her children (she has had another baby since learning of her rare condition)." itemprop="image" src="http://images.essentialbaby.com.au/2014/02/03/5127965/chimera-300x0.jpg"/>
+       <p>
+        DNA mystery solved ... Lydia Fairchild and her children (she has had another baby since learning of her rare condition).
+       </p>
+      </div>
+      <p>
+       As part of a routine procedure, both 26-year-old Fairchild and her estranged partner Jamie Townsend had to undergo DNA testing to prove they were their children's parents before government assistance would be provided.
+      </p>
+      <div class="ad adCentred" id="conditionalAd-300x250-pos-3" style="display:none;">
+       <small>
+        Advertisement
+       </small>
+       <script type="text/javascript">
+        function getAdCookie(name) { var regex = new RegExp('(?:^|; )' + name + '=([^;]*)'); var value = regex.exec(document.cookie); if (value &amp;&amp; value.length &gt; 1) { value = decodeURIComponent(value[1]); } else { value = ""; } return value; } function getFrameDocument(fr) { var doc = fr.contentWindow || fr.contentDocument; if (doc &amp;&amp; doc.document) { doc = doc.document; } return doc; } function closeDoc(doc) { doc.close(); } function closeOpenDocuments(openDocs) { for (var i=0;i&lt; openDocs.length; i++) { closeDoc(getFrameDocument(document.getElementById(openDocs[i]))); } } function isIE() { return /msie/i.test(navigator.userAgent) &amp;&amp; !/opera/i.test(navigator.userAgent); } function setHash (element, hash) { if(element.hash) { element.hash = element.hash + "," + hash; } else { element.hash = hash; } } function renderIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); if (ie) { var sizePart = srcUrl.substring(srcUrl.indexOf("sz=")+3); sizePart = sizePart.substring(0, sizePart.indexOf(";")); var multiSizes = sizePart.split(","); var minSize = multiSizes[0]; if (multiSizes.length &gt; 1) { for(var i=1; i&lt; multiSizes.length; i++) { if (minSize &gt; multiSizes[i]) { minSize = multiSizes[i]; } } var sizeParts = minSize.toLowerCase().split("x"); width = sizeParts[0]; height = sizeParts[1]; srcUrl = srcUrl.replace(sizePart, minSize); } } document.write('&lt;iframe id="' + adID + '" src="' + srcUrl + '" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"&gt;&lt;\/iframe&gt;'); } function renderJIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); document.write('&lt;iframe id="' + adID + '" src="javascript: ;" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"&gt;&lt;\/iframe&gt;'); var body = '&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body ' + bodyAttributes + '&gt;&lt;scr' + 'ipt src="' + srcUrl + '"&gt;&lt;/sc' + 'ript&gt;&lt;/body&gt;&lt;/html&gt;'; var fr = document.getElementById(adID); setHash(fr, hash); fr.body = body; var doc = getFrameDocument(fr); doc.open(); doc.write(body); setTimeout(function() {closeDoc(getFrameDocument(document.getElementById(adID)))}, 2000); } function renderJIFAdWithInterim(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); document.write('&lt;iframe id="' + adID + '" src=" '+ srcUrl +'" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"&gt;&lt;\/iframe&gt;'); } function renderIJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.write('&lt;scr' + 'ipt src="' + srcUrl + '" id="' + adID + '"&gt;&lt;/sc' + 'ript&gt;'); } function renderJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.dcdAdsH.push(holderID); document.dcdAdsI.push(adID); document.dcdAdsU.push(srcUrl); } function er_showAd() { var regex = new RegExp("externalReferrer=(.*?)(; |&amp;|$)", "gi"); var value = regex.exec(document.cookie); if (value &amp;&amp; value.length == 3) { var externalReferrer = value[1]; return (!FD.isInternalReferrer() || ((externalReferrer) &amp;&amp; (externalReferrer &gt; 0))); } return false; } function isHome() { var loc = "" + window.location; loc = loc.replace("//", ""); var tokens = loc.split("/"); if (tokens.length == 1) { return true; } else if (tokens.length == 2) { if (tokens[1].trim().length == 0) { return true; } } return false; } function checkAds(checkStrings) { var cs = checkStrings.split(','); for (var i = 0; i &lt; document.dcdAdsAA.length; i++) { var cAd = document.getElementById(document.dcdAdsAA[i]); document.dcdAdsAG.push(cAd.hash); for (var j = 0; j &lt; cs.length; j++) { var c = cs[j].trim(); if (c.length &gt; 0 &amp;&amp; cAd.innerHTML.indexOf(c) &gt; 0) { document.dcdAdsAI.push(cAd.hash); cAd.style.display ='none'; } } } if (!ie) { for (var i = 0; i &lt; document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { document.dcdAdsAG.push(fr.hash); var doc = getFrameDocument(fr); for (var j = 0; j &lt; cs.length; j++) { var c = cs[j].trim(); if (c.length &gt; 0 &amp;&amp; doc.body.innerHTML.indexOf(c) &gt; 0) { document.dcdAdsAI.push(fr.hash); fr.style.display ='none'; } } } } } if (document.dcdAdsAI.length &gt; 0 || document.dcdAdsAG.length &gt; 0) { var pingServerParams = "i="; var sep = ""; for (var i=0;i&lt; document.dcdAdsAI.length; i++) { pingServerParams += sep + document.dcdAdsAI[i]; sep = ","; } } document.pingServerAdParams = pingServerParams; } function adSuppress(id) { var div = document.getElementById(id); div.style.display = 'none'; document.dcdAdsAI.push(div.hash); document.pingServerAdParams = 'i=' + document.dcdAdsAI.join(','); } function pingAdStatus() { if (isHome ()) { return; } if (document.pingServerAdParams &amp;&amp; document.pingServerAdParams.length &gt; 0) { var pingServerUrl = "/action/pingServerAction?" + document.pingServerAdParams; var xmlHttp = null; try { xmlHttp = new XMLHttpRequest(); } catch(e) { try { xmlHttp = new ActiveXObject("Microsoft.XMLHttp"); } catch(e) { xmlHttp = null; } } if (xmlHttp != null) { xmlHttp.open( "GET", pingServerUrl, true); xmlHttp.send( null ); } } } function initAds(log) { for (var i=0;i&lt; document.dcdAdsU.length; i++) { var shadowHolder = document.getElementById("adShD" + i); var targetHolder = document.getElementById(document.dcdAdsH[i]); if (shadowHolder &amp;&amp; targetHolder) { var adNodes = new Array(); for (var j=0; j&lt;shadowHolder.childNodes.length; j++) { var child = shadowHolder.childNodes[j]; if (child.nodeName.toLowerCase() != "script") { adNodes.push(child); } } appendNodesToTargetHolder(targetHolder, shadowHolder, adNodes); } } if (er_showAd()) { for (var i=0;i&lt; document.dcdAdsE.length; i++) { var erAd = document.getElementById(document.dcdAdsEH[i]); erAd.className = document.dcdAdsEC[i]; erAd.appendChild(document.dcdAdsE[i]); } } if (log) { console.log(document.igCount + "/" + document.tCount); } } function appendNodesToTargetHolder(targetHolder, shadowHolder, adNodes) { var changeMethod = 0; /** appendChild **/ var placeholder = targetHolder; if (targetHolder.children) { for (var i=0; i &lt; targetHolder.children.length; i++) { var child = targetHolder.children[i]; if (child.tagName &amp;&amp; child.tagName.toLowerCase() == "small") { if (placeholder.tagName.toLowerCase() == "small") { placeholder = child; changeMethod = 1; /** prepend, since this is the second small tag **/ } else { if (i &lt; (targetHolder.children.length -1)) { placeholder = child; changeMethod = 2; /** append, since this is the first small and its not the last child**/ } else { placeholder = child; changeMethod = 1; /** prepend, since this is the first small but last child **/ } } } } } for (var i=0; i &lt; adNodes.length; i++) { switch(changeMethod) { case 2: placeholder.parentNode.insertBefore(shadowHolder.removeChild(adNodes[i]), placeholder.nextSibling); placeholder = placeholder.nextSibling; break; case 1: placeholder.parentNode.insertBefore(shadowHolder.removeChild(adNodes[i]), placeholder.previousSibling); break; default: placeholder.appendChild(shadowHolder.removeChild(adNodes[i])); } } } function isInterimEnable(frame){ var iFrame_src = frame.src; var interim = iFrame_src.indexOf("adinterim"); if(interim &lt; 0 ){ return false; }else{ return true; } } function getCurrentOrd(srcurl){ var currentOrg = ""; currentOrg = srcurl.split("ord=")[1]; if(currentOrg.indexOf("?") &lt; 0){ return currentOrg }else{ return currentOrg.split("?")[0]; } } document.refreshAds = function rAds(adID) { if (document.dcdAdsR) { document.dcdsAdsToClose = new Array(); for (var i=0;i&lt; document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { if (!ie &amp;&amp; !isInterimEnable(fr)) { if (!adID || adID =="*" || fr.parentNode.id==adID ) { var chNodes = new Array(); for (var j=0; j&lt;fr.parentNode.childNodes.length; j++) { var child = fr.parentNode.childNodes[j]; if (!(child.nodeName.toLowerCase() == "script" || child.nodeName.toLowerCase() == "iframe") || child.nodeName.toLowerCase() == "small") { chNodes.push(child); } } for (var j=0; j&lt;chNodes.length; j++) { if (!child.nodeName.toLowerCase() == "small") { chNodes[j].parentNode.removeChild(chNodes[j]); } } var doc = getFrameDocument(fr); while (doc.childNodes.length &gt; 0) { doc.removeChild(doc.childNodes[0]); } doc.open(); var newBody = fr.body; if (getCurrentOrd(newBody) != "" ) { newBody = newBody.replace(";ord="+getCurrentOrd(newBody), ";ord=" + Math.floor(100000000*Math.random())); } else { newBody = newBody.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); } doc.write(newBody); document.dcdsAdsToClose.push(fr.id); } } else { var newSrc = fr.src; if (getCurrentOrd(newSrc) != "" ) { newSrc = newSrc.replace(";ord="+getCurrentOrd(newSrc), ";ord=" + Math.floor(100000000*Math.random())); } else { newSrc = newSrc.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); } fr.src = newSrc; } } } if (document.dcdsAdsToClose.length &gt; 0) { setTimeout(function() {closeOpenDocuments(document.dcdsAdsToClose)}, 500); } } }; var ie = isIE(); if(ie &amp;&amp; typeof String.prototype.trim !== 'function') { String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); }; } document.dcdAdsH = new Array(); document.dcdAdsI = new Array(); document.dcdAdsU = new Array(); document.dcdAdsR = new Array(); document.dcdAdsEH = new Array(); document.dcdAdsE = new Array(); document.dcdAdsEC = new Array(); document.dcdAdsAA = new Array(); document.dcdAdsAI = new Array(); document.dcdAdsAG = new Array(); document.dcdAdsToClose = new Array(); document.igCount = 0; document.tCount = 0; var dcOrd = Math.floor(100000000*Math.random()); document.dcAdsCParams = ""; var savValue = getAdCookie("sav"); if (savValue != null &amp;&amp; savValue.length &gt; 2) { document.dcAdsCParams = savValue + ";"; } document.dcAdsCParams += "csub={csub};"; var aamCookie=function(e,t){var i=document.cookie,n="";return i.indexOf(e)&gt;-1&amp;&amp;(n="u="+i.split(e+"=")[1].split(";")[0]+";"),i.indexOf(t)&gt;-1&amp;&amp;(n=n+decodeURIComponent(i.split(t+"=")[1].split(";")[0])+";"),n}("aam_did","aam_dest_dfp_legacy");
+       </script>
+       <script type="text/javascript">
+        var externalReferrerAds = window.externalReferrerAds || []; externalReferrerAds.push(function () { var externalReferrer=getAdCookie("externalReferrer"); if(externalReferrer!=""){ var titan = window.titan || {}; titan.requestConditionalAd = titan.requestConditionalAd || []; titan.requestConditionalAd.push("conditionalAd-300x250-pos-3"); } });
+       </script>
+      </div>
+      <p>
+       But the results shocked everyone - including the obstetrician who delivered the couple's babies - when they revealed the children had no DNA link to Fairchild.
+      </p>
+      <p>
+       "I knew that I carried them, and I knew I delivered them. There was no doubt in my mind," Fairchild told American ABC television about the day her life was turned upside down in December 2002.
+      </p>
+      <p>
+       The tests did confirm Townsend was the children's father and Fairchild was called into US Department of Social Service Offices immediately where staff warned her children could be taken away from her at any time.
+      </p>
+      <p>
+       "As I sat down, they came up and shut the door, and they just ... started drilling me with questions like, 'Who are you?'," the Washington woman said.
+      </p>
+      <p>
+       In order to rule out any errors in the DNA testing, a second test at a different laboratory was ordered. The results were the same: Townsend was the father, but Fairchild had no biological connection to her children.
+      </p>
+      <p>
+       What followed was a 16-month nightmare that ended only when Fairchild's lawyers made a startling discovery: the mum was one of about 30 people around the world who have been found to have chimerism, a condition in which an individual carries two distinct and separate strands of DNA.
+      </p>
+      <p>
+       Before that finding, things looked grim for Fairchild and her family as officials launched court action to have her children removed from her care.
+      </p>
+      <p>
+       The state even had a court officer in the delivery room when she gave birth her third baby so a DNA test could be carried out as soon as the child was born. Again it revealed the baby had no DNA link to its mother, and Fairchild was suspected of acting as a surrogate for payment.
+      </p>
+      <p>
+       "I'd sit and have dinner with my kids and just break out crying. They would just look at me like, 'What's wrong, Mum.' They'd come get me a hug, and I couldn't explain it to them, because I didn't understand," Fairchild said.
+      </p>
+      <p>
+       Fortunately for the struggling mother, she had a diligent lawyer on her side. He had initially doubted her story, but finally decided to take the case on after seeing how adamant Fairchild was that the children were hers.
+      </p>
+      <p>
+       While researching, that lawyer, Alan Tindell, stumbled on the case of Boston woman Karen Keegan, who needed a kidney transplant. Keegan's family had undergone blood testing to see if they were compatible to donate a kidney, but the results instead revealed Keegan shared no DNA link with two of her three sons.
+      </p>
+      <p>
+       Doctors had taken DNA samples from all over Keegan's body, hoping to find proof of some shared DNA with her sons. They were unsuccessful until Keegan told them she'd had a thyroid nodule removed years previously. A sample of that thyroid tissue, stored in a nearby laboratory, proved to be the key to solving Keegan's medical mystery, as the DNA contained in the sample was found to have links to her sons' DNA.
+      </p>
+      <p>
+       "In (Keegan's) blood she was one person, but in other tissues she had evidence of being a fusion of two individuals," Boston pathologist Dr Lynne Uhl told ABC.
+      </p>
+      <p>
+       At that stage, Keegan was one of only 30 documented cases around the world of chimerism.
+      </p>
+      <p>
+       A chimera is an organism with at least two genetically distinct types of cells. It occurs when someone was originally going to be born a twin, but in their mother's womb two fertilised eggs fuse, becoming one foetus carrying two distinctly separate strands of DNA.
+      </p>
+      <p>
+       In chimeras, their twin lives on microscopicallysomewhere inside the body as DNA. They are essentially their own twin, all in one body.
+      </p>
+      <p>
+       After reading about Keegan's case, Fairchild's lawyers set about investigating whether chimerism could provide the answer as to why their client and her children did not share any genetic material. And it did.
+      </p>
+      <p>
+       First they tested genetic material from Fairchild's own mother, which proved a link between the children and their grandmother. Later a cervical smear from Fairchild showed DNA cells matching all three of her children.
+      </p>
+      <p>
+       It was then confirmed that Fairchild was indeed a chimera and her "invisible twin" lived on only in her ovaries. Her twin, who never lived, was her children's biological mother.
+      </p>
+      <p>
+       Thanks to this new evidence, the case against Fairchild was dismissed and she could finally continue a normal life with her children.
+      </p>
+      <p>
+       "I probably wouldn't have my kids today if (my lawyers) didn't discover (Keegan's) situation. They wouldn't have known to even consider me as a chimera," Fairchild told ABC.
+      </p>
+     </div>
+     <!-- class:articleBody -->
+     <div class="ad adSpot-textBox">
+      <ins class="adsbygoogle" id="moreGoogleAds">
+      </ins>
+     </div>
+     <!-- class:ad adSpot-textBox -->
+     <div class="customSuggestions cfix hidden" data-brand="essentialbaby.com.au" data-section="Life Style" data-siteid="9222289450909507089">
+     </div>
+     <div class="OUTBRAIN" data-ob-template="Essential_Baby_Fairfax" data-src="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-widget-id="AR_1">
+     </div>
+     <div class="OUTBRAIN" data-ob-template="Essential_Baby_Fairfax" data-src="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-widget-id="AR_10">
+     </div>
+     <div class="cT-comments" id="comments">
+      <a id="makeComment" name="makeComment">
+      </a>
+      <h3>
+      </h3>
+      <h2>
+       8 comments
+      </h2>
+      <ul class="comments">
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          I'm glad it's not april first, or I'd have trouble believing this.  How incredible.
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           bornagirl
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+          Melbourne
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 9:47AM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          I remember seeing an episode of CSI with a storyline on a chimera and I found it really fascinating. I looked into it a little at the time as I had never heard of such a thing, and I remember reading about this particular woman's case. It makes you wonder how many are out there but just don't know it.
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           Mrs F
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+          Gold Coast
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 10:47AM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          So DNA testing is not the faultless fix we have been told it is.  This poor bloody woman - what a royal stuff up.  And THANK GOD we live in Australia where we don't have to undergo expensive DNA testing to claim welfare.
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           Deb DeGood
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 10:53AM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          A truly amazing story. ( in proper use of the word).
+          <br/>
+          Its not the DNA test that was the problem but something quite outside the scope of the test. Real science not the pseudo science on TV.
+          <br/>
+          I am glad she got to keep her kids.
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           G Sacramento
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 12:05PM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          Amazing case, what a trial for that poor mum.
+         </p>
+         <p>
+          One thing I dont understand though is how there could be no DNA link at all between this mum and her kids.  An aunt has a DNA link to her nieces and nephews, it is just further removed than the link that the mother normally has.  If the children's DNA came from an unborn twin sister chimera, wouldn't the mum have the apparent DNA link of an aunt?
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           David
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+          Turra
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 12:07PM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          Deb DeGood
+         </p>
+         <p>
+          1. NO-ONE who knows what they are talking about has EVER said that DNA is 'a faultless fix". Where do you get such a  dumb idea?
+          <br/>
+          2. Read the article. There was no royal stuff-up. The woman is just a really unusual mix of two people. The DNA result was right - it just took time to work  out why.
+          <br/>
+          3.In Australia  people usually DO have to undertake DNA testing when custody/maintenance/ welfare etc is in dispute (same as for this woman).
+         </p>
+         <p>
+          By the way - this is a 12 year old story which was well covered at the time. Why is it revived now?
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           gunther
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 12:33PM
+         </dd>
+        </dl>
+        <ul>
+         <li>
+          <blockquote>
+           <p>
+           </p>
+           <p>
+            What a grump!
+           </p>
+          </blockquote>
+          <dl>
+           <dt class="hiddenVisually">
+            Commenter
+           </dt>
+           <dd>
+            <cite>
+             Bob
+            </cite>
+           </dd>
+           <dt class="hiddenVisually">
+            Location
+           </dt>
+           <dd>
+            Melbourne
+           </dd>
+           <dt class="hiddenVisually">
+            Date and time
+           </dt>
+           <dd class="dateTime">
+            February 05, 2014, 9:31AM
+           </dd>
+          </dl>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <blockquote>
+         <p>
+         </p>
+         <p>
+          The people doing the DNA testing should have tested the grandmother a lot sooner than they did.
+         </p>
+        </blockquote>
+        <dl>
+         <dt class="hiddenVisually">
+          Commenter
+         </dt>
+         <dd>
+          <cite>
+           Jimbo
+          </cite>
+         </dd>
+         <dt class="hiddenVisually">
+          Location
+         </dt>
+         <dd>
+          Hawthorn
+         </dd>
+         <dt class="hiddenVisually">
+          Date and time
+         </dt>
+         <dd class="dateTime">
+          February 04, 2014, 6:04PM
+         </dd>
+        </dl>
+        <ul>
+        </ul>
+       </li>
+      </ul>
+      <b>
+       Comments are now closed
+      </b>
+     </div>
+     <!-- id:comments -->
+     <div class="meta">
+      <ul class="social cfix">
+       <!--We need to call this as a dynamic component, to many variants meant i had to start hacking it for different sections -->
+       <li class="tweet">
+        <a class="twitter-share-button" data-count="horizontal" data-text="When your unborn twin is your children's mother" data-url="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-via="essentialbaby" href="http://twitter.com/share" onclick="trackShare('twitter')">
+         Twitter
+        </a>
+       </li>
+       <li class="fblike">
+        <div class="fb-share-button" data-href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-type="button_count">
+        </div>
+       </li>
+       <li class="gplus">
+        <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-onstartinteraction="gplusCallback">
+        </div>
+       </li>
+       <li class="pinterest" onclick="trackShare('pinterest')">
+        <a class="pin-it-button pinteonclick=" href="http://pinterest.com/pin/create/button/?url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html&amp;media=http://images.essentialbaby.com.au/2014/02/03/5128166/scan-wide.jpg&amp;description=scan wide">
+         Pin It
+        </a>
+       </li>
+       <li class="reddit">
+        <a href="http://www.reddit.com/submit?url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html&amp;title=When your unborn twin is your children's mother" onclick="trackShare('reddit')">
+         submit to reddit
+        </a>
+       </li>
+       <li class="email">
+        <a data-emailsociallink="true" data-emailurl="/action/emailToFriend?id=5127858" href="/action/emailToFriend?id=5127858" onclick="trackShare('email')" rel="nofollow" title="Email to a friend">
+         Email article
+        </a>
+       </li>
+       <li class="print">
+        <a data-printsociallink="true" data-printurl="/action/printArticle?id=5127858" href="/action/printArticle?id=5127858" onclick="trackShare('print')" rel="nofollow" title="Print this story">
+         Print
+        </a>
+       </li>
+       <li class="reprint">
+        <a href="http://rightsportal.copyright.com.au/pages/republicationpage.aspx?publisher=fxj&amp;publication=ESB&amp;author=Letitia Rowlands&amp;title=When your unborn twin is your children's mother&amp;publicationdate=05/02/2014&amp;url=http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" onclick="trackShare('reprint')" rel="nofollow" target="_blank" title="Reprints and permissions">
+         Reprints &amp; permissions
+        </a>
+       </li>
+       <script type="text/javascript">
+        window.fbAsyncInit = function() {
+        FB.Event.subscribe('edge.create', function(href, widget) {
+            trackShare('facebook');
+        });
+    };
+
+    function linkedInShare() {
+        trackShare('linkedin');
+    }
+
+    function gplusCallback(args) {
+        if (args.type === 'confirm') {
+            trackShare('gplus');
+        }
+    }
+
+    function trackShare(eVar25) {
+        var beforeLinkTrackVars = s.linkTrackVars;
+        var beforeLinkTrackEvents = s.linkTrackEvents;
+        var beforeEvents = s.events;
+        var beforeEVar25 = s.eVar25;
+
+        s=s_gi(s_account);
+        s.linkTrackVars='eVar25,events';
+        s.linkTrackEvents='event19';
+        s.events='event19';
+        s.eVar25=eVar25;
+        s.tl(true,'o','social share');
+
+        // Reset the vars as the state will continue across subsequent requests
+        s.linkTrackVars=beforeLinkTrackVars;
+        s.linkTrackEvents=beforeLinkTrackEvents;
+        s.events=beforeEvents;
+        s.eVar25=beforeEVar25;
+
+
+    }
+       </script>
+      </ul>
+     </div>
+     <!-- class:meta -->
+     <div class="cT-relatedCoverageContentPage">
+      <h3>
+       Related Coverage
+      </h3>
+      <div class="cN-relatedCoverage cfix" id="moreRelatedCoverage">
+       <!-- cN-story -->
+       <div class="cN-story cfix ">
+        <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-health/obstetricians-warned-to-consider-rare-pregnancy-condition-20140322-359dr.html" title="Obstetricians warned to consider rare pregnancy condition ">
+         <img alt="Michelle Johnson" height="60" src="http://images.essentialbaby.com.au/2013/11/13/4920043/th-MICHELLE-90x60.jpg" width="90"/>
+        </a>
+        <div class="wof">
+         <h3>
+          <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-health/obstetricians-warned-to-consider-rare-pregnancy-condition-20140322-359dr.html" title="Obstetricians warned to consider rare pregnancy condition ">
+           Obstetricians warned to consider rare pregnancy condition
+          </a>
+         </h3>
+         <p>
+          <cite>
+           <small>
+            22 Mar
+           </small>
+          </cite>
+          Michelle Johnson's tragic death is a reminder of the importance of recognising symptoms of potentially fatal and rare pregnancy conditions, a coroner has said.
+         </p>
+        </div>
+       </div>
+       <!-- cN-story -->
+       <div class="cN-story cfix last">
+        <a href="http://www.essentialbaby.com.au/conception/ivf/a-familys-journey-from-heartbreak-to-sheer-joy-20140709-3bmtl.html" title="A family's journey from heartbreak to sheer joy ">
+         <img alt="twins newton" height="60" src="http://images.essentialbaby.com.au/2014/07/09/5581651/twins-90x60.jpg" width="90"/>
+        </a>
+        <div class="wof">
+         <h3>
+          <a href="http://www.essentialbaby.com.au/conception/ivf/a-familys-journey-from-heartbreak-to-sheer-joy-20140709-3bmtl.html" title="A family's journey from heartbreak to sheer joy ">
+           A family's journey from heartbreak to sheer joy
+          </a>
+         </h3>
+         <p>
+          <cite>
+           <small>
+            9 Jul
+           </small>
+          </cite>
+          Julia and Lee Newton faced one of their darkest moments when they realised they couldn't have more children. Then a friend offered the gift of a lifetime.
+         </p>
+        </div>
+       </div>
+      </div>
+      <!-- id:moreRelatedCoverage -->
+     </div>
+     <!-- class:cT-relatedCoverageContentPage -->
+    </div>
+    <!-- id:content -->
+    <div class="aside span-8 last" role="complementary">
+     <div class="ad" id="adspot-300x1515-pos-1" style="display:none;">
+      <script type="text/javascript">
+       var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-300x1515-pos-1");
+      </script>
+     </div>
+     <div class="cS-storyImageLeadRotator rotator autoRotate cfix">
+      <h3>
+      </h3>
+      <div class="cN-storyImageLead media-image tab1 selected">
+       <div class="media">
+        <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR" title="Get your FREE ticket to the Baby &amp; Toddler Show">
+         <img alt="eb-ebts-freeticket-thumb-sm" src="http://images.essentialbaby.com.au/2015/07/02/6657056/eb-ebts-freeticket-thumb-sm-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR" title="Get your FREE Baby &amp; Toddler Show ticket!">
+          Get your FREE Baby &amp; Toddler Show ticket!
+         </a>
+        </h3>
+        <p>
+         Get your free ticket to the Sydney Essential Baby &amp; Toddler Show for September 25-27 - register online now.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab1 selected -->
+      <div class="cN-storyImageLead media-image tab2">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/LoveChild" title="Win Love Child Season 1 &amp; 2 on DVD">
+         <img alt="eb-lovechild-thumb" src="http://images.essentialbaby.com.au/2015/06/29/6649577/eb-lovechild-thumb-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/LoveChild" title="Win Love Child Season 1 &amp; 2 on DVD">
+          Win Love Child Season 1 &amp; 2 on DVD
+         </a>
+        </h3>
+        <p>
+         To celebrate the release of Love Child Season 2 on DVD from July 9, Essential Baby and Universal Sony Pictures Home Entertainment are giving away Love Child Season 1 &amp; 2 on DVD to 13 lucky winners.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab2 -->
+      <div class="cN-storyImageLead media-image tab3">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/10-things-i-wish-my-prebaby-self-knew-20150703-gi4aln.html" title="10 things I wish my pre-baby self knew">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/07/03/6659020/Thumbnail997892267gi4atoimage.related.thumbnail.320x214.gi4aln.png1435886619543.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/10-things-i-wish-my-prebaby-self-knew-20150703-gi4aln.html" title="10 things I wish my pre-baby self knew">
+          10 things I wish my pre-baby self knew
+         </a>
+        </h3>
+        <p>
+         I look back at my pre-baby self and laugh at how ridiculously easy I actually had it. I remember complaining about how tired I was and how little time I had.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab3 -->
+      <div class="cN-storyImageLead media-image tab4">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/creative-ways-to-store-your-childs-art-20150702-gi32cg.html" title="Creative ways to store your child's art">
+         <img alt="All smiles: The experts say that you only need to store your child's best pieces." src="http://images.essentialbaby.com.au/2015/07/02/6655660/Index%20Lead997834912ghyn57image.related.indexLead.460x307.gi32cg.png1436236496376.jpg-300x200.jpg" width="300"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/creative-ways-to-store-your-childs-art-20150702-gi32cg.html" title="Creative ways to store your child's art">
+          Creative ways to store your child's art
+         </a>
+        </h3>
+        <p>
+         Ideas for storing your child's artworks have moved on from sticking them to the fridge door before guiltily dumping them in the bin.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab4 -->
+      <div class="cN-storyImageLead media-image tab5">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/child-abuse-ignored-because-its-not-your-children-waleed-aly-20150703-gi479v.html" title="Child abuse ignored because 'it's not your children': Waleed Aly">
+         <img alt="Waleed Aly challenged his viewers to pay attention to immigration policy." src="http://images.essentialbaby.com.au/2015/07/03/6658742/Thumbnail997887955gh5tkbimage.related.thumbnail.320x214.gi479v.png1435881349886.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/child-abuse-ignored-because-its-not-your-children-waleed-aly-20150703-gi479v.html" title="Child abuse ignored because 'it's not your children': Waleed Aly">
+          Child abuse ignored because 'it's not your children': Waleed Aly
+         </a>
+        </h3>
+        <p>
+         Waleed Aly takes apart the immigration law that's designed to "protect politicians"
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab5 -->
+      <div class="cN-storyImageLead media-image tab6">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents/how-a-newborn-niece-changed-star-australian-basketballers-life-20150703-gi3k7i.html" title="How a newborn niece changed star Australian basketballer's life">
+         <img alt="Abby bishop" src="http://images.essentialbaby.com.au/2015/07/03/6659287/Thumbnail997858062gi4e2timage.related.thumbnail.320x214.gi3k7i.png1435889877279.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents/how-a-newborn-niece-changed-star-australian-basketballers-life-20150703-gi3k7i.html" title="How a newborn niece changed star Australian basketballer's life">
+          How a newborn niece changed star Australian basketballer's life
+         </a>
+        </h3>
+        <p>
+         In August2013 star basketball Abby Bishop was 24-years-old and in the prime of her sporting career.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab6 -->
+      <div class="cN-storyImageLead media-image tab7">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/wellbeing/mind-and-body/guilt-is-my-new-shadow-20150702-gi3jtc.html" title="Guilt is my new shadow">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/07/02/6657069/Thumbnail997857552gi3k6mimage.related.thumbnail.320x214.gi3jtc.png1435813926784.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/wellbeing/mind-and-body/guilt-is-my-new-shadow-20150702-gi3jtc.html" title="Guilt is my new shadow">
+          Guilt is my new shadow
+         </a>
+        </h3>
+        <p>
+         No one warned me that when I gave birth there would be an additional side order of guilt.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab7 -->
+      <div class="cN-storyImageLead media-image tab8">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/toddler/toddler-products/12-brilliant-ikea-hacks-for-kids8217-rooms-20150702-gi3n4q.html" title="12 brilliant Ikea hacks for kids rooms">
+         <img alt="Sort Lego pieces into tins that adhere to the Grundtal magnetic knife rack. " src="http://images.essentialbaby.com.au/2015/07/02/6657264/Thumbnail997861850gi3mxoimage.related.thumbnail.320x214.gi3n4q.png1435817290228.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/toddler/toddler-products/12-brilliant-ikea-hacks-for-kids8217-rooms-20150702-gi3n4q.html" title="12 brilliant Ikea hacks for kids rooms">
+          12 brilliant Ikea hacks for kids rooms
+         </a>
+        </h3>
+        <p>
+         Check out these creative upcycling ideas that transform regular Ikea items into something special for your little ones.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab8 -->
+      <div class="cN-storyImageLead media-image tab9">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/childs-nightmare-about-man-with-a-light-turned-out-to-be-real-20150702-gi3afa.html" title="Child's nightmare about 'man with a light' turned out to be real">
+         <img alt="The boy's family used an old smartphone and an app called Salient Eye to capture the intruder." src="http://images.essentialbaby.com.au/2015/07/02/6656273/Thumbnail997845382gi31ovimage.related.thumbnail.320x214.gi3afa.png1435802165979.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/childs-nightmare-about-man-with-a-light-turned-out-to-be-real-20150702-gi3afa.html" title="Child's nightmare about 'man with a light' turned out to be real">
+          Child's nightmare about 'man with a light' turned out to be real
+         </a>
+        </h3>
+        <p>
+         For three days, a three-year-old boy had been saying there was "a man with a light" outside his window at night.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab9 -->
+      <div class="cN-storyImageLead media-image tab10">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/birth/after-birth/toilet-truths-after-giving-birth-20150702-gi37wy.html" title="Toilet truths after giving birth">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/07/02/6656142/Thumbnail997842130gi383aimage.related.thumbnail.320x214.gi37wy.png1435799885022.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/birth/after-birth/toilet-truths-after-giving-birth-20150702-gi37wy.html" title="Toilet truths after giving birth">
+          Toilet truths after giving birth
+         </a>
+        </h3>
+        <p>
+         The thought of going to the toilet after giving birth is often feared, but there are ways to make it less painful.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab10 -->
+      <div class="cN-storyImageLead media-image tab11">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/woman-asks-strangers-for-1-million-to-stop-her-having-an-abortion-20150702-gi38b0.html" title="Woman asks strangers for $1 million to stop her having an abortion">
+         <img alt="stomach hand" src="http://images.essentialbaby.com.au/2015/07/02/6656373/Thumbnail997842636gi3az5image.related.thumbnail.320x214.gi38b0.png1435803596308.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/woman-asks-strangers-for-1-million-to-stop-her-having-an-abortion-20150702-gi38b0.html" title="Woman asks strangers for $1 million to stop her having an abortion">
+          Woman asks strangers for $1 million to stop her having an abortion
+         </a>
+        </h3>
+        <p>
+         An anonymous woman is takingan extreme moral and ethical stand by seeking $1 million in donations to prevent her going ahead with a planned abortion.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab11 -->
+      <div class="cN-storyImageLead media-image tab12">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/conception/adoption/how-a-womans-dying-wish-made-another-woman-a-mum-20150702-ghx3we.html" title="How a woman's dying wish made another woman a mum">
+         <img alt="Linda Rahal and her daughter Mariana today." src="http://images.essentialbaby.com.au/2015/07/02/6656735/Thumbnail997556990gi3ghlimage.related.thumbnail.320x214.ghx3we.png1435808969915.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/conception/adoption/how-a-womans-dying-wish-made-another-woman-a-mum-20150702-ghx3we.html" title="How a woman's dying wish made another woman a mum">
+          How a woman's dying wish made another woman a mum
+         </a>
+        </h3>
+        <p>
+         "I kind of think about, 'What did I do beforehand? What kept me so busy back then?' Because now I'm really busy."
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab12 -->
+      <div class="cN-storyImageLead media-image tab13">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/the-parenting-doover-what-six-parents-did-differently-second-time-around-20150701-gi2dbg.html" title="The parenting do-over: what six parents did differently second time around">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/07/01/6654177/Thumbnail997802476gi2er7image.related.thumbnail.320x214.gi2dbg.png1435722766976.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/the-parenting-doover-what-six-parents-did-differently-second-time-around-20150701-gi2dbg.html" title="The parenting do-over: what six parents did differently second time around">
+          The parenting do-over: what six parents did differently second time around
+         </a>
+        </h3>
+        <p>
+         In playgrounds across Australia, you can hear parents lamenting, "When we have our next baby I swear I won't be doing THAT again".
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab13 -->
+      <div class="cN-storyImageLead media-image tab14">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/birth/birth-stories/a-solo-birth-a-wasp-swarm-and-a-forest-fire-mum-and-babys-amazing-story-of-survival-20150701-gi28ul.html" title="A solo birth, a wasp swarm and a forest fire: mum and baby's amazing story of survival">
+         <img alt="Amber Pangborn gave birth alone and started a fire before being rescued." src="http://images.essentialbaby.com.au/2015/07/01/6653788/Thumbnail997796685gi24krimage.related.thumbnail.320x214.gi28ul.png1435715668276.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/birth/birth-stories/a-solo-birth-a-wasp-swarm-and-a-forest-fire-mum-and-babys-amazing-story-of-survival-20150701-gi28ul.html" title="A solo birth, a wasp swarm and a forest fire: mum and baby's amazing story of survival">
+          A solo birth, a wasp swarm and a forest fire: mum and baby's amazing story of survival
+         </a>
+        </h3>
+        <p>
+         Desperate, out of petrol and low on food, a new mother lit a fire in the hope of attracting attention.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab14 -->
+      <div class="cN-storyImageLead media-image tab15">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/boy-found-on-swing-died-of-hypothermia-and-dehydration-autopsy-finds-20150701-gi260d.html" title="Boy found on swing died of hypothermia and dehydration, autopsy finds">
+         <img alt="Romechia Simms with her son, Ji'Aire Donnell Lee. " src="http://images.essentialbaby.com.au/2015/07/01/6653606/Thumbnail997793005gh9nc1image.related.thumbnail.320x214.gi260d.png1435708852046.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/boy-found-on-swing-died-of-hypothermia-and-dehydration-autopsy-finds-20150701-gi260d.html" title="Boy found on swing died of hypothermia and dehydration, autopsy finds">
+          Boy found on swing died of hypothermia and dehydration, autopsy finds
+         </a>
+        </h3>
+        <p>
+         The story was chilling and heartbreaking: a three-year-old boy was found dead in a Southern Maryland park, his mother pushing him on the swing.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab15 -->
+      <div class="cN-storyImageLead media-image tab16">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/wellbeing/mind-and-body/childs-play-and-laughter-help-battle-fatigue-20150701-gi21pj.html" title="Child's play and laughter help battle fatigue">
+         <img alt="There are some simple steps you can take to tackle fatigue." src="http://images.essentialbaby.com.au/2015/07/01/6653319/Thumbnail997787431gi225oimage.related.thumbnail.320x214.gi21pj.png1435703345739.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/wellbeing/mind-and-body/childs-play-and-laughter-help-battle-fatigue-20150701-gi21pj.html" title="Child's play and laughter help battle fatigue">
+          Child's play and laughter help battle fatigue
+         </a>
+        </h3>
+        <p>
+         Feeling fatigued? Uh-huh, thought as much. Join the queue.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab16 -->
+      <div class="cN-storyImageLead media-image tab17">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/being-dad/dad-shares-entertaining-how-to-hold-a-baby-clip-20150630-gi1fci.html" title="Dad shares entertaining 'how to hold a baby' clip">
+         <img alt="Jordan Watson demonstrating a few of the different baby holds. " src="http://images.essentialbaby.com.au/2015/06/30/6652311/Thumbnail997758450gi1m91image.related.thumbnail.320x214.gi1fci.png1435644766993.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/being-dad/dad-shares-entertaining-how-to-hold-a-baby-clip-20150630-gi1fci.html" title="Dad shares entertaining 'how to hold a baby' clip">
+          Dad shares entertaining 'how to hold a baby' clip
+         </a>
+        </h3>
+        <p>
+         For many new dads, their own childis the first babythey have ever held. So one dad has posted an instructive YouTube video titled "How to Hold a Baby".
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab17 -->
+      <div class="cN-storyImageLead media-image tab18">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents/the-australian-baby-with-100000-facebook-fans-20150630-gi19hj.html" title="The Australian baby with 100,000 Facebook fans">
+         <img alt="egypt" src="http://images.essentialbaby.com.au/2015/06/30/6651770/Thumbnail997750855gi1craimage.related.thumbnail.320x214.gi19hj.png1435634037982.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents/the-australian-baby-with-100000-facebook-fans-20150630-gi19hj.html" title="The Australian baby with 100,000 Facebook fans">
+          The Australian baby with 100,000 Facebook fans
+         </a>
+        </h3>
+        <p>
+         She may be onlyeight months old, but Egypt has already amassedmore than 100,000 fans and received a letter from royalty - Hollywood royalty that is.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab18 -->
+      <div class="cN-storyImageLead media-image tab19">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/baby-health/tongue-tie-what-you-need-to-know-20150630-gi17xt.html" title="Tongue tie: what you need to know">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/06/30/6651357/Thumbnail997748849gi182oimage.related.thumbnail.320x214.gi17xt.png1435627080153.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/baby-health/tongue-tie-what-you-need-to-know-20150630-gi17xt.html" title="Tongue tie: what you need to know">
+          Tongue tie: what you need to know
+         </a>
+        </h3>
+        <p>
+         Tongue and lip tie can lead to many problems for babies - and their parents. Here are the signs of tongue tie and how it's treated.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab19 -->
+      <div class="cN-storyImageLead media-image tab20">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/my-daughter-is-small-but-that-doesnt-matter-20150630-gi1hij.html" title="My daughter is small but that doesn't matter">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/06/30/6652054/Thumbnail997761259gi1i10image.related.thumbnail.320x214.gi1hij.png1435639604635.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/my-daughter-is-small-but-that-doesnt-matter-20150630-gi1hij.html" title="My daughter is small but that doesn't matter">
+          My daughter is small but that doesn't matter
+         </a>
+        </h3>
+        <p>
+         My daughter may be small, but it's my job as her parent to refocus back where it belongs - on who she is as a person
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab20 -->
+      <div class="cN-storyImageLead media-image tab21">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/baby-health/wet-wipes-linked-to-rise-in-allergic-reactions-20150629-gi0fqw.html" title="Wet wipes linked to rise in allergic reactions">
+         <img alt="Up to one in 10 people are allergic to the ingredient, research has found. " src="http://images.essentialbaby.com.au/2015/06/29/6649465/Thumbnail997712312gi0gesimage.related.thumbnail.320x214.gi0fqw.png1435549262995.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/baby-health/wet-wipes-linked-to-rise-in-allergic-reactions-20150629-gi0fqw.html" title="Wet wipes linked to rise in allergic reactions">
+          Wet wipes linked to rise in allergic reactions
+         </a>
+        </h3>
+        <p>
+         The government has issued a health warning after a rise in allergic skin reactions has been linked to a preservative found in some wet wipes.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab21 -->
+      <ul>
+       <li class="previous">
+        <a href="javascript:;">
+         Prev
+        </a>
+       </li>
+       <li class="next last">
+        <a href="javascript:;">
+         Next
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!-- class:cS-storyImageLeadRotator rotator cfix -->
+     <div class="ad" id="adspot-300x600_300x250-pos-1" style="display:none;">
+      <small>
+       Advertisement
+      </small>
+      <script type="text/javascript">
+       var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-300x600_300x250-pos-1");
+      </script>
+     </div>
+     <script src="http://secure-au.imrworldwide.com/cgi-bin/j?ci=rj0121-caltrate&amp;se=1&amp;te=0" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      function gotoSubmit(){
+document.frm.action = 'http://www.findababysitter.com.au/Search/Postcode/' + document.frm.pcode.value + '#utm_source=eb&amp;utm_medium=searchboxarticle&amp;utm_campaign=widget';
+document.frm.submit();
+}
+     </script>
+     <div class="cS-promoSearch">
+      <h3 style="border-top:none">
+       Find a Nanny or Babysitter
+      </h3>
+      <ul class="nav">
+       <li>
+        <a href="http://www.findababysitter.com.au/#utm_source=eb&amp;utm_medium=searchboxarticle&amp;utm_campaign=widget" target="_blank">
+         Search Nannies &amp; Babysitters
+        </a>
+       </li>
+       <li>
+        <a href="https://www.findababysitter.com.au/parent/register#utm_source=eb&amp;utm_medium=searchboxarticle&amp;utm_campaign=widget" target="_blank">
+         Post a Job
+        </a>
+       </li>
+       <li>
+        <a href="https://www.findababysitter.com.au/parent/register#utm_source=eb&amp;utm_medium=searchboxarticle&amp;utm_campaign=widget" target="_blank">
+         Join Now
+        </a>
+       </li>
+      </ul>
+      <!-- UI NOTE: quick search from -->
+      <form method="post" name="frm" onsubmit="gotoSubmit();" target="_blank">
+       <h4 class="access">
+        Search by Postcode
+       </h4>
+       <label for="fab-postcode">
+        Postcode
+       </label>
+       <input class="text" id="fab-postcode" maxlength="4" name="pcode" type="text"/>
+       <input class="button" onclick="gotoSubmit();" type="button" value="Search for Free"/>
+      </form>
+      <!-- UI NOTE: promo feature list -->
+      <h4>
+       <a href="http://www.findababysitter.com.au/#utm_source=eb&amp;utm_medium=searchboxarticle&amp;utm_campaign=widget" target="_blank">
+        Find a Babysitter
+       </a>
+      </h4>
+      <ul class="features">
+       <li>
+        Daytime nannies
+       </li>
+       <li>
+        Casual babysitters
+       </li>
+       <li>
+        After-school care
+       </li>
+       <li>
+        Live-in nannies
+       </li>
+      </ul>
+     </div>
+     <div class="cS-photoGalleryLinks cfix">
+      <h3>
+       Photo Gallery
+      </h3>
+      <ul>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/toddler/toddler-health/dad-creates-custom-eyepatches-for-baby-20150618-3xyvh.html">
+         <img alt="eb-eyepatch-1thumb" height="60" src="http://images.essentialbaby.com.au/2015/06/18/6624097/eb-eyepatch-1thumb-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/toddler/toddler-health/dad-creates-custom-eyepatches-for-baby-20150618-3xyvh.html">
+          Dad creates custom eyepatches for baby
+         </a>
+        </p>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/baby/playtime-guide/pretend-play-ideas-20150611-3xlju.html">
+         <img alt="eb-pretendplay-1thumb" height="60" src="http://images.essentialbaby.com.au/2015/06/12/6608099/eb-pretendplay-1thumb-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/baby/playtime-guide/pretend-play-ideas-20150611-3xlju.html">
+          Pretend play ideas for preschoolers
+         </a>
+        </p>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/baby/playtime-guide/fine-motor-skill-activities-for-toddlers-and-preschoolers-20150529-3wv2b.html">
+         <img alt="eb-finemotor-a-thumb" height="60" src="http://images.essentialbaby.com.au/2015/05/29/6572107/eb-finemotor-a-thumb-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/baby/playtime-guide/fine-motor-skill-activities-for-toddlers-and-preschoolers-20150529-3wv2b.html">
+          20 fine motor skill activities for toddlers and preschoolers
+         </a>
+        </p>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/pregnancy/stages-of-pregnancy/funny-ultrasound-pictures-20150526-3wnrp.html">
+         <img alt="eb-scans-funny-a-thumb" height="60" src="http://images.essentialbaby.com.au/2015/05/29/6570382/eb-scans-funny-a-thumb-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/pregnancy/stages-of-pregnancy/funny-ultrasound-pictures-20150526-3wnrp.html">
+          27 funny ultrasound pictures
+         </a>
+        </p>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/baby/baby-products/best-new-prams-of-2015-20150527-3wqbz.html">
+         <img alt="." height="60" src="http://images.essentialbaby.com.au/2015/05/27/6565959/candy-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/baby/baby-products/best-new-prams-of-2015-20150527-3wqbz.html">
+          Best new prams of 2015
+         </a>
+        </p>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/photogallery/toddler/caring-for-toddler/meet-harry-styles-minime-michael-rangamiz-20150514-3vzhk.html">
+         <img alt="michael" height="60" src="http://images.essentialbaby.com.au/2015/05/14/6531177/mr-90x60.jpg" width="89"/>
+        </a>
+        <p>
+         <a href="http://www.essentialbaby.com.au/photogallery/toddler/caring-for-toddler/meet-harry-styles-minime-michael-rangamiz-20150514-3vzhk.html">
+          Meet Harry Styles' mini-me, Michael Rangamiz
+         </a>
+        </p>
+       </li>
+      </ul>
+     </div>
+     <!-- class:cS-photoGalleryLinks cfix -->
+     <div class="ad adSpot-twin cfix">
+      <small>
+       Featured advertisers
+      </small>
+      <div class="ad" id="adspot-149x170-pos-1" style="display:none;">
+       <script type="text/javascript">
+        var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-149x170-pos-1");
+       </script>
+      </div>
+      <div class="ad" id="adspot-149x170-pos-2" style="display:none;">
+       <script type="text/javascript">
+        var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-149x170-pos-2");
+       </script>
+      </div>
+     </div>
+     <!-- class:ad adSpot-twin cfix -->
+     <div class="cS-latestArticles latestForums">
+      <h3>
+       We are discussing...
+      </h3>
+      <!-- 06:56:13 Wed 08-07-2015 from azesbpws067b -->
+      <ol>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1156796-">
+         Ongoing bar thread #86
+        </a>
+        <em title="189 posts">
+         189
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1156691-">
+         I wish the pox on you
+        </a>
+        <em title="60 posts">
+         60
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1156902-">
+         Frontbenchers banned from Q&amp;A
+        </a>
+        <em title="30 posts">
+         30
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1157037-">
+         School kids bonus
+        </a>
+        <em title="3 posts">
+         3
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1156998-">
+         12 year old babysitting
+        </a>
+        <em title="31 posts">
+         31
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1156851-">
+         Lagotto Breeders (NSW)
+        </a>
+        <em title="10 posts">
+         10
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1155583-">
+         Symptoms
+        </a>
+        <em title="173 posts">
+         173
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1155859-">
+         Scan / Test Watch :)
+        </a>
+        <em title="169 posts">
+         169
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1154956-">
+         Word Chain Game - Names
+        </a>
+        <em title="44 posts">
+         44
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+       <li>
+        <a href="http://www.essentialbaby.com.au/forums/index.php?/topic/1130566-">
+         A-Z of Celebrities
+        </a>
+        <em title="399 posts">
+         399
+         <span>
+          posts
+         </span>
+        </em>
+       </li>
+      </ol>
+     </div>
+     <div class="cS-storyImageLeadRotator rotator autoRotate cfix">
+      <h3>
+       <a href="/photogalleries">
+        What's hot on EB
+       </a>
+      </h3>
+      <div class="cN-storyImageLead media-image tab1 selected">
+       <div class="media">
+        <a class="more-photos" href="http://www.essentialbaby.com.au/photogallery/pregnancy/stages-of-pregnancy/funny-ultrasound-pictures-20150526-3wnrp.html" title="27 funny ultrasound pictures">
+         <img alt="eb-scans-funny-a-thumb" src="http://images.essentialbaby.com.au/2015/05/29/6570382/eb-scans-funny-a-thumb-90x60.jpg" width="90"/>
+         <span class="size-sml">
+         </span>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/photogallery/pregnancy/stages-of-pregnancy/funny-ultrasound-pictures-20150526-3wnrp.html" title="27 funny ultrasound pictures">
+          27 funny ultrasound pictures
+         </a>
+        </h3>
+        <p>
+         Ultrasounds give you a look at your growing baby ... and sometimes what appears to their womb-buddy, or your bub in an amusing position.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab1 selected -->
+      <div class="cN-storyImageLead media-image tab2">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/what-all-parents-should-know-about-safe-babywearing-20150626-ghygaa.html" title="What all parents should know about safe babywearing">
+         <img alt="Ryan Reynolds in the controversial Father's Day shot. " src="http://images.essentialbaby.com.au/2015/06/26/6644141/Thumbnail997619698ghygivimage.related.thumbnail.320x214.ghygaa.png1435289065260.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/what-all-parents-should-know-about-safe-babywearing-20150626-ghygaa.html" title="What all parents should know about safe babywearing">
+          What all parents should know about safe babywearing
+         </a>
+        </h3>
+        <p>
+         A picture of Ryan Reynolds always gets the girls talking, and a recently shared photo has done exactly that - but this time, it's for all the wrong reasons.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab2 -->
+      <div class="cN-storyImageLead media-image tab3">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/baby-health/babys-head-shape-reveals-potentially-fatal-condition-20150626-ghy1jy.html" title="Baby's head shape reveals potentially fatal condition">
+         <img alt="Matthew before his operation, and while wearing his special helmet afterwards." src="http://images.essentialbaby.com.au/2015/06/26/6643865/Thumbnail997600606ghy1kbimage.related.thumbnail.320x214.ghy1jy.png1435284810640.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/baby-health/babys-head-shape-reveals-potentially-fatal-condition-20150626-ghy1jy.html" title="Baby's head shape reveals potentially fatal condition">
+          Baby's head shape reveals potentially fatal condition
+         </a>
+        </h3>
+        <p>
+         Thinking her baby just had an unusually shaped head, a mother was shocked to discover it was instead linked to a dangerous condition.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab3 -->
+      <div class="cN-storyImageLead media-image tab4">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/conception/ivf/why-ivf-success-rates-may-not-be-what-you-think-20150625-ghy0z5.html" title="Why IVF success rates may not be what you think">
+         <img alt="Transparency, accountability and responsibility are essential measures to protect IVF vulnerable patients." src="http://images.essentialbaby.com.au/2015/06/25/6642791/Thumbnail997599857ghy0ynimage.related.thumbnail.320x214.ghy0z5.png1435240657224.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/conception/ivf/why-ivf-success-rates-may-not-be-what-you-think-20150625-ghy0z5.html" title="Why IVF success rates may not be what you think">
+          Why IVF success rates may not be what you think
+         </a>
+        </h3>
+        <p>
+         Transparency, accountability and responsibilityare essential measures to protect IVF vulnerable patients.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab4 -->
+      <div class="cN-storyImageLead media-image tab5">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/wellbeing/relationships/motherinlaw-from-hell-inspires-survival-guide-20150630-gi12ab.html" title="Mother-in-law 'from hell' inspires survival guide">
+         <img alt="Nicola Milan's wedding didn't go ahead, in part because of her " dramatic="" mother-in-law.="" src="http://images.essentialbaby.com.au/2015/06/30/6650921/Thumbnail997741523gi0je0image.related.thumbnail.320x214.gi12ab.png1435613354153.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/wellbeing/relationships/motherinlaw-from-hell-inspires-survival-guide-20150630-gi12ab.html" title="Mother-in-law 'from hell' inspires survival guide">
+          Mother-in-law 'from hell' inspires survival guide
+         </a>
+        </h3>
+        <p>
+         The happily ever after Nicola Milan had imagined wasn't to be  and she blames her mother-in-law.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab5 -->
+      <div class="cN-storyImageLead media-image tab6">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/owning-a-pair-of-nail-scissors-does-not-make-me-a-hairdresser-and-other-parenting-lessons-ive-learnt-20150625-ghxca3.html" title="Owning a pair of nail scissors does not make me a hairdresser (and other parenting lessons I've learnt)">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/06/25/6641008/Thumbnail997567851ghxcwbimage.related.thumbnail.320x214.ghxca3.png1435199392861.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/owning-a-pair-of-nail-scissors-does-not-make-me-a-hairdresser-and-other-parenting-lessons-ive-learnt-20150625-ghxca3.html" title="Owning a pair of nail scissors does not make me a hairdresser">
+          Owning a pair of nail scissors does not make me a hairdresser
+         </a>
+        </h3>
+        <p>
+         It's been a whole year since sleeping in until 10am. A whole year since having a peaceful shower.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab6 -->
+      <div class="cN-storyImageLead media-image tab7">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/the-83-children-who-were-tragically-let-down-in-the-last-decade-20150629-gi0lvh.html" title="The 83 children who were tragically let down in the last decade">
+         <img alt="&lt;p&gt;&lt;/p&gt;" src="http://images.essentialbaby.com.au/2015/06/29/6650084/Thumbnail997720253ghdtnhimage.related.thumbnail.320x214.gi0lvh.png1435561279420.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/the-83-children-who-were-tragically-let-down-in-the-last-decade-20150629-gi0lvh.html" title="The 83 children who were tragically let down in the last decade">
+          The 83 children who were tragically let down in the last decade
+         </a>
+        </h3>
+        <p>
+         Over a 10-year period, 83 children died from domestic violence abuse in NSW, with three quarters of the victims aged five years or under, the NSW Ombudsman has revealed.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab7 -->
+      <div class="cN-storyImageLead media-image tab8">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-nutrition-and-wellbeing/is-it-reasonable-to-expect-your-partner-to-give-up-drinking-in-pregnancy-20150629-gi0bfz.html" title="Is it reasonable to expect your partner to give up drinking in pregnancy?">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/06/29/6649121/Thumbnail997706735gi0bqhimage.related.thumbnail.320x214.gi0bfz.png1435542070152.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-nutrition-and-wellbeing/is-it-reasonable-to-expect-your-partner-to-give-up-drinking-in-pregnancy-20150629-gi0bfz.html" title="Is it reasonable to expect your partner to give up drinking in pregnancy?">
+          Is it reasonable to expect your partner to give up drinking in pregnancy?
+         </a>
+        </h3>
+        <p>
+         From the moment that I fell pregnant with my son, I realised just how much my life had already started to change.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab8 -->
+      <div class="cN-storyImageLead media-image tab9">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/life-style/current-affairs/stroke-victim-joins-class-action-against-makers-of-popular-contraceptive-pill-20150629-gi06n4.html" title="Stroke victim joins class action against makers of popular contraceptive pill">
+         <img alt="No warnings: Stroke victim Amy Walker with her daughters Eve, Milly and Ada." src="http://images.essentialbaby.com.au/2015/06/29/6648733/Thumbnail997700512ghzf70image.related.thumbnail.320x214.gi06n4.png1435532610817.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h3>
+         <a href="http://www.essentialbaby.com.au/life-style/current-affairs/stroke-victim-joins-class-action-against-makers-of-popular-contraceptive-pill-20150629-gi06n4.html" title="Stroke victim joins class action against makers of popular contraceptive pill">
+          Stroke victim joins class action against makers of popular contraceptive pill
+         </a>
+        </h3>
+        <p>
+         "I was terrified I would always be this way. The pill needs to come with a much higher warning."
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab9 -->
+      <div class="cN-storyImageLead media-image tab10">
+       <div class="media">
+        <a href="http://www.essentialbaby.com.au/wellbeing/relationships/why-you-should-get-excited-about-scheduling-sex-20150625-ghxfi5.html" title="Why you should get excited about scheduling sex">
+         <img alt="&lt;i&gt;&lt;/i&gt;" src="http://images.essentialbaby.com.au/2015/06/25/6642773/Thumbnail997572029ghy0pfimage.related.thumbnail.320x214.ghxfi5.png1435237846196.jpg-90x60.jpg" width="90"/>
+        </a>
+       </div>
+       <div class="wof">
+        <h4>
+         Sexy time
+        </h4>
+        <h3>
+         <a href="http://www.essentialbaby.com.au/wellbeing/relationships/why-you-should-get-excited-about-scheduling-sex-20150625-ghxfi5.html" title="Why you should get excited about scheduling sex">
+          Why you should get excited about scheduling sex
+         </a>
+        </h3>
+        <p>
+         Unfortunately, the belief that sex should always be spontaneous is a myth. It just isn't.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image tab10 -->
+      <ul>
+       <li class="previous">
+        <a href="javascript:;">
+         Prev
+        </a>
+       </li>
+       <li class="next last">
+        <a href="javascript:;">
+         Next
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!-- class:cS-storyImageLeadRotator rotator cfix -->
+     <script src="http://connect.facebook.net/en_US/all.js#xfbml=1">
+     </script>
+     <script type="text/javascript">
+      FB.init("9fb13b1113aed014ce53c005fe8c35a3");
+     </script>
+     <fb:fan connections="10" profile_id="117876495379" stream="false" width="300">
+     </fb:fan>
+     <div class="cT-strapMagazine essentials">
+      <h3 class="cT-strapHeading">
+       FREE TICKET
+       <span>
+       </span>
+      </h3>
+      <div class="cN-storyImageLead media-image">
+       <div class="media">
+        <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR">
+         <img alt="eb-tebts-300puff" src="http://images.essentialbaby.com.au/2015/03/11/6340552/eb-tebts-300puff-300x0.jpg" width="300"/>
+        </a>
+       </div>
+       <!-- class:media -->
+       <div class="wof">
+        <h3>
+         <a href="http://www.babyandtoddlershow.com.au/?utm_source=eb&amp;utm_medium=banner&amp;utm_campaign=S15_EB_VAR">
+          Get your FREE ticket to the Baby &amp; Toddler Show
+         </a>
+        </h3>
+        <p>
+         Get your free ticket to the Sydney Essential Baby &amp; Toddler Show for September 25-27 - register online now.
+        </p>
+       </div>
+       <!-- class:wof -->
+      </div>
+      <!-- class:cN-storyImageLead media-image -->
+     </div>
+     <!-- class:cT-strapMagazine essentials -->
+     <!-- masthead stepout box -->
+     <div class="mh-stepout-box">
+      <header>
+       <h2>
+        <span>
+         In The News Today
+        </span>
+        <a href="http://www.smh.com.au" target="_blank" title="The Sydney Morning Herald">
+         <span class="logo ir">
+          The Sydney Morning Herald
+         </span>
+        </a>
+       </h2>
+      </header>
+      <article>
+       <a href="http://www.smh.com.au/entertainment/tv-and-radio/former-top-gear-host-jeremy-clarkson-banned-from-launching-new-show-until-2017-report-20150707-gi7a0b.html" target="_blank" title="Former Top Gear host Jeremy Clarkson banned from launching new show until 2017: report">
+        <img alt="Big impact ... Jeremy Clarkson's sacking has it's consequences." height="60" src="http://images.essentialbaby.com.au/2015/07/07/6668374/Thumbnail9980314671m7tc1image.related.thumbnail.320x214.gi7a0b.png1436289673121.jpg-90x60.jpg" width="90"/>
+       </a>
+       <h3>
+        <a href="http://www.smh.com.au/entertainment/tv-and-radio/former-top-gear-host-jeremy-clarkson-banned-from-launching-new-show-until-2017-report-20150707-gi7a0b.html" target="_blank">
+         Former Top Gear host Jeremy Clarkson banned from ...
+        </a>
+       </h3>
+      </article>
+      <article>
+       <a href="http://www.smh.com.au/entertainment/music/john-farnham-thailand-collapse-hoax-puzzles-manager-farnsys-in-rude-health-20150707-gi7a7g.html" target="_blank" title="John Farnham Thailand collapse hoax puzzles manager: Farnsy's in 'rude health'">
+        <img alt="Hall of Fame inductee John Farnham." height="60" src="http://images.essentialbaby.com.au/2015/07/07/6668354/Thumbnail998031724ghr8efimage.related.thumbnail.320x214.gi7a7g.png1436266989947.jpg-90x60.jpg" width="90"/>
+       </a>
+       <h3>
+        <a href="http://www.smh.com.au/entertainment/music/john-farnham-thailand-collapse-hoax-puzzles-manager-farnsys-in-rude-health-20150707-gi7a7g.html" target="_blank">
+         John Farnham Thailand collapse hoax puzzles manager: ...
+        </a>
+       </h3>
+      </article>
+      <article>
+       <a href="http://www.smh.com.au/entertainment/music/reggae-singer-shaggys-smoky-strategy-for-defeating-the-islamic-state-20150707-gi795y.html" target="_blank" title="Reggae singer Shaggy's smoky strategy for defeating the Islamic State">
+        <img alt="Reggae singer Shaggy says his music and marijuana would stop Islamic State extremists from beheading people.
+
+                 
+
+Shaggy" height="60" src="http://images.essentialbaby.com.au/2015/07/07/6668294/Thumbnail998030374gi795himage.related.thumbnail.320x214.gi795y.png1436266257298.jpg-90x60.jpg" width="90"/>
+       </a>
+       <h3>
+        <a href="http://www.smh.com.au/entertainment/music/reggae-singer-shaggys-smoky-strategy-for-defeating-the-islamic-state-20150707-gi795y.html" target="_blank">
+         Reggae singer Shaggy's smoky strategy for defeating ...
+        </a>
+       </h3>
+      </article>
+      <ul>
+       <li>
+        <a href="http://www.smh.com.au/nsw" target="_blank">
+         News
+        </a>
+       </li>
+       <li>
+        <a href="http://www.smh.com.au/sport" target="_blank">
+         Sport
+        </a>
+       </li>
+       <li>
+        <a href="http://www.smh.com.au/entertainment" target="_blank">
+         Entertainment
+        </a>
+       </li>
+       <li>
+        <a href="http://www.smh.com.au/lifestyle" target="_blank">
+         Lifestyle
+        </a>
+       </li>
+       <li>
+        <a href="http://www.smh.com.au/executivestyle" target="_blank">
+         Executive Style
+        </a>
+       </li>
+      </ul>
+     </div>
+     <!-- //masthead stepout box -->
+     <div class="customSuggestions cfix hidden" data-brand="essentialbaby.com.au" data-section="Life Style" data-siteid="9222289450909507089">
+     </div>
+     <div class="OUTBRAIN" data-ob-template="Essential_Baby_Fairfax" data-src="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html" data-widget-id="SB_1">
+     </div>
+     <div class="ad" id="adspot-300x250-pos-2" style="display:none;">
+      <small>
+       Advertisement
+      </small>
+      <script type="text/javascript">
+       var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-300x250-pos-2");
+      </script>
+     </div>
+    </div>
+    <!-- class:aside span-8 last -->
+    <!-- Footer fN-footerNetwork (class according to new HTML5 element 'footer'; scope: network-wide) -->
+    <div class="footer span-24" role="contentinfo">
+     <div class="c5 classifieds cfix">
+      <div class="s1 cDrive">
+       <!-- Campaign ID: 1262424 -->
+       <h2>
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au" title="Motoring">
+         Motoring
+        </a>
+       </h2>
+       <div class="puff">
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au/motor-news/ford-mustang-pricing-revealed-20150303-13tkqo.html" rel="nofollow">
+         <img alt="Ford Mustang" src="http://images.essentialbaby.com.au/2015/03/05/6323740/mustang_172-172x115.jpg" width="172"/>
+        </a>
+        <h5>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au/motor-news/ford-mustang-pricing-revealed-20150303-13tkqo.html" rel="nofollow" title="fordmustangaustralianpricingrevealed">
+          Ford Mustang Australian pricing revealed
+         </a>
+        </h5>
+       </div>
+       <!-- class:puff -->
+       <ul>
+        <li class="lDrive">
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au">
+          Drive.com.au
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au/car-reviews/car-of-the-year/2014">
+          2014 Drive Car of the Year: Full winners list
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au/car-reviews?utm_source=rainbowstrip&amp;utm_medium=mastheads&amp;utm_campaign=500carreviews">
+          Over 500 car reviews a year
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.drive.com.au/listings/buy-used-cars/australia?utm_source=rainbowstrip&amp;utm_medium=mastheads&amp;utm_campaign=carsforsale">
+          Cars for sale on Drive.com.au
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- class:s1 cDrive -->
+      <div class="s2 cAdzuna">
+       <!-- Campaign ID: 1262426 -->
+       <h2>
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au" title="Jobs">
+         Jobs
+        </a>
+       </h2>
+       <div class="puff">
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au" rel="nofollow">
+         <img alt="Adzuna Icon" src="http://images.essentialbaby.com.au/2014/12/01/6047200/adzuna_icon_172x115_v2-172x115.png" width="172"/>
+        </a>
+        <h5>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au" rel="nofollow" title="findyourperfectjobtoday">
+          Find your perfect job today
+         </a>
+        </h5>
+       </div>
+       <!-- class:puff -->
+       <ul>
+        <li class="lAdzuna">
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au">
+          Adzuna.com.au
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au/about-us.html">
+          What is Adzuna?
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au/search?w=Australia#stats_map_view">
+          Where are all the jobs?
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.adzuna.com.au/blog/">
+          Jobs blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- class:s2 cAdzuna -->
+      <div class="s3 cDomain">
+       <!-- Campaign ID: 1262430 -->
+       <h2>
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.domain.com.au" title="Real Estate">
+         Real Estate
+        </a>
+       </h2>
+       <div class="puff">
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://ad.doubleclick.net/ddm/clk/281221992;108022187;a?http://www.domain.com.au/blog/dream-property/" rel="nofollow">
+         <img alt="Win $10,000 towards your dream property" src="http://images.essentialbaby.com.au/2015/06/22/6633380/rainbow_strip_ad-172x115.jpg" width="172"/>
+        </a>
+        <h5>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://ad.doubleclick.net/ddm/clk/281221992;108022187;a?http://www.domain.com.au/blog/dream-property/" rel="nofollow" title="win$10,000towardsyourdreamproperty">
+          Win $10,000 towards your dream property
+         </a>
+        </h5>
+       </div>
+       <!-- class:puff -->
+       <ul>
+        <li class="lDomain">
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.domain.com.au">
+          Domain.com.au
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.domain.com.au?utm_source=mastheads&amp;utm_medium=rainbow&amp;utm_campaign=buy">
+          Buy real estate
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://news.domain.com.au/domain/real-estate-news/johnny-depps-luxury-home-at-centre-of-dogs-fiasco-20150515-gh27st.html">
+          Johnny Depp's luxury home at centre of dogs fiasco
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://news.domain.com.au/investor-centre">
+          Investor Hints &amp; Tips
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- class:s3 cDomain -->
+      <div class="s4 cGoodFood">
+       <!-- Campaign ID: 1262433 -->
+       <h2>
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au" title="Good Food">
+         Good Food
+        </a>
+       </h2>
+       <div class="puff">
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au/good-food/cook/recipe/buffalo-mozzarella-lasagne-20111111-29u8h.html" rel="nofollow">
+         <img alt="Recipes" src="http://images.essentialbaby.com.au/2015/05/06/6507680/rainbow_lasagne-172x115.jpg" width="172"/>
+        </a>
+        <h5>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au/good-food/cook/recipe/buffalo-mozzarella-lasagne-20111111-29u8h.html" rel="nofollow" title="neilperryslasagne">
+          Neil Perry's lasagne
+         </a>
+        </h5>
+       </div>
+       <!-- class:puff -->
+       <ul>
+        <li class="lGoodFood">
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au">
+          Goodfood.com.au
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au/good-food/cook/recipe/braised-lamb-neck-with-white-wine-tomato-and-oregano-20140813-3dmnr.html">
+          Karen Martini's braised lamb
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au/good-food/cook/recipe/butter-chicken-20140826-3ebcn.html">
+          Butter chicken with a healthy twist
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.goodfood.com.au/good-food/cook/recipe/chicken-cacciatore-20140428-37dqo.html">
+          Set and forget: chicken cacciatore
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- class:s4 cGoodFood -->
+      <div class="s5 cEssentialKids">
+       <!-- Campaign ID: 1262435 -->
+       <h2>
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au" title="Essential Kids">
+         Essential Kids
+        </a>
+       </h2>
+       <div class="puff">
+        <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au/photogallery/entertaining-kids/games-and-technology/boys-growing-up-in-the-80s-20150512-3vu6q.html" rel="nofollow">
+         <img alt="ek80s-rainbow-mrt" src="http://images.essentialbaby.com.au/2015/05/21/6548959/ek80s-rainbow-mrt-172x115.jpg" width="172"/>
+        </a>
+        <h5>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au/photogallery/entertaining-kids/games-and-technology/boys-growing-up-in-the-80s-20150512-3vu6q.html" rel="nofollow" title="doyourememberthese80sfads,fashionsandshows?">
+          Do you remember these 80s fads, fashions and shows?
+         </a>
+        </h5>
+       </div>
+       <!-- class:puff -->
+       <ul>
+        <li class="lEssentialKids">
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au">
+          Essentialkids.com.au
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au/recipes/lunchbox#utm_source=FD&amp;utm_medium=rainbow&amp;utm_campaign=lunchbox">
+          Lunchbox ideas &amp; recipes
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au/activities-and-worksheets#utm_source=FD&amp;utm_medium=rainbow&amp;utm_campaign=activities">
+          Free kids' activities and worksheets
+         </a>
+        </li>
+        <li>
+         <a class="trackingClick" data-ga-action="RainbowStrip Click" data-ga-category="RainbowStrip" data-tracking-stop-event="true" data-tracking-types="ga" href="http://www.essentialkids.com.au/recipes#utm_source=FD&amp;utm_medium=rainbow&amp;utm_campaign=recipes">
+          Family recipe finder
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!-- class:s5 cEssentialKids -->
+     </div>
+     <!-- class:c5 classifieds cfix -->
+     <div class="affiliateTabsInitParams" selectedtab="1" selectedtitle="" style="visibility:hidden">
+     </div>
+     <div class="fN-affiliateStrip">
+      <h2>
+       Compare and Save
+      </h2>
+      <div class="cN-tabPages affiliateStrip cfix">
+       <p class="access">
+        Skip to:
+       </p>
+       <ul class="nav" role="navigation">
+        <li class="tab-1 selected">
+         <a href="#tab-1" id="link-tab-1">
+          Best Deals
+         </a>
+        </li>
+        <li class="tab-2">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-2.html" href="#tab-2" id="link-tab-2">
+          Mobile
+         </a>
+        </li>
+        <li class="tab-3">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-3.html" href="#tab-3" id="link-tab-3">
+          Broadband
+         </a>
+        </li>
+        <li class="tab-4">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-4.html" href="#tab-4" id="link-tab-4">
+          Home Loans
+         </a>
+        </li>
+        <li class="tab-5">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-5.html" href="#tab-5" id="link-tab-5">
+          Credit Cards
+         </a>
+        </li>
+        <li class="tab-6">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-6.html" href="#tab-6" id="link-tab-6">
+          Low Rate Cards
+         </a>
+        </li>
+        <li class="tab-7">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-7.html" href="#tab-7" id="link-tab-7">
+          Rewards Cards
+         </a>
+        </li>
+        <li class="tab-8">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-8.html" href="#tab-8" id="link-tab-8">
+          Savings Accts
+         </a>
+        </li>
+        <li class="tab-9">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-9.html" href="#tab-9" id="link-tab-9">
+          Money Deals
+         </a>
+        </li>
+        <li class="tab-10 last">
+         <a data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&amp;designVersionName=media-common-1.0&amp;params=tab-cands-10.html" href="#tab-10" id="link-tab-10">
+          Loans
+         </a>
+        </li>
+       </ul>
+       <div aria-live="polite" class="tab selected cfix" id="tab-1">
+        <h3>
+         Check out today's best deals
+        </h3>
+        <div class="one">
+         <h3>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="1" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/home-loans?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=HL_loans">
+           Low Home Loan Rate
+          </a>
+         </h3>
+         <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="1" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/home-loans?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=HL_loans">
+          <img height="50" src="http://images.smh.com.au/compareandsave/HL-loans-award.png" width="60"/>
+         </a>
+         <p>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="1" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/home-loans?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=HL_loans">
+           Low variable rate + no monthly fees with loans.com.au
+          </a>
+         </p>
+         <span>
+         </span>
+         <p class="links">
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="1" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/home-loans?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=HL_loans">
+           More Info
+          </a>
+         </p>
+        </div>
+        <div class="two">
+         <h3>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="2" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_rewards_virgin&amp;mpp_tab=4">
+           0% p.a. for 14 Months
+          </a>
+         </h3>
+         <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="2" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_rewards_virgin&amp;mpp_tab=4">
+          <img height="50" src="http://images.smh.com.au/compareandsave/cs-virgin-velocity-flyer-3x-points.png" width="60"/>
+         </a>
+         <p>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="2" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_rewards_virgin&amp;mpp_tab=4">
+           Plus earn 3 times the Velocity Points in first 3 months
+          </a>
+         </p>
+         <span>
+         </span>
+         <p class="links">
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="2" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_rewards_virgin&amp;mpp_tab=4">
+           Check it Out
+          </a>
+         </p>
+        </div>
+        <div class="three">
+         <h3>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="3" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_nab_qantas&amp;mpp_tab=2">
+           40,000 Bonus Points
+          </a>
+         </h3>
+         <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="3" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_nab_qantas&amp;mpp_tab=2">
+          <img height="50" src="http://images.smh.com.au/compareandsave/cc-nab-qantas-premium-15mnths.png" width="60"/>
+         </a>
+         <p>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="3" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_nab_qantas&amp;mpp_tab=2">
+           Plus 0% p.a. on balance transfers for 15 months
+          </a>
+         </p>
+         <span>
+         </span>
+         <p class="links">
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="3" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://compare.smh.com.au/rewards-credit-cards?utm_source=CS_front&amp;utm_medium=CnS&amp;utm_campaign=CC_nab_qantas&amp;mpp_tab=2">
+           Find Out More
+          </a>
+         </p>
+        </div>
+        <div class="four">
+         <h3>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="4" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=Get_big_data">
+           Get big data
+          </a>
+         </h3>
+         <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="4" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=Get_big_data">
+          <img height="50" src="http://images.smh.com.au/compareandsave/bigData_160x70_0315_left_a.jpg" width="60"/>
+         </a>
+         <p>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="4" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=Get_big_data">
+           Spend a little, get a LOT of data
+          </a>
+         </p>
+         <span>
+         </span>
+         <p class="links">
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="4" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=Get_big_data">
+           Big Data
+          </a>
+         </p>
+        </div>
+        <div class="five">
+         <h3>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="5" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=On_a_small_budget">
+           On a small budget
+          </a>
+         </h3>
+         <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="5" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=On_a_small_budget">
+          <img height="50" src="http://images.smh.com.au/compareandsave/bigData_160x70_0315_right_a.jpg" width="60"/>
+         </a>
+         <p>
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="5" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=On_a_small_budget">
+           SIM-only plans with lots of data and a low monthly fee
+          </a>
+         </p>
+         <span>
+         </span>
+         <p class="links">
+          <a class="trackingClick" data-ga-action="1" data-ga-category="CompareSave" data-ga-label="5" data-sc='{"events":"event22","eVar22":"s.prop1-s.prop2-Various-Best Deals-bottom"}' data-sc-tl="compare_and_save" data-tracking-stop-event="true" data-tracking-types="ga,sc" href="http://mobile-phones.smh.com.au/MobilePhones/Guides/budget-sim-only-plans-with-big-data?utm_source=Widget_Fairfax_SMH_CompareAndSave&amp;utm_medium=Widget&amp;utm_campaign=On_a_small_budget">
+           Big Data
+          </a>
+         </p>
+        </div>
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-2">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-3">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-4">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-5">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-6">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-7">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-8">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-9">
+       </div>
+       <div aria-live="polite" class="tab cfix" id="tab-10">
+       </div>
+      </div>
+     </div>
+     <div class="c5 cfix top5">
+      <h2 class="cfix">
+       Today's Top 5 Articles
+      </h2>
+      <div class="s1 lEssentialBaby">
+       <a class="lEb" href="http://www.essentialbaby.com.au/" title="">
+       </a>
+       <h5>
+        Today's Top 5 Articles
+       </h5>
+       <ol>
+        <li>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/baby-whisperer-tizzie-hall-slammed-for-dangerous-carseat-advice-20150707-gi64kp.html" style="" title="'Baby whisperer' Tizzie Hall slammed for dangerous carseat advice">
+          'Baby whisperer' Tizzie Hall slammed for dangerous carseat advice
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialbaby.com.au/baby/caring-for-baby/what-aussie-parents-really-think-about-different-prams-20150707-gi6pqi.html" style="" title="What Aussie parents really think about different prams">
+          What Aussie parents really think about different prams
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialbaby.com.au/life-style/celebrity-parents/is-prince-georges-nanny-actually-mary-poppins-20150707-gi6j86.html" style="" title="Is Prince George's nanny actually Mary Poppins?">
+          Is Prince George's nanny actually Mary Poppins?
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-nutrition-and-wellbeing/mum-puts-15minute-labour-down-to-fit-not-fat-pregnancy-20150706-gi6aps.html" style="" title="Mum puts 15-minute labour down to 'fit, not fat' pregnancy">
+          Mum puts 15-minute labour down to 'fit, not fat' pregnancy
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialbaby.com.au/toddler/caring-for-toddler/grandfather-saves-toddler-with-just-seconds-to-spare-20150707-gi6mrk.html" style="" title="Grandfather saves toddler with just seconds to spare">
+          Grandfather saves toddler with just seconds to spare
+         </a>
+        </li>
+       </ol>
+      </div>
+      <div class="s2 lEssentialKids">
+       <a class="lEk" href="http://www.essentialkids.com.au/" title="">
+       </a>
+       <h5>
+        Today's Top 5 Articles
+       </h5>
+       <ol>
+        <li>
+         <a href="http://www.essentialkids.com.au/younger-kids/kids-activities-and-worksheets/aboriginal-girl-who-was-racially-abused-at-a-frozen-event-finally-meets-queen-elsa-20150707-gi6obv.html" style="" title="Aboriginal girl who was racially abused at a Frozen event finally meets Queen Elsa">
+          Aboriginal girl who was racially abused at a Frozen event finally meets Queen Elsa
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialkids.com.au/entertaining-kids/celebrity-mums-and-kids/leukaemia-sufferer-naomi-oakes-uses-taylor-swifts-bad-blood-to-reach-out-to-the-pop-star-20150707-gi6p5l.html" style="" title="Leukaemia sufferer Naomi Oakes uses Taylor Swift's 'Bad Blood' to reach out to the pop star">
+          Leukaemia sufferer Naomi Oakes uses Taylor Swift's 'Bad Blood' to reach out to the pop star
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialkids.com.au/ek-health/latest-health-news/mummy-bloggers-heartwrenching-post-reveals-she-is-a-victim-of-domestic-abuse-20150707-gi6rle.html" style="" title="Mummy blogger's heart-wrenching post reveals she is a victim of domestic abuse">
+          Mummy blogger's heart-wrenching post reveals she is a victim of domestic abuse
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialkids.com.au/special/campbell-remess-11-year-old-charitable-teddy-bear-maker-extraordinaire-20150707-gi6cvd.html" style="" title="Campbell Remess: 11 year old charitable teddy bear maker extraordinaire">
+          Campbell Remess: 11 year old charitable teddy bear maker extraordinaire
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialkids.com.au/preschoolers/preschool-toys-and-products/satanic-baby-doll-teaches-toddler-to-swear-and-other-inappropriate-toys-ive-owned-20150707-gi6qxu.html" style="" title="Satanic baby doll teaches toddler to swear and other inappropriate toys I've owned">
+          Satanic baby doll teaches toddler to swear and other inappropriate toys I've owned
+         </a>
+        </li>
+       </ol>
+      </div>
+      <div class="s3 lDailyLife">
+       <a class="lDailyLife" href="http://www.dailylife.com.au/" title="">
+       </a>
+       <h5>
+        Today's Top 5 Articles
+       </h5>
+       <ol>
+        <li>
+         <a href="http://www.dailylife.com.au/life-and-love/dl-horoscopes/virgo-20080101-1qmgv.html" style="" title="Virgo">
+          Virgo
+         </a>
+        </li>
+        <li>
+         <a href="http://www.dailylife.com.au/life-and-love/dl-horoscopes/libra-20120128-1qmh4.html" style="" title="Libra">
+          Libra
+         </a>
+        </li>
+        <li>
+         <a href="http://www.dailylife.com.au/life-and-love/dl-horoscopes/pisces-20120128-1qmgz.html" style="" title="Pisces">
+          Pisces
+         </a>
+        </li>
+        <li>
+         <a href="http://www.dailylife.com.au/life-and-love/dl-horoscopes/gemini-20120128-1qmh3.html" style="" title="Gemini">
+          Gemini
+         </a>
+        </li>
+        <li>
+         <a href="http://www.dailylife.com.au/life-and-love/dl-horoscopes/cancer-20120128-1qmh5.html" style="" title="Cancer">
+          Cancer
+         </a>
+        </li>
+       </ol>
+      </div>
+      <div class="s4 lSmh">
+       <a class="lSmh" href="http://www.smh.com.au/" title="For the latest Sydney news, Australia news and world breaking news visit the Sydney Morning Herald website">
+        Most viewed articles on The Sydney Morning Herald
+       </a>
+       <h5>
+        Today's Top 5 Articles
+       </h5>
+       <ol>
+        <li>
+         <a href="http://www.smh.com.au/entertainment/tv-and-radio/gossip-columnist-resigns-after-tweeting-offensive-comments-20150707-gi6pq3.html" style="" title="Gossip columnist resigns after tweeting offensive comments">
+          Gossip columnist resigns after tweeting offensive comments
+         </a>
+        </li>
+        <li>
+         <a href="http://www.smh.com.au/entertainment/movies/dustin-hoffman-hollywood-is-at-its-worst-in-50-years-20150707-gi6jf8.html" style="" title="Dustin Hoffman: Hollywood is at its worst in 50 years">
+          Dustin Hoffman: Hollywood is at its worst in 50 years
+         </a>
+        </li>
+        <li>
+         <a href="http://www.smh.com.au/entertainment/tv-and-radio/radio-ratings-kyle-sandilands-and-jackie-o-tumble-dan-debuf-and-maz-compton-lift-20150707-gi6lcs.html" style="" title="Radio ratings: Kyle Sandilands and Jackie O tumble, Dan Debuf and Maz Compton lift">
+          Radio ratings: Kyle Sandilands and Jackie O tumble, Dan Debuf and Maz Compton lift
+         </a>
+        </li>
+        <li>
+         <a href="http://www.smh.com.au/entertainment/music/john-farnham-thailand-collapse-hoax-puzzles-manager-farnsys-in-rude-health-20150707-gi7a7g.html" style="" title="John Farnham Thailand collapse hoax puzzles manager: Farnsy's in 'rude health'">
+          John Farnham Thailand collapse hoax puzzles manager: Farnsy's in 'rude health'
+         </a>
+        </li>
+        <li>
+         <a href="http://www.smh.com.au/entertainment/tv-and-radio/former-top-gear-host-jeremy-clarkson-banned-from-launching-new-show-until-2017-report-20150707-gi7a0b.html" style="" title="Former Top Gear host Jeremy Clarkson banned from launching new show until 2017: report">
+          Former Top Gear host Jeremy Clarkson banned from launching new show until 2017: report
+         </a>
+        </li>
+       </ol>
+      </div>
+     </div>
+     <div class="ad" id="adspot-728x90_468x60-pos-2" style="display:none;">
+      <script type="text/javascript">
+       var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-728x90_468x60-pos-2");
+      </script>
+     </div>
+     <ul class="fSectionLinks cfix">
+      <li>
+       <a href="http://www.essentialbaby.com.au/about_us.html" title="about us">
+        about us
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/contact_us.html" title="contact us">
+        contact us
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/membership_newsletters.html" title="newsletters">
+        newsletters
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/faq.html" title="faq">
+        faq
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/advertise_with_us.html" title="advertise with us">
+        advertise with us
+       </a>
+      </li>
+      <li>
+       <a href="http://www.essentialbaby.com.au/privacy.html" title="privacy statement">
+        privacy statement
+       </a>
+      </li>
+      <li>
+       <a href="http://www.fairfax.com.au/conditions.ac" title="terms of use">
+        terms of use
+       </a>
+      </li>
+      <li class="last">
+       <a href="http://www.essentialbaby.com.au/sitemap.html" title="site map">
+        site map
+       </a>
+      </li>
+      <li class="last">
+       <span class="Kampyle" data-kampyleformid="101321" data-kampylesitecode="3499354">
+        <a href="http://www.kampyle.com/feedback_form/ff-feedback-form.php?site_code=3499354&amp;lang=en&amp;form_id=101321" id="kampylilink" target="kampyleWindow">
+         give feedback
+        </a>
+       </span>
+      </li>
+     </ul>
+     <!-- Footer masthead links and copyright -->
+     <div class="fMastheadLinks cfix">
+     </div>
+     <!-- This comment fixes IE6's logo problem. Might be temporary until we've got content below this point -->
+     <div class="nN-footerLinks">
+      <a class="logo" href="http://www.fairfaxdigital.com.au">
+       Fairfax Media
+      </a>
+      <div>
+       <h3>
+        Our Sites
+       </h3>
+       <ul>
+        <li class="first">
+         <a href="http://www.smh.com.au/" title="The Sydney Morning Herald">
+          The Sydney Morning Herald
+         </a>
+        </li>
+        <li>
+         <a href="http://www.theage.com.au/" title="The Age">
+          The Age
+         </a>
+        </li>
+        <li>
+         <a href="http://www.adzuna.com.au" title="Adzuna">
+          Adzuna
+         </a>
+        </li>
+        <li>
+         <a href="http://www.domain.com.au/" title="Domain">
+          Domain
+         </a>
+        </li>
+        <li>
+         <a href="http://www.drive.com.au/" title="Drive">
+          Drive
+         </a>
+        </li>
+        <li>
+         <a href="http://www.rsvp.com.au/" title="RSVP">
+          RSVP
+         </a>
+        </li>
+        <li>
+         <a href="http://www.essentialbaby.com.au/" title="Essential Baby">
+          Essential Baby
+         </a>
+        </li>
+        <li>
+         <a href="http://apm.com.au/" title="APM">
+          APM
+         </a>
+        </li>
+        <li>
+         <a href="http://www.weatherzone.com.au/" title="Weatherzone">
+          Weatherzone
+         </a>
+        </li>
+       </ul>
+       <h3>
+        Our Partners
+       </h3>
+       <ul>
+        <li class="first">
+         <a href="http://www.business.com.au/" title="Business">
+          Business
+         </a>
+        </li>
+        <li>
+         <a href="http://www.dentalsurgery.com.au/" title="Dental Surgery">
+          Dental Surgery
+         </a>
+        </li>
+        <li>
+         <a href="http://www.fitness.com.au/" title="Fitness">
+          Fitness
+         </a>
+        </li>
+        <li>
+         <a href="http://www.gardens.com.au/" title="Gardens">
+          Gardens
+         </a>
+        </li>
+        <li>
+         <a href="http://www.hairsalon.com.au/" title="Hair salon">
+          Hair salon
+         </a>
+        </li>
+        <li>
+         <a href="http://www.jogging.com.au/" title="Jogging">
+          Jogging
+         </a>
+        </li>
+        <li>
+         <a href="http://www.physicians.com.au/" title="Physicians">
+          Physicians
+         </a>
+        </li>
+        <li>
+         <a href="http://www.wedding.com.au/" title="Wedding">
+          Wedding
+         </a>
+        </li>
+        <li>
+         <a href="http://www.wine.com.au/" title="Wine">
+          Wine
+         </a>
+        </li>
+        <li>
+         <a href="http://www.floristdirectory.com.au" title="Florists">
+          Florists
+         </a>
+        </li>
+       </ul>
+      </div>
+      <cite>
+       Copyright  2015 Fairfax Media
+      </cite>
+     </div>
+    </div>
+    <!-- End fN-footerNetwork -->
+    <div class="ad" id="adspot-1x1-pos-1" style="display:none;">
+     <script type="text/javascript">
+      var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-1x1-pos-1");
+     </script>
+    </div>
+    <div class="ad" id="adspot-1x11-pos-1" style="display:none;">
+     <script type="text/javascript">
+      var titan = window.titan || {}; titan.requestAd = titan.requestAd || []; titan.requestAd.push("adspot-1x11-pos-1");
+     </script>
+    </div>
+   </div>
+   <!-- class:wrap cfix -->
+  </div>
+  <!-- class:outerWrap -->
+  <script type="text/javascript">
+   var recommendOptions = {
+        display: "off",
+        pos: "rhs",
+        size: {content: 5, rhs: 4},
+        matchingMode: "behavioral^50,contextual^25,trend^25",
+        maxResults: 30
+    };
+  </script>
+  <div class="subscription-overlay" data-drm-host="" data-hagrid-api-url="https://api.myfairfax.com.au" data-hagrid-base-url="https://essentialbaby.myfairfax.com.au" data-hagrid-channel-key="Ix5ipxc6tkrpGS2vCjcxAg" data-hagrid-iframe-container-id="loginIframeContainer" data-hagrid-member-profile-provider-name="customMemberProfileProvider" data-hagrid-proxy-url="/originstatic/hagridproxy-0.9.39.html" id="subscription-overlay">
+  </div>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.js/fd_min.js" type="text/javascript">
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.google.js/fd.google_min.js" type="text/javascript">
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.registrars.js/fd.registrars_min.js" type="text/javascript">
+  </script>
+  <script>
+   var adParameters = {
+        paywall: false
+    };
+    FD.trigger("FDLoadJSSDK", [
+        "",
+        "essentialbaby.com.au",
+        "http://www.essentialbaby.com.au",
+        "https://essentialbaby.myfairfax.com.au",
+        "https://api.myfairfax.com.au",
+        "Ix5ipxc6tkrpGS2vCjcxAg"
+    ]);
+  </script>
+  <div data-brandname="essentialbaby">
+  </div>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.videoplayer.js/fd.videoplayer_min.js" type="text/javascript">
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/jwplayer6/jwplayer.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jwplayer.key="3Kw6cxrtDRgcWRtdGLa2YBoPkAlVC9+iy+DgiQ==";
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.registrars.mymasthead.js/fd.registrars.mymasthead_min.js" type="text/javascript">
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.registrars.contentpagewide.js/fd.registrars.contentpagewide_min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   new FD.UserHistoryRecommendations({
+            "assetId": "5127858"
+        });
+  </script>
+  <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript">
+  </script>
+  <div data-ad-channel="Life Style" data-adtest="off" data-google-ad-sense="true" data-short-site-name="essentialbaby" data-url="http://www.essentialbaby.com.au/life-style/nutrition-and-wellbeing/when-your-unborn-twin-is-your-childrens-mother-20140203-31woi.html">
+  </div>
+  <script type="text/javascript">
+   (function (FD) {
+        new FD.GoogleAdSense({
+            googleAdSenseContainerElement: 'div[data-google-ad-sense="true"]'
+        });
+    })(FD);
+  </script>
+  <script type="text/javascript">
+   FD.addVideoPlayer(new FD.VideoPlayer({
+        "adServerUrl": "http://pubads.g.doubleclick.net/gampad/ads?sz=4x1&amp;iu=/6411/vid.ebaby/news&amp;ciu_szs=300x250&amp;impl=s&amp;gdfp_req=1&amp;env=vp&amp;output=xml_vast2&amp;unviewed_position_start=1&amp;cust_params=channel%3Dnews%26show%3Dqldnews%26ctype%3DRHS%26source%3DFair+use&amp;correlator=240692",
+        "assetId": "6576802",
+        "divId": "video-player-latest",
+        "playerId": "video-player-latest-player",
+        "playerType": "Article_rhs",
+        "postPlay": ""
+    }, {
+        "height": 170,
+        "playlist": [
+    {
+                    "sources": [
+                    {
+                        "bitrate": "714",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_high.mp4"
+                    },
+                    {
+                        "bitrate": "508",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_ihigh.mp4"
+                    },
+                    {
+                        "bitrate": "475",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_mid.mp4"
+                    },
+                    {
+                        "bitrate": "455",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_low.mp4"
+                    },
+                    {
+                        "bitrate": "335",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_imid.mp4"
+                    },
+                    {
+                        "bitrate": "182",
+                        "file": "http://mediadownload.f2.com.au/flash/media/2015/06/01/6576802/6576802_ilow.mp4"
+                    }
+            ],
+            "image": "http://images.essentialbaby.com.au/2015/06/01/6577042/vd-Cafe66-190x107.jpg"
+    }
+],
+        "primary": "flash",
+            "advertising": {
+        "client": "googima",
+                "tag": "http://pubads.g.doubleclick.net/gampad/ads?sz=4x1&amp;iu=/6411/vid.ebaby/news&amp;ciu_szs=300x250&amp;impl=s&amp;gdfp_req=1&amp;env=vp&amp;output=xml_vast2&amp;unviewed_position_start=1&amp;cust_params=channel%3Dnews%26show%3Dqldnews%26ctype%3DRHS%26source%3DFair+use&amp;correlator=240692"
+,
+        "companiondiv": {
+            "height": 250,
+            "id": "video-player-companion-ad-mrec",
+            "width": 300
+        }
+    },
+"timeslidertooltipplugin-2": {},
+        "width": 300
+    }, {
+        "ga": {
+    "channel": "News",
+    "duration": "153",
+    "headline": "Cafe owner defends breastfeeding mum",
+    "interval": 10000,
+    "referrer": "",
+    "playerType": "Article_rhs",
+    "showName": "QLD News"
+}
+,
+        "nielsen": {
+    "brand": "essentialbaby",
+    "duration": "153",
+    "interval": 10000,
+    "ou": "video/news/qld-news",
+    "vc": "vc-eb-Video_News-Article_rhs-Video_QLD_News-Unknown-Scott_Beveridge-6576802-Cafe_owner_defends_breastfeeding_mum-00:02:33"
+},
+        "collector": {
+    "system": "DCDS",
+    "brand": "ebaby",
+    "section": "Video News",
+    "assetId": "6576802",
+    "title": "Cafe owner defends breastfeeding mum",
+    "assetType": "Video",
+    "assetUrl": "http://media.essentialbaby.com.au/news/qld-news/cafe-owner-defends-breastfeeding-mum-6576802.html",
+    "category": "Video QLD News",
+    "showName": "Video_QLD_News",
+    "duration": "153041",
+    "videoSource": "Fair use",
+    "producer": "Scott Beveridge",
+    "playerType": "Article_rhs"
+},
+        "sitecatalyst": {
+    "assetId": "6576802",
+    "assetType": "Video",
+    "assetUrl": "http://media.essentialbaby.com.au/news/qld-news/cafe-owner-defends-breastfeeding-mum-6576802.html",
+    "brand": "ebaby",
+    "category": "Video QLD News",
+    "channelName": "Video_News",
+    "duration": "153041",
+    "interval": 10000,
+    "producer": "Scott Beveridge",
+    "playerType": "Article_rhs",
+    "section": "Video News",
+    "showName": "Video_QLD_News",
+    "system": "DCDS",
+    "title": "Cafe owner defends breastfeeding mum",
+    "type":"Video",
+    "videoSource": "Fair use",
+    "videoType": "Standard"
+}
+    }));
+  </script>
+  <script type="text/javascript">
+   (function(FD) {
+            // Check that the user is at least logged in before attempting to say that they have read an article.
+            if (FD.isLoggedIn()) {
+                FD.trigger("FDArticleRead");
+            }
+    })(FD);
+  </script>
+  <script type="text/javascript">
+   if (document.googleMapConfiguration) {
+        document.write("&lt;script src='http://maps.googleapis.com/maps/api/js?client=gme-fairfax&amp;sensor=false&amp;channel=essentialbabycomau' type='text/javascript'&gt;&lt;\/script&gt;");
+    }
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.registrars.googlemap.js/fd.registrars.googlemap_min.js" type="text/javascript">
+  </script>
+  <!-- START Google Analytics Tracking -->
+  <script>
+   var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5149436-4']);
+    _gaq.push(['_setDomainName', '.essentialbaby.com.au']);
+    _gaq.push(['_addIgnoredRef', 'essentialbaby.com.au']);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCustomVar', 1, 'Section', 'Life Style', 3]);
+    _gaq.push(['_setCustomVar', 2, 'Sub-Section', 'Nutrition &amp; Wellbeing', 3]);
+    _gaq.push(['_setCustomVar', 3, 'Byline', 'Letitia Rowlands', 3]);
+    _gaq.push(['_setCustomVar', 4, 'Page Type', 'Article', 3]);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCampaignCookieTimeout', 1209600000]);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics Tracking -->
+  <!-- START Nielsen Online SiteCensus V6.0 -->
+  <!-- COPYRIGHT 2009 Nielsen Online -->
+  <script src="//secure-au.imrworldwide.com/v60.js">
+  </script>
+  <script>
+   var pvar = {cid:"f2", content:"essbaby-lifestyle-nutrition-wellbeing-story-online", server:"secure-au"};
+    var trac = nol_t(pvar);
+    trac.record().post();
+    window.s_pageName = "essentialbaby:article:life style:nutrition &amp; wellbeing:when your unborn twin is your children's mother";
+  </script>
+  <noscript>
+   <div>
+    <img alt="" height="1" src="//secure-au.imrworldwide.com/cgi-bin/m?ci=f2&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1"/>
+   </div>
+  </noscript>
+  <!--end of if !suppressNielsen -->
+  <!-- END Nielsen Online SiteCensus V6.0 -->
+  <script type="text/javascript">
+   (function(FD) {
+		/**
+		 * Initiates the client side asset view tracking component (self executing).
+		 */
+        FD.pingServerWithSuccessCallback("5127858", "Article", "Life+Style", FD.updateWhiteStrip);
+	})(FD);
+  </script>
+  <!-- FFX analytics stuff -->
+  <script>
+   var _fmaq = _fmaq || [];
+        _fmaq.push(["_trackEvent", [
+            ["event", "view"],
+            ["system", "DCDS"],
+            ["site", "ebaby"],
+            ["assetCategory", "Life Style"],
+            ["asset", "5127858"],
+            ["title", "When your unborn twin is your children's mother"],
+            ["assetType", "Article"],
+            ["urlHash", window.location.hash]        ]]);
+
+    var _fma_options = {};
+
+    (function () {
+        var fma_script = document.createElement('script');
+        fma_script.src = 'http://resources.fairfax.com.au/js/track/1.0/track.min.js';
+        fma_script.setAttribute('async', 'true');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fma_script, s);
+    })();
+  </script>
+  <script type="text/javascript">
+   var cX_ffx_customParameters = cX_ffx_customParameters || {};
+        cX_ffx_customParameters.ffx_contentid = 'dcds_5127858';
+  </script>
+  <div id="cX-root" style="display:none">
+  </div>
+  <script type="text/javascript">
+   var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+        cX.callQueue.push(['setAccountId', '9222289450909507088']);
+        cX.callQueue.push(['setSiteId', '9222289450909507089']);
+        if (cX_ffx_customParameters) {
+            cX.callQueue.push(['setCustomParameters', cX_ffx_customParameters]);
+        }
+        cX.callQueue.push(['sendPageViewEvent']);
+  </script>
+  <script type="text/javascript">
+   (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async';
+            scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js';
+            var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {};} ());
+  </script>
+  <!-- Adobe Marketing Cloud Tag Management code
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.adobe.com -->
+  <script>
+   if(s){
+    s.pageName = "ebaby:Life Style:Nutrition &amp; Wellbeing::When your unborn twin is your children's mother:5127858"
+    s.prop1 = "ebaby"
+    s.prop2 = "Life Style"
+    s.prop6 = ""
+    s.prop7 = "Article"
+    s.prop8 = "5127858 + When your unborn twin is your children's mother"
+    s.prop31 = "Letitia Rowlands"
+    s.prop32 = "2014-02-05"
+    if (window["FD"]) {
+        if (typeof FD.s_prop24 !== "undefined") {
+            s.prop24 = FD.s_prop24
+        }
+    }
+
+    // OLG tracking
+    if(typeof olgTracking !== "undefined") {
+        if(s.events) {
+            s.events += ",event21";
+        } else {
+            s.events = "event21";
+        }
+        s.eVar22 = s.prop1 + "-" + s.prop2 + "-" + olgTracking.provider + "-" + olgTracking.productType + "-" + olgTracking.location;
+    }
+    s.t();
+}
+  </script>
+  <!-- End Adobe Marketing Cloud Tag Management code -->
+  <script>
+   if (window["FD"]) {
+    FD.trigger("FDTrackReady");
+}
+  </script>
+  <!-- Start Apple Auto Affiliate Link Maker script -->
+  <script>
+   var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11l8Ma']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src='https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();
+  </script>
+  <!-- End Apple Auto Affiliate Link Maker script -->
+  <!-- Start Skimlinks Auto Affiliate Link Maker script -->
+  <script src="http://s.skimresources.com/js/57568X1347956.skimlinks.js">
+  </script>
+  <!-- End Skimlinks Auto Affiliate Link Maker script -->
+  <script async="async" src="http://widgets.outbrain.com/outbrain.js" type="text/javascript">
+  </script>
+  <script>
+   function createSocialElement(d, s, id, src) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = src;
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+  </script>
+  <div id="fb-root">
+  </div>
+  <!-- id:fb-root -->
+  <script>
+   window.fbAsyncInit = function() {
+                 FB.init({appId: '216314111748839', status: true, cookie: true,  xfbml: true});
+            };
+            createSocialElement(document, 'script', 'facebook-jssdk', "//connect.facebook.net/en_GB/all.js#xfbml=1");
+  </script>
+  <script gapi_processed="true" src="https://apis.google.com/js/plusone.js">
+  </script>
+  <script src="http://platform.linkedin.com/in.js" type="text/javascript">
+   authorize: true
+  </script>
+  <script>
+   createSocialElement(document, "script", "twitter-wjs", "//platform.twitter.com/widgets.js");
+  </script>
+  <div data-boomerangsegment="132493">
+  </div>
+  <script>
+   /* Social bar prototype */
+$('ul.social').on('click', '.expand-toggle a',function() {
+    socialWrap = $(this).parents('ul.social');
+    defaultTitle = 'More sharing options';
+    expandedTitle = 'Less sharing options';
+
+    socialWrap.toggleClass('expanded');
+    if (socialWrap.hasClass('expanded')) {
+        $(this).attr('title', expandedTitle);
+        socialWrap.find('.social-right').fadeToggle('fast', function() {
+        socialWrap.find('.expand-show').fadeToggle();
+        });
+    } else {
+        socialWrap.find('.social-right').fadeToggle('fast');
+        socialWrap.find('.expand-show').toggle();
+        $(this).attr('title', defaultTitle);
+    }
+});
+/* END Social bar prototype */
+  </script>
+  <!-- social media scripts -->
+  <script src="//assets.pinterest.com/js/pinit.js">
+  </script>
+  <script src="http://secure-au.imrworldwide.com/cgi-bin/j?ci=rj0093-stayz&amp;se=1&amp;te=0" type="text/javascript">
+  </script>
+  <script src="http://resources.essentialbaby.com.au/common/media-common-1.0/js/fdjsf/output/7.54.2/fd.registrars.images.httppipelining.js/fd.registrars.images.httppipelining_min.js" type="text/javascript">
+  </script>
+  <div id="adspot-interstitial">
+   <script>
+    var titan = window.titan || {};
+        titan.requestAd = titan.requestAd || [];
+        titan.requestAd.push("adspot-interstitial");
+   </script>
+  </div>
+  <script type="text/javascript">
+   window.setTimeout('new FD.TitanService()', 3000);
+_satellite.pageBottom();
+  </script>
+ </body>
+</html>

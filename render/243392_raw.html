@@ -1,0 +1,1588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <link href="http://fast.fonts.net/cssapi/62169001-333c-460f-9f6a-c1ea15dff193.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"VwUGUFdUGwUAXVZVAAE="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;&amp;t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f&gt;d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;&amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;&amp;"function"==typeof console.log&amp;&amp;(i.console=!0,-1!==n.indexOf("dev")&amp;&amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;&amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;&amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;&amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;&amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&amp;&amp;(t(1),t(2),"addEventListener"in window&amp;&amp;t(3),window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)&amp;&amp;t(4),s=!0)}i.on("fn-start",function(){s&amp;&amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;&amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;&amp;!this.thrown&amp;&amp;c&gt;0&amp;&amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&amp;&amp;window.performance.timing&amp;&amp;window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&amp;&amp;(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&amp;&amp;r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&amp;&amp;(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;&amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;&amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;&amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;&amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;&amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;&amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;&amp;(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&amp;&amp;(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;&amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;&amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;&amp;t instanceof ArrayBuffer&amp;&amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;&amp;t instanceof Blob&amp;&amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;&amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;&amp;"xpid"in NREUM.loader_config&amp;&amp;this.sameOrigin&amp;&amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;&amp;o){var f=n(o);f&amp;&amp;(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;&amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;&amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;&amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c&gt;u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;&amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;!this.xhrGuids[n]&amp;&amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;this.xhrGuids[n]&amp;&amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;&amp;("onload"===n&amp;&amp;(this.onload=!0),("load"===(t[0]&amp;&amp;t[0].type)||this.onload)&amp;&amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;&amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;&amp;o[1]&amp;&amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;&amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;&amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;&amp;e.port===n.port&amp;&amp;e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;&amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;&amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&amp;&amp;t.licenseKey&amp;&amp;t.applicationID&amp;&amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&amp;&amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;&amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;&amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&gt;o?0:o);++r&lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&amp;&amp;"function"==typeof t&amp;&amp;t.apply&amp;&amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&amp;&amp;r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c&lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&amp;&amp;(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);
+  </script>
+  <title>
+   15 useful WordPress plugins and extensions - Pixafy
+  </title>
+  <meta content="index, follow" name="robots"/>
+  <meta content="width=1024" name="viewport"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="@pixafy" name="twitter:site"/>
+  <meta content="15 useful WordPress plugins and extensions" name="twitter:title"/>
+  <meta content="@pixafy" name="twitter:creator"/>
+  <meta content="http://www.pixafy.com/blog/2013/06/15-useful-wordpress-plugins-and-extensions" name="twitter:domain"/>
+  <meta content="Do you use WordPress for your website? If you do, chances are good that you use at least a few plugins. Part of what's fantastic about a CMS like WordPress is the robustness of the plugin ecosystem, allowing you to pick and choose which functionalities to install without having to weigh your system down with pre-installed bloatware that you may not need. And with over 25k plugins (and counting!) in the WordPress Plugin Directory, you have a tremendous number of options that can help you add serious extensibility to your site!" name="twitter:description"/>
+  <meta content="http://www.pixafy.com/wp-content/uploads/2013/06/wordpress-plugins-extensions-blog-graphic.jpg" name="twitter:image"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/images/pixFB.jpg" rel="image_src" type="image/jpeg"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <!--   &lt;link rel="stylesheet" href="http://www.pixafy.com/wp-content/themes/pixafy/css/styles.css"/&gt; -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="http://gmpg.org/xfn/11" rel="profile"/>
+  <link href="http://www.pixafy.com/xmlrpc.php" rel="pingback"/>
+  <!-- deprecated
+        &lt;script type="text/javascript" src="//use.typekit.net/gps5mdp.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;try{Typekit.load();}catch(e){}&lt;/script&gt;
+     -->
+  <script src="//cdn.optimizely.com/js/921060350.js">
+  </script>
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v2.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <link href="http://www.pixafy.com/blog/2013/06/15-useful-wordpress-plugins-and-extensions" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="15 useful WordPress plugins and extensions - Pixafy" property="og:title"/>
+  <meta content="Do you use WordPress for your website? If you do, " property="og:description"/>
+  <meta content="http://www.pixafy.com/blog/2013/06/15-useful-wordpress-plugins-and-extensions" property="og:url"/>
+  <meta content="Pixafy" property="og:site_name"/>
+  <meta content="CMS,content management system,Dropbox,extensions,google analytics,plugins,SEO,WordPress" property="article:tag"/>
+  <meta content="Tech topics" property="article:section"/>
+  <meta content="2013-06-10T14:00:17+00:00" property="article:published_time"/>
+  <meta content="2014-06-12T14:47:07+00:00" property="article:modified_time"/>
+  <meta content="2014-06-12T14:47:07+00:00" property="og:updated_time"/>
+  <meta content="http://www.pixafy.com/wp-content/uploads/2013/06/wordpress-plugins-extensions-blog-graphic.jpg" property="og:image"/>
+  <!-- / Yoast WordPress SEO plugin. -->
+  <link href="http://www.pixafy.com/feed" rel="alternate" title="Pixafy  Feed" type="application/rss+xml"/>
+  <link href="http://www.pixafy.com/comments/feed" rel="alternate" title="Pixafy  Comments Feed" type="application/rss+xml"/>
+  <link href="http://www.pixafy.com/blog/2013/06/15-useful-wordpress-plugins-and-extensions/feed" rel="alternate" title="Pixafy  15 useful WordPress plugins and extensions Comments Feed" type="application/rss+xml"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/css/flexslider.css?ver=1.0" id="flexslider-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/css/icarousel.css?ver=1.0" id="icarousel-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/css/demo1.css?ver=1.0" id="icarousel_demo-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/css/styles-admin.css?ver=1.0" id="admin_styles-css" media="all" rel="stylesheet" type="text/css"/>
+  <!--[if lte IE 9]&gt;
+&lt;link rel='stylesheet' id='lt_ie9-css'  href='http://www.pixafy.com/wp-content/themes/pixafy/css/lt_ie9_styles.css?ver=1398990682' type='text/css' media='all' /&gt;
+&lt;![endif]-->
+  <link href="http://www.pixafy.com/wp-content/themes/pixafy/css/styles.css?ver=1435329408" id="base_styles-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/plugins/captcha/css/style.css?ver=4.1.1" id="cptch_stylesheet-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.2.1" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://www.pixafy.com/wp-content/plugins/hubspot/css/hubspot.css?ver=4.1.1" id="hubspot-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="http://www.pixafy.com/wp-includes/js/jquery/jquery.js?ver=1.11.1" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery-ui-1.10.4.effectscore.min.js?ver=1.10.4" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery-define.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.flexslider-min.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/pixafy/grid-script.js?ver=1435691767" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/clickclear.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/validation.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/raphael-min.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.mousewheel.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/icarousel.packed.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.slider.js?ver=1.0" type="text/javascript">
+   &lt;/script&gt;
+&lt;script type='text/javascript' src='http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.tabs.js?ver=1.0'&gt;
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.scroll-to-section.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/pixafy/new_script.js?ver=1435691767" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/collapsible-list.js?ver=4.1.1" type="text/javascript">
+   &lt;/script&gt;
+&lt;script type='text/javascript' src='http://www.pixafy.com/wp-content/themes/pixafy/js/jquery.mobilymap.js?ver=4.1.1'&gt;
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/new_script_admin.js?ver=4.1.1" type="text/javascript">
+  </script>
+  <link href="http://www.pixafy.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://www.pixafy.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <link href="http://www.pixafy.com/?p=3947" rel="shortlink"/>
+  <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" type="text/javascript">
+   getTwitters('tweet', {
+            id: 'pixafy',
+            count: 7,
+            enableLinks: true,
+            ignoreReplies: true,
+            clearContents: true,
+            template: '&lt;p&gt;%text%&lt;br&gt;%time%&lt;/p&gt;'
+
+        });
+  </script>
+  <!-- KISSmetrics tracking snippet -->
+  <script type="text/javascript">
+   var _kmq = _kmq || [];
+    var _kmk = _kmk || 'cb512bed4290ea46f1828c2c9f1733f33d7a78c6';
+    function _kms(u){
+    setTimeout(function()
+    { var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u; f.parentNode.insertBefore(s, f); }
+    , 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+  </script>
+  <!-- ChartBeat Tracking -->
+  <script type="text/javascript">
+   var _sf_startpt=(new Date()).getTime()
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-50685604-1', 'auto', {'allowLinker': true});
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+  </script>
+  <!-- google analytics -->
+  <script type="text/javascript">
+   window.pix = window.pix || {};
+        window.pix.BASE_URL = 'http://www.pixafy.com';
+  </script>
+ </head>
+ <body class="single single-post postid-3947 single-format-standard">
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>
+   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+  <a id="top">
+  </a>
+  <input id="page-name" type="hidden" value="blog"/>
+  <div class="instant fixed scroll-hidden" id="main-menu">
+   <div class="container center-text">
+    <div class="logo">
+     <a data-ga="cat:nav_pixafy_logo, act:click, lab:universal" href="http://www.pixafy.com">
+     </a>
+    </div>
+    <div class="menu-items-wrapper">
+     <ul class="menu">
+      <li>
+       <a class="" data-ga="cat:nav_features, act:click, lab:universal" href="http://www.pixafy.com/features">
+        Features
+       </a>
+      </li>
+      <li>
+       <a class="" data-ga="cat:nav_pricing, act:click, lab:universal" href="http://www.pixafy.com/pricing">
+        Pricing
+       </a>
+      </li>
+      <li class="dropdown-menu">
+       <!-- -->
+       <a class="" data-ga="cat:nav_resources, act:click, lab:universal" href="#">
+        Resources
+       </a>
+       <ul class="secondary-menu ">
+        <li>
+         <a data-ga="cat:nav_support, act:click, lab:universal" href="https://support.pixafy.com">
+          Support
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_agency_partners, act:click, lab:universal" href="http://www.pixafy.com/agency-partners">
+          Agency Partners
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_themes, act:click, lab:universal" href="http://www.pixafy.com/themes">
+          Themes
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_apps, act:click, lab:universal" href="http://www.pixafy.com/apps">
+          Apps
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_payment_gateways, act:click, lab:universal" href="http://www.pixafy.com/payment-gateways">
+          Payment Gateways
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_compare_platforms, act:click, lab:universal" href="http://www.pixafy.com/compare-platforms">
+          Compare Platforms
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_case_study, act:click, lab:universal" href="http://www.pixafy.com/le-pain-quotidien-case-study">
+          Case Study
+         </a>
+        </li>
+        <li>
+         <a data-ga="cat:nav_partner_program, act:click, lab:universal" href="http://www.pixafy.com/partner-program">
+          Partner Program
+         </a>
+        </li>
+       </ul>
+      </li>
+      <!-- &lt;li&gt;&lt;/li&gt; -->
+      <!-- -->
+      <!--  &lt;li class="callout "&gt;&lt;a class="free-trial-action" href="#free-trial" data-ga="cat:free_trial, act:trial, lab:universal"&gt;Free trial&lt;/a&gt;&lt;/li&gt; -->
+      <!-- -->
+     </ul>
+     <a class="header-phone-number" href="tel:1-855-446-1200">
+      <p>
+       <span class="phone-icon">
+       </span>
+       1-855-446-1200
+      </p>
+     </a>
+     <!-- &lt;div class="main-menu-divider"&gt;&lt;/div&gt; -->
+     <ul class="sections">
+      <li>
+       <a data-ga="cat:enterprise, act:click, lab:universal" href="http://www.pixafy.com/services/magento">
+        Services
+       </a>
+      </li>
+      <li>
+       <a data-ga="cat:login, act:click, lab:universal" href="https://hosting.pixafy.com">
+        Login
+       </a>
+      </li>
+      <li class="callout ">
+       <a class="free-trial-action" data-ga="cat:trial_button, act:click, lab:universal" href="#free-trial">
+        Free trial
+       </a>
+      </li>
+      <li class="callout last">
+       <a class="contact-us-action" data-ga="cat:demo_button, act:click, lab:universal" href="#free-trial">
+        Free Demo
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="magento-gold-logo">
+    </div>
+   </div>
+  </div>
+  <div id="main-menu-padding">
+  </div>
+  <div class="thinkbuildblog blog-topper" id="topper">
+   <div class="container">
+    <h1>
+     <a href="http://www.pixafy.com/blog">
+      Made for Merchants Blog
+     </a>
+    </h1>
+    <!--&lt;div class="blog-banner"&gt;
+                        &lt;a data-ga="cat:top_banner" title="Affordable and User-Friendly Magento Solutions for the Aspirational Merchant" href="http://www.pixafy.com?utm_source=blog&amp;utm_medium=banner&amp;utm_content=homepage_top_general&amp;utm_campaign=internal"&gt;
+                &lt;img src="http://www.pixafy.com/wp-content/themes/pixafy/images/banners/PixafyGeneral-Banner-v2.jpg" alt="Affordable and User-Friendly Magento Solutions for the Aspirational Merchant"/&gt;
+            &lt;/a&gt; -->
+   </div>
+  </div>
+  <div class="container">
+   <div class="leftContent">
+    <div class="post post-3947 post type-post status-publish format-standard has-post-thumbnail hentry category-tech-topics category-wordpress tag-cms tag-content-management-system tag-dropbox tag-extensions tag-google-analytics tag-plugins tag-seo tag-wordpress" id="post-3947">
+     <h2 class="entry-title">
+      15 useful WordPress plugins and extensions
+      <div class="postedBy" style="margin-bottom:15px;">
+       Posted by
+       <span class="author vcard">
+        Pixafy
+       </span>
+      </div>
+     </h2>
+     <ul class="entry-actions">
+     </ul>
+     <div class="bannerBox">
+     </div>
+     <div class="entry-content">
+      <p>
+       <img alt="15 Useful WordPress Plugins &amp; Extensions  |  Pixafy.com" class="alignnone size-full wp-image-4059" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/wordpress-plugins-extensions-blog-graphic.jpg" title="15 Useful WordPress Plugins &amp; Extensions  |  Pixafy.com" width="490"/>
+      </p>
+      <div class="series-block">
+       <h3>
+        This post is part of a series on Useful Plugins and Extensions:
+       </h3>
+       <ul>
+        <li>
+         <a href="http://www.pixafy.com/blog/2013/06/15-useful-wordpress-plugins-and-extensions">
+          15 useful WordPress plugins and extensions
+         </a>
+         (
+         <i>
+          current
+         </i>
+         )
+        </li>
+        <li>
+         <a href="http://www.pixafy.com/blog/2013/06/5-useful-magento-extensions">
+          5 useful Magento extensions
+         </a>
+        </li>
+       </ul>
+      </div>
+      <p>
+       Do you use WordPress for your website? If you do, chances are good that you use at least a few plugins. Part of whats fantastic about a CMS like WordPress is the robustness of the plugin ecosystem, allowing you to pick and choose which functionalities to install without having to weigh your system down with pre-installed bloatware that you may not need. And with over 25k plugins (and counting!) in the WordPress
+       <a href="http://wordpress.org/plugins/" target="_blank">
+        Plugin Directory
+       </a>
+       , you have a tremendous number of options that can help you add serious extensibility to your site!
+      </p>
+      <p>
+       But with so many great choices, you might feel overwhelmed. To help you get a handle on some of the essential plugins and extensions available to WordPress users, we asked our Pixafy team to talk about some of their favorites WP plugins.
+      </p>
+      <p>
+       Heres a list of 15 useful plugins and extensions for WordPress:
+      </p>
+      <p>
+       <span id="more-3947">
+       </span>
+      </p>
+      <ol>
+       <li>
+        <span style="line-height: 16px;">
+         <span style="line-height: 16px;">
+          <strong>
+           Magic Fields
+           <br/>
+           <a href="http://magicfields.org/">
+            <img alt="magicfields" class="alignnone size-full wp-image-4095" height="162" src="http://www.pixafy.com/wp-content/uploads/2013/06/magicfields.png" width="300"/>
+            <br/>
+           </a>
+          </strong>
+          A nifty WordPress CMS plugin that focuses on allowing you to create easy custom fields,
+          <a href="http://magicfields.org/" target="_blank">
+           Magic Fields
+          </a>
+          greatly improves WordPress flexibility. You can choose between 15 types of custom fields including image, multi-line, checkbox, audio, file, color picker, drop down, and more. Its feature-rich yet user-friendly interface makes it both a powerful tool and simple to use for the end user.
+         </span>
+        </span>
+       </li>
+       <li>
+        <strong>
+         Akismet
+         <br/>
+         <a href="http://akismet.com/">
+          <img alt="WPPlugins-Akismet" class="alignnone size-full wp-image-4082" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugins-Akismet.jpg" width="490"/>
+         </a>
+         <br/>
+        </strong>
+        The mother of all spam-busters, Akismet is a great tool to fight spam. Itactually comes pre-installed in WordPress, and with good reason! Spambots and spammy posters are a huge nuisance for site owners who want to connect in an authentic way with their audience. All those spammy, irrelevant messages telling you how you can lose weight with this diet! or where you can buy these horrible knockoff shoes! can get a bit distracting. Thankfully, Akismet rescues you from an influx of these annoying messages and reduces your workload in moderating and removing these unwanted comments.
+       </li>
+       <li>
+        <strong>
+         WP Missed Schedule
+         <a href="http://wordpress.org/plugins/wp-missed-schedule/">
+          <img alt="WPPluggins-WP Missed Schedule Fix Failed Future Posts" class="alignnone size-full wp-image-4091" height="159" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPluggins-WP-Missed-Schedule-Fix-Failed-Future-Posts.png" width="482"/>
+          <br/>
+         </a>
+        </strong>
+        One of WordPress great features is that it allows you to schedule posts to be auto-published at a day and time you specify. For bloggers and folks who need to be away or just want to get ahead in their editorial calendar, scheduling can be a godsend. That is, unless something goes awry and you realize that some of your posts were not published while you were away!
+        <a href="http://wordpress.org/plugins/wp-missed-schedule/" target="_blank">
+         WP Missed Schedule
+        </a>
+        is a useful plugin that looks for pieces that missed their scheduled posting time, and then publishes that post properly.
+       </li>
+       <li>
+        <strong>
+         <strong>
+          bbPress
+          <br/>
+          <a href="http://wordpress.org/plugins/bbpress/">
+           <img alt="WPPlugins-bbPress" class="alignnone size-full wp-image-4074" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugins-bbPress.png" width="490"/>
+          </a>
+         </strong>
+        </strong>
+        <br/>
+        Bulletin boards can be a great way to allow your visitors to share and interact within a community. With
+        <a href="http://wordpress.org/plugins/bbpress/" target="_blank">
+         bbPress
+        </a>
+        , you can readily implement such a bulletin board system that allows for useful add-on features through WordPress plugin system.
+       </li>
+       <li>
+        <strong>
+         WP Total Cache
+        </strong>
+        <a href="http://wordpress.org/plugins/w3-total-cache/" target="_blank">
+         <img alt="WPPlugin-W3 Total Cache" class="alignnone size-full wp-image-4066" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-W3-Total-Cache.png" width="490"/>
+         <br/>
+        </a>
+        <a href="http://wordpress.org/plugins/w3-total-cache/" target="_blank">
+         WP Total Cache
+        </a>
+        helps to increase server performance and reduce download times, which in turn improves the user experience of your site. This WordPress Performance Optimization (WPO) framework helps to improve page speed using caching.
+       </li>
+       <li>
+        <strong>
+         Crayon Syntax Highlighter
+         <a href="http://wordpress.org/plugins/crayon-syntax-highlighter/">
+          <img alt="WPPlugins-Crayon-Syntax-Highlighter" class="alignnone size-full wp-image-4079" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugins-Crayon-Syntax-Highlighter.jpg" width="490"/>
+          <br/>
+         </a>
+        </strong>
+        <a href="http://wordpress.org/plugins/crayon-syntax-highlighter/" target="_blank">
+         Crayon Syntax Highlighter
+        </a>
+        is built in PHP and jQuery. It supports customizable languages and themes, and can highlight from a URL, a local file, or WordPress post text. Its a really neat and simple implementation of code snippets within WordPress, with tons of fun features!
+       </li>
+       <li>
+        <strong>
+         Disqus Comment System
+         <br/>
+         <a href="http://wordpress.org/plugins/disqus-comment-system/">
+          <img alt="WPPlugin-DisqusCommentSystem" class="alignnone size-full wp-image-4138" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-DisqusCommentSystem.png" width="490"/>
+         </a>
+         <br/>
+        </strong>
+        <a href="http://wordpress.org/plugins/disqus-comment-system/" target="_blank">
+         Disqus Comment System
+        </a>
+        is a handy comment system for your WP that is hosted and powered by Disqus. This WordPress plugin integrates using the Disqus API, syncing with WP comments. Its also SEO-friendly, with comments indexable by search engines.
+       </li>
+       <li>
+        <strong>
+         Social
+         <br/>
+         <a href="http://wordpress.org/plugins/social/">
+          <img alt="WPPlugin-Social" class="alignnone size-full wp-image-4137" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-Social.png" width="490"/>
+          <br/>
+         </a>
+        </strong>
+        A lightweight plugin that seamlessly integrates with social networking sites Twitter and Facebook,
+        <a href="http://wordpress.org/plugins/social/" target="_blank">
+         Social
+        </a>
+        is brought to you by
+        <a href="http://mailchimp.com/" target="_blank">
+         MailChimp
+        </a>
+        . When you publish a new post, you can choose to auto-broadcast a message to any authenticated accounts with the blog or current logged-in user.
+       </li>
+       <li>
+        <strong>
+         Contact Form 7
+        </strong>
+        <a href="http://wordpress.org/plugins/contact-form-7/">
+         <img alt="WPPlugin-ContactForm7" class="alignnone size-full wp-image-4063" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-ContactForm7.png" width="490"/>
+         <br/>
+        </a>
+        Using forms like Contact us! or data captures is a popular way of adding some interactivity to your site. The
+        <a href="http://wordpress.org/plugins/contact-form-7/" target="_blank">
+         Contact Form 7
+        </a>
+        plugin makes it a breeze to create all kinds of forms that can be customized without super-technical knowledge. It even comes with CAPTCHA to deter auto submissions from bots.
+       </li>
+       <li>
+        <strong>
+         Twitter Tools
+         <br/>
+         <a href="http://wordpress.org/plugins/twitter-tools/">
+          <img alt="WPPlugin-TwitterTools" class="alignnone size-full wp-image-4144" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-TwitterTools.png" width="490"/>
+         </a>
+         <br/>
+        </strong>
+        A plugin that integrates with Twitter,
+        <a href="http://wordpress.org/plugins/twitter-tools/" target="_blank">
+         Twitter Tools
+        </a>
+        allows you to connect multiple Twitter accounts (via Social). You can archive your tweets from your Twitter accounts and even create a blog post from each of your tweets.
+       </li>
+       <li>
+        <strong>
+         All in One SEO Pack
+        </strong>
+        <a href="http://wordpress.org/plugins/all-in-one-seo-pack/">
+         <img alt="WPPlugin-All in One SEO Pack" class="alignnone size-full wp-image-4064" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-All-in-One-SEO-Pack.png" width="490"/>
+         <br/>
+        </a>
+        <a href="http://wordpress.org/plugins/all-in-one-seo-pack/" target="_blank">
+         WordPress SEO
+        </a>
+        plugin helps you automatically optimize your WordPress blog for search engines, providing support of Google Analytics, custom post types, advanced canonical URLs, auto meta tag generation, and more!
+       </li>
+       <li>
+        <strong>
+         Google Analytics for WordPress
+        </strong>
+        <a href="http://wordpress.org/plugins/google-analytics-for-wordpress/">
+         <img alt="WPPlugin-GoogleAnalyticsForWordPress" class="alignnone size-full wp-image-4146" height="153" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-GoogleAnalyticsForWordPress.png" width="490"/>
+         <br/>
+        </a>
+        The
+        <a href="http://wordpress.org/plugins/google-analytics-for-wordpress/" target="_blank">
+         Google Analytics for WordPress
+        </a>
+        plugin lets you easily track your blog with tons of metadata, like views per author and category, automatic tracking of outbound clicks, and pageviews.
+       </li>
+       <li>
+        <strong>
+         The Types
+         <br/>
+         <a href="http://wordpress.org/plugins/types/">
+          <img alt="WPPlugin-Types" class="alignnone size-full wp-image-4154" height="157" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-Types.png" width="490"/>
+         </a>
+         <br/>
+        </strong>
+        <a href="http://wordpress.org/plugins/types/" target="_blank">
+         The Types
+        </a>
+        is a free extension for WordPress by onTheGoSystems. Its great for customizing the WordPress admin by including content types, custom fields, and taxonomy. Its a useful time-saver that makes WordPress very powerful for content management.
+       </li>
+       <li>
+        <strong>
+         WordPress Backup to Dropbox
+        </strong>
+        <a href="http://wpb2d.com/">
+         <img alt="WPPlugins-WordPress-Backup-to-Dropbox" class="alignnone size-full wp-image-4068" height="250" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugins-WordPress-Backup-to-Dropbox.jpg" width="490"/>
+        </a>
+        <br/>
+        One unlucky day when something goes terribly wrong, youll be ridiculously happy that you made regular copies for your website! Created to give you a great backup solution,
+        <a href="http://wpb2d.com/" target="_blank">
+         WordPress Backup to Dropbox
+        </a>
+        is a plugin that auto-uploads your entire site to Dropbox, including all files and the database. Itsgreat for smaller sites and free for basic usage. However, they offer premium options that you can upgrade to.
+       </li>
+       <li>
+        <strong>
+         Shareaholic
+        </strong>
+        <br/>
+        <a href="http://wordpress.org/plugins/shareaholic/" target="_blank">
+         <img alt="WPPlugin-Shareaholic" class="alignnone size-full wp-image-4286" height="164" src="http://www.pixafy.com/wp-content/uploads/2013/06/WPPlugin-Shareaholic.jpg" width="490"/>
+         Shareaholic
+        </a>
+        is a useful social bookmarking menu tool that lets your readers easily discover and submit your articles to various social sites. You can customize which social networks show up as buttons for sharing. A great feature is that it automatically includes your posts title and Twitter handle that you can set up. Additionally, itll show a few related posts with images to entice your readers to click on your older articles.
+       </li>
+      </ol>
+      <p>
+       Stay tuned as we bring you our favorite plugins for
+       <a href="http://www.pixafy.com/magento/" target="_blank">
+        Magento
+       </a>
+       !
+      </p>
+      <p>
+       <em>
+        What are your essential, favorite WordPress plugins and extensions? Share them in comments, or tweet us
+        <a href="http://twitter.com/Pixafy" target="_blank">
+         @Pixafy
+        </a>
+        !
+       </em>
+      </p>
+     </div>
+     <!-- .entry-content -->
+    </div>
+    <!-- #post-## -->
+    <div class="comment-container">
+     <h3 class="section-title">
+      Comments
+     </h3>
+     <h3>
+      6 Responses to
+      <em>
+       15 useful WordPress plugins and extensions
+      </em>
+     </h3>
+     <ol>
+      <li class="comment even thread-even depth-1" id="li-comment-52667">
+       <div class="clear-fix" id="comment-52667">
+        <div class="comment-avatar">
+         <img alt="" class="avatar avatar-60 photo" height="60" src="http://0.gravatar.com/avatar/4aaac3bd452ab164e599a9f9b36af092?s=60&amp;d=retro&amp;r=G" width="60"/>
+        </div>
+        <div class="comment-wrap">
+         <div class="comment-head">
+          <span class="comment-author vcard">
+           <cite class="fn">
+            kristenhanna2012
+           </cite>
+          </span>
+          <!-- .comment-author.vcard -->
+          <span class="comment-meta commentmetadata">
+           June 14, 2013 at 5:33 am
+          </span>
+          <!-- .comment-meta .commentmetadata -->
+         </div>
+         <div class="comment-body">
+          <p>
+           These list will be the most recommended one for any wordpress plugins. wordpress is my favorite platform, I have tried many different wordpress plugins but my favorite among them is Video Gallery plugin.
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="Reply to kristenhanna2012" class="comment-reply-link" href="#comment-52667" onclick='return addComment.moveForm( "comment-52667", "52667", "respond", "3947" )'>
+           Reply
+          </a>
+         </div>
+         <!-- .reply -->
+        </div>
+       </div>
+       <!-- #comment-##  -->
+       <ul class="children">
+        <li class="comment byuser comment-author-glaw odd alt depth-2" id="li-comment-127041">
+         <div class="clear-fix" id="comment-127041">
+          <div class="comment-avatar">
+           <img alt="" class="avatar avatar-60 photo" height="60" src="http://0.gravatar.com/avatar/a9e8da8501fd29523c86ab859450c9eb?s=60&amp;d=retro&amp;r=G" width="60"/>
+          </div>
+          <div class="comment-wrap">
+           <div class="comment-head">
+            <span class="comment-author vcard">
+             <cite class="fn">
+              Gee-Gee Law
+             </cite>
+            </span>
+            <!-- .comment-author.vcard -->
+            <span class="comment-meta commentmetadata">
+             June 15, 2013 at 3:55 am
+            </span>
+            <!-- .comment-meta .commentmetadata -->
+           </div>
+           <div class="comment-body">
+            <p>
+             Hi Kristen,
+            </p>
+            <p>
+             Thanks for commenting! WordPress is so flexible, in part, due to the robust library of plugins available. Definitely useful!
+            </p>
+            <p>
+             Best,
+             <br/>
+             Gee-Gee
+            </p>
+           </div>
+           <div class="reply">
+            <a aria-label="Reply to Gee-Gee Law" class="comment-reply-link" href="#comment-127041" onclick='return addComment.moveForm( "comment-127041", "127041", "respond", "3947" )'>
+             Reply
+            </a>
+           </div>
+           <!-- .reply -->
+          </div>
+         </div>
+         <!-- #comment-##  -->
+        </li>
+        <!-- #comment-## -->
+       </ul>
+       <!-- .children -->
+      </li>
+      <!-- #comment-## -->
+      <li class="comment even thread-odd thread-alt depth-1" id="li-comment-104962">
+       <div class="clear-fix" id="comment-104962">
+        <div class="comment-avatar">
+         <img alt="" class="avatar avatar-60 photo" height="60" src="http://1.gravatar.com/avatar/13b1bb49d71b7711b8c4c9bc66a5b96a?s=60&amp;d=retro&amp;r=G" width="60"/>
+        </div>
+        <div class="comment-wrap">
+         <div class="comment-head">
+          <span class="comment-author vcard">
+           <cite class="fn">
+            <a class="url" href="https://www.lyfcn.net/centre-healthy-juicing-formulas/" rel="external nofollow">
+             karry
+            </a>
+           </cite>
+          </span>
+          <!-- .comment-author.vcard -->
+          <span class="comment-meta commentmetadata">
+           October 18, 2013 at 4:43 pm
+          </span>
+          <!-- .comment-meta .commentmetadata -->
+         </div>
+         <div class="comment-body">
+          <p>
+           That is really helpful. Ive joined your rss feed. Also, I have shared your
+           <br/>
+           web site in my social networks
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="Reply to karry" class="comment-reply-link" href="#comment-104962" onclick='return addComment.moveForm( "comment-104962", "104962", "respond", "3947" )'>
+           Reply
+          </a>
+         </div>
+         <!-- .reply -->
+        </div>
+       </div>
+       <!-- #comment-##  -->
+       <ul class="children">
+        <li class="comment byuser comment-author-glaw odd alt depth-2" id="li-comment-127036">
+         <div class="clear-fix" id="comment-127036">
+          <div class="comment-avatar">
+           <img alt="" class="avatar avatar-60 photo" height="60" src="http://0.gravatar.com/avatar/a9e8da8501fd29523c86ab859450c9eb?s=60&amp;d=retro&amp;r=G" width="60"/>
+          </div>
+          <div class="comment-wrap">
+           <div class="comment-head">
+            <span class="comment-author vcard">
+             <cite class="fn">
+              Gee-Gee Law
+             </cite>
+            </span>
+            <!-- .comment-author.vcard -->
+            <span class="comment-meta commentmetadata">
+             October 20, 2013 at 9:12 am
+            </span>
+            <!-- .comment-meta .commentmetadata -->
+           </div>
+           <div class="comment-body">
+            <p>
+             Hey Karry,
+            </p>
+            <p>
+             Thanks for the shares and the support  we appreciate it!
+            </p>
+            <p>
+             Best,
+             <br/>
+             Gee-Gee
+            </p>
+           </div>
+           <div class="reply">
+            <a aria-label="Reply to Gee-Gee Law" class="comment-reply-link" href="#comment-127036" onclick='return addComment.moveForm( "comment-127036", "127036", "respond", "3947" )'>
+             Reply
+            </a>
+           </div>
+           <!-- .reply -->
+          </div>
+         </div>
+         <!-- #comment-##  -->
+        </li>
+        <!-- #comment-## -->
+       </ul>
+       <!-- .children -->
+      </li>
+      <!-- #comment-## -->
+      <li class="comment even thread-even depth-1" id="li-comment-127017">
+       <div class="clear-fix" id="comment-127017">
+        <div class="comment-avatar">
+         <img alt="" class="avatar avatar-60 photo" height="60" src="http://1.gravatar.com/avatar/14dc5156b427bea2868a394f4179ea49?s=60&amp;d=retro&amp;r=G" width="60"/>
+        </div>
+        <div class="comment-wrap">
+         <div class="comment-head">
+          <span class="comment-author vcard">
+           <cite class="fn">
+            <a class="url" href="http://www.natebal.com/blog/category/wordpress/" rel="external nofollow">
+             Nate Balcom
+            </a>
+           </cite>
+          </span>
+          <!-- .comment-author.vcard -->
+          <span class="comment-meta commentmetadata">
+           November 20, 2013 at 10:26 am
+          </span>
+          <!-- .comment-meta .commentmetadata -->
+         </div>
+         <div class="comment-body">
+          <p>
+           Great list! I use a lot of these WP plugins. The must haves you have listed would be Yoast, Ultimate SEO, Shareaholic, Contact Form and Akismet. I didnt know there was a WordPress to Drop box plugin.
+          </p>
+         </div>
+         <div class="reply">
+          <a aria-label="Reply to Nate Balcom" class="comment-reply-link" href="#comment-127017" onclick='return addComment.moveForm( "comment-127017", "127017", "respond", "3947" )'>
+           Reply
+          </a>
+         </div>
+         <!-- .reply -->
+        </div>
+       </div>
+       <!-- #comment-##  -->
+       <ul class="children">
+        <li class="comment byuser comment-author-glaw odd alt depth-2" id="li-comment-127034">
+         <div class="clear-fix" id="comment-127034">
+          <div class="comment-avatar">
+           <img alt="" class="avatar avatar-60 photo" height="60" src="http://0.gravatar.com/avatar/a9e8da8501fd29523c86ab859450c9eb?s=60&amp;d=retro&amp;r=G" width="60"/>
+          </div>
+          <div class="comment-wrap">
+           <div class="comment-head">
+            <span class="comment-author vcard">
+             <cite class="fn">
+              Gee-Gee Law
+             </cite>
+            </span>
+            <!-- .comment-author.vcard -->
+            <span class="comment-meta commentmetadata">
+             November 20, 2013 at 10:49 am
+            </span>
+            <!-- .comment-meta .commentmetadata -->
+           </div>
+           <div class="comment-body">
+            <p>
+             Hey Nate,
+            </p>
+            <p>
+             Yea, the WordPress to DropBox plugin can come in handy!
+            </p>
+            <p>
+             And thanks, right back at you  great list of must-have WordPress plugins for 2013 on your site.
+            </p>
+            <p>
+             Best,
+             <br/>
+             Gee-Gee
+            </p>
+           </div>
+           <div class="reply">
+            <a aria-label="Reply to Gee-Gee Law" class="comment-reply-link" href="#comment-127034" onclick='return addComment.moveForm( "comment-127034", "127034", "respond", "3947" )'>
+             Reply
+            </a>
+           </div>
+           <!-- .reply -->
+          </div>
+         </div>
+         <!-- #comment-##  -->
+        </li>
+        <!-- #comment-## -->
+       </ul>
+       <!-- .children -->
+      </li>
+      <!-- #comment-## -->
+     </ol>
+     <div class="comment-respond" id="respond">
+      <h3 class="comment-reply-title" id="reply-title">
+       <small>
+        <a href="/blog/2013/06/15-useful-wordpress-plugins-and-extensions#respond" id="cancel-comment-reply-link" rel="nofollow" style="display:none;">
+         Cancel Comment
+        </a>
+       </small>
+      </h3>
+      <form action="http://www.pixafy.com/wp-comments-post.php" class="comment-form" id="commentform" method="post">
+       <p class="comment-form-author">
+        <label for="author">
+         Name
+         <span class="required">
+          *
+         </span>
+        </label>
+        <input aria-required="true" id="author" name="author" size="30" type="text" value=""/>
+       </p>
+       <p class="comment-form-email">
+        <label for="email">
+         Email
+         <span class="required">
+          *
+         </span>
+        </label>
+        <input aria-describedby="email-notes" aria-required="true" id="email" name="email" size="30" type="text" value=""/>
+       </p>
+       <p class="cptch_block">
+        <br/>
+        <input name="cptch_result" type="hidden" value="5eI="/>
+        <input name="cptch_time" type="hidden" value="1435917954"/>
+        <input type="hidden" value="Version: 4.1.0"/>
+        <input aria-required="true" autocomplete="off" class="cptch_input" id="cptch_input" maxlength="2" name="cptch_number" required="required" size="2" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;" type="text" value=""/>
+         4 =  twenty
+       </p>
+       <p class="comment-form-comment">
+        <label for="comment">
+         Comment *
+        </label>
+        <textarea aria-required="true" cols="45" id="comment" name="comment" rows="8">
+        </textarea>
+       </p>
+       <p class="form-submit">
+        <input class="submit" id="submit" name="submit" type="submit" value="Submit Comment"/>
+        <input id="comment_post_ID" name="comment_post_ID" type="hidden" value="3947"/>
+        <input id="comment_parent" name="comment_parent" type="hidden" value="0"/>
+       </p>
+       <p style="display: none;">
+        <input id="akismet_comment_nonce" name="akismet_comment_nonce" type="hidden" value="0cbb8e2738"/>
+       </p>
+       <p style="display: none;">
+        <input id="ak_js" name="ak_js" type="hidden" value="188"/>
+       </p>
+      </form>
+     </div>
+     <!-- #respond -->
+    </div>
+   </div>
+   <!-- close leftContent -->
+   <div class="sidebar post-sidebar">
+    <div class="sidebar-item">
+     <div class="sidebar-title">
+      About Pixafy
+     </div>
+     <p class="sidebar-text">
+      Pixafy is a powerful and easy to use eCommerce platform with capabilities comparable to Magento. 
+            Starting at $89/month it empowers merchants of all sizes to take control and grow their online businesses on their terms.
+     </p>
+    </div>
+    <div class="sidebar-item">
+     <div class="wpcf7" dir="ltr" id="wpcf7-f23616-o1" lang="en-US" role="form">
+      <div class="screen-reader-response">
+      </div>
+      <form action="/blog/2013/06/15-useful-wordpress-plugins-and-extensions#wpcf7-f23616-o1" class="wpcf7-form base-form subscribe-field" method="post" name="" novalidate="novalidate">
+       <div style="display: none;">
+        <input name="_wpcf7" type="hidden" value="23616"/>
+        <input name="_wpcf7_version" type="hidden" value="4.2.1"/>
+        <input name="_wpcf7_locale" type="hidden" value="en_US"/>
+        <input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f23616-o1"/>
+        <input name="_wpnonce" type="hidden" value="81ae83eea7"/>
+       </div>
+       <div class="sidebar-subtitle">
+        Learn more about Pixafy
+       </div>
+       <p>
+        <span class="wpcf7-form-control-wrap your-email">
+         <input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" name="your-email" placeholder="Your email address" size="40" type="email" value=""/>
+        </span>
+        <br/>
+        <input class="wpcf7-form-control wpcf7-submit" type="submit" value="Learn More"/>
+       </p>
+       <div class="wpcf7-response-output wpcf7-display-none">
+       </div>
+      </form>
+     </div>
+    </div>
+    <div class="sidebar-item">
+     <div class="sidebar-title">
+      Top Categories
+     </div>
+     <div class="tags popular-tags">
+      <ul class="tag-list">
+       <li class="cat-item cat-item-3">
+        <a href="http://www.pixafy.com/blog/category/employee-profiles">
+         Employee profiles
+        </a>
+       </li>
+       <li class="cat-item cat-item-12">
+        <a href="http://www.pixafy.com/blog/category/pixafy-history">
+         Pixafy History
+        </a>
+       </li>
+       <li class="cat-item cat-item-23">
+        <a href="http://www.pixafy.com/blog/category/mobile-games">
+         Mobile games
+        </a>
+       </li>
+       <li class="cat-item cat-item-33">
+        <a href="http://www.pixafy.com/blog/category/client-spotlight">
+         Client spotlight
+        </a>
+       </li>
+       <li class="cat-item cat-item-48">
+        <a href="http://www.pixafy.com/blog/category/tech-topics">
+         Tech topics
+        </a>
+       </li>
+       <li class="cat-item cat-item-244">
+        <a href="http://www.pixafy.com/blog/category/work-experience">
+         Work Experience
+        </a>
+       </li>
+       <li class="cat-item cat-item-339">
+        <a href="http://www.pixafy.com/blog/category/press-releases">
+         Press releases
+        </a>
+       </li>
+       <li class="cat-item cat-item-600">
+        <a href="http://www.pixafy.com/blog/category/blog-roundup">
+         Blog Roundup
+        </a>
+       </li>
+       <li class="cat-item cat-item-604">
+        <a href="http://www.pixafy.com/blog/category/twitter-roundup">
+         Twitter Roundup
+        </a>
+       </li>
+       <li class="cat-item cat-item-62">
+        <a href="http://www.pixafy.com/blog/category/wordpress">
+         WordPress
+        </a>
+       </li>
+       <li class="cat-item cat-item-50">
+        <a href="http://www.pixafy.com/blog/category/magento">
+         Magento
+        </a>
+       </li>
+       <li class="cat-item cat-item-878">
+        <a href="http://www.pixafy.com/blog/category/guest-posts">
+         Guest Posts
+        </a>
+       </li>
+       <li class="cat-item cat-item-1338">
+        <a href="http://www.pixafy.com/blog/category/press">
+         Press
+        </a>
+       </li>
+       <li class="cat-item cat-item-5">
+        <a href="http://www.pixafy.com/blog/category/pixafy">
+         Pixafy
+        </a>
+       </li>
+       <li class="cat-item cat-item-1812">
+        <a href="http://www.pixafy.com/blog/category/ecommerce-shipping-strategy">
+         eCommerce Shipping Strategy
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="sidebar-item search-bar clear-fix">
+     <form action="http://www.pixafy.com/" class="base-form" id="searchform" method="get">
+      <span class="input-field">
+       <input class="field" id="s" name="s" placeholder="Search" type="text"/>
+      </span>
+      <span class="input-button">
+       <input class="submit" id="searchsubmit" name="submit" type="submit" value="Search"/>
+      </span>
+     </form>
+    </div>
+    <div class="sidebar-item banner">
+     <a data-ga="cat:side_banner" href="http://www.pixafy.com?utm_source=blog&amp;utm_medium=banner&amp;utm_content=homepage_side_general&amp;utm_campaign=internal" title="Affordable and User-Friendly Magento Solutions for the Aspirational Merchant">
+      <img alt="Affordable and User-Friendly Magento Solutions for the Aspirational Merchant" src="http://www.pixafy.com/wp-content/themes/pixafy/images/banners/PixafyInstant-Banner-Vert6-revisionsCase.jpg"/>
+     </a>
+    </div>
+   </div>
+  </div>
+  <div style="clear:both;">
+  </div>
+  <div id="footer-spacer">
+  </div>
+  <div id="footer-top">
+   <div class="container">
+    <img class="footer-magento-innovative" src="http://www.pixafy.com/wp-content/themes/pixafy/images/footer-magento-innovative.png"/>
+    <img class="pixafy-footer-logo" src="http://www.pixafy.com/wp-content/themes/pixafy/images/instant/logo.png"/>
+    <p>
+     Pixafy spent the last few years building some of the world's most sophisticated Magento sites. Our key learnings inspired us to 
+build a series of powerful, intuitive products for growing merchants that do not have Enterprise budgets. Our easy to use solutions
+are built by Pixafy, powered by Magento and created for the aspirational merchant.
+    </p>
+    <div style="clear:both;">
+    </div>
+   </div>
+  </div>
+  <div id="footer">
+   <div class="container">
+    <div class="footer-links-wrap clear-fix">
+     <div class="footer-link">
+      <h6>
+       <a href="http://www.pixafy.com">
+        Pixafy
+       </a>
+      </h6>
+      <ul>
+       <li>
+        <a href="http://www.pixafy.com/features">
+         Features
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/pricing">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/pricing/#faq">
+         Questions
+        </a>
+       </li>
+       <li>
+        <a href="https://support.pixafy.com">
+         Support
+        </a>
+       </li>
+       <li>
+        <a href="https://hosting.pixafy.com/">
+         Login
+        </a>
+       </li>
+       <li>
+        <a class="free-trial-action" href="#free-trial">
+         Free Trial
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-link">
+      <h6>
+       <a href="http://www.pixafy.com/services/magento">
+        Services
+       </a>
+      </h6>
+      <ul class="scroll-to-container">
+       <li>
+        <a href="http://www.pixafy.com/services/magento">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/services/magento-services">
+         Magento Enterprise
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/services/portfolio">
+         Portfolio
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/services/contact">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-link">
+      <h6>
+       <a href="http://www.pixafy.com/company">
+        Company
+       </a>
+      </h6>
+      <ul>
+       <li>
+        <a href="http://www.pixafy.com/company/team">
+         Team
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/company/careers">
+         Careers
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/blog">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/services/partners">
+         Partners
+        </a>
+       </li>
+       <li>
+        <a href="http://www.pixafy.com/privacy-policy">
+         Legal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-link">
+      <h6>
+       <a href="http://www.pixafy.com/contact">
+        Contact Us
+       </a>
+      </h6>
+      <ul>
+       <li>
+        1-855-446-1200
+       </li>
+       <li>
+        <a href="mailto:info@pixafy.com">
+         info@pixafy.com
+        </a>
+       </li>
+       <li class="spacer">
+       </li>
+       <li>
+        810 Seventh Ave
+        <br/>
+        37th Floor
+        <br/>
+        New York, NY 10019
+       </li>
+      </ul>
+     </div>
+     <div class="footer-link">
+      <h6>
+       <a href="">
+        Social Media
+       </a>
+      </h6>
+      <ul>
+       <li>
+        <a href="https://twitter.com/pixafy" target="_blank">
+         Twitter
+        </a>
+       </li>
+       <li>
+        <a href="https://www.linkedin.com/company/pixafy" target="_blank">
+         Linkedin
+        </a>
+       </li>
+       <li>
+        <a href="http://www.crunchbase.com/organization/pixafy" target="_blank">
+         CrunchBase
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div style="clear:both;">
+    </div>
+    <ul class="icons">
+     <li>
+      <a href="http://www.rapidssl.com" target="_blank">
+       <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/rapid-ssl.png"/>
+      </a>
+     </li>
+     <li>
+      <a href="http://www.authorize.net" target="_blank">
+       <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/authorize-net.png"/>
+      </a>
+     </li>
+     <li>
+      <a href="http://www.magentocommerce.com" target="_blank">
+       <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/magento.png"/>
+      </a>
+     </li>
+     <li>
+      <a href="http://www.wordpress.org" target="_blank">
+       <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/wordpress.png"/>
+      </a>
+     </li>
+     <li>
+      <a href="http://wearemadeinny.com/" target="_blank">
+       <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/made-in-ny.png"/>
+      </a>
+     </li>
+    </ul>
+    <p class="copyright">
+     <span>
+      
+     </span>
+     2015 Pixafy, Inc.
+    </p>
+   </div>
+  </div>
+  <script type="text/javascript">
+   setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0014/2641.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+  <!-- Start of Async HubSpot Analytics Code for WordPress v1.9.4 -->
+  <script type="text/javascript">
+   var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+(function(d,s,i,r) {
+  if (d.getElementById(i)){return;}
+  var n = d.createElement(s),e = document.getElementsByTagName(s)[0];
+  n.id=i;n.src = '//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/425453.js';
+  e.parentNode.insertBefore(n, e);
+})(document, "script", "hs-analytics", 300000);
+  </script>
+  <!-- End of Async HubSpot Analytics Code -->
+  <script src="http://www.pixafy.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/themes/pixafy/js/ga_tracking.js?ver=1418677573" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-includes/js/comment-reply.min.js?ver=4.1.1" type="text/javascript">
+  </script>
+  <script src="http://www.pixafy.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.pixafy.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]&gt; */
+  </script>
+  <script src="http://www.pixafy.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.2.1" type="text/javascript">
+  </script>
+  <!-- Hubspot Request Demo Form -->
+  <div class="hidden request-demo-form" id="hubspot-form">
+   <script charset="utf-8" src="//js.hsforms.net/forms/current.js">
+   </script>
+   <script>
+    hbspt.forms.create({ 
+        portalId: '425453',
+        formId: 'a79895a4-fb93-4a17-8f37-64902c299ede',
+	            onFormReady: function($form) {
+	        $form.attr('target', 'hubspot-iframe');
+	      }
+      });
+   </script>
+   <iframe id="hubspot-iframe" name="hubspot-iframe">
+   </iframe>
+  </div>
+  <!-- End of Hubspot Request Demo Form -->
+  <!-- Hubspot Trial Deployment form -->
+  <div class="hidden email-capture-form" id="hubspot-form">
+   <script charset="utf-8" src="//js.hsforms.net/forms/current.js">
+   </script>
+   <script>
+    hbspt.forms.create({ 
+        portalId: '425453',
+        formId: '4c889bc3-5e9e-4aa2-ae82-1ac8e6dbc956',
+         onFormReady: function($form) {
+            $form.attr('target', 'hubspot-iframe');
+          }
+      });
+   </script>
+   <iframe id="hubspot-iframe" name="hubspot-iframe">
+   </iframe>
+  </div>
+  <!-- End of Hubspot Trial Deployment form -->
+  <div class="contact-form contact-form-modal">
+   <div class="contact-form-inner request-demo">
+    <h3 class="section-title m0 center">
+     Schedule a Free Demo
+    </h3>
+    <p class="section-parag-lg center mb40">
+     Fill out this form to schedule a personalized demo
+    </p>
+    <form action="" class="contact-form-element" data-ga="cat:demo_form, act:demo, lab:universal, listener:off">
+     <div class="input-group ">
+      <div class="inputs">
+       <input class="contact-name" data-validate="required" name="name" placeholder="Name" type="text"/>
+      </div>
+     </div>
+     <div class="input-group tight-field left">
+      <div class="inputs">
+       <input class="contact-email" data-validate="required" name="email" placeholder="Email Address" type="text"/>
+      </div>
+     </div>
+     <div class="input-group tight-field right">
+      <div class="inputs">
+       <input class="contact-phone" name="phone-number" placeholder="Phone Number" type="text"/>
+      </div>
+     </div>
+     <div class="input-group tight-field left">
+      <div class="inputs">
+       <input class="contact-company-url" data-validate="required" name="company_url" placeholder="Company URL" type="text"/>
+      </div>
+     </div>
+     <div class="input-group tight-field right">
+      <div class="inputs">
+       <select class="industry" data-validate="required" name="user_type">
+        <option value="">
+         User Type
+        </option>
+        <option value="Merchant">
+         Merchant
+        </option>
+        <option value="Designer">
+         Designer
+        </option>
+        <option value="Developer">
+         Developer
+        </option>
+        <option value="Other">
+         Other
+        </option>
+       </select>
+      </div>
+     </div>
+     <div class="input-group">
+      <div class="inputs">
+       <textarea class="contact-message" name="message" placeholder="Message">
+       </textarea>
+      </div>
+     </div>
+     <div class="input-box half-width block-center">
+      <div class="inputs">
+       <input class="submit pix-btn orange" name="send" type="submit" value="Send"/>
+      </div>
+     </div>
+     <input name="topic" type="hidden" value="15 useful WordPress plugins and extensions"/>
+     <input class="contact-page" name="page" type="hidden" value="15 useful WordPress plugins and extensions"/>
+     <input name="entry-point" type="hidden" value="https://www.google.co.za/"/>
+    </form>
+    <div style="clear:both;">
+    </div>
+    <p class="contact-result contact-error">
+    </p>
+    <p class="contact-result contact-success center-txt section-parag-md">
+    </p>
+   </div>
+  </div>
+  <!-- .contact-form-modal end -->
+  <div class="base-form signup-form free-trial-email-modal">
+   <div class="signup-form-inner free-trial-inner">
+    <h5 class="section-title center m0">
+     Start your 14-day free trial
+    </h5>
+    <p class="section-parag-lg center mb30">
+     No credit card required
+    </p>
+    <div class="signup-form-container">
+     <form action="http://www.pixafy.com/instant_trials.php" class="signup-form-element" data-ga="cat:email_field_2, act:submit_email, lab:universal, evt:submit">
+      <input class="signup-page" name="page" type="hidden" value="15 useful WordPress plugins and extensions"/>
+      <input name="entry-point" type="hidden" value="https://www.google.co.za/"/>
+      <span class="input-field">
+       <input class="signup-email" data-validate="required, email" name="email" placeholder="Email address" type="text" value=""/>
+       <span class="signup-required-error email-error">
+       </span>
+      </span>
+      <span class="input-box">
+       <input class="submit pix-btn orange" name="send" type="submit" value="Get Started"/>
+       <span class="loader">
+        <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/ajax-loader.gif"/>
+       </span>
+      </span>
+     </form>
+     <div style="clear:both;">
+     </div>
+     <p class="signup-result signup-error">
+     </p>
+     <p class="signup-result signup-success">
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- .free-trial-modal end -->
+  <div class="base-form signup-form free-trial free-trial-modal-white free-trial-real-modal">
+   <div class="inner signup-form-inner">
+    <div class="signup-form-container">
+     <h2 class="section-title center mt0 mb0">
+      Create your online store
+     </h2>
+     <p class="section-parag-lg center mb30">
+      Start your 14-day trial now
+     </p>
+     <form action="http://www.pixafy.com/instant_trials.php" class="signup-form-element" data-ga="cat:trial_form, act:trial, lab:universal, evt:submit, listener:off">
+      <input name="utm_campaign" type="hidden" value=""/>
+      <!-- Email -->
+      <div class="input-group">
+       <div class="inputs">
+        <div class="">
+         <input class="signup-email" data-validate="required, email, maxLength:255" name="email_address" placeholder="Email Address" type="text" value=""/>
+         <span class="signup-required-error email-error">
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Store Name -->
+      <div class="input-group">
+       <div class="inputs">
+        <div>
+         <input class="signup-store-name" data-validate="required, maxLength:32" maxlength="32" name="store_name" placeholder="Store Name" type="text" value=""/>
+         <span class="signup-required-error">
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Password -->
+      <div class="input-group">
+       <div class="inputs">
+        <div class="">
+         <input class="signup-password" data-validate="minLength:8, maxLength:20" id="instant-signup-pw" name="password" placeholder="Password" type="password" value=""/>
+         <span class="signup-required-error">
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Phone Number -->
+      <div class="input-group last">
+       <div class="inputs">
+        <div class="">
+         <input class="signup-telephone" name="phone_number" placeholder="Phone Number" type="tel" value=""/>
+        </div>
+       </div>
+      </div>
+      <span class="input-box block-center">
+       <input class="submit pix-btn orange" name="send" type="submit" value="Start Free Trial"/>
+       <span class="loader">
+        <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/ajax-loader.gif"/>
+       </span>
+      </span>
+     </form>
+     <div style="clear:both;">
+     </div>
+     <p class="signup-result signup-error">
+     </p>
+     <p class="signup-result signup-success">
+     </p>
+    </div>
+   </div>
+   <script async="" src="//action.media6degrees.com/orbserv/hbjs?pixId=25105&amp;pcv=38" type="text/javascript">
+   </script>
+  </div>
+  <!-- .free-trial-real-modal end -->
+  <div class="free-trial-modal-white free-trial-after-modal" style="display:none;">
+   <div class="inner">
+    <div class="wait-msg">
+     <div id="free-trial-after-form-header">
+      <div id="before-store-launch-screen">
+       <h3 class="title center">
+        Your store will be ready in a minute!
+       </h3>
+       <a class="submit-button-link" href="javascript:void(0)">
+        <button class="loading-trial-btn">
+         Loading store
+         <span class="dots">
+         </span>
+        </button>
+       </a>
+      </div>
+      <!--   &lt;div id="after-store-launch-screen" style="display:none;"&gt;
+                    &lt;h3 class="title"&gt;Your store is ready!&lt;/h3&gt;
+                    &lt;a class="submit-button-link" href="javascript:void(0)"&gt;
+                        &lt;button class="loading-trial-btn success-trial-btn"&gt;Visit your store!&lt;/button&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt; -->
+      <div id="store-creation-fail" style="display:none;">
+       <h3>
+        There was an error while creating your store. Please contact our customer support at support@pixafy.com or call 1-855-446-1200.
+       </h3>
+      </div>
+     </div>
+     <div id="trial-extra-data-form-container">
+      <div id="popular-feat-video">
+       <section class="homepage-block content-block homepage-magento-feat">
+        <div class="container">
+         <div class="row">
+          <div class="col-md-6 create-store">
+           <h2 class="section-title">
+            Build your store like Le Pain Quotidien
+           </h2>
+           <p class="section-parag-lg">
+            International restaurant group Le Pain Quotidien found success with Pixafy.
+           </p>
+           <ul class="section-parag-lg">
+            <li>
+             200% increase in team efficiency
+            </li>
+            <li>
+             24% increase in mobile revenue
+            </li>
+            <li>
+             30% increase in customer engagement
+            </li>
+            <li>
+             Faster site speed
+            </li>
+           </ul>
+          </div>
+          <div class="col-md-6 lpq-room-img-bg">
+           <img src="http://www.pixafy.com/wp-content/themes/pixafy/images/temp-images/backgrounds/lepain-devices.png"/>
+          </div>
+         </div>
+        </div>
+        <!-- .container -->
+       </section>
+       <!--  &lt;p class="descrip"&gt;While you wait, watch this clip to learn about popular features!&lt;/p&gt;
+                    &lt;iframe width="650" height="450" src="" data-src="http://www.youtube.com/embed/LrBEgPPk7xE" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt; -->
+      </div>
+     </div>
+     <script async="" src="//action.media6degrees.com/orbserv/hbjs?pixId=25109&amp;pcv=42" type="text/javascript">
+     </script>
+    </div>
+   </div>
+  </div>
+  <!-- free-trial-after-modal end -->
+  <!-- 6 Degrees Media Tracking -->
+  <!-- End of 6 Degrees Media Tracking -->
+  <!-- Start Alexa Certify Javascript -->
+  <script type="text/javascript">
+   _atrk_opts =
+        { atrk_acct:"pL61l1aoqAD2vg", domain:"pixafy.com",dynamic: true}
+        ;
+        (function()
+        { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); }
+        )();
+  </script>
+  <noscript>
+   <img alt="" height="1" src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=pL61l1aoqAD2vg" style="display:none" width="1"/>
+  </noscript>
+  <!-- End Alexa Certify Javascript -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"87989aabb4","applicationID":"6097770","transactionName":"ZgBbN0QECxFUV0xRW19KbBFfSgwMUVFAFkRZFQ==","queueTime":0,"applicationTime":25,"atts":"SkdYQQweGB8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}
+  </script>
+ </body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching using apc
+Object Caching 1229/1338 objects using apc
+
+ Served from: www.pixafy.com @ 2015-07-03 06:05:54 by W3 Total Cache -->

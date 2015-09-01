@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Make Batch Files - A GUI tool that allows to create Windows batch files easily
+  </title>
+  <meta name="content" value="Create Windows batch (command) files quickly and easily. Just drag-and-drop commands then click 'Create', easy as that!"/>
+  <meta name="keywords" value="windows batch file, .bat, .cmd"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39222158-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+ </head>
+ <body>
+  <!-- AddThis Smart Layers BEGIN -->
+  <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ed606cb0053e355" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }, 
+    'follow' : {
+      'services' : [
+        {'service': 'facebook', 'id': 'MakeBatchFiles'},
+        {'service': 'twitter', 'id': 'makebatchfiles'}
+      ]
+    },  
+    'whatsnext' : {},  
+    'recommended' : {} 
+  });
+  </script>
+  <!-- AddThis Smart Layers END -->
+  <div id="wrapper">
+   <div id="header">
+    <div id="logo">
+     <img alt="make batch files" src="images/makebatchfiles.png"/>
+    </div>
+    <div id="title">
+     <h1>
+      Make Batch Files
+     </h1>
+    </div>
+   </div>
+   <div class="spacer_30px">
+   </div>
+   <div id="videoandtext">
+    <div id="videotext">
+     <p>
+      A tool that allows to create Windows batch files quickly. Eeasy to learn and to use.
+     </p>
+     <ul class="pros">
+      <li>
+       No need to remember or type command names. Just drag-and-drop items with understandable names to the project.
+      </li>
+      <li>
+       No need to learn or remember all of the switches. Visual options editor for every command!
+      </li>
+      <li>
+       Automates common tasks like validating parameters or showing "how to use" info.
+      </li>
+     </ul>
+    </div>
+    <div id="video">
+     <iframe allowfullscreen="" frameborder="0" height="315" src="//www.youtube.com/embed/M9qZatQY-J8?rel=0" width="560">
+     </iframe>
+    </div>
+   </div>
+   <div class="spacer_30px">
+   </div>
+   <div id="buttons">
+    <div class="button_wrapper">
+     <ul>
+      <li>
+       <a class="button button-indigo" href="https://s3-eu-west-1.amazonaws.com/makebatchfiles/makebatchfiles.zip" onclick="javascript: _gaq.push(['_trackPageview', '/downloadpro']); ">
+        <span>
+         Download Demo
+        </span>
+       </a>
+      </li>
+      <li>
+       <span class="or">
+       </span>
+      </li>
+      <li>
+       <a class="button button-orange" href="http://www.trialpay.com/productpage/?c=432a265&amp;tid=6rp6pxp">
+        <span>
+         Get your free lifetime key (via TrialPay)
+        </span>
+       </a>
+      </li>
+      <li>
+       <span class="or">
+       </span>
+      </li>
+      <li class="last">
+       <a class="button button-black" href="http://www.makebatchfiles.com/help/index.html">
+        <span>
+         View Documentation
+        </span>
+       </a>
+      </li>
+      <li>
+       <span class="or">
+       </span>
+      </li>
+     </ul>
+    </div>
+    <div class="spacer_30px">
+    </div>
+    <div id="tutorial">
+     <h2>
+      Video tutorial
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <iframe allowfullscreen="" frameborder="0" height="480" src="//www.youtube.com/embed/ZjL6nrkKbPc?rel=0" width="853">
+     </iframe>
+    </div>
+    <div class="spacer_30px">
+    </div>
+    <a name="fundraiser">
+    </a>
+    <div id="fundraisertext">
+     <h2>
+      The Fundraiser
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <p>
+      This project has a working demo version but is in the "fundraiser" mode. We need around 10 000 US dollars to turn into a nice and complete tool. You can pre-order your copy via PayPal with 50% off (that makes 29USD minimum per "Home" license) and we'll use collected money to fund the development process of "Make Batch Files". Fundraiser deadline is January 31st of 2014. Planned release day: May 1st of 2014, however there will be a lot of beta versions in the process. If fundraiser fails you get full money back via PayPal. OR you can get it for
+      <b>
+       FREE
+      </b>
+      from TrialPay. If you do not want to preorder the tool but still do want to help - check out sponsor ads below, we'll add money received from ads to the total collected sum.
+     </p>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      Fundraiser Sponsors
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <p>
+      We'll add money earned from clicks on advertising to the total fund amount.
+     </p>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      Google Ads
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+     </script>
+     <!-- MakeBatchFiles -->
+     <ins class="adsbygoogle" data-ad-client="ca-pub-7895044966403694" data-ad-slot="2364848830" style="display:inline-block;width:970px;height:90px">
+     </ins>
+     <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+     </script>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      Amazon Ads
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <iframe border="0" frameborder="0" height="90" marginwidth="0" scrolling="no" src="http://rcm-na.amazon-adsystem.com/e/cm?t=zerodollarsta-20&amp;o=1&amp;p=48&amp;l=ur1&amp;category=kindle&amp;banner=1ZBZSNEHH7SQA3YGEH82&amp;f=ifr" style="border:none;" width="728">
+     </iframe>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      Fundraiser preorder links
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <div class="table_wrapper">
+      <table>
+       <tr>
+        <th>
+         License
+        </th>
+        <th>
+         Price
+        </th>
+        <th>
+         Link
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Home (for use at home only)
+        </td>
+        <td>
+         <strike>
+          59
+         </strike>
+         29
+        </td>
+        <td>
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input name="cmd" type="hidden" value="_s-xclick"/>
+          <input name="hosted_button_id" type="hidden" value="D6ERAK96QVBX4"/>
+          <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" type="image"/>
+          <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/>
+         </form>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Office (for use at work)
+        </td>
+        <td>
+         <strike>
+          99
+         </strike>
+         49
+        </td>
+        <td>
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input name="cmd" type="hidden" value="_s-xclick"/>
+          <input name="hosted_button_id" type="hidden" value="MSUWFNUVY98ZG"/>
+          <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" type="image"/>
+          <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/>
+         </form>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         UNLIMITED (for use at work)
+        </td>
+        <td>
+         <strike>
+          1999
+         </strike>
+         999
+        </td>
+        <td>
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input name="cmd" type="hidden" value="_s-xclick"/>
+          <input name="hosted_button_id" type="hidden" value="GHYMJTGYH7UKU"/>
+          <input alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" type="image"/>
+          <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"/>
+         </form>
+        </td>
+       </tr>
+      </table>
+     </div>
+     <div class="spacer_15px">
+     </div>
+     <p>
+      <b>
+       "Home"
+      </b>
+      license is for any number of PCs and any number of users at your home.
+      <b>
+       "Office"
+      </b>
+      license is for SINGLE user and any number of PCs she works on at the office.
+      <b>
+       UNLIMITED
+      </b>
+      license is for any number of users on any number of PCs.
+     </p>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      How to track the progress?
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <ul>
+      <li>
+       On author's blog:
+       <a href="http://www.dmitripopov.com">
+        http://www.dmitripopov.com
+       </a>
+      </li>
+      <li>
+       Project's twitter:
+       <a href="http://twitter.com/makebatchfiles">
+        http://twitter.com/makebatchfiles
+       </a>
+      </li>
+      <li>
+       Facebook page:
+       <a href="http://www.facebook.com/makebatchfiles">
+        http://www.facebook.com/makebatchfiles
+       </a>
+      </li>
+     </ul>
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      How can I help?
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <p>
+      At this time -
+      <b>
+       PLEASE PROMOTE!
+      </b>
+      This project will fail without "social storm". Subscribe to our mailing list, like our Facebook page posts, retweet project stats, post on your favorite forums, at least twice a week tell your friends to participate. If you have a blog about Windows OS and everything around it - please write a cover post.
+     </p>
+     <div class="spacer_15px">
+     </div>
+     <!-- AddThis Button BEGIN -->
+     <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count">
+      </a>
+      <a class="addthis_button_tweet">
+      </a>
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal">
+      </a>
+      <a class="addthis_counter addthis_pill_style">
+      </a>
+     </div>
+     <script type="text/javascript">
+      var addthis_config = {"data_track_addressbar":true};
+     </script>
+     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ed606cb0053e355" type="text/javascript">
+     </script>
+     <!-- AddThis Button END -->
+     <div class="spacer_30px">
+     </div>
+     <h2>
+      Fundraiser Stats
+     </h2>
+     <div class="spacer_15px">
+     </div>
+     <div id="collected">
+      <p>
+       Collected
+       <b>
+        512 USD
+       </b>
+       out of
+       <b>
+        10.000 USD
+       </b>
+       .
+      </p>
+     </div>
+    </div>
+    <div class="spacer_30px">
+    </div>
+    <!-- Begin MailChimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+     #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <div id="mc_embed_signup">
+     <form action="http://majormind.us5.list-manage.com/subscribe/post?u=151dbb01ae247939f0e4363b1&amp;id=90d8a4d376" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+      <h2>
+       Subscribe to our mailing list
+      </h2>
+      <div class="indicates-required">
+       <span class="asterisk">
+        *
+       </span>
+       indicates required
+      </div>
+      <div class="mc-field-group">
+       <label for="mce-EMAIL">
+        Email Address
+        <span class="asterisk">
+         *
+        </span>
+       </label>
+       <input class="required email" id="mce-EMAIL" name="EMAIL" type="email" value=""/>
+      </div>
+      <div class="mc-field-group">
+       <label for="mce-FNAME">
+        First Name
+       </label>
+       <input class="" id="mce-FNAME" name="FNAME" type="text" value=""/>
+      </div>
+      <div class="mc-field-group">
+       <label for="mce-LNAME">
+        Last Name
+       </label>
+       <input class="" id="mce-LNAME" name="LNAME" type="text" value=""/>
+      </div>
+      <div class="mc-field-group input-group">
+       <strong>
+        Email Format
+       </strong>
+       <ul>
+        <li>
+         <input id="mce-EMAILTYPE-0" name="EMAILTYPE" type="radio" value="html"/>
+         <label for="mce-EMAILTYPE-0">
+          html
+         </label>
+        </li>
+        <li>
+         <input id="mce-EMAILTYPE-1" name="EMAILTYPE" type="radio" value="text"/>
+         <label for="mce-EMAILTYPE-1">
+          text
+         </label>
+        </li>
+       </ul>
+      </div>
+      <div class="clear" id="mce-responses">
+       <div class="response" id="mce-error-response" style="display:none">
+       </div>
+       <div class="response" id="mce-success-response" style="display:none">
+       </div>
+      </div>
+      <div class="clear">
+       <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"/>
+      </div>
+     </form>
+    </div>
+    <script type="text/javascript">
+     var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';
+try {
+    var jqueryLoaded=jQuery;
+    jqueryLoaded=true;
+} catch(err) {
+    var jqueryLoaded=false;
+}
+var head= document.getElementsByTagName('head')[0];
+if (!jqueryLoaded) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+    head.appendChild(script);
+    if (script.readyState &amp;&amp; script.onload!==null){
+        script.onreadystatechange= function () {
+              if (this.readyState == 'complete') mce_preload_check();
+        }    
+    }
+}
+
+var err_style = '';
+try{
+    err_style = mc_custom_error_style;
+} catch(e){
+    err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+}
+var head= document.getElementsByTagName('head')[0];
+var style= document.createElement('style');
+style.type= 'text/css';
+if (style.styleSheet) {
+  style.styleSheet.cssText = err_style;
+} else {
+  style.appendChild(document.createTextNode(err_style));
+}
+head.appendChild(style);
+setTimeout('mce_preload_check();', 250);
+
+var mce_preload_checks = 0;
+function mce_preload_check(){
+    if (mce_preload_checks&gt;40) return;
+    mce_preload_checks++;
+    try {
+        var jqueryLoaded=jQuery;
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+    head.appendChild(script);
+    try {
+        var validatorLoaded=jQuery("#fake-form").validate({});
+    } catch(err) {
+        setTimeout('mce_preload_check();', 250);
+        return;
+    }
+    mce_init_form();
+}
+function mce_init_form(){
+    jQuery(document).ready( function($) {
+      var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+      var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+      $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+      options = { url: 'http://majormind.us5.list-manage.com/subscribe/post-json?u=151dbb01ae247939f0e4363b1&amp;id=90d8a4d376&amp;c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+                    beforeSubmit: function(){
+                        $('#mce_tmp_error_msg').remove();
+                        $('.datefield','#mc_embed_signup').each(
+                            function(){
+                                var txt = 'filled';
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        var bday = false;
+                                        if (fields.length == 2){
+                                            bday = true;
+                                            fields[2] = {'value':1970};//trick birthdays into having years
+                                        }
+                                    	if ( fields[0].value=='MM' &amp;&amp; fields[1].value=='DD' &amp;&amp; (fields[2].value=='YYYY' || (bday &amp;&amp; fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else if ( fields[0].value=='' &amp;&amp; fields[1].value=='' &amp;&amp; (fields[2].value=='' || (bday &amp;&amp; fields[2].value==1970) ) ){
+                                    		this.value = '';
+									    } else {
+									        if (/\[day\]/.test(fields[0].name)){
+    	                                        this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;									        
+									        } else {
+    	                                        this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+	                                        }
+	                                    }
+                                    });
+                            });
+                        $('.phonefield-us','#mc_embed_signup').each(
+                            function(){
+                                var fields = new Array();
+                                var i = 0;
+                                $(':text', this).each(
+                                    function(){
+                                        fields[i] = this;
+                                        i++;
+                                    });
+                                $(':hidden', this).each(
+                                    function(){
+                                        if ( fields[0].value.length != 3 || fields[1].value.length!=3 || fields[2].value.length!=4 ){
+                                    		this.value = '';
+									    } else {
+									        this.value = 'filled';
+	                                    }
+                                    });
+                            });
+                        return mce_validator.form();
+                    }, 
+                    success: mce_success_cb
+                };
+      $('#mc-embedded-subscribe-form').ajaxForm(options);
+      
+      
+    });
+}
+function mce_success_cb(resp){
+    $('#mce-success-response').hide();
+    $('#mce-error-response').hide();
+    if (resp.result=="success"){
+        $('#mce-'+resp.result+'-response').show();
+        $('#mce-'+resp.result+'-response').html(resp.msg);
+        $('#mc-embedded-subscribe-form').each(function(){
+            this.reset();
+    	});
+    } else {
+        var index = -1;
+        var msg;
+        try {
+            var parts = resp.msg.split(' - ',2);
+            if (parts[1]==undefined){
+                msg = resp.msg;
+            } else {
+                i = parseInt(parts[0]);
+                if (i.toString() == parts[0]){
+                    index = parts[0];
+                    msg = parts[1];
+                } else {
+                    index = -1;
+                    msg = resp.msg;
+                }
+            }
+        } catch(e){
+            index = -1;
+            msg = resp.msg;
+        }
+        try{
+            if (index== -1){
+                $('#mce-'+resp.result+'-response').show();
+                $('#mce-'+resp.result+'-response').html(msg);            
+            } else {
+                err_id = 'mce_tmp_error_msg';
+                html = '&lt;div id="'+err_id+'" style="'+err_style+'"&gt; '+msg+'&lt;/div&gt;';
+                
+                var input_id = '#mc_embed_signup';
+                var f = $(input_id);
+                if (ftypes[index]=='address'){
+                    input_id = '#mce-'+fnames[index]+'-addr1';
+                    f = $(input_id).parent().parent().get(0);
+                } else if (ftypes[index]=='date'){
+                    input_id = '#mce-'+fnames[index]+'-month';
+                    f = $(input_id).parent().parent().get(0);
+                } else {
+                    input_id = '#mce-'+fnames[index];
+                    f = $().parent(input_id).get(0);
+                }
+                if (f){
+                    $(f).append(html);
+                    $(input_id).focus();
+                } else {
+                    $('#mce-'+resp.result+'-response').show();
+                    $('#mce-'+resp.result+'-response').html(msg);
+                }
+            }
+        } catch(e){
+            $('#mce-'+resp.result+'-response').show();
+            $('#mce-'+resp.result+'-response').html(msg);
+        }
+    }
+}
+    </script>
+    <!--End mc_embed_signup-->
+    <div class="spacer_30px">
+    </div>
+    <div id="disqus">
+     <div id="disqus_thread">
+     </div>
+     <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'makebatchfiles'; // required: replace example with your forum shortname
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+     </script>
+     <noscript>
+      Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript">
+       comments powered by Disqus.
+      </a>
+     </noscript>
+     <a class="dsq-brlink" href="http://disqus.com">
+      comments powered by
+      <span class="logo-disqus">
+       Disqus
+      </span>
+     </a>
+    </div>
+    <div class="spacer_30px">
+    </div>
+    <div id="footer">
+     <p>
+       2013 Major Mind Software.
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

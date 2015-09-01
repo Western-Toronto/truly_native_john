@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <link href="./Lumos_Files/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100" rel="stylesheet" type="text/css"/>
+  <title>
+   Lumos: Home Automation Made Simple!
+  </title>
+  <link href="./Lumos_Files/css/Main.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script src="./Lumos_Files/js/modernizr.custom.js">
+  </script>
+  <script src="./Lumos_Files/js/toucheffects.js">
+  </script>
+  <script src="./Lumos_Files/js/jquery-1.9.1.min.js">
+  </script>
+  <!-- jquery to execute the menu effect-->
+  <script type="text/javascript">
+   $(document).ready(function () {
+    var menu = $('.slide');
+
+    $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        var z = $('#fold2').offset().top; //to ensure smooth scrolling
+
+        if (y &gt;= z) {
+            menu.removeClass('menuBar').addClass('light-menuBar');
+            document.getElementById("logo").style.backgroundImage="url('./Lumos_Files/images/LumosFinalLogo.png')";
+        }
+        else{
+            menu.removeClass('light-menuBar').addClass('menuBar');
+         	document.getElementById("logo").style.backgroundImage="url('./Lumos_Files/images/LumosFinalLogo1.png')";   
+        }
+    });
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+	    var target = this.hash,
+	    $target = $(target);
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+});
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54359531-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <script>
+   //an image width in pixels 
+        var imageWidth = 300;
+    
+
+        //DOM and all content is loaded 
+        $(window).ready(function() {
+            
+            var currentImage = 0;
+
+            //set image count 
+            var allImages = $('#slideshow li img').length;
+            
+            //setup slideshow frame width
+            $('#slideshow ul').width(allImages*imageWidth);
+
+            //attach click event to slideshow buttons
+            $('.listimage2').hover(function(){
+                
+                //increase image counter
+                currentImage=1;
+                //if we are at the end let set it to 0
+                //if(currentImage&gt;=allImages) currentImage = 0;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+            //attach click event to slideshow buttons
+            $('.listimage1').hover(function(){
+                
+                //increase image counter
+                currentImage= 0;
+                //if we are at the end let set it to 0
+                //if(currentImage&gt;=allImages) currentImage = 0;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+
+
+            $('.listimage3').hover(function(){
+                
+                //decrease image counter
+                currentImage = 2;
+                //if we are at the end let set it to 0
+                //if(currentImage&lt;0) currentImage = allImages-1;
+                //calcualte and set position
+                setFramePosition(currentImage);
+
+            });
+           
+        });
+
+        //calculate the slideshow frame position and animate it to the new position
+        function setFramePosition(pos){
+            
+            //calculate position
+            var px = imageWidth*pos*-1;
+            //set ul left position
+            $('#slideshow ul').animate({
+                left: px
+            }, 0);
+        }
+  </script>
+ </head>
+ <body>
+  <!-- Facebook like button -->
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;appId=117642831675989&amp;version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fold1background" id="fold1background">
+   <div id="backgroundvideo">
+    <video autoplay="" id="bgvid" loop="" poster="./Lumos_Files/images/Fold1.jpg">
+     <source src="./Lumos_Files/images/Lumos_Website_2_hd720.webm" type="video/webm">
+      <source src="./Lumos_Files/images/Lumos_Website_2_hd720.mp4" type="video/mp4">
+      </source>
+     </source>
+    </video>
+   </div>
+  </div>
+  <div class="slide menuBar">
+   <div class="wrap">
+    <div id="menuBar">
+     <div class="logo" id="logo">
+      <a href="">
+       <img src="./Lumos_Files/images/Logohref.png"/>
+      </a>
+     </div>
+     <ul class="nav">
+      <li class="business_solutions" id="business_solutions">
+       <a href="./businesssolutions.html">
+        <span>
+         Business Solutions
+        </span>
+       </a>
+      </li>
+      <li class="case_studies" id="case_studies">
+       <a href="https://www.medium.com/@LumosAutomation">
+        <span>
+         Blog
+        </span>
+       </a>
+      </li>
+      <li class="preorder" id="preorder">
+       <a class="preordernow" href="mailto:contactus@getlumos.co" id="preordernow" target="_blank">
+        Contact Us
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="clear">
+  </div>
+  <!-- fold 1 starts here -->
+  <div class="wrap">
+   <div class="fold1" id="fold1">
+    <div id="fold1image">
+     <img src="./Lumos_Files/images/SWITCH.png"/>
+    </div>
+    <div id="fold1desc">
+     <p id="tagline">
+      Switch to a Smart Home
+     </p>
+     <p id="taglinesmall">
+      Home Automation that's easy and energy efficient!
+     </p>
+    </div>
+   </div>
+  </div>
+  <!-- fold 2 starts here -->
+  <div class="clear">
+  </div>
+  <div class="fold2" id="fold2">
+   <div class="wrap">
+    <h1 id="fold2tagline">
+     How does it work? Simple.
+    </h1>
+    <div id="fold2image">
+     <img src="./Lumos_Files/images/Fold2.png"/>
+    </div>
+    <div id="fold2desc">
+     Replace your old switches with Lumos Switches. Connect them to WiFi using your smartphone. Get a smart home immediately!
+    </div>
+   </div>
+  </div>
+  <!-- fold 3 starts here -->
+  <div class="clear">
+  </div>
+  <div class="fold3" id="fold3">
+   <div class="wrap">
+    <div id="fold3content">
+     <h1>
+      Turns appliances off when you don't need them to save power.
+     </h1>
+     <img src="./Lumos_Files/images/Switch2.png"/>
+    </div>
+   </div>
+  </div>
+  <!-- fold 4 starts here -->
+  <div class="clear">
+  </div>
+  <div class="fold4" id="fold4">
+   <div class="wrap">
+    <div id="fold4content">
+     <h1>
+      Adjusts your fans and A.C's to make your life comfortable.
+     </h1>
+     <img src="./Lumos_Files/images/Switch3.png"/>
+    </div>
+   </div>
+  </div>
+  <!-- fold 5 starts here -->
+  <div class="clear">
+  </div>
+  <div id="fold5">
+   <div class="wrap">
+    <h1 id="fold5tagline">
+     Technology we are proud of!
+    </h1>
+    <ul id="fold5list">
+     <li id="fold5image1">
+      <h3>
+       Intelligence
+      </h3>
+      <h1>
+       Self Learning
+      </h1>
+      <p>
+       Learns from your daily schedule to make your life comfortable!
+       <br/>
+       <br/>
+       <a href="https://medium.com/@LumosAutomation/lumos-technology-series-self-learning-7b1ccf6bfcfb" target="_blank">
+        Read More!
+       </a>
+      </p>
+     </li>
+     <li id="fold5image2">
+      <h3>
+       Accuracy
+      </h3>
+      <h1>
+       Ambient Sensing
+      </h1>
+      <p>
+       Ambient Sensors that help keep your home the way you like it!
+       <br/>
+       <br/>
+       <a href="https://medium.com/@LumosAutomation/lumos-technology-series-ambient-sensing-f56a53f23588" target="_blank">
+        Read More!
+       </a>
+      </p>
+     </li>
+     <li id="fold5image3">
+      <h3>
+       Security
+      </h3>
+      <h1>
+       Data Security
+      </h1>
+      <p>
+       Super secure servers and encryption keep your data completely safe!
+       <br/>
+       <br/>
+       <a href="https://medium.com/@LumosAutomation/lumos-technology-series-data-security-601231c5e086" target="_blank">
+        Read More!
+       </a>
+      </p>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <!-- fold 6 starts here -->
+  <div class="clear">
+  </div>
+  <div id="fold6">
+   <div class="wrap">
+    <div id="fold6image">
+     <div id="slideshow">
+      <ul>
+       <li>
+        <img alt="photo1" src="./Lumos_Files/images/MobileApp1.png"/>
+       </li>
+       <li>
+        <img alt="photo2" src="./Lumos_Files/images/Insights.png"/>
+       </li>
+       <li>
+        <img alt="photo3" src="./Lumos_Files/images/Notifications.png"/>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div id="fold6list">
+     <ol id="list">
+      <li id="list1">
+       <div class="listimage1" id="listimage1">
+        <a>
+         Control all your appliances using your smartphone from anywhere in the world.
+        </a>
+       </div>
+      </li>
+      <li id="list2">
+       <div class="listimage2" id="listimage2">
+        <a>
+         View all your power consumption data from your home appliances in real time.
+        </a>
+       </div>
+      </li>
+      <li id="list3">
+       <div class="listimage3" id="listimage3">
+        <a>
+         Get notifications if you leave home without switching off an appliance!
+        </a>
+       </div>
+      </li>
+     </ol>
+    </div>
+   </div>
+  </div>
+  <!-- fold 7 starts here 
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;div id="fold7"&gt;
+	&lt;div class="wrap"&gt;
+		&lt;h1&gt;What our Customers say&lt;/h1&gt;
+		&lt;table&gt;
+			&lt;tr class="customercomment"&gt;
+				&lt;td class"customerimage"&gt;&lt;img src="./Lumos_Files/images/customer1.png"&gt;&lt;/td&gt;
+				&lt;td class="comment"&gt;This technology has revolutionaized the way we use power at IIT Gandhinagar campus. I would highly recomment Lumos switches for those who want to see a greener future.&lt;br&gt;&lt;br&gt;&lt;span&gt;Dr. Sudhir K. Jain, Director, IIT Gandhinagar&lt;/span&gt;&lt;/td&gt;
+				&lt;td class="comma"&gt;&lt;img src="./Lumos_Files/images/fold7_comma.png"&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="customercomment"&gt;
+				&lt;td class"customerimage"&gt;&lt;img src="./Lumos_Files/images/customer2.png"&gt;&lt;/td&gt;
+				&lt;td class="comment"&gt;This technology has revolutionaized the way we use power at IIT Gandhinagar campus.&lt;br&gt;&lt;br&gt;&lt;span&gt;Dr. Sudhir K. Jain, Director, IIT Gandhinagar&lt;/span&gt;&lt;/td&gt;
+				&lt;td class="comma"&gt;&lt;img src="./Lumos_Files/images/fold7_comma.png"&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;-->
+  <!-- footer starts here -->
+  <div class="clear">
+  </div>
+  <div class="footer">
+   <div class="wrap">
+    <!-- Begin MailChimp Signup Form -->
+    <div class="mc_embed_signup" id="mc_embed_signup">
+     <form action="http://getlumos.us9.list-manage.com/subscribe/post?u=899fa9d8d9877aaf6f7557c3e&amp;id=a20ab70013" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+      <div id="mc_embed_signup_scroll">
+       <div class="mc-field-group">
+        <label for="mce-EMAIL">
+         Get updates and early discounts:
+        </label>
+        <input class="required_email" id="mce-EMAIL" name="EMAIL" type="email" value=""/>
+       </div>
+       <input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"/>
+      </div>
+     </form>
+    </div>
+    <!--End mc_embed_signup-->
+    <div class="social">
+     <div class="facebook">
+      <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Flumosautomation&amp;width=60&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" style="border:none; overflow:hidden; width:60px; height:35px;">
+      </iframe>
+     </div>
+     <div class="twitter">
+      <a class="twitter-share-button" data-count="none" data-related="getlumos" data-size="large" data-text="Lumos: A revolutionary home automation product!" href="https://twitter.com/share">
+       Tweet
+      </a>
+      <script type="text/javascript">
+       window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+      </script>
+     </div>
+     <div class="blog">
+      <a href="https://medium.com/@LumosAutomation" target="_blank">
+       Blog
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="wrap">
+    <div class="contact">
+     <p>
+      In case of queries, please contact us at
+      <a href="mailto:contactus@getlumos.co" target="_blank">
+       contactus@getlumos.co
+      </a>
+      or call us at +91-9535692852.
+     </p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

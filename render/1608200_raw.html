@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Horse racing systems that increase your betting skills. Free!
+  </title>
+  <meta content="Horse racing betting systems that give you the edge over your bookmaker. Easily create your own free greyhound and horse betting systems." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- Le styles -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/slider.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/tipstanew.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/jquery.jqplot.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/bootstrap-fileupload.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/bootstrap-tour.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/imgareaselect-default.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/imgareaselect-animated.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/tsort.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/jquery.pnotify.default.css" rel="stylesheet" type="text/css"/>
+  <!--jscrollpane css-->
+  <link href="/assets/css/jquery.jscrollpane.min.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/dropzone.min.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/history.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/tipsta-restyle.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/assets/css/fontello.min.css" rel="stylesheet"/>
+  <link href="/assets/css/animation.min.css" rel="stylesheet"/>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]&gt;
+		  &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+		&lt;![endif]-->
+  <!-- Fav and touch icons -->
+  <link href="/assets/ico/favicon.ico" rel="shortcut icon"/>
+  <link href="/assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="/assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+  <link href="/assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <link href="/assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed"/>
+  <script src="/assets/js/metrics.js">
+  </script>
+  <!-- Le javascript
+		================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!--&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"&gt;&lt;/script&gt;-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/handlebars-v1.3.0.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-transition.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-alert.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-modal.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-dropdown.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-scrollspy.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-tab.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-tooltip.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-popover.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-button.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-collapse.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-carousel.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-typeahead.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-slider.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-fileupload.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jquery.imgareaselect.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/bootstrap-tour.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/dropzone.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/underscore.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/dateformat.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/tsort.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jquery.pnotify.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jquery.sparkline.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jquery.circliful.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/tipstanew.min.js" type="text/javascript">
+  </script>
+  <!-- // &lt;script type="text/javascript" src="/assets/js/history.min.js"&gt;&lt;/script&gt; -->
+  <!--JQPLOT REQUIRES-->
+  <!--[if lt IE 9]&gt;&lt;script language="javascript" type="text/javascript" src="/assets/js/jqplot/excanvas.js"&gt;&lt;/script&gt;&lt;![endif]-->
+  <script src="/assets/js/jqplot/jquery.jqplot.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jqplot/plugins/jqplot.canvasTextRenderer.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js" type="text/javascript">
+  </script>
+  <script src="/assets/js/jqplot/plugins/jqplot.barRenderer.min.js" type="text/javascript">
+  </script>
+  <!--JSCROLLPANE REQUIRES-->
+  <!-- the mousewheel plugin - optional to provide mousewheel support -->
+  <script src="/assets/js/jscrollpane/jquery.mousewheel.min.js" type="text/javascript">
+  </script>
+  <!-- the jScrollPane script -->
+  <script src="/assets/js/jscrollpane/jquery.jscrollpane.min.js" type="text/javascript">
+  </script>
+  <!--GOOGLE ANALYTICS-->
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+			_gaq.push(["_setAccount", "UA-31632657-1"]);
+			_gaq.push(["_setDomainName", "tipsta.com.au"]);
+			_gaq.push(["_setAllowLinker", true]);  
+			_gaq.push(["_trackPageview"]);
+			
+			(function() {
+			var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+			ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+			var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+			})();
+  </script>
+  <script type="text/javascript">
+   $(function() { $('body').hide().show(); });
+  </script>
+ </head>
+ <body>
+  <div class="body-wrapper">
+   <input id="userid" type="hidden" value=""/>
+   <input id="ut" type="hidden" value="0"/>
+   <input id="uid" type="hidden" value="1"/>
+   <img alt="Profile picture" class="displaynone" id="account-profilepic" src=""/>
+   <img alt="Profile picture" class="displaynone" id="account-profilepictext" src=""/>
+   <input id="user_type" type="hidden" value=""/>
+   <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner ">
+     <div class="container">
+      <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+       <span class="icon-bar">
+       </span>
+      </a>
+      <a class="brand" href="/index.php">
+       <img alt="Tipsta Horse Racing Systems" src="/images/tipsta-horse-racing-systems-logo.png"/>
+      </a>
+      <div class="nav-collapse collapse pull-right">
+       <ul class="nav">
+        <li id="hometab">
+         <a href="/index.php">
+          <i class="icon-glyph">
+          </i>
+          Predict future races
+         </a>
+        </li>
+        <li class="dropdown" id="leaderboardtab">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="icon-glyph-1">
+          </i>
+          Leaderboards
+          <b class="caret">
+          </b>
+         </a>
+         <ul class="dropdown-menu">
+          <li>
+           <a href="/leaderboard_greyhound.php">
+            Greyhound leaderboard
+           </a>
+          </li>
+          <li>
+           <a href="/leaderboard_thoroughbred.php">
+            Thoroughbred leaderboard
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="dropdown" id="statisticstab">
+         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class=" icon-glyph-2">
+          </i>
+          Statistics
+          <b class="caret">
+          </b>
+         </a>
+         <ul class="dropdown-menu">
+          <li>
+           <a href="/greyhoundstats.php">
+            Greyhound statistics
+           </a>
+          </li>
+          <li>
+           <a href="/thoroughbredstats.php">
+            Thoroughbred statistics
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li id="raceResultsMenu">
+         <a href="/race-results.php">
+          <i class="icon-glyph-3">
+          </i>
+          Race Results
+         </a>
+        </li>
+        <li id="blogtab">
+         <a href="http://blog.tipsta.com.au">
+          <i class="icon-glyph-4">
+          </i>
+          Blog
+         </a>
+        </li>
+        <li id="login">
+         <a href="/login.php">
+          <i class="icon-glyph-5">
+          </i>
+          Login
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!--/.nav-collapse -->
+     </div>
+    </div>
+   </div>
+   <div class="hide paypal-template">
+   </div>
+   <!-- &lt;div class="container"&gt; -->
+   <div class="home-page">
+    <div class="pick-more">
+     <div class="container">
+      <h1 class="spec">
+       Racing Betting Systems
+       <br/>
+       To Pick More Winners
+      </h1>
+      <div class="container-narrow">
+       <div class="row-fluid marketing top-logos-runners">
+        <div class="span6 logo-rad">
+         <img alt="Horse Racing Systems" class="img-circle" src="/images/horse-racing-systems.png"/>
+         <h2 class="spec-top">
+          Horse Racing
+          <br/>
+          Systems
+         </h2>
+        </div>
+        <div class="span6 logo-rad">
+         <img alt="Greyhound Betting System" class="img-circle" src="/images/greyhound-betting-system.png"/>
+         <h2 class="spec-top">
+          Greyhound
+          <br/>
+          Betting Systems
+         </h2>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="dont-leave">
+     <div class="container">
+      <h4 class="spec center">
+       Don't leave your bets to chance!
+      </h4>
+      <p class="spec center thin-text">
+       Create, use and share your free fully custom greyhound and horse racing systems
+       <br/>
+       to predict winners, places and exotics more consistently.
+      </p>
+      <div class="container-narrow8">
+       <div class="home-form clearfix form-with-warning-popup">
+        <div class="span3 offset1 inputFieldLogin">
+         <input class="lg" data-content="email required" data-placement="top" data-toggle="popover" id="login_email" name="email" placeholder="Enter your email" title="" type="email"/>
+        </div>
+        <div class="span3 inputFieldLogin">
+         <input class="lg" data-content="password required" data-placement="top" data-toggle="popover" id="login_pass" name="password" placeholder="Enter a password" title="" type="password"/>
+        </div>
+        <div class="span3">
+         <button class="btn-success loginbutton greenButtonLogin">
+          Join Today
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="try-picking">
+     <div class="container">
+      <h2 class="spec2 black">
+       Try Picking the Winner
+       <br/>
+       of the Next Race Free!
+      </h2>
+      <div class="row-fluid">
+       <div class="span3">
+        <div class="clearfix time-to-race-wrapper arrow_box">
+         <span class="time-to-next-text">
+          Time to next race:
+         </span>
+         <span class="time-to-next-race">
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="row-fluid metric-section">
+       <div class="span3">
+        <div class="winner-stats">
+         <div class="raceinfo-raceNumber">
+         </div>
+         <div class="raceinfo-venueName">
+         </div>
+         <input id="nearestRaceId" type="hidden"/>
+         <div class="runner-logo logo-rad">
+          <img class="predict-runner"/>
+          <table class="table-hover" id="home-predict-table">
+          </table>
+         </div>
+        </div>
+       </div>
+       <div class="span9">
+        <div class="row-fluid navigation-steps">
+         <div class="span7">
+          <img class="navigation-arrow" src="/images/arrow.jpg"/>
+          <div class="navigation-way">
+           <img alt="Horse Betting Systems 1" src="/images/horse-betting-systems-1.jpg"/>
+           <p class="navigation-text">
+            Customize your betting system
+            <br/>
+            using the sliders below
+           </p>
+          </div>
+          <div id="modelholder">
+           <div class="mymodel">
+           </div>
+          </div>
+         </div>
+         <div class="span5">
+          <div class="navigation-way form-with-warning-popup">
+           <img alt="Horse Betting Systems 2" src="/images/horse-betting-systems-2.jpg"/>
+           <p class="navigation-text">
+            Predict the Winner
+           </p>
+           <div class="input-section">
+            <input class="name-for-prediction invisib" id="username_page" placeholder="Enter a username" type="text"/>
+            <input class="email-for-prediction" data-content="email required" data-placement="top" data-toggle="popover" id="email_page" placeholder="Enter your email" title="" type="text"/>
+            <input class="pass-for-prediction invisib" id="pass_page" placeholder="Set a password for your free account" type="password"/>
+           </div>
+           <button class="predict-the-winner btn-success">
+            Predict the Winner
+           </button>
+           <button class="signup-after-predict btn-success hidden">
+            Join Free Today
+           </button>
+           <p class="strageText">
+            How easy is that ?!
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="row-fluid statistic-total-block">
+       <div class="span3">
+        <div class="statistic-item numbers-dont-lie">
+         <span>
+          Numbers Don't Lie!
+         </span>
+        </div>
+       </div>
+       <div class="span9">
+        <div class="row-fluid">
+         <div class="span3 statistic-item">
+          <div class="img-logo-wrapper">
+           <img alt="Horse Racing Betting System" src="/images/horse-racing-betting-system.png"/>
+          </div>
+          <p>
+           <span class="bet-sys-val">
+           </span>
+           Betting Systems
+          </p>
+         </div>
+         <div class="span3 statistic-item">
+          <div class="img-logo-wrapper">
+           <img alt="horse racing systems" src="/images/horse-racing-system-count.png"/>
+          </div>
+          <p>
+           <span class="bet-tipped-val">
+           </span>
+           Races Tipped
+          </p>
+         </div>
+         <div class="span3 statistic-item">
+          <div class="img-logo-wrapper">
+           <img alt="Horse System Winners" src="/images/horse-system-winners.png"/>
+          </div>
+          <p>
+           <span class="bet-win-val">
+           </span>
+           Winners Picked
+          </p>
+         </div>
+         <div class="span3 statistic-item">
+          <div class="img-logo-wrapper">
+           <img alt="horse system places" src="/images/horse-system-places.png"/>
+          </div>
+          <p>
+           <span class="bet-place-picked-val">
+           </span>
+           Places Picked
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="some-punters">
+     <div class="container">
+      <h2 class="spec">
+       Just some of the punters winning more often with
+       <br/>
+       Tipsta Betting Systems
+      </h2>
+      <div class="row-fluid">
+       <div class="span3 user-card row-fluid">
+        user1
+       </div>
+       <div class="span3 user-card row-fluid">
+        user2
+       </div>
+       <div class="span3 user-card row-fluid">
+        user3
+       </div>
+       <div class="span3 user-card row-fluid">
+        user4
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container article">
+     <h1 class="center how-does-it-work">
+      How Does it Work?
+     </h1>
+     <div class="center">
+      <iframe allowfullscreen="" class="intro-video" frameborder="0" src="//www.youtube.com/embed/Uoj-Ml-ly5A?modestbranding=1&amp;showinfo=0&amp;fs=0&amp;controls=0&amp;rel=0">
+      </iframe>
+     </div>
+     <h3 class="center reason-why-need">
+      <span class="text-gray-h">
+       3 Reasons Why You Need a
+      </span>
+      <br/>
+      Horse Racing System
+     </h3>
+     <div class="home-text">
+      <div class="row-fluid">
+       <div class="span7">
+        <p>
+         <b>
+          There are too many stats in the average formguide for human brains.
+         </b>
+        </p>
+        <p>
+         A typical form guide lists more than 50 statistics for every runner in a typical horse race - so to pick your next winner based on hard data, you'd need to be considering hundreds of variables for each race.
+        </p>
+        <p>
+         Of course, this isn't possible for mere mortals - that's why professional punters (and now you!) turn to powerful horse racing betting systems to process all this data &amp; get an edge on their bookies.
+        </p>
+        <p>
+         Tipsta lets you create free horse betting systems that you can use to predict race winners, leveraging all this data in just seconds.
+        </p>
+       </div>
+       <div class="span5 img_parent">
+        <img alt="Horse Racing Systems Chart" src="/images/horse-racing-systems-chart.png"/>
+       </div>
+      </div>
+      <div class="row-fluid">
+       <div class="span5 img_parent">
+        <img alt="Greyhound System" src="/images/greyhound_system.jpg"/>
+       </div>
+       <div class="span7">
+        <p>
+         <b>
+          Use the same quant systems well street banks &amp; professional gamblers.
+         </b>
+        </p>
+        <p>
+         The world's top investment bank and professional gamblers have one thing in common - they both use quant systems to beat the markets.
+        </p>
+        <p>
+         Tipsta lets you create quant betting systems super easily - no sweat (no maths or spreadsheets required)!
+        </p>
+        <p>
+         Choose the race form guide statistics you think are most important, and set their relative weightings to predict the race finishing order and get and edge on your bookmaker.
+        </p>
+       </div>
+      </div>
+      <div class="row-fluid">
+       <div class="span7">
+        <p>
+         <b>
+          You can learn from, copy and follow the very best professional punters - lift your betting game.
+         </b>
+        </p>
+        <p>
+         With our Horse Racing Leaderboard and Greyhound Racing Leaderboard, you can track the performance of the very best greyhound and horse racing systems from the top Tipsta punters for each sport over time.
+        </p>
+        <p>
+         Once you've signed up for your free Tipsta account, you can copy their leading betting systems with a single click and use them to improve your own betting performance or customise them to get the edge on the competition.
+        </p>
+        <p>
+         Even better, you can follow individual punters on Tipsta and get a direct feed of all their tips each day.
+        </p>
+       </div>
+       <div class="span5 img_parent">
+        <img alt="Horse Racing Systems Software" src="/images/horse-racing-systems-software.png"/>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="signup-to-start">
+     <div class="container">
+      <h2 class="spec center">
+       Sign Up to Start Picking More Winners Today
+       <br/>
+       (It's Free!)
+      </h2>
+      <div class="container-narrow8">
+       <div class="home-form clearfix form-with-warning-popup">
+        <div class="span3 offset1 inputFieldLogin">
+         <input class="lg" data-content="email required" data-placement="top" data-toggle="popover" id="login_email" name="email" placeholder="Enter your email" title="" type="email"/>
+        </div>
+        <div class="span3 inputFieldLogin">
+         <input class="lg" data-content="password required" data-placement="top" data-toggle="popover" id="login_pass" name="password" placeholder="Enter a password" title="" type="password"/>
+        </div>
+        <div class="span3">
+         <button class="btn-success loginbutton greenButtonLogin">
+          Join Today
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--body-wrapper -->
+  <div class="footer footer-nav-menu ">
+   <!-- &lt;hr /&gt; -->
+   <div class="container">
+    <div class="footer_company">
+      Copyright Tipsta 2013-2015. All Rights Reserved.
+    </div>
+    <div class="footer_menu_list">
+     <!-- &lt;a href="/terms_and_conditions.php"&gt;Terms &amp; Conditions&lt;/a&gt; -->
+     <a href="/security_and_privacy.php">
+      Security Privacy
+     </a>
+     /
+     <a href="/contact_us.php">
+      Support
+     </a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

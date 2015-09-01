@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html id="ng-app" lang="en" xmlns:ng="http://angularjs.org">
+ <head>
+  <style>
+   [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}
+html{background:url("data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA1CAYAAAAUGCjAAAAAAXNSR0IArs4c6QAADQNJREFUaAXV2uWvnUUTAPC95QLFobi3SHF3TbHgBNpAQggJ/xVfCIQEggbXYMWltMVdiru7nnd/A3PYe+5zzpXCh3eSc59nbXZ8Zve5Y70K5V+Gr7/+unz55ZflrbfeKu+991754osvyh9//FHWWGON2On3338vc+bMKZtuumnZcccdy4IFC8q8efPKJpts8i9TUsrYv8XgDz/8UF566aXy9ttvB3Mbbrhh2WGHHcpGG21U1ltvvbLuuuuWtdZaKxj49ddfy08//VR+/PHHQhiE8M033wSD1uy9995l/fXXj7nkPzY2NmvGV5vBzz//vDzzzDPBGI0sXLiw7LTTTmWdddaZNmGY+Pnnn8s777xTXn311fLJJ5+EcA488MCyxRZbzJo5C2fNIOk/8sgjIf1ddtml7LPPPmFmq0XN34tp8/nnnw9mt9lmm3LMMcf0NTpT/CMZTPPIZyJnio8//nj4zmGHHRYmmGOe7XyCWHvttcP/aObTTz/tmy6/ZH78sQto9amnniqvvfZaOfTQQ8u+++4b0xJ/PrvWZt9IBnNSPn/77bfy4IMPlvfff78cf/zxQWiOebYbCiQ0/N1335Xx8fFy7LHHljvvvDN8cv/99y+bb755ef3118srr7xSNt5443LwwQeHIJLZFtcHH3xQ7rnnnrLVVlvFvunL5oBRPtotulj2159EIijceuut4Svnn3/+BObMIe0WPvvss9DWqaeeGsGFn9KkuRgG8+fPL99//33ZbLPNiiB14403lueee64QTkv0tttuWy644ILou+mmm2KN9e0c7S6YkkFIaOH6668vW265ZTnjjDOC0BaZOffff39ZtWpVv3vNNdeMSImhuXPnll9++SVShSgpAAHma+0ee+xRVqxYET7M/D/88MNCQISaAN/JJ59c5lehXHPNNRF9jU3F5JQM0swtt9xSdt1113LUUUflfvEUDB577LGQPiJpCfz555+R46yh9a+++qocdNBBgWPnnXcOhs379ttvy/bbbx+MYuijjz4KM2SCTJKPcgvPBL4outI2AQ1CWlz2j/RBiG+77baQrEgGICA1ZoQomuNDoigGSZrJHXLIITFfwpcT0yyj8+8/8iGfM8cPgzTEL0Vm2r733nvLSSed1M+huV7wkVbOPvvs2DP7B58jNSiggEHN0ZoqRfUhgWN45cqVUZUI6xJ1gjldzBmnKWNy3e677x5C0uYSC2p1c9ddd4WwBKNly5aFUBMvTSoGCDhhUHv6//L2nFGfqSEMqEo4d0Y20/iZMX6kClF+kTQCQRczNMUc+RRhCDa06tkCzQOlHbfQ3nPPPSP6eqfZVngnnHBCueqqq8rLL78cfgx30p94JzFokoDw0EMPhWkIEAnCNY1svfXWEeJVLjRIA4OMiYry1xtvvFEwyJdbCROQNaoewtlggw1ymyKN0CDf9bPHfvvtFxqEj/kCFnDKKaeU22+/PawnramPqL5MYtAgc+NXNJPw8ccfl0cffbSceOKJsQH/vO+++4o00JZTGHn66adDqnBkMe09i21BSIBiIfzIfpiUCxEJ1LA0/sQTT0RbPSulyKXnnHNO2W677aJfZJcf+eSiRYuir/3TDzKpWkio/dxzzw0mc7LQzSeZFu2QvMhp4wTmu3Tp0jCtI488MrSdY6OemFUZKSAEs912260/ncAIxBhBGGNhgli6Dp9F83nnnTeB5rCYurg+/4GqlV6NnP90NG810vWqf8R4zVfNSK9X81jv4osv7r355psT+rMxuE/2t8933323d8kll/Sq1truXmWgV82wVwv76IdrEB+677jjjgnrNPhFH6pJ9C6//PI+ov5A81JzT686e9PT673wwgu9K664olf9ZUL/bBo1GPVqIg+BzWQ9IVx66aU961sYu/baa6OgE1wkzirF8Js6qW8m7Quz8JMHgXmCD18QkNqk3K6b7jvccMCpREMXyAg5Co81AmDrNmOkbxFCIUdkWyLlWG7UbmCNfmsGK46udTl/2Jh++NAhhQxGXuOjAB0iNgGlQPpBZtTC/+exfiVDusCzfZ8Nc7l+umtffPHFKASmO3/YvK59+wymCXq278OQjerP9e2crs1rJCzPPvtsufnmmyP1tPPzvV1nfgvtmH77TuqrHf1o4rWLOHYtTynN+Id5ErITgpswl0aOO8YkcycExbfcJelL2scdd1zMkdxVKupIhYKyDz757eijj47gItAJMPYT+ODKykhSbwuClmHvyUM+x/PFYBdz+iVWDLhuSLBOFXLRRRcFUYpegQGTSjDS9lOYi7BO9C6UFM3aCgY4RTz7EoTioebROJUYEywIzBkRDSK3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") no-repeat;background-position: 50% 0%;position: relative;width: 235px;margin: auto;height: 97px;margin-top: 15%;}html:after{content:"Paytm is loading...";position: absolute;bottom:0;color: #555;font-family: 'Open Sans', sans-serif;font-size: 25px;font-weight: bold;margin-left:6px;}
+  </style>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="0" http-equiv="Expires"/>
+  <meta content="!" name="fragment"/>
+  <link href="https://shop.paytm.com/min/css/cfafb8ea2a184f868c588f269a8d1319.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="{{value}}" name="{{key}}" ng-repeat="(key,value) in metaTags"/>
+  <meta content="{{value}}" name="{{key}}" ng-repeat="(key,value) in ogTags" property="{{key.replace('_', ':')}}"/>
+  <link href="{{canonicalPageUrl}}" rel="canonical"/>
+  <link href="/opensearch.xml" rel="search" type="application/opensearchdescription+xml"/>
+  <title ng-bind="pageTitle">
+   Online Mobile Recharge - Postpaid, DTH &amp; Datacard Bill Payments at Paytm.com
+  </title>
+  <!--if lte IE 9-->
+  <script>
+   if (window!= top)
+    var frame = top.document.getElementsByTagName("IFRAME");
+    if(typeof(frame) !== 'undefined' &amp;&amp; frame[0].id !== 'document')
+      top.location.href=location.href
+window.urlMapper = {};
+window.urlParams = {};
+window.referral = false;
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';
+  j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTT2P2');
+  </script>
+  <script type="text/javascript">
+   var branchMetricData = '';
+window.BranchInit = function BranchInit(testcallback) {
+
+  var config = {
+    app_id: '46886721278706641',
+    debug: true,
+    init_callback: testcallback ? testcallback : function(){
+      branchMetricData = JSON.stringify(branch.utils.readSession())
+      localStorage.bmetricReferral = true
+      console.log('Branch SDK initialized123!', branchMetricData);
+    } 
+  };
+  // Begin Branch SDK //
+  var Branch_Init=function(a){self=this,self.app_id=a.app_id,self.debug=a.debug,self.init_callback=a.init_callback,self
+  .queued=[],this.init=function(){for(var a=["close","logout","track","identify","createLink","showReferrals","showCredits",
+  "redeemCredits","appBanner"],b=0;b&lt;a.length;b++)self[a[b]]=function(a){return function(){self.queued.push([a].concat(Array
+  .prototype.slice.call(arguments,0)))}}(a[b])},self.init();var b=document.createElement("script");b.type="text/javascript",
+  b.async=!0,b.src="https://bnc.lt/_r",document.getElementsByTagName("head")[0].appendChild(b),self._r=function(){if(
+  void 0!==window.browser_fingerprint_id){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a
+  .src="https://s3-us-west-1.amazonaws.com/branch-web-sdk/branch-0.x.min.js",document.getElementsByTagName("head")[0].appendChild(a)
+  }else window.setTimeout("self._r()",100)},self._r()};window.branch=new Branch_Init(config);
+  // End Branch SDK //
+};
+
+if (window.referral) {
+  window.BranchInit();
+}
+  </script>
+ </head>
+ <!--[if lt IE 9]&gt;&lt;script src="/libs/es5-shim/es5-shim.js"&gt;&lt;/script&gt;&lt;![endif]-->
+ <script src="https://shop.paytm.com/min/js/6c64e7c315998396d37b1b2167f69572.js">
+ </script>
+ <body id="body" ng-class="isBodyBackGround ? '' : ''" ng-cloak="" ng-controller="paytmCtrl">
+  <script src="https://shop.paytm.com/min/js/92c9405cd6594521f98301ecf5c013eb.js">
+  </script>
+  <div id="fb-root">
+  </div>
+  <div ng-show="usingOldBrowser">
+   Please enable html5 storage to continue.
+  </div>
+  <div id="site-wrapper" ng-show="!usingOldBrowser">
+   <div id="header-wrapper" paytm-add-header="">
+   </div>
+   <div id="header-wrapper" ng-if="!noHeaderFooter">
+    <span id="scrollH" ng-controller="cartCtrl">
+     <div class="elementAdded" ng-click="elementAdded = false;" ng-show="elementAdded">
+     </div>
+     <div class="loader text-center mb10" ng-show="elementAdded">
+      <img ng-src="{{::resourceUrl}}/images/loading-new.gif" style="height:45px;width:45px;"/>
+     </div>
+     <div ev="mouse" hide-menu="" id="logo-bar" ng-class="onCheckoutPage?'logo-bar-bottom-border':''">
+      <div class="logo-nav">
+       <div class="logo fl">
+        <a class="sprite-hm paytm-logo" href="/" ng-click="scrollToTop()">
+        </a>
+       </div>
+       <div class="fl" id="for-search" loop-items="" ng-hide="onCheckoutPage">
+        <input class="search-across-app" focus-me="{{focusedMe}}" increase-width="" maxlength="255" ng-keyup="suggestSearch($event.keyCode)" ng-model="searchAcrossApp" placeholder="Search Paytm" type="search"/>
+        <a class="search sprite-hm search-icon">
+        </a>
+        <div id="suggested-search" ng-show="haveResults &amp;&amp; searchAcrossApp.length &gt; 0" tabindex="0">
+         <ul class="s-keywords">
+          <li ng-repeat="keyword in suggestedSearchResults.keywords">
+           <a id="search-t-item" ng-click="updateSearchQuery(keyword.text)">
+            <span ng-bind-html="highlight(keyword.text, searchAcrossApp)">
+            </span>
+            <span class="results-esitmates" ng-if="keyword.count">
+             about
+             <strong>
+              {{::keyword.count}}
+             </strong>
+             results
+            </span>
+           </a>
+           <ul class="s-keywords-child">
+            <li flat-repeat="" from="child" ng-repeat="cat in keyword.cats">
+             <a ng-click="resetSearch()" ng-href="{{::urlGeneratorExtended.getLink(cat,false,'&amp;q='+keyword.text,'mobile/')}}">
+              in
+              <span class="fancy">
+               {{::cat.text}}
+              </span>
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+         <h3 class="pp" ng-show="suggestedSearchResults.products.length &gt; 0">
+          <span>
+           Popular Products
+          </span>
+         </h3>
+         <ul>
+          <li ng-repeat="product in suggestedSearchResults.products">
+           <a ng-href="{{::urlGeneratorExtended.getLink(product)}}">
+            <div class="p-image">
+             <img ng-src="{{::product.image_url}}"/>
+            </div>
+            <span class="p-info">
+             <span ng-bind-html="highlight(product.text, searchAcrossApp)">
+             </span>
+             <span class="price">
+              Rs {{::product.price}}
+             </span>
+            </span>
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div id="checkoutSteps" ng-show="onCheckoutPage">
+        <ul ng-class="checkoutStep">
+         <li class="step1" ng-class="stepAddEditAddress?'pointer':''" ng-click="gotoConfirmOrderStep()" ng-disabled="!stepAddEditAddress">
+         </li>
+         <li class="step2">
+         </li>
+         <li class="step3">
+         </li>
+        </ul>
+       </div>
+       <div class="fl" ng-hide="newCallGenerated" ng-if="!disableBreadcrumb">
+       </div>
+       <ul class="fr nav1">
+        <li ng-click="openLinkLogin()" ng-hide="user">
+         <a>
+          Log In / Sign Up
+         </a>
+        </li>
+        <li class="relative profileLi user-dropdown-open" ng-class="isUserDropdownOpen ? 'active' :''" ng-mouseenter="showDropdown();" ng-mouseleave="hideDropdown()" ng-show="user">
+         <a class="profile">
+          {{user.name}}
+          <span class="sprite-hm arrow-open-black">
+          </span>
+         </a>
+         <div id="profile-dropdown">
+          <ul>
+           <li ng-click="performOperation('/settings')">
+            View Profile
+           </li>
+           <li ng-click="performOperation('/myorders')">
+            Your Orders
+           </li>
+           <li ng-click="performOperation('/shop/help')">
+            Help Center
+           </li>
+           <li ng-click="performOperation('/shop/logout')">
+            Log Out
+           </li>
+          </ul>
+         </div>
+        </li>
+        <li class="text-center relative checkoutLi user-dropdown-open" ng-class="{'active' : itemCount, 'activemenu' : showCart}" ng-hide="hideCartIcon || isCouponPage" ng-mouseenter="showCartDropdown(mpCart.itemCount)" ng-mouseleave="hideCartDropdown()">
+         <span class="icon">
+         </span>
+         Rs {{mpCart.final_price}}
+         <div class="bubble" ng-if="itemCount">
+          {{itemCount}}
+         </div>
+         <!--.cart-tip(ng-show="elementAdded", show-element="elementAdded")&lt;div class="up-arrow"&gt;&lt;/div&gt;&lt;div class="stess"&gt;Item "{{justAddedText}}" has been added to cart.&lt;/div&gt;-->
+         <div class="slidingDiv bold" id="cart-dropdown" ng-class="{hideCart:itemCount == 0}">
+          <span class="arr">
+          </span>
+          <div class="loading-cart" ng-show="isCartUpdating">
+           <span>
+            Updating Cart...
+           </span>
+          </div>
+          <div id="mpCart">
+           <div class="mpCartInfoDiv mb10 overflow-hidden">
+            <span class="x-bold" ng-hide="productsOutOfStock">
+             You have {{mpCart.itemCount}} item(s) in your cart
+            </span>
+            <span class="error fl" ng-show="productsOutOfStock" style="font-weight:normal; width:80%; line-height:15px; font-size:12px;">
+             Some items in your cart are not available. Please remove them to proceed.
+            </span>
+            <span class="fr">
+             Rs {{mpCart.final_price}}
+            </span>
+           </div>
+           <div class="clear">
+           </div>
+           <div class="orders-list">
+            <ul ms-bx="" shown-elements="1" style="display:block;position:relative;" type="vert-horizontal">
+             <li class="break-row clear" ng-mouseleave="mpCart.cart_items[$index+0].showCross = false" ng-mouseover="mpCart.cart_items[$index+0].showCross = true" ng-repeat="item in mpCart.cart_items" style="overflow:auto;">
+              <div class="border-blo cart-bb border-radius padding1015">
+               <div class="item_quant">
+                <a ng-href="{{mpCart.cart_items[$index+0].productUrl}}">
+                 <img class="left" ng-src='{{ imgResized(mpCart.cart_items[$index+0].image_url,"50x50") }}'/>
+                </a>
+                <div class="ml20 f13">
+                 X
+                </div>
+                <div class="colc ml20 f13">
+                 <select ng-change="updateQty($event, mpCart.cart_items[$index+0])" ng-model="mpCart.cart_items[$index+0].quantity" ng-options="n for n in [] | range:1:21">
+                 </select>
+                </div>
+                <div class="ml20 f13">
+                 =
+                </div>
+                <div class="F14 bold center fr">
+                 <i class="web-rupee">
+                  Rs
+                 </i>
+                 {{mpCart.cart_items[$index+0].price * mpCart.cart_items[$index+0].quantity}}
+                </div>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="cola F14 col333">
+                <a ng-href="{{mpCart.cart_items[$index+0].productUrl}}">
+                 <div class="wrap">
+                  {{mpCart.cart_items[$index+0].title}}
+                 </div>
+                </a>
+               </div>
+               <div class="clear">
+               </div>
+               <div class="error text-left mt1">
+                {{mpCart.cart_items[$index+0].error}}
+               </div>
+               <div class="minheight20">
+                <span class="removeCartBtn fr clear f13" ng-click="removeItem($event, mpCart.cart_items[$index+0].product_id)" ng-show="mpCart.cart_items[$index+0].showCross">
+                 Remove
+                </span>
+               </div>
+              </div>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="mini_cart_promocode">
+           Promocode can be applied later
+          </div>
+          <button class="btn btn-primary btn-medium F14 x-bold minicartCheckout" ng-class='(mpCart.isProceedDisabled || !mpCart.itemCount) ? "disabled" : ""' ng-click="checkoutProceed($event)" ng-disabled="mpCart.isProceedDisabled || !mpCart.itemCount" type="button">
+           Proceed to Pay Rs {{mpCart.final_price}}
+          </button>
+         </div>
+        </li>
+        <li class="wallet" ng-class="pageactive?'paytmcash':''">
+         <a ng-href="/paytmwallet">
+          <span>
+          </span>
+          Paytm Wallet
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="clear">
+      </div>
+     </div>
+    </span>
+    <div id="main-bar" ng-hide="onCouponsPage || onCheckoutPage" ng-show="!hideHeader" scroll-header="">
+     <div class="block wrapper">
+      <div class="top-nav">
+       <div id="menu-wrapper">
+        <div id="menu">
+         <a item="{{$index}}" menu-item="" ng-class="returnClasses(link)" ng-href="{{urlGeneratorExtended.getLink(link.l1,false)}}" ng-repeat="link in headerLinks | limitTo : 11">
+          {{link.l1.name}}
+         </a>
+         <a class="tab hide" id="tab">
+         </a>
+        </div>
+       </div>
+       <div id="menu-pane">
+        <div class="child-navs hidden" ng-repeat="link in headerLinks">
+         <ul ng-repeat="sublink in link.l2 | partition:link.l2.length/5">
+          <li ng-class="subSubLink.isHeading ? 'heading':''" ng-repeat="subSubLink in sublink">
+           <a ev="click" hide-menu="" ng-href="{{urlGeneratorExtended.getLink(subSubLink,false)}}">
+            {{subSubLink.name}}
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <div class="clear">
+      </div>
+     </div>
+    </div>
+    <div id="headerHidden" ng-class="homePageScrolledDown ? 'height70':''" ng-show="homePageScrolledDown" scroll-header="">
+     ;
+    </div>
+   </div>
+   <div id="message-placeholder" ng-hide="hideMessage || sellerPage" style="display:none">
+    <div class="fl">
+    </div>
+    <div class="fr">
+     <a class="xx-bold" ng-click="hideMessage=true;">
+      X
+     </a>
+    </div>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="mask" ng-click="hideSearch()" ng-show="searchCalled">
+   </div>
+   <div class="main-container" ev="mouse" hide-menu="" ng-view="">
+   </div>
+   <div class="clear" ng-if="rechargeOrHomePage &amp;&amp; !rechargeLandingPage" paytm-homepage="">
+   </div>
+   <div class="clear" ng-if="topRoutesBuses" paytm-top-bus-routes="">
+   </div>
+   <div class="clear" ng-if="rechargeLandingPage || busLandingPage" paytm-landing-seo-messages="">
+   </div>
+   <div class="clear mt10" ng-if="busRouteLandingPage" paytm-landing-bus-seo-messages="">
+   </div>
+   <div class="wrapper overflow-hidden clear" id="static-message" ng-hide="onCheckoutPage || noHeaderFooter">
+    <ul class="overflow-hidden">
+     <li>
+      <h2>
+       <span class="sprite-hm FI-1">
+       </span>
+       100% Assurance
+      </h2>
+      <p>
+       At Paytm, we provide 100% assurance. If you have any issue, your money is immediately refunded. Sit back and enjoy your shopping.
+      </p>
+     </li>
+     <li class="mid">
+      <h2>
+       <span class="sprite-hm FI-2">
+       </span>
+       Paytm Trust
+      </h2>
+      <p>
+       Your money is yours! All refunds come with no question asked guarantee.
+      </p>
+     </li>
+     <li class="right">
+      <h2>
+       <span class="sprite-hm FI-3">
+       </span>
+       Our Promise
+      </h2>
+      <p>
+       Happiness is guaranteed at Paytm. If we fall short of your expectations, give us a shout.
+      </p>
+     </li>
+    </ul>
+    <div class="p-care" ng-click="openContact()">
+     <li>
+      <a>
+       Happy to help, 24x7
+      </a>
+     </li>
+    </div>
+   </div>
+   <div class="loading-homepage" ng-show="isPageLoading" style="{{loadingStyle}}">
+   </div>
+   <div ng-if="!noHeaderFooter" paytm-footer="">
+    <div id="footerlink" ng-hide="onCheckoutPage">
+     <div class="inner">
+      <ul>
+       <li class="heading">
+        Mobile Recharges
+       </li>
+       <li>
+        <a href="/vodafone-prepaid-mobile-online-recharge.htm" target="_self" title="Vodafone Recharge">
+         Vodafone Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/airtel-prepaid-mobile-online-recharge.htm" target="_self" title="Airtel Recharge">
+         Airtel Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/aircel-prepaid-mobile-online-recharge.htm" target="_self" title="Aircel Recharge">
+         Aircel Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/idea-prepaid-mobile-online-recharge.htm" target="_self" title="Idea Recharge">
+         Idea Recharge
+        </a>
+       </li>
+       <li>
+        <a class="more active" href="/recharge-partners#mobile-recharge" ng-click="showTabRechargePartners('mobile-recharge')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        DTH Recharges
+       </li>
+       <li>
+        <a href="/online-prepaid-airtel-digital-dth-recharge.htm" target="_self" title="Airtel DTH Recharge">
+         Airtel DTH Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/online-prepaid-videocon-d2h-recharge.htm" target="_self" title="Videocon D2H Recharge">
+         Videocon D2H Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/online-prepaid-dishtv-dth-recharge.htm" target="_self" title="Dish TV Recharge">
+         Dish TV Recharge,
+        </a>
+       </li>
+       <li>
+        <a href="/online-prepaid-tata-sky-dth-recharge.htm" target="_self" title="Tata Sky Recharge">
+         Tata Sky Recharge
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#dth-recharge" ng-click="showTabRechargePartners('dth-recharge')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Data Card Recharges
+       </li>
+       <li>
+        <a href="/online-bsnl-datacard-recharge.htm" target="_self" title="BSNL Data Card">
+         BSNL Data Card,
+        </a>
+       </li>
+       <li>
+        <a href="/online-reliance-netconnect-plus-recharge.htm" target="_self" title="Reliance">
+         Reliance Netconnect,
+        </a>
+       </li>
+       <li>
+        <a href="/online-tata-photon-plus-recharge.htm" target="_self" title="Tata Docomo Photon Recharge">
+         Tata Photon Plus,
+        </a>
+       </li>
+       <li>
+        <a href="/online-mts-mblaze-recharge.htm" target="_self" title="MTS Data Card">
+         MTS Data Card,
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#datacard-recharge" ng-click="showTabRechargePartners('datacard-recharge')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Mobile Bill Payment
+       </li>
+       <li>
+        <a href="/airtel-postpaid-mobile-online-bill-payment.htm" target="_self" title="Airtel Bill Payment">
+         Airtel Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/bsnl-postpaid-mobile-online-bill-payment.htm" target="_self" title="BSNL Bill Payment">
+         BSNL Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/idea-postpaid-mobile-online-bill-payment.htm" target="_self" title="Idea Bill Payment">
+         Idea Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/vodafone-postpaid-mobile-online-bill-payment.htm" target="_self" title="Vodafone Bill Payment">
+         Vodafone Bill Payment
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#mobile-bill-payments" ng-click="showTabRechargePartners('mobile-bill-payments')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Landline Bill Payment
+       </li>
+       <li>
+        <a href="/airtel-landline-bill-payment.htm" target="_self" title="Airtel Landline Bill Payment Delhi">
+         Airtel Landline Bill Payment Delhi
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#landline-bill-payments" ng-click="showTabRechargePartners('landline-bill-payments')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Data Card Bill Payments
+       </li>
+       <li>
+        <a href="/online-reliance-netconnect-bill-payment.htm" target="_self" title="Reliance Netconnect Bill payment">
+         Reliance Netconnect Bill payment,
+        </a>
+       </li>
+       <li>
+        <a href="/online-tata-docomo-photon-plus-bill-payment.htm" target="_self" title="Tata Photon Bill Payment">
+         Tata Photon Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/online-tata-docomo-photon-whiz-bill-payment.htm" target="_self" title="Tata Photon Whiz Bill Payment">
+         Tata Photon Whiz Bill Payment
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#datacard-bill-payments" ng-click="showTabRechargePartners('datacard-bill-payments')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Electricity Bill Payment
+       </li>
+       <li>
+        <a href="/bses-yamuna-electricity-bill-payment" target="_self" title="BSES Yamuna Bill Payments">
+         BSES Yamuna Bill Payments,
+        </a>
+       </li>
+       <li>
+        <a href="/reliance-energy-electricity-bill-payment" target="_self" title="Reliance Energy">
+         Reliance Energy Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/mseb-electricity-bill-payment" target="_self" title="MSEB Mumbai Electricity Bill Payment">
+         MSEB Mumbai Electricity Bill Payment,
+        </a>
+       </li>
+       <li>
+        <a href="/ndpl-tatapower-electricity-bill-payment" target="_self" title="NDPL Bill Payment">
+         NDPL Bill Payment
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#electricity-bill-payments" ng-click="showTabRechargePartners('electricity-bill-payments')">
+         more..
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li class="heading">
+        Gas Bill Payment
+       </li>
+       <li>
+        <a href="/mahanagar-mgl-gas-bill-payment" target="_self" title="Mahanagar Gas Bill Payment">
+         Mahanagar Gas Bill Payment
+        </a>
+       </li>
+       <li>
+        <a class="more" href="/recharge-partners#gas-bill-payments" ng-click="showTabRechargePartners('gas-bill-payments')">
+         more..
+        </a>
+       </li>
+       <div class="clear">
+       </div>
+      </ul>
+     </div>
+    </div>
+    <div id="footer" ng-hide="onCheckoutPage">
+     <div class="inner">
+      <ul class="fl grid-3">
+       <li class="fl">
+        <a class="sprite-hm visa" href="#">
+        </a>
+       </li>
+       <li class="fl lp10 tp5">
+        <a class="sprite-hm master-card" href="#">
+        </a>
+       </li>
+       <li class="fl lp10 tp5">
+        <a class="sprite-hm pci" href="#">
+        </a>
+       </li>
+      </ul>
+      <ul class="fl grid-3">
+       <li class="fl lp20 title">
+        Mobile App
+       </li>
+       <li class="fl lp20">
+        <a class="sprite-hm ano" href="https://play.google.com/store/apps/details?id=net.one97.paytm">
+        </a>
+       </li>
+       <li class="fl lp5">
+        <a class="sprite-hm apple" href="https://itunes.apple.com/in/app/mobile-recharge-bill-payments/id473941634?mt=8">
+        </a>
+       </li>
+       <li class="fl lp5">
+        <a class="sprite-hm bb" href="https://appworld.blackberry.com/webstore/content/52308/?lang=en">
+        </a>
+       </li>
+       <li class="fl lp5">
+        <a class="sprite-hm java" href="http://store.ovi.com/content/365021">
+        </a>
+       </li>
+       <li class="fl lp5">
+        <a class="sprite-hm window" href="http://www.windowsphone.com/en-us/store/app/paytm/43783c68-2cae-47e0-b326-e8eda1285885">
+        </a>
+       </li>
+      </ul>
+      <ul class="fr grid-3">
+       <li class="fr lp5 tp5">
+        <a class="sprite-hm instagram" href="https://instagram.com/paytm/">
+        </a>
+       </li>
+       <li class="fr lp5 tp5">
+        <a class="sprite-hm pinterest" href="https://in.pinterest.com/paytm_official/">
+        </a>
+       </li>
+       <li class="fr lp5 tp5">
+        <a class="sprite-hm fbgray" href="https://facebook.com/paytm">
+        </a>
+       </li>
+       <li class="fr lp10 tp5">
+        <a class="sprite-hm twittergray" href="https://twitter.com/paytm">
+        </a>
+       </li>
+       <li class="fr p20 title">
+        Follow us on
+       </li>
+      </ul>
+      <div class="clear">
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+     <div id="footer" ng-hide="onCheckoutPage">
+      <div class="inner">
+       <div class="links fl">
+        <a href="https://paytm.com/about" target="_self">
+         About Us |
+        </a>
+        <a href="https://paytm.com/partners" target="_self">
+         Partner with Us |
+        </a>
+        <a href="https://paytm.com/terms" target="_self">
+         Terms &amp; Conditions |
+        </a>
+        <a href="https://paytm.com/blog" target="_blank">
+         Blog |
+        </a>
+        <a href="https://paytm.com/press" target="_blank">
+         Press |
+        </a>
+        <a href="https://paytm.com/help" target="_self">
+         Customer Service |
+        </a>
+        <a href="https://paytm.com/grievance-policy" target="_self">
+         Grievance Policy |
+        </a>
+        <a href="https://paytm.com/offer/bug-bounty" target="_self">
+         Bug Bounty
+        </a>
+        <!--.flag.fr-->
+        <!--    .image.left-->
+        <!--        img(ng-src='{{::resourceUrl}}/images/flag.png')-->
+        <!--    | Handcrafted in india-->
+       </div>
+       <div class="sell border-radius fr">
+        <a href="http://sellon.paytm.com/" target="_blank">
+         Become a Seller
+        </a>
+       </div>
+       <div class="fr">
+        <a class="btn btn-primary paytm-services" href="http://paywithpaytm.com/" target="_blank">
+         Payment Services
+        </a>
+       </div>
+       <div class="wallet-d fl">
+        <span>
+         Paytm Wallet is issued by One97 Communications Ltd, whereas One97 Communications Ltd works under the brand name of Paytm .
+        </span>
+        <div id="message-placeholder">
+         <span>
+          <b>
+           Disclaimer : &amp;nbsp
+          </b>
+          Please do not share your Paytm Wallet password , Credit/Debit card PIN , CVV and any other confidential information with anyone even if he/she claims to be from Paytm. We advise our customers to completely ignore such communications &amp; report to us at cybercell@paytm.com.
+          <a class="blue" href="https://paytm.com/security" target="_blank">
+           &amp;nbsp Read more
+          </a>
+         </span>
+        </div>
+       </div>
+       <div class="clear">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div id="sign-in-modal" options="{dialogClass: 'modal my-class'}">
+    <script id="loginModal.jade" type="text/ng-template">
+     &lt;span ng-click="closeModal()" ng-hide="showVerificationScreen" class="pull-right closebtn"&gt;&lt;/span&gt;&lt;div ng-if="!showVerificationScreen"&gt;&lt;div ng-hide="showVerificationScreen" align="center" style="z-index: 0;height: 0;"&gt;&lt;img style="width:100px;height:100px;margin-top:154px;" ng-src="{{::resourceUrl}}/images/loading-large.gif"&gt;&lt;br&gt;&lt;span&gt;Logging into Paytm...&lt;/span&gt;&lt;/div&gt;&lt;iframe ng-hide="showVerificationScreen" width="715px" height="425px" ng-src="{{loginUrl}}" ng-class="homePageScrolledDown? 'fixedhead' : ''" style="border:none;"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div id="profile-ver" ngsettop ng-if="showVerificationScreen"&gt;&lt;div class="center xx-bold mb20"&gt;Complete Your Profile&lt;/div&gt;&lt;form role="form" name="userForm" ng-controller="userCtrl" class="block"&gt;&lt;div ng-class="!user.mobile ?'red-text' :''" class="mb20 center grey rp10 thin"&gt;To Proceed, please enter a mobile number and verify it.&lt;/div&gt;&lt;label class="up f12 grey"&gt;First Name&lt;/label&gt;&lt;input type="text" ng-model="user.firstName" name="firstName" placeholder="First Name" maxlength="45" class="form-control changeplaceholder mb20 F14"&gt;&lt;div ng-show="firstNameError" class="error mb10"&gt;{{firstNameError}}&lt;/div&gt;&lt;label class="up f12 grey"&gt;Last Name&lt;/label&gt;&lt;input type="text" ng-model="user.lastName" name="lastName" placeholder="Last Name" maxlength="45" class="form-control changeplaceholder mb20 F14"&gt;&lt;div ng-show="lastNameError" class="error mb10"&gt;{{lastNameError}}&lt;/div&gt;&lt;div&gt;&lt;label class="up f12 grey"&gt;Date of Birth&lt;/label&gt;&lt;input pick-a-date="defaultDate" placeholder="Select Date" ng-model="user.dob" pick-a-date-options="dateOptions" readonly name="dob" class="form-control changeplaceholder mb20 F14"&gt;&lt;div ng-show="lastNameError" class="error mb10"&gt;{{lastNameError}}&lt;/div&gt;&lt;/div&gt;&lt;div class="mb10"&gt;&lt;label ng-class="user.gender=='male'?'checked': ''" ng-click="setGender('male')" class="rd mr105"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;span class="icon-to-fade"&gt;&lt;/span&gt;&lt;input type="radio" name="gender" value="male" ng-model="user.gender"&gt;Male&lt;/label&gt;&lt;label ng-class="user.gender=='female'?'checked': ''" ng-click="setGender('female')" class="rd"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;span class="icon-to-fade"&gt;&lt;/span&gt;&lt;input type="radio" name="gender" value="female" ng-model="user.gender"&gt;Female&lt;/label&gt;&lt;/div&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;label class="up f12 grey"&gt;Email Address&lt;/label&gt;&lt;input type="text" ng-model="user.email" name="email" placeholder="Email Address" maxlength="150" class="form-control fl changeplaceholder mb20 F14"&gt;&lt;div class="F12"&gt;&lt;a ng-click="verifyEmailAndPhone(&quot;email&quot;)" ng-show="!user.is_verified_email" class="fl ml10"&gt;&lt;span class="icon icon-info"&gt;&lt;/span&gt;&lt;span class="abs up"&gt;Verify Now&lt;/span&gt;&lt;/a&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div ng-show="emailError" class="error mb10"&gt;{{emailError}}&lt;/div&gt;&lt;label class="up f12 grey"&gt;Mobile No.&lt;/label&gt;&lt;input type="text" ng-model="user.mobile" name="mobile" placeholder="Mobile Number" numbers-only="numbers-only" class="form-control changeplaceholder mb20 fl F14"&gt;&lt;div ng-if="user.mobile &amp;&amp; user.mobile.length &gt; 9" class="F12"&gt;&lt;a ng-click="verifyEmailAndPhone(&quot;mobile&quot;)" ng-show="!user.is_verified_mobile" class="fl ml10"&gt;&lt;span class="abs up"&gt;Verify Now&lt;/span&gt;&lt;/a&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div ng-show="phoneNoError" class="error mb10"&gt;{{phoneNoError}}&lt;/div&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div class="text-center"&gt;&lt;input type="button" value="Confirm" ng-click="confirmVerification(userForm)" class="btn btn-primary bold"&gt;&lt;br&gt;&lt;br&gt;&lt;a ng-click="performOperation('/shop/logout');closeModal();" class="mt5 thin f1"&gt;Not you? Sign out to continue browsing&lt;/a&gt;&lt;/div&gt;&lt;/form&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/div&gt;
+    </script>
+    <!-- .Lgrey-bg.padding10.BN.f13&lt;div ng-show="showMisscallMsg" class="center Lgrey-bg tp10"&gt;-------------------------------- Or --------------------------------&lt;/div&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;div ng-show="showMisscallMsg" class="center pb28 tp10"&gt; Give a missed call on&lt;b&gt; 18001219700&lt;/b&gt; in next 4 hours to verify  &amp; refresh this page to continue.&lt;/div&gt;-->
+   </div>
+   <script id="myModalContent.html" type="text/ng-template">
+    &lt;div ng-show="verifyObj.isMobileDirty || verifyObj.isEmailDirty" class="modal-header"&gt;&lt;b&gt;Verify your details&lt;/b&gt;&lt;/div&gt;&lt;div class="alignCenter f12 myModalContent modal-body"&gt;&lt;p&gt;{{verifyObj.dataStatus}}&lt;/p&gt;&lt;p ng-show="verifyObj.isMobileDirty &amp;&amp; verifyObj.isEmailDirty"&gt;And&lt;/p&gt;&lt;div ng-show="verifyObj.isMobileDirty"&gt;&lt;p&gt;Enter the One Time Password (OTP) sent to your mobile no.&nbsp;&lt;/p&gt;&lt;b&gt;{{verifyObj.mobile}}&lt;/b&gt;&lt;p&gt;to verify &amp; update your mobile number&lt;/p&gt;&lt;/div&gt;&lt;input type="text" palceholder="Enter OTP" name="otpText" ng-show="verifyObj.isMobileDirty" ng-model="verifyObj.otp"&gt;&lt;span ng-show="verifyObj.otpError" class="error"&gt;{{verifyObj.otpError}}&lt;/span&gt;&lt;/div&gt;&lt;div class="modal-footer"&gt;&lt;!--button(class="btn btn-primary", ng-click="ok()"){{verifyObj.isMobileDirty ? 'Cancel' :'OK'}}--&gt;&lt;button ng-click="verifyOTP()" ng-show="verifyObj.isMobileDirty" class="btn btn-primary"&gt;Verify OTP&lt;/button&gt;&lt;/div&gt;
+   </script>
+   <script id="verifyModal.html" type="text/ng-template">
+    &lt;div class="modal-header"&gt;&lt;b&gt;Verify {{verifyObj.verifyHeader}}&lt;/b&gt;&lt;/div&gt;&lt;div class="text-center f12 verifyModal modal-body"&gt;{{verifyObj.verifyText}}&lt;div class="mt10 input-field"&gt;&lt;input type="text" ng-placeholder="verifyObj.placeholder" ng-model="verifyObj.verifyField" focus-me="focusInput"&gt;&lt;/div&gt;&lt;div ng-show="verifyObj.otpError" class="mt10 error"&gt;{{verifyObj.otpError}}&lt;/div&gt;&lt;/div&gt;&lt;div class="modal-footer"&gt;&lt;button ng-click="ok()" class="btn btn-primary"&gt;Cancel&lt;/button&gt;&lt;button ng-click="sendOTPOrLink()" class="btn btn-primary"&gt;{{verifyObj.btnText}}&lt;/button&gt;&lt;/div&gt;
+   </script>
+   <script id="sizeChart.html" type="text/ng-template">
+    &lt;iframe ng-src="{{sizeChartUrl}}" width="776" height="450" frameborder="0" border="0"&gt;&lt;/iframe&gt;
+   </script>
+   <script id="errorModal.html" type="text/ng-template">
+    &lt;div class="modal-header-new"&gt;&lt;b&gt;Error:&lt;/b&gt;&lt;/div&gt;&lt;div class="alignCenter modal-body-new"&gt;{{errorText}}&lt;/div&gt;&lt;div class="modal-footer-new"&gt;&lt;button ng-click="ok()" class="btn btn-primary"&gt;Ok&lt;/button&gt;&lt;/div&gt;
+   </script>
+   <!-- Created by Amit Thakkar on 26/9/14.-->
+   <script id="confirmBox.html" type="text/ng-template">
+    &lt;div class="modal-header-new"&gt;&lt;b&gt;Confirm:&lt;/b&gt;&lt;/div&gt;&lt;div class="alignCenter modal-body-new"&gt;{{confirmText}}&lt;/div&gt;&lt;div class="modal-footer-new"&gt;&lt;button ng-click="cancel()" class="mr10 btn btn-primary"&gt;Cancel&lt;/button&gt;&lt;button ng-click="ok()" class="btn btn-primary"&gt;Ok&lt;/button&gt;&lt;/div&gt;
+   </script>
+   <script id="viewDetails.html" type="text/ng-template">
+    &lt;div class="contact-us"&gt;&lt;div class="header"&gt;&lt;a href="#" ng-click="ok()" class="close"&gt;&lt;/a&gt;&lt;div class="fl tp10"&gt;{{schoolMerchantName}}&lt;/div&gt;&lt;div class="fr"&gt;&lt;img ng-src="{{::resourceUrl}}/images/paytm-logo.png"&gt;&lt;/div&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style="background-color:#F8FAFB  ;padding:20px 20px 0 20px" class="heading"&gt;&lt;span style="float:left"&gt;Description&lt;/span&gt;&lt;span style="float:right"&gt;Amount&lt;/span&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="tab-content"&gt;&lt;div class="data"&gt;&lt;ul ng-repeat="detail in product" style="display:block"&gt;&lt;li style="border-bottom:solid 1px #ccc; padding:20px 0"&gt;&lt;span style="float:left;display:block"&gt; {{detail.key}}&lt;/span&gt;&lt;span style="float:right;display:block"&gt;{{detail.value}}&lt;/span&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li ng-if="isConvFee" style="padding:20px 0;border-bottom:solid 1px #ccc;"&gt;&lt;span style="float:left;display:block"&gt;&lt;b&gt; Convenience Fee&lt;/b&gt;&lt;/span&gt;&lt;span style="float:right;display:block"&gt;&lt;b&gt;Rs. {{conv_fee}}&lt;/b&gt;&lt;/span&gt;&lt;/li&gt;&lt;li style="padding:20px 0"&gt;&lt;span style="float:left;display:block"&gt;&lt;b&gt; Total Amount&lt;/b&gt;&lt;/span&gt;&lt;span style="float:right;display:block"&gt;&lt;b&gt;Rs. {{total}}&lt;/b&gt;&lt;/span&gt;&lt;div class="clear"&gt; &lt;/div&gt;&lt;/li&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class="clear"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+   </script>
+   <script id="promocodeTermsAndConditions.html" type="text/ng-template">
+    &lt;div class="modal-header-new"&gt;&lt;b&gt;Terms &amp; Conditions&lt;/b&gt;&lt;/div&gt;&lt;div class="modal-body-new"&gt;&lt;div ng-bind-html="tnc"&gt; &lt;/div&gt;&lt;/div&gt;&lt;div class="modal-footer-new"&gt;&lt;button ng-click="ok()" class="btn btn-primary"&gt;Ok&lt;/button&gt;&lt;/div&gt;
+   </script>
+   <div style="width:960px">
+    <script id="quickViewModal.html" type="text/ng-template">
+     &lt;img ng-src="{{product.image_url}}"&gt;&lt;div class="fl"&gt;{{product.name}}
+{{product.offer_price}}&lt;/div&gt;
+    </script>
+   </div>
+   <div ng-if="firePixel">
+    <img ng-src="{{pixelSource}}"/>
+   </div>
+  </div>
+  <script>
+   angular.element(document).ready(function() {
+    angular.bootstrap(document, ['PaytmApp']);
+});
+angular.module('paytmApp.Constants', []).constant('Constants', {
+    viewConfig: '{"hosturl":"https://paytm.com/shop","carturl":"http://cartelb.mkt.paytm","catalogurl":"https://catalog.paytm.com","resourceurl":"https://shop.paytm.com","oauthurl":"http://oauth_proxy"}',
+    source: 'web',
+    order: '',
+    viewConfig1: '{}',
+    session : '{"isLogin":false,"env":"production"}'
+});
+
+ &lt;!--//&lt;![CDATA[
+ var m3_u = (location.protocol=='https:'?'https://c.one97adworks.com/delivery/ajs.php':'http://c.one97adworks.com/delivery/ajs.php');
+ var m3_r = Math.floor(Math.random()*99999999999);
+ if (!document.MAX_used) document.MAX_used = ',';
+ document.write ("&lt;scr"+"ipt type='text/javascript' src='"+m3_u);
+ document.write ("?zoneid=6");
+ document.write ('&amp;cb=' + m3_r);
+ if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+ document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+ document.write ("&amp;loc=" + escape(window.location));
+ if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+ if (document.context) document.write ("&amp;context=" + escape(document.context));
+ if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+ document.write ("'&gt;&lt;\/scr"+"ipt&gt;");
+//]]&gt;--&gt;
+  </script>
+  <span paytm-home-schema-tag="">
+  </span>
+ </body>
+</html>

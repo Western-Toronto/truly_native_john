@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="width=device-width" name="viewport"/>
+  <script type="text/javascript">
+   var home_url = 'http://www.rxeconsult.com/';
+  </script>
+  <meta content="width=1170" name="viewport"/>
+  <link href="http://www.rxeconsult.com/css/new/style.css" rel="stylesheet" type="text/css"/>
+  <!--[if IE]&gt;&lt;script src="http://www.rxeconsult.com/js/new/html5.js"&gt;&lt;/script&gt;&lt;![endif]-->
+  <script src="http://www.rxeconsult.com/js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="http://www.rxeconsult.com/js/rsv.js" type="text/javascript">
+  </script>
+  <script src="http://www.rxeconsult.com/js/jquery.popupWindow.js" type="text/javascript">
+  </script>
+  <script src="http://www.rxeconsult.com/js/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript">
+  </script>
+  <script src="http://www.rxeconsult.com/js/facebox.js" type="text/javascript">
+  </script>
+  <link href="http://www.rxeconsult.com/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.rxeconsult.com/css/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   $(document).ready(function(){$("a[rel='fancybox']").fancybox({"showNavArrows":false});});
+  </script>
+  <script language="javascript" src="http://www.rxeconsult.com/js/form.js" type="text/javascript">
+  </script>
+  <link href="http://www.rxeconsult.com/css/form.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script language="javascript" src="http://www.rxeconsult.com/js/common.js" type="text/javascript">
+  </script>
+  <script language="javascript" src="http://www.rxeconsult.com/js/prototypes.js" type="text/javascript">
+  </script>
+  <script src="http://www.rxeconsult.com/js/facebox.js" type="text/javascript">
+  </script>
+  <link href="http://www.rxeconsult.com/widget.css" rel="stylesheet" type="text/css"/>
+  <link href="http://www.rxeconsult.com/img/icons/favicon.ico" rel="shortcut icon"/>
+  <script type="text/javascript">
+   function like(type,id){
+	var likes = Math.floor(Number($('#like_'+type+'_'+id).html()));
+	$.get('http://www.rxeconsult.com/like.php',
+	{'type':type,'content_id':id},
+	function(data){
+		$.fancybox(data); 
+		if(data.indexOf('for liking') &gt; 1){
+			$('#like_'+type+'_'+id).html(likes+1);
+		}
+		//setTimeout('history.go(0);',2000);
+	});
+}
+  </script>
+  <script type="text/javascript">
+   function setVisibility(){
+					myVar=setTimeout(function(){ 
+						PopUp('show');
+					},5000);
+				}
+				setVisibility();
+  </script>
+  <script>
+   /*window.onload = function () {
+    //setTimeout(function () {
+    //    PopUp('show');
+    //}, 3000);
+	
+ //Uncomment this if you want to close popup on overlay click
+   $("#overlay").click(function(){
+ 	  PopUp('hide');
+   });
+}*/
+  </script>
+  <!-- comment the popup -->
+  <script type="text/javascript">
+   function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide'){
+		 document.getElementById('overlay').style.display = "none";
+	}else{
+		 document.getElementById('overlay').removeAttribute('style');
+		 	}
+}
+  </script>
+ </head>
+ <body>
+  <div id="overlay" style="display:none">
+   <div class="popup-content" id="popup">
+    <center>
+     <h2>
+      SHARE HEALTHCARE KNOWLEDGE  GET DISCOVERED
+     </h2>
+     <div class="popup-content-area">
+      <aside>
+       <ul>
+        <li>
+         Publish Healthcare Articles
+        </li>
+        <li>
+         Showcase your Expertise
+        </li>
+        <li>
+         Promote your Career or Business
+        </li>
+        <li>
+         Find or Post Healthcare Jobs
+        </li>
+       </ul>
+       <div class="links">
+        <a class="join-btn" href="http://www.rxeconsult.com/signup">
+         Join Now
+        </a>
+        <span>
+         For Free!
+        </span>
+        <a class="login-btn" href="http://www.rxeconsult.com/login.php">
+         Login
+        </a>
+       </div>
+      </aside>
+     </div>
+     <a class="close" href="javascript:void(0)" onclick="PopUp('hide')">
+      Close
+     </a>
+    </center>
+   </div>
+  </div>
+  <!-- end of comment of popup -->
+  <link href="http://www.rxeconsult.com/css/new/form-element.css" rel="stylesheet" type="text/css"/>
+  <script src="http://www.rxeconsult.com/js/new/form-element.js" type="text/javascript">
+  </script>
+  <!-- custom slider -->
+  <link href="http://www.rxeconsult.com/css/new/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+  <script src="http://www.rxeconsult.com/js/new/jquery.bxslider.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function () {
+$('.bxslider').bxSlider({
+  minSlides: 3,
+  maxSlides: 3,
+  slideWidth: 283,
+  slideMargin: 30,
+  captions: false,
+  pager: false,
+  moveSlides: 1,
+});
+});
+  </script>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25474768-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <!--Viglink-->
+  <!--&lt;script type="text/javascript"&gt;
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: 'cdc0fc05324cd69542f8ef212340a70c' };
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+&lt;/script&gt;-->
+  <!--Viglink ends-->
+  <title>
+   Pharmaceutical, Biotechnology, and Medical Device Jobs for PhDs | Omudhome Ogbru, PharmD | RxEconsult
+  </title>
+  <meta content="Pharmaceutical, biotechnology, and medical device jobs for PhDs. Includes descriptions, tips, and resources for job openings. " name="description"/>
+  <meta content="" name="keywords"/>
+  <meta content="Pharmaceutical, Biotechnology, and Medical Device Jobs for PhDs" property="og:title"/>
+  <meta content="
+	
+
+	Obtaining a PhD in life sciences was hard work. You toiled for any years, published your research, received an " property="og:description"/>
+  <meta content="article" property="og:type"/>
+  <meta content="http://www.rxeconsult.com/articles/view.php?id=476" property="og:url"/>
+  <meta content="http://www.rxeconsult.com/articles/files/476/ID100115061jpgID100115061_1384667343.jpg" property="og:image"/>
+  <meta content="RxEconsult" property="og:site_name"/>
+  <script type="text/javascript">
+   var switchTo5x=true;
+  </script>
+  <script src="http://w.sharethis.com/button/buttons.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   stLight.options({publisher: "ur-bd3b87f3-941f-9f49-682-4ef7e5ddac20"});
+  </script>
+  <style>
+   .mid-full ol li {list-style-type:decimal!important;}
+  </style>
+  <!-- wrapper -->
+  <section class="wrapper">
+   <!-- header -->
+   <!-- Go to www.addthis.com/dashboard to customize your tools -->
+   <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-544dd97464434360" type="text/javascript">
+   </script>
+   <script async="async" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-544dd97464434360" type="text/javascript">
+   </script>
+   <section class="header">
+    <header>
+     <figure>
+      <a href="http://www.rxeconsult.com/">
+       <img align="top" src="http://www.rxeconsult.com/image/logo.png"/>
+      </a>
+     </figure>
+     <aside>
+      <!-- social box -->
+      <div class="social-box">
+       <form action="http://www.rxeconsult.com/search/index.php" class="search-box fl" method="get" onsubmit="">
+        <span>
+         <input autocomplete="off" id="q" name="q" placeholder="Search" type="text" value=""/>
+         <input name="type" type="hidden" value="mvafd"/>
+        </span>
+       </form>
+       <script src="http://w.sharethis.com/button/buttons.js" type="text/javascript">
+       </script>
+       <script type="text/javascript">
+        stLight.options({publisher: "5cad8367-f9df-4db3-825c-ff487d63f38b", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+       </script>
+       <ul>
+        <li class="st_sharethis_custom_fb" displaytext="Facebook">
+         <img src="http://www.rxeconsult.com/image/fb-icon.png"/>
+        </li>
+        <li class="st_sharethis_custom_tw" displaytext="Tweet">
+         <img src="http://www.rxeconsult.com/image/twt-icon.png"/>
+        </li>
+        <li class="st_sharethis_custom_gp" displaytext="Google +">
+         <img src="http://www.rxeconsult.com/image/gp-icon.png"/>
+        </li>
+        <li class="st_sharethis_custom_lnkd" displaytext="LinkedIn">
+         <img src="http://www.rxeconsult.com/image/lindin-icon.png"/>
+        </li>
+       </ul>
+      </div>
+      <!-- social box end -->
+      <div class="cl">
+      </div>
+      <!-- navigation -->
+      <nav>
+       <!--script type="text/javascript" &gt;
+                   $(document).ready(function()
+                   {
+
+                       $(".account").click(function()
+                       {
+                           var X = $(this).attr('id');
+                           if (X == 1)
+                           {
+                               $(".submenu").hide();
+                               $(this).attr('id', '0');
+                           }
+                           else
+                           {
+                               $(".submenu").show();
+                               $(this).attr('id', '1');
+                           }
+
+                       });
+
+               //Mouse click on sub menu
+                       $(".submenu").mouseup(function()
+                       {
+                           return false
+                       });
+
+               //Mouse click on my account link
+                       $(".account").mouseup(function()
+
+                       {
+                           return false
+                       });
+
+
+               //Document Click
+                       $(document).mouseup(function()
+                       {
+                           $(".submenu").hide();
+                           $(".account").attr('id', '');
+                       });
+                   });
+               &lt;/script-->
+       <div class="dropdown">
+        <ul>
+         <li>
+          <a href="http://www.rxeconsult.com/">
+           Home
+          </a>
+         </li>
+         <li class="account">
+          <a href="http://www.rxeconsult.com/healthcare-network-about">
+           About
+           <span>
+            <img src="http://www.rxeconsult.com/image/down-arw.png"/>
+           </span>
+          </a>
+          <div class="submenu">
+           <ul class="root">
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-network-tour">
+              Take A Tour
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-network-benefits">
+              Benefits
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-community">
+              Community Overview
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-community-members">
+              Browse Members
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-network-news">
+              News
+             </a>
+            </li>
+           </ul>
+          </div>
+         </li>
+         <li class="account">
+          <a href="javascript:void(0)">
+           Articles
+           <span>
+            <img src="http://www.rxeconsult.com/image/down-arw.png"/>
+           </span>
+          </a>
+          <div class="submenu">
+           <ul class="root">
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-articles">
+              View Articles
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-articles-espotlight">
+              E-spotlights
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-articles/publish">
+              Publish An Article
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-articles/writing-guidelines">
+              Writing Guidelines
+             </a>
+            </li>
+           </ul>
+          </div>
+         </li>
+         <li class="account">
+          <a href="http://www.rxeconsult.com/healthcare-jobs">
+           Jobs
+           <span>
+            <img src="http://www.rxeconsult.com/image/down-arw.png"/>
+           </span>
+          </a>
+          <div class="submenu">
+           <ul class="root">
+            <li>
+             <a href="http://www.jobtarget.com/c/search_results.cfm?site_id=19782" target="_blank">
+              View Jobs
+             </a>
+            </li>
+            <li>
+             <a href="http://www.jobtarget.com/r/jobs/post/index.cfm?site_id=19782" target="_blank">
+              Employers
+             </a>
+            </li>
+            <li>
+             <a href="http://www.rxeconsult.com/healthcare-jobs">
+              Career Center
+             </a>
+            </li>
+           </ul>
+          </div>
+         </li>
+         <div class="cl">
+         </div>
+        </ul>
+        <a class="join-btn" href="http://www.rxeconsult.com/signup">
+         Join Now
+        </a>
+        <a class="login-btn" href="http://www.rxeconsult.com/login.php">
+         Login
+        </a>
+       </div>
+       <!--Dropdown ends-->
+       <div class="cl">
+       </div>
+      </nav>
+      <!-- navigation end -->
+      <div class="cl">
+      </div>
+     </aside>
+    </header>
+    <div class="cl">
+    </div>
+   </section>
+   <!-- header -->
+   <!-- middle -->
+   <section class="middle-container">
+    <div class="main">
+     <h3 class="title">
+      All Health Articles
+     </h3>
+    </div>
+    <div class="top-add-space">
+     <center>
+      <script type="text/javascript">
+       var ehs_site="ehs.pro.rxec.rxeconsult";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="728x90";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("iprof=md;");
+ehs_kv.push("ims1=f9;");
+ehs_kv.push("ims2=i19;");
+ehs_kv.push("ims3=null;");
+ehs_kv.push("rprof=null;");
+ehs_kv.push("rms1=null;");
+ehs_kv.push("rss1=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('&lt;scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"&gt;&lt;/scr'+'ipt&gt;');
+      </script>
+     </center>
+    </div>
+    <div class="slider-details">
+     <ul class="bxslider">
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Finding-Medical-Science-Liaison-MSL-Jobs-without-Experience-78/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/78/ID100100166jpgID100100166_1350654518_th.jpg" style="height: 113px;" title="Finding Medical Science Liaison (MSL) Jobs without Experience"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Finding-Medical-Science-Liaison-MSL-Jobs-without-Experience-78/">
+          Finding Medical Science Liaison (MS                              ...
+         </a>
+        </span>
+       </div>
+      </li>
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Pharmaceutical-Industry-Jobs-for-Doctors-142/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/142/33997yjp8501zf6jpg33997yjp8501zf6_1350559034_th.jpg" style="height: 113px;" title="Pharmaceutical Industry Jobs for Doctors"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Pharmaceutical-Industry-Jobs-for-Doctors-142/">
+          Pharmaceutical Industry Jobs for Do                              ...
+         </a>
+        </span>
+       </div>
+      </li>
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Getting-a-Job-in-Biotechnology-192/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/192/MP900408849JPGMP900408849_1350483228_th.JPG" style="height: 113px;" title="Getting a Job in Biotechnology"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Getting-a-Job-in-Biotechnology-192/">
+          Getting a Job in Biotechnology
+         </a>
+        </span>
+       </div>
+      </li>
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Employment-Opportunities-in-Telehealth-296/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/296/ID10091677jpgID10091677_1362688769_th.jpg" style="height: 113px;" title="Employment Opportunities in Telehealth"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Employment-Opportunities-in-Telehealth-296/">
+          Employment Opportunities in Telehea                              ...
+         </a>
+        </span>
+       </div>
+      </li>
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Top-10-Reasons-Why-Physicians-Leave-Medicine-323/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/323/MP900321054JPGMP900321054_1365675799_th.JPG" style="height: 113px;" title="Top 10 Reasons Why Physicians Leave Medicine"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Top-10-Reasons-Why-Physicians-Leave-Medicine-323/">
+          Top 10 Reasons Why Physicians Leave                              ...
+         </a>
+        </span>
+       </div>
+      </li>
+      <li>
+       <a href="http://www.rxeconsult.com/healthcare-articles/Top-10-Non-Clinical-Jobs-for-Doctors-356/">
+        <img height="113" src="http://www.rxeconsult.com/articles/files/356/MP900442179JPGMP900442179_1369242377_th.JPG" style="height: 113px;" title="Top 10 Non-Clinical Jobs for Doctors"/>
+       </a>
+       <div class="bx-caption">
+        <span>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Top-10-Non-Clinical-Jobs-for-Doctors-356/">
+          Top 10 Non-Clinical Jobs for Doctor                              ...
+         </a>
+        </span>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <div class="main">
+     <div class="span8 article-list fl">
+      <!--Article listing-->
+      <div class="article-details">
+       <article>
+        <strong>
+         Pharmaceutical, Biotechnology, and Medical Device Jobs for PhDs
+        </strong>
+        <small>
+         Category:
+         <a>
+          Job Search
+         </a>
+        </small>
+        <small>
+         by
+         <a href="http://www.rxeconsult.com/profile/Omudhome-Ogbru-PharmD-12/" rel="author">
+          Omudhome Ogbru, PharmD
+         </a>
+         - November 17, 2013 | Views: 5005 | Likes: 0 | Comment: 0
+         <a href="http://www.rxeconsult.com/rss_feed.php" target="_blank">
+          <img src="http://www.rxeconsult.com/images/rss_small.png"/>
+         </a>
+        </small>
+        <!--&lt;figure&gt;&lt;/figure&gt;-->
+        <div class="socail-icons">
+         <div class="addthis_sharing_toolbox">
+         </div>
+         <!--&lt;span class='st_twitter_hcount fl' displayText='Tweet'&gt;&lt;/span&gt;
+                &lt;span class='st_plusone_hcount fl' style="margin-top:2px;"  displayText='Google +1'&gt;&lt;/span&gt;
+                &lt;span class='st_fblike_hcount fl' style="margin-top:-8px;" displayText='Facebook Like'&gt;&lt;/span&gt;
+                &lt;span class='st_linkedin_hcount fl' displayText='LinkedIn'&gt;&lt;/span&gt;
+                &lt;span class='st_digg_hcount fl' displayText='Digg'&gt;&lt;/span&gt;
+                &lt;!-- Place this tag where you want the su badge to render -->
+         <!--&lt;span class="fl"  style="margin-top:2px;"&gt;&lt;su:badge layout="1"&gt;&lt;/su:badge&gt;&lt;/span&gt;-->
+         <!-- Place this snippet wherever appropriate -->
+         <script type="text/javascript">
+          (function() {
+                    var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+                    li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+                })();
+         </script>
+         <!--&lt;span class="fl" style="margin-top:3px; margin-left:5px"&gt;&lt;a href="http://www.rxeconsult.com/rss_feed.php" target="_blank"&gt;&lt;img src="http://www.rxeconsult.com/images/rss_small.png" /&gt;&lt;/a&gt;&lt;/span&gt;-->
+         <style>
+          .st-twitter-counter{background-image: url("http://www.rxeconsult.com/image/tweet.jpg")!important;}
+         </style>
+        </div>
+        <div class="cl">
+        </div>
+        <p>
+        </p>
+        <p>
+         <img alt="Pharmaceutical, medical device, biotech jobs for PhDs" src="http://www.rxeconsult.com/articles/files/476/ID100115061jpgID100115061_1384667343.jpg" style="width: 266px; height: 400px; float: left; margin-left: 2px; margin-right: 2px;"/>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Obtaining a PhD in life sciences was hard work. You toiled for any years, published your research, received an accolade or two along the way, and you even have a comfortable faculty position. May be you have been stuck in a lab for many years and finally you decided that publish or perish is no longer a rule you want to live by. Now you yearn for more and you want to find other opportunities. What else is out there? Where else can you apply your expertise other than traditional PhD roles?
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Probably the best careers for PhDs in life sciences are in the pharmaceutical, biotechnology and medical device industries. All the years of training, research, publications, teaching, and speaking are very valuable skills that can land you a very satisfying and lucrative position in the pharmaceutical industry. The pharmaceutical industry presents several options for PhDs who are comfortable in a business environment and can apply their scientific skills to support the objectives of a pharmaceutical, biotech, or device company.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          There are many different types of opportunities ranging from drug discovery, preclinical studies, clinical studies, regulatory, marketing, sales, publications, and post marketing scientific support in medical affairs. All are excellent opportunities depending on your interest and your entry point into the pharmaceutical industry. Here are some interestingpharmaceutical, biotech, or device companyjobs that do not involve lab work and are suitable for PhDs.
+         </span>
+        </p>
+        <p>
+        </p>
+        <p style="text-align: center;">
+         <span style="font-size:14px;">
+          <strong>
+           Related
+          </strong>
+          :
+          <a href="http://www.rxeconsult.com/healthcare-articles/Tips-for-PhDs-Looking-for-Pharmaceutical-Industry-Jobs--475/" target="_blank">
+           Tips for PhDs Looking for Pharmaceutical Industry Jobs
+          </a>
+         </span>
+        </p>
+        <p>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           What Qualifications do PhDs Need to Work in Pharmaceutical Companies
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Requirements vary depending on the role. The following types of experience are desirable for the jobs described below.
+         </span>
+        </p>
+        <ol>
+         <li>
+          <span style="font-size:14px;">
+           Specialize in a scientific discipline that matches the companies business focus. If you are a neuroscientist look for a position at companies that have a neurology department.
+          </span>
+         </li>
+         <li>
+          <span style="font-size:14px;">
+           Know how to design studies and analyze research results. If you have conducted original research it will help you stand out.
+          </span>
+         </li>
+         <li>
+          <span style="font-size:14px;">
+           Experience publishing in scientific journals, refereeing publications, or editing scientific paper are very desirable. Pharmaceutical companies are the source of many scientific publications.
+          </span>
+         </li>
+         <li>
+          <span style="font-size:14px;">
+           Teaching experience is very valuable and PhDs with academic appointments may want to seek roles that involve teaching healthcare professionals (e.g., MSL jobs) or presenting to the FDA.
+          </span>
+         </li>
+         <li>
+          <span style="font-size:14px;">
+           A good understanding of the drug life cycle is very desirable but can be learned quickly.
+          </span>
+         </li>
+         <li>
+          <span style="font-size:14px;">
+           Excellent communication skills are a universal requirement.
+          </span>
+         </li>
+        </ol>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           What are Popular Jobs, Outside the Laboratory, for PhDs at Pharmaceutical, Biotech, Medical Device Companies
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Research and Medical Affairs departments of pharmaceutical, biotech and medical device companies are where you will find most positions for PhDs in lives sciences. Regulatory, medical marketing, and sales also offer additional opportunities. Here are some examples of pharmaceutical industry jobs for life scientists. These are not the only opportunities. Use our job board and plug in your search terms and explore the jobs that are available in the pharmaceutical, biotech, and medical device industries.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Here are examples of jobs for PhDs at pharmaceutical, biotech, and medical device industries. Select links for current openings and requirements for each type of position.
+         </span>
+         <br/>
+        </p>
+        <p style="text-align: center;">
+         <span style="font-size:14px;">
+          <strong>
+           Related
+          </strong>
+          :
+          <a href="http://www.rxeconsult.com/pharmaceutical-jobs" target="_blank">
+           Pharmaceutical Industry Jobs and Careers
+          </a>
+         </span>
+         <br/>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           <a href="http://www.rxeconsult.com/classifieds/index.php?q=medical+science+liaison&amp;l=&amp;search_type=keyword">
+            Medical Science Liaison (MSL)
+           </a>
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          MSLs positions have proliferated in the last several years. This role involves building relationships with key decision makers and educating healthcare providers about the latest research and treatment guidelines that impact use of the company's products. MSLs collaborate with the sales and marketing teams to support the company's educational and product promotion efforts. This role involves giving one-one and group presentations. MSLs work from home and travel to meet with customers. This is a great entry level position.
+         </span>
+         <br/>
+        </p>
+        <p style="text-align: center;">
+         <span style="font-size:14px;">
+          <strong>
+           Related
+          </strong>
+          :
+          <a href="http://www.rxeconsult.com/healthcare-articles/Finding-Medical-Science-Liaison-MSL-Jobs-without-Experience-78/" target="_blank">
+           Finding Medical Science Liaison (MSL) Jobs without Experience
+          </a>
+         </span>
+         <br/>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           <a href="http://www.rxeconsult.com/classifieds/index.php?q=clinical+research+associate&amp;l=&amp;search_type=keyword">
+            Clinical Research Associates (CRA)
+           </a>
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Clinical research associates either work in the main research facility or work remotely in the field. Their main responsibility is to facilitate enrollment, data collection and provide site support for clinical trials. They give presentations, answer questions about the clinical trial, and help investigators solve problems that may impede enrollment or data collection. This role may involve travel. This is a great entry position for PhDs with little experience or are just venturing into the pharmaceutical, biotech, and medical device industries.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=advance&amp;title=medical+director&amp;compensation=Compensation&amp;location=City%2C+State%2C+or+Zipcode&amp;department=Department&amp;business_type=pharmaceuticals">
+            Medical Director
+           </a>
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Medical directors typically are involved in the design of clinical trials, develop scientific educational materials, develop scientific or medical messaging, and are involved in training the commercial and medical teams. Some may present data to regulatory authorities. The exact responsibilities vary between companies. Medical directors may eventually become Vice Presidents or
+          <a href="http://www.rxeconsult.com/classifieds/index.php?search_type=advance&amp;title=Chief+Medical+Officer&amp;compensation=Compensation&amp;location=City,+State,+or+Zipcode&amp;department=Department&amp;business_type=pharmaceutical">
+           Chief Medical Officers
+          </a>
+          . There is no limit to how far your career can take you.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=advance&amp;title=medical+information&amp;compensation=Compensation&amp;location=City%2C+State%2C+or+Zipcode&amp;department=Department&amp;business_type=pharmaceuticals">
+           <strong>
+            Medical Information
+           </strong>
+          </a>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          This is a great entry point into the pharmaceutical,biotech, and medical deviceindustry. Most companies tend to prefer PharmD (Doctor of Pharmacy) professionals for this department but PhDs are also a good fit. These professionals develop responses and answer questions from healthcare providers and patients about the company's products. This job requires good writing andspokencommunication skills, and a passion for finding answers to questions.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           <a href="http://www.rxeconsult.com/classifieds/index.php?q=drug+safety&amp;l=&amp;search_type=keyword">
+            Drug Safety (Pharmacovigilance)
+           </a>
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          This a popular department for medical as well as non-medical professionals. Drug safety collects, evaluates, and looks for signals in adverse event reports about the company's products. They are involved in clinical trials safety reporting, post marketing safety reporting, and they work closely with regulatory personnel. This is also a great entry point into the pharmaceutical industry.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=advance&amp;title=regulatory+or+compliance&amp;compensation=Compensation&amp;location=City%2C+State%2C+or+Zipcode&amp;department=Department&amp;business_type=pharmaceuticals">
+           <strong>
+            Regulatory
+           </strong>
+          </a>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Regulatory is involved in all submissions to regulatory authorities. It is a very specialized area that is suitable for many different types of professionals, including PhDs. This department also ensures that all the company's promotional materials are within FDA guidelines. They work closely with the sales, marketing, and clinical teams to ensure compliance with FDA rules and regulations that govern many aspects of the pharmaceutical industry. Additional courses and on-the-job training will be required for this role.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=keyword&amp;q=medical+writing+and+pharmaceuticals&amp;l=City%2C+State%2C+or+Zipcode" target="_blank">
+           <strong>
+            Publications and Medical Writing
+           </strong>
+          </a>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Pharmaceutical, biotech, and medical device companies publish many articles and posters. The publications department is usually responsible for developing and executing the companys publication strategy and work closely with research, regulatory and medical affairs teams. Those who like to write, review and edit manuscripts will find a home in publications. The publications team may also write final reports of clinical trials and produce FDA submission documents.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=keyword&amp;q=Pharmacoeconomics+or+outcomes+research&amp;l=City%2C+State%2C+or+Zipcode" target="_blank">
+           <strong>
+            Pharmacoeconomics or Outcomes Research
+           </strong>
+          </a>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          This role has also grown in popularity over the last few years because payers are requesting outcomes data from pharmaceutical companies. This position involves outcomes research and publications. It is a specialized area that may require further training if you do not already have expertise in pharmacoeconomics; a fellowship or equivalent training in pharmacoeconomics is usually required. Professionals with the appropriate credentials will find field opportunities as Pharmacoeconomic MSLs or office based positions.
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           What are Salaries for PhDs in the Pharmaceutical Industry
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Pharmaceutical,biotech, and medical device companiestypically pay more than academia and other settings where PhDs tend to find work. Pay will vary depending your role, experience and responsibilities. After adding bonuses, stock options or grants, a car (MSL), and other perks, PhDs receive significantly better compensation at pharmaceutical,biotech, and medical device companiesand there are more growth opportunities. Entry level base salaries may start below $100,000 but after a few years of experience six figure base salaries are customary. You can research salaries for some of the positions mentioned above by searching the
+          <a href="http://www.rxeconsult.com/healthcare-jobs/index.php?search_type=keyword&amp;q=pharmaceutical+or+biotechnology+or+medical+device&amp;l=City%2C+State%2C+or+Zipcode" target="_blank">
+           job board
+          </a>
+          .
+         </span>
+        </p>
+        <p>
+         <span style="font-size:16px;">
+          <strong>
+           Conclusion
+          </strong>
+         </span>
+        </p>
+        <p>
+         <span style="font-size:14px;">
+          Although PhDs are trained for research and academia they are highly suited for top level positions at pharmaceutical,biotech, and medical device companies. Making the transition from other settings to the pharmaceutical, biotechnology, or medical device industries is not always easy but it is possible with the right credentials, some planning, perseverance, and a little but of luck. Many life scientists have successfully transitioned and are enjoying life-long careers at pharmaceutical, biotechnology, or medical device industries. The sky is the limit.
+         </span>
+        </p>
+        <div>
+         <span style="font-size:14px;">
+          If you have questions about the pharmaceutical industry
+          <a href="http://www.rxeconsult.com/signup" target="_blank">
+           join
+          </a>
+          the RxEconsult community and post a question on the discussion board.
+         </span>
+        </div>
+       </article>
+       <div class="bottom-links">
+        <a href="http://www.rxeconsult.com/article_widget.php">
+         <img alt="Articles Widget" src="http://www.rxeconsult.com/image/widget-btn.png"/>
+        </a>
+        <a href="http://www.rxeconsult.com/rss_feed.php">
+         <img alt="Subscribe" src="http://www.rxeconsult.com/image/subscribe.png"/>
+        </a>
+        <div class="cl">
+        </div>
+        <small>
+         more Articles by:
+         <a href="http://www.rxeconsult.com/profile/Omudhome-Ogbru-PharmD-12/" rel="author">
+          Omudhome Ogbru, PharmD
+         </a>
+        </small>
+       </div>
+      </div>
+      <!--Article listing-->
+      <div class="widgetwrapper">
+       <div class="heading">
+        <a href="#">
+         Healthcare Career Center Jobs
+        </a>
+       </div>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501747/">
+           Clinical Social Worker - PD Care Coordination
+          </a>
+         </strong>
+         <small>
+          Northridge Hospital Medical Center
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501744/">
+           SOCIAL WORKER MSW - Outpatient Clinic
+          </a>
+         </strong>
+         <small>
+          Bakersfield Memorial Hospital
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501738/">
+           RN Registered Nurse - Cardiac Cath Services Per Diem Call Required
+          </a>
+         </strong>
+         <small>
+          Mercy General Hospital
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501726/">
+           Social Worker (LCSW) F/T Evenings Social Services
+          </a>
+         </strong>
+         <small>
+          Northridge Hospital Medical Center
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <div class="cl">
+       </div>
+       <div class="jt_clear">
+        <a class="jt_post jt_button" href="http://www.rxeconsult.com/healthcare-jobs">
+         <span>
+          Career Center 
+         </span>
+        </a>
+        <a class="jt_more jt_button" href="http://www.jobtarget.com/c/search.cfm?site_id=19782" target="_blank">
+         <span>
+          View all 
+         </span>
+        </a>
+       </div>
+       <div class="cl">
+       </div>
+      </div>
+      <div class="bottom-add-space" style="text-align:left">
+      </div>
+      <div class="bottom-add-space" style="text-align:left">
+       <center>
+        <script type="text/javascript">
+         var ehs_site="ehs.pro.rxec.rxeconsult";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="728x90";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("iprof=ph;");
+ehs_kv.push("ims1=f9;");
+ehs_kv.push("ims2=i19;");
+ehs_kv.push("ims3=null;");
+ehs_kv.push("rprof=null;");
+ehs_kv.push("rms1=null;");
+ehs_kv.push("rss1=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('&lt;scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"&gt;&lt;/scr'+'ipt&gt;');
+        </script>
+       </center>
+      </div>
+     </div>
+     <!--span8 -->
+     <div class="span4 sidebar fr">
+      <div class="widgetwrapper">
+       <div class="heading">
+        <a href="#">
+         Healthcare Career Center Jobs
+        </a>
+       </div>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501747/">
+           Clinical Social Worker - PD Care Coordination
+          </a>
+         </strong>
+         <small>
+          Northridge Hospital Medical Center
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501744/">
+           SOCIAL WORKER MSW - Outpatient Clinic
+          </a>
+         </strong>
+         <small>
+          Bakersfield Memorial Hospital
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501738/">
+           RN Registered Nurse - Cardiac Cath Services Per Diem Call Required
+          </a>
+         </strong>
+         <small>
+          Mercy General Hospital
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <aside style="margin-left:0">
+         <strong>
+          <a href="http://rxeconsult-careers.jobtarget.com/jobseeker/job/24501726/">
+           Social Worker (LCSW) F/T Evenings Social Services
+          </a>
+         </strong>
+         <small>
+          Northridge Hospital Medical Center
+          <br/>
+          California, United States
+         </small>
+         <!--&lt;small&gt;  Date Posted: &lt;/small&gt;-->
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <div class="cl">
+       </div>
+       <div class="jt_clear">
+        <a class="jt_post jt_button" href="http://www.rxeconsult.com/healthcare-jobs">
+         <span>
+          Career Center 
+         </span>
+        </a>
+        <a class="jt_more jt_button" href="http://www.jobtarget.com/c/search.cfm?site_id=19782" target="_blank">
+         <span>
+          View all 
+         </span>
+        </a>
+       </div>
+       <div class="cl">
+       </div>
+      </div>
+      <div class="add">
+       <center>
+        <script type="text/javascript">
+         var ehs_site="ehs.pro.rxec.rxeconsult";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="160x600,120x600,300x600";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("iprof=md;");
+ehs_kv.push("ims1=f9;");
+ehs_kv.push("ims2=i19;");
+ehs_kv.push("ims3=null;");
+ehs_kv.push("rprof=null;");
+ehs_kv.push("rms1=null;");
+ehs_kv.push("rss1=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('&lt;scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"&gt;&lt;/scr'+'ipt&gt;');
+        </script>
+       </center>
+      </div>
+      <div class="widget-blocks">
+       <div class="title">
+        Featured Articles
+       </div>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Keytruda-Versus-Yervoy-For-Treatment-Of-Advanced-Melanoma--814/">
+          <img src="http://www.rxeconsult.com/articles/files/814/ID100149683jpgID100149683_1431278625_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Keytruda-Versus-Yervoy-For-Treatment-Of-Advanced-Melanoma--814/">
+           Keytruda Versus Yervoy For Treatment Of Advanced Melanoma
+          </a>
+         </strong>
+         <small>
+          By:
+          <a href="http://www.rxeconsult.com/profile/Wing-Bernadette-Cheung-PharmD-3226/">
+           Wing (Bernadette) Cheung, PharmD
+          </a>
+          - May 7th
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/A-Review-of-Contraceptives-and-Selecting-A-Method-of-Contraception-447/">
+          <img src="http://www.rxeconsult.com/articles/files/447/MP900321069JPGMP900321069_1381374171_th_2.JPG" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/A-Review-of-Contraceptives-and-Selecting-A-Method-of-Contraception-447/">
+           A Review of Contraceptives and Selecting A Method of Contraception
+          </a>
+         </strong>
+         <small>
+          By:
+          <a href="http://www.rxeconsult.com/profile/Karine-Wong-PharmD-175/">
+           Karine Wong, Pharm.D.
+          </a>
+          - Oct 1st 2013
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Medications-That-Increase-Blood-Glucose-Sugar-Or-Cause-Diabetes--621/">
+          <img src="http://www.rxeconsult.com/articles/files/621/ID100240392jpgID100240392_1405256107_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Medications-That-Increase-Blood-Glucose-Sugar-Or-Cause-Diabetes--621/">
+           Medications That Increase Blood Glucose (Sugar) Or Cause Diabetes
+          </a>
+         </strong>
+         <small>
+          By:
+          <a href="http://www.rxeconsult.com/profile/Steven-Ma-PharmD-Intern-2359/">
+           Steven Ma, PharmD Intern
+          </a>
+          - Jun 27th 2014
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+      </div>
+      <div class="add">
+       <script type="text/javascript">
+        var ehs_site="ehs.pro.rxec.rxeconsult";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="300x250";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("iprof=md;");
+ehs_kv.push("ims1=f9;");
+ehs_kv.push("ims2=i19;");
+ehs_kv.push("ims3=null;");
+ehs_kv.push("rprof=null;");
+ehs_kv.push("rms1=null;");
+ehs_kv.push("rss1=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('&lt;scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"&gt;&lt;/scr'+'ipt&gt;');
+       </script>
+      </div>
+      <div class="newsletter-box">
+       <p>
+        NEWSLETTER
+       </p>
+       <span>
+        Stay up to date. Subscribe to RxEconsult weekly newsletters.
+        <a href="http://ymlp.com/xgmbjehwgmgb" target="_blank">
+         <img border="0" src="http://btn.ymlp.com/button_gmbjehwgmgb.png"/>
+        </a>
+       </span>
+      </div>
+      <div class="add">
+       <script src="/jwplayer/jwplayer.js" type="text/javascript">
+       </script>
+       <video autoplay="" controls="" height="221" id="v-id2" width="300">
+        <!--&lt;source src="" type="video/mp4"&gt;-->
+        <source src="http://www.rxeconsult.com/RxE_Video.m4v" type="video/mp4">
+        </source>
+       </video>
+       <script type="text/javascript">
+        jwplayer("v-id2").setup({
+				modes: [
+					{ type: 'html5' },
+					{ type: 'flash', src: '/jwplayer/player.swf' }
+				],
+				'image': 'http://www.rxeconsult.com/watch-video-add.jpg'
+			});
+       </script>
+      </div>
+      <div class="widget-blocks recent">
+       <div class="title">
+        Recent Articles Published
+       </div>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Social-Media-For-Pharmaceutical-Companies-Time-For-Social-Medical-Information-837/">
+          <img src="http://www.rxeconsult.com/articles/files/837/ID100111226jpgID100111226_1435982796_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Social-Media-For-Pharmaceutical-Companies-Time-For-Social-Medical-Information-837/">
+           Social Media For Pharmaceutical Companies: Time For Social Medical Information
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Omudhome-Ogbru-PharmD-12/">
+           Omudhome Ogbru, PharmD
+          </a>
+          <br/>
+          Category: Social Media
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Listening-To-Patients-Prevents-Urgent-Care-Misdiagnosis--836/">
+          <img src="http://www.rxeconsult.com/articles/files/836/ID100333338jpgID100333338_1436018492_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Listening-To-Patients-Prevents-Urgent-Care-Misdiagnosis--836/">
+           Listening To Patients Prevents Urgent Care Misdiagnosis
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Karine-Wong-PharmD-175/">
+           Karine Wong, Pharm.D.
+          </a>
+          <br/>
+          Category: Healthcare Practice
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Symptoms-And-Treatment-Of-Four-Types-Of-Dementia--832/">
+          <img src="http://www.rxeconsult.com/articles/files/832/DementiajpgDementia_1435198576_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Symptoms-And-Treatment-Of-Four-Types-Of-Dementia--832/">
+           Symptoms And Treatment Of Four Types Of Dementia
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Nhan-Le-PharmD-Intern-3377/">
+           Nhan Le, PharmD Intern
+          </a>
+          <br/>
+          Category: Alzheimer's
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/How-Website-Speed-Affects-Your-Healthcare-Business-And-Tips-For-Improving-Site-Speed-827/">
+          <img src="http://www.rxeconsult.com/articles/files/827/ID10098711jpgID10098711_1434039800_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/How-Website-Speed-Affects-Your-Healthcare-Business-And-Tips-For-Improving-Site-Speed-827/">
+           How Website Speed Affects Your Healthcare Business And Tips For Improving Site Speed
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Michael--Sherman-1711/">
+           Michael  Sherman
+          </a>
+          <br/>
+          Category: Business Tips
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/How-To-Use-Facebook-Groups-To-Market-Your-Healthcare-Business--826/">
+          <img src="http://www.rxeconsult.com/articles/files/826/ID10078195jpgID10078195_1434033564_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/How-To-Use-Facebook-Groups-To-Market-Your-Healthcare-Business--826/">
+           How To Use Facebook Groups To Market Your Healthcare Business
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Michael--Sherman-1711/">
+           Michael  Sherman
+          </a>
+          <br/>
+          Category: Social Media
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <article>
+        <figure>
+         <a href="http://www.rxeconsult.com/healthcare-articles/Viberzi-eluxadoline-Side-Effects-Costs-Dosing-And-Prescribing-Information-For-Irritable-Bowel-Syndrome-With-Diarrhea-IBS-D-825/">
+          <img src="http://www.rxeconsult.com/articles/files/825/ID100299414jpgID100299414_1435679025_th_2.jpg" width="60"/>
+         </a>
+        </figure>
+        <aside>
+         <strong>
+          <a href="http://www.rxeconsult.com/healthcare-articles/Viberzi-eluxadoline-Side-Effects-Costs-Dosing-And-Prescribing-Information-For-Irritable-Bowel-Syndrome-With-Diarrhea-IBS-D-825/">
+           Viberzi (eluxadoline) Side Effects, Costs, Dosing, And Prescribing Information For Irritable Bowel Syndrome With Diarrhea (IBS-D)
+          </a>
+         </strong>
+         <small>
+          Published by:
+          <a href="http://www.rxeconsult.com/profile/Nhan-Le-PharmD-Intern-3377/">
+           Nhan Le, PharmD Intern
+          </a>
+          <br/>
+          Category: GI (Ulcers, Crohn's, Ulcerative Colitis)
+         </small>
+        </aside>
+        <div class="cl">
+        </div>
+       </article>
+       <a class="recent-all" href="http://www.rxeconsult.com/healthcare-articles">
+        View all published articles 
+       </a>
+      </div>
+      <!--recent ends-->
+      <div class="widget-blocks recent">
+       <!--&lt;div class="title"&gt;  All Healthcare Jobs&lt;/div&gt;-->
+       <a href="http://www.rxeconsult.com/click.php?id=1684">
+        <img alt="Advertisement" src="http://www.rxeconsult.com/Ads/1684.jpg"/>
+       </a>
+      </div>
+     </div>
+     <div class="cl">
+     </div>
+    </div>
+    <!--Main ends-->
+    <div class="cl">
+    </div>
+   </section>
+   <!-- middle end -->
+   <!-- footer -->
+   <footer>
+    <!-- footer box -->
+    <div class="footer-box">
+     <!-- footer menu -->
+     <div class="foot-menu">
+      <ul>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-about">
+         About
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-tour">
+         Take A Tour
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-benefits">
+         Benefits
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/articles">
+         Articles
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-jobs">
+         Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-community">
+         Community
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-news">
+         News
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="http://www.rxeconsult.com/contact">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/testimonials">
+         Testimonials
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-partners">
+         Partners
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-advertising">
+         Advertise
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-employers">
+         Employers
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-network-affiliate-program">
+         Affiliate Program
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-faculty">
+         Healthcare Faculty
+        </a>
+       </li>
+      </ul>
+      <ul class="last">
+       <li>
+        <a href="http://www.rxeconsult.com/nursing-jobs">
+         Nursing Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/pharmacy-jobs">
+         Pharmacy Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-consulting-jobs">
+         Healthcare Consulting Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/healthcare-management-jobs">
+         Healthcare Management Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/pharmaceutical-jobs">
+         Pharmaceutical Jobs
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/medical-jobs">
+         Medical Jobs
+        </a>
+       </li>
+      </ul>
+      <div class="cl">
+      </div>
+     </div>
+     <!-- footer menu -->
+     <!-- connect menu -->
+     <div class="connect-menu">
+      <h3>
+       Connect with RxEconsult
+      </h3>
+      <ul>
+       <li>
+        <a href="https://www.facebook.com/#!/RxEconsult" target="_blank">
+         <img src="http://www.rxeconsult.com/image/fb-icon.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="http://twitter.com/#!/RxEconsult" target="_blank">
+         <img src="http://www.rxeconsult.com/image/twt-icon.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="https://plus.google.com/u/0/b/109044906632386393068/109044906632386393068/posts" target="_blank">
+         <img src="http://www.rxeconsult.com/image/gp-icon.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="http://www.linkedin.com/company/1447585?trk=tyah" target="_blank">
+         <img src="http://www.rxeconsult.com/image/lindin-icon.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="http://www.youtube.com/user/RxEconsult" target="_blank">
+         <img src="http://www.rxeconsult.com/image/tube-icon.png"/>
+        </a>
+       </li>
+       <li>
+        <a href="http://www.rxeconsult.com/rss_feed.php" target="_blank">
+         <img src="http://www.rxeconsult.com/image/blog-icon.png"/>
+        </a>
+       </li>
+      </ul>
+      <div class="cl">
+      </div>
+      <a class="widget-btn" href="http://www.rxeconsult.com/article_widget.php">
+       <img alt="" src="http://www.rxeconsult.com/image/widget-btn.png"/>
+      </a>
+     </div>
+     <!-- connect menu end -->
+     <div class="cl">
+     </div>
+     <p>
+      The content on this website is for information only and is not a substitute for professional medical advice, diagnosis, and treatment.
+      <br/>
+      Authors are responsible for their content.
+     </p>
+     <div class="cl">
+     </div>
+    </div>
+    <!-- footer box end -->
+    <div class="cl">
+    </div>
+   </footer>
+   <!-- footer end -->
+   <!-- copy right -->
+   <section class="copy-right-box">
+    <!-- copy right box  -->
+    <div class="copy-rightbox">
+     <p>
+      Copyright 2015 RxEconsult. All Rights Reserved |
+      <a href="http://www.rxeconsult.com/privacy">
+       Privacy Policy
+      </a>
+      |
+      <a href="http://www.rxeconsult.com/terms">
+       Terms of Use
+      </a>
+      |
+      <a href="http://www.rxeconsult.com/sitemap">
+       Sitemap
+      </a>
+     </p>
+     <div class="cl">
+     </div>
+    </div>
+    <!-- copy right box end -->
+    <div class="cl">
+    </div>
+   </section>
+   <!-- copy right end -->
+   <div class="cl">
+   </div>
+  </section>
+  <!-- wrapper end -->
+ </body>
+</html>

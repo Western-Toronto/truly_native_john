@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--
+####################################
+
+           Created with:
+        __  __   __       __
+       /   /  \ (_  |\/| /  \
+       \__ \__/ __) |  | \__/
+
+      http://www.cosmocms.org/
+            v1.0.0-beta.3
+
+####################################
+-->
+<html id="ng-app" ng-app="main" ng-controller="HTMLCtrl" xmlns:ng="http://angularjs.org">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <!--[if lte IE 9]&gt;
+            &lt;script&gt;
+                if(window.location.href.indexOf('#!') === -1)
+                    window.location.href = window.location.protocol + '//' + window.location.host + '/#!' + window.location.pathname;
+            &lt;/script&gt;
+            &lt;script src="core/js/3rd-party/html5.js"&gt;&lt;/script&gt;
+        &lt;![endif]-->
+  <!--[if lte IE 8]&gt;
+            &lt;script src="core/js/3rd-party/json2.js"&gt;&lt;/script&gt;
+            &lt;br /&gt;&lt;br /&gt;Your broswer is incompatible with this site. Please upgrade to a &lt;a href="http://www.browsehappy.com"&gt;newer browser.&lt;/a&gt;
+        &lt;![endif]-->
+  <link href="uploads/logo-5449a65fcc958.svg" rel="shortcut icon"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport"/>
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+  <!-- Meta Tags -->
+  <title ng-bind-template="{{title}}">
+   Cosmo - The Single Page Application CMS
+  </title>
+  <meta content="Cosmo is the first open source, responsive, live-editing, single page application content management system (CMS). It was created in AngularJS and PHP." name="description"/>
+  <meta content="Cosmo - The Single Page Application CMS" property="og:title"/>
+  <meta content="Cosmo is the first open source, responsive, live-editing, single page application content management system (CMS). It was created in AngularJS and PHP." property="og:description"/>
+  <meta content="article" property="og:type"/>
+  <meta content="http://www.cosmocms.org/" property="og:url"/>
+  <meta content="http://www.cosmocms.org/uploads/test-555a344951365.png" property="og:image"/>
+  <base href="/"/>
+  <script src="min/?f=core/js/angular/angular.min.js,core/js/angular/angular-animate.min.js,core/js/angular/angular-touch.min.js,core/js/angular/angular-route.min.js,core/js/angular/angular-resource.min.js,core/js/cosmo.js,core/js/admin-panel.js,core/js/3rd-party/angular-file-upload.min.js,core/js/3rd-party/diff_match_patch.js,core/js/3rd-party/ngDialog.min.js,core/js/3rd-party/angular-ui-tree.min.js,themes/Newmanium/js/newmanium.minify.js,modules/amazon-cloudfront/amazon-cloudfront.minify.js,modules/CosmoCMS/cosmo-cms.minify.js,modules/google-analytics/google-analytics.minify.js">
+  </script>
+  <link href="min/?f=core/css/cosmo-default-style.minify.css,themes/Newmanium/css/style.minify.css" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="http://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet" type="text/css"/>
+  <script>
+   // Setup main module with HTML5 URLs
+            angular.module('main', [
+                'cosmo',
+                'cosmo.admin',
+                'ngRoute',
+                'ngAnimate',
+                'ui.tree',
+                'angularFileUpload',
+                'ngResource',
+                'ngDialog',
+                'ngTouch',
+		'newmanium',
+		'amazonCloudfront',
+		'cosmocms',
+		'googleAnalytics'
+            ])
+
+            .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+                // Configure standard URLs
+                $routeProvider.
+                    when('/admin', { controller: function(ngDialog){ ngDialog.open({ template: 'core/html/login.html', showClose: false, closeByEscape: false, closeByDocument: false }); }, template: '&lt;div&gt;&lt;/div&gt;' }).
+                    when('/reset/:userID/:token', { controller: 'resetModal', template: '&lt;div&gt;&lt;/div&gt;' }).
+                    when('/', { controller: 'urlCtrl', template: '&lt;div ng-include="template" ng-cloak&gt;&lt;/div&gt;' }).
+                    when('/:url', { controller: 'urlCtrl', template: '&lt;div ng-include="template" ng-cloak&gt;&lt;/div&gt;' });
+
+                // Enable HTML5 urls
+                $locationProvider.html5Mode(true).hashPrefix('!');
+            }])
+
+            // Initialize JS variables
+            .run(['Users', '$http', '$templateCache', 'REST', '$rootScope', 'Page', function(Users, $http, $templateCache, REST, $rootScope, Page) {
+
+                Users.username = '';
+                Users.role = '';
+                Page.directives = [{"name":"Single Row Post","directive":"one-post","description":"Tag you want to pull from:"},{"name":"Three Features","directive":"three-features"},{"name":"Feature Gallery","directive":"feature-gallery"},{"name":"Search Items","directive":"search-items","description":"Attribute to search:"}];
+                Page.classes = "";
+                Page.themePages = ["index.html","page.html","page-alt.html","post.html","overview.html","maintenance.html"];
+                Page.folder = '';
+                Page.menus = [{"id":"2","name":"Docs Sidebar","menu":"[{\"id\":1,\"title\":\"Install\",\"url\":\"install\",\"items\":[]},{\"id\":10,\"title\":\"Basic Editing\",\"url\":\"cosmo-basics\",\"items\":[]},{\"id\":10,\"title\":\"Create a Module\",\"url\":\"how-to-create-a-module-for-cosmo\",\"items\":[{\"id\":100,\"title\":\"RESTful API\",\"url\":\"rest\",\"items\":[]},{\"id\":101,\"title\":\"Hooks \/ Callbacks\",\"url\":\"hooks-callbacks\",\"items\":[]},{\"id\":102,\"title\":\"Backend\",\"url\":\"backend\",\"items\":[]}]},{\"id\":100,\"title\":\"Create a Theme\",\"url\":\"how-to-create-a-theme-for-cosmo\",\"items\":[{\"id\":1000,\"title\":\"Theme Styling\",\"url\":\"cosmo-styling\",\"items\":[]}]}]","area":"secondary"},{"id":"5","name":"Main Menu","menu":"[{\"id\":1,\"title\":\"Docs\",\"url\":\"\",\"items\":[{\"id\":10,\"title\":\"Install\",\"url\":\"install\",\"items\":[]},{\"id\":11,\"title\":\"Editing Basics\",\"url\":\"cosmo-basics\",\"items\":[]},{\"id\":12,\"title\":\"Create a Module\",\"url\":\"how-to-create-a-module-for-cosmo\",\"items\":[{\"id\":14,\"title\":\"Restful API\",\"url\":\"rest\",\"items\":[]},{\"id\":14,\"title\":\"Hooks &amp; Callbacks\",\"url\":\"hooks-callbacks\",\"items\":[]},{\"id\":14,\"title\":\"Backend\",\"url\":\"backend\",\"items\":[]}]},{\"id\":13,\"title\":\"Create a Theme\",\"url\":\"how-to-create-a-theme-for-cosmo\",\"items\":[{\"id\":14,\"title\":\"Theme Styling\",\"url\":\"cosmo-styling\",\"items\":[]}]}]},{\"id\":100,\"title\":\"Themes\",\"url\":\"themes\",\"items\":[]},{\"id\":1000,\"title\":\"Modules\",\"url\":\"modules\",\"items\":[]},{\"id\":1000,\"title\":\"Get Involved\",\"url\":\"get-involved\",\"items\":[]},{\"id\":100,\"title\":\"Blog\",\"url\":\"blog\",\"items\":[]}]","area":"primary"}];
+                Page.settings = {"id":"1","site_name":"Cosmo","slogan":"The Single Page App CMS","logo":"uploads\/Cosmo-Logo_4c-5510aefe1f1a1.svg","favicon":"uploads\/logo-5449a65fcc958.svg","email":"james@eloqu.co","theme":"Newmanium","maintenance_url":"\/maintenance","maintenance_mode":""};
+                Page.theme = 'Newmanium';
+
+                // If the user has permissions, show the sidebar.
+                if(Users.role === 'admin' || Users.role === 'editor' || Users.role === 'contributor' || Users.id){
+                    Users.admin = true;
+                    $rootScope.$broadcast('adminLogin');
+                }
+
+                // Get the user's role number
+                switch(Users.role){
+                    case 'admin':
+                        Users.roleNum = 1;
+                        break;
+                    case 'editor':
+                        Users.roleNum = 2;
+                        break;
+                    case 'contributor':
+                        Users.roleNum = 3;
+                        break;
+                    default:
+                        Users.roleNum = 4;
+                        break;
+                }
+
+                // Initialize headers for authorizing API calls
+                $http.defaults.headers.common['usersID'] = '';
+                $http.defaults.headers.common['username'] = '';
+                $http.defaults.headers.common['token'] = '';
+
+                // Cache all template pages
+                angular.forEach(Page.themePages, function(page){
+                    $templateCache.put('themes/Newmanium/'+page);
+                });
+
+            }]);
+  </script>
+ </head>
+ <body>
+  <div ng-if="admin">
+   <div ng-include="'core/html/admin-panel.html'">
+   </div>
+   <div cs-wysiwyg="">
+   </div>
+  </div>
+  <div class="cosmo-theme" ng-view="">
+   <section class="ng-scope bg-blue--dark center pad-vert">
+    <div class="container">
+     <div class="col--two">
+      <i class="fa fa-rocket blue--light">
+      </i>
+      <h5>
+       SEO/Social Friendly
+      </h5>
+      <p>
+       One page app sites have difficulty getting indexed by search engines and social sites.We've taken care of it for you.
+      </p>
+     </div>
+     <div class="col--two">
+      <i class="fa fa-code yellow">
+      </i>
+      <h5>
+       Custom WYSIWYG
+      </h5>
+      <p>
+       Say goodbye to shortcodes, our WYSIWYG editor is custom created so you can insert images, galleries, videos and custom directives.
+      </p>
+     </div>
+     <div class="col--two">
+      <i class="fa fa-circle-o-notch yellow-light">
+      </i>
+      <h5>
+       Prefetching
+      </h5>
+      <p>
+       With Cosmo, your sites will begin loading content that the user will be heading to next. This helps load times and creats less interruptions for your users.
+      </p>
+     </div>
+     <div class="col--two">
+      <i class="fa fa-mobile green">
+      </i>
+      <h5>
+       Mobile First
+      </h5>
+      <p>
+       Whether it's auto generated responsive images, or themes with mobile first CSS, Cosmo is always mobile ready.
+      </p>
+     </div>
+     <div class="col--two">
+      <i class="fa fa-file-image-o blue--light-mid">
+      </i>
+      <h5>
+       Responsive Images
+      </h5>
+      <p>
+       Cosmo will automatically resize and upload images into 4 sizes - 2048px, 1024px, 512px and 320px and use the correct image for the correct device.
+      </p>
+     </div>
+     <div class="col--two">
+      <i class="fa fa-spinner blue--mid">
+      </i>
+      <h5>
+       Single Page App
+      </h5>
+      <p>
+       With AngularJS being at the core of cosmo, every installation becomes a single page app. This allows for faster page loads, keeps the number of header requests down and the total website size smaller.
+      </p>
+     </div>
+     <section class="center-mid pad-vert ng-scope ">
+      <div class="container">
+       <div class="col--two-third marg-right">
+        <div class="fluidvids ng-isolate-scope fluidvids fluidvids fluidvids fluidvids fluidvids" fluidvids="" height="315" style="padding-top: 56.25%;" video="https://player.vimeo.com/video/123042879?color=70c8c4&amp;title=0&amp;byline=0&amp;portrait=0" width="560">
+         <iframe kwframeid="1" ng-src="https://player.vimeo.com/video/123042879?color=70c8c4&amp;title=0&amp;byline=0&amp;portrait=0" src="https://player.vimeo.com/video/123042879?color=70c8c4&amp;title=0&amp;byline=0&amp;portrait=0">
+         </iframe>
+        </div>
+       </div>
+       <div class="col--one-third">
+        <h4>
+         Live Editing
+        </h4>
+        <p>
+         Editing the content on your website shouldn't require menus, submenus and "previews" of your webpage. Cosmo allows you to insert text, images, galleries, videos and even blocks of html code directly into your site.
+        </p>
+       </div>
+      </div>
+     </section>
+     <section class="ng-scope center-mid pad-vert bg-gray--xlight">
+      <div class="container">
+       <div class="col--one-third marg-right">
+        <h4>
+         Version Control
+        </h4>
+        <p>
+         Revisions to a document shouldn't be a guessing game. With cosmo you can quickly and easily tell who and when the document was edited, whether it's published along with the ability to see the exact deletions and additions made since the previous save.
+        </p>
+        <p>
+         If you're familiar with github or wikipedia, you'll be right at home. You can see deletions marked in red, and additions marked in green. Need to revert to an earlier version? Not a problem, the revision manager can revert to any previous saved version          with ease.
+        </p>
+       </div>
+       <div class="col--two-third">
+        <img src="http://d2s3knzc1uyvvd.cloudfront.net/revisions.jpg"/>
+       </div>
+      </div>
+     </section>
+     <section class="center-mid pad-vert ng-scope">
+      <div class="container">
+       <div class="col--two-third marg-right">
+        <div class="fluidvids ng-isolate-scope fluidvids fluidvids fluidvids" fluidvids="" height="315" style="padding-top: 56.25%;" video="https://player.vimeo.com/video/124364564?color=70C8C4&amp;title=0&amp;byline=0&amp;portrait=0" width="560">
+         <iframe kwframeid="3" ng-src="https://player.vimeo.com/video/124364564?color=70C8C4&amp;title=0&amp;byline=0&amp;portrait=0" src="https://player.vimeo.com/video/124364564?color=70C8C4&amp;title=0&amp;byline=0&amp;portrait=0">
+         </iframe>
+        </div>
+       </div>
+       <div class="col--one-third">
+        <h4>
+         Insert Directives
+        </h4>
+        <p>
+         You no longer need to remember shortcodes or any code at all. Now you can insert a block of interactive html within cosmo's WYSIWYG editor. Simply input the information needed and it will generate the HTML for you.
+        </p>
+        <p>
+         Directives can be created by developers to add widgets like google maps, facebook feeds, or anything else you can imagine.
+        </p>
+       </div>
+      </div>
+     </section>
+    </div>
+    <div cs-notification="">
+    </div>
+   </section>
+  </div>
+ </body>
+</html>

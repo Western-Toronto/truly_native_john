@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]&gt;&lt;html class="ie ie6" lang="en"&gt; &lt;![endif]-->
+<!--[if IE 7 ]&gt;&lt;html class="ie ie7" lang="en"&gt; &lt;![endif]-->
+<!--[if IE 8 ]&gt;&lt;html class="ie ie8" lang="en"&gt; &lt;![endif]-->
+<!--[if (gte IE 9)|!(IE)]&gt;&lt;!-->
+<html lang="en">
+ <!--&lt;![endif]-->
+ <head>
+  <title>
+   Chappy Tunes - YouTube Music Playlist Generator
+  </title>
+  <meta charset="utf-8"/>
+  <meta content="Use the quick and easy YouTube Music Playlist Generator. Discover top 100 hit songs from today and yesterday." name="description"/>
+  <meta content="music,tune,toon,song,mp3,Billboard,hits,game,playlist,YouTube" name="keywords"/>
+  <meta content="Unicom Systems Inc." name="author"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <link href="stylesheets/base.css" rel="stylesheet"/>
+  <link href="stylesheets/skeleton.css" rel="stylesheet"/>
+  <link href="stylesheets/layout.css" rel="stylesheet"/>
+  <link href="images/favicon.ico" rel="shortcut icon"/>
+  <link href="images/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+  <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+  <script src="javascript/jquery-1.9.1.min.js">
+  </script>
+  <script src="javascript/youtubeplaylist.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   //&lt;![CDATA[ 
+$(window).load(function(){
+var glow = $('.confirm_selection');
+setTimeout(function(){
+glow.addClass('glow');
+}, 3000);
+});
+//]]&gt;
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-40241835-1', 'chappytunes.com');
+ga('send', 'pageview');
+  </script>
+  <style type="text/css">
+   body {
+margin: 0 auto;
+text-align: center;
+}
+
+form {
+width: 200px;
+margin: 0 auto;
+text-align: center;
+}
+
+h1 {
+font-family: 'Broadway', 'Arial Black', 'Arial';
+font-size: 32px;
+color: #ffffff;
+position: relative;
+display: inline-block;
+}
+
+h2 {
+font-family: 'Broadway', 'Arial Black', 'Arial';
+font-size: 26px;
+color: #ffffff;
+text-shadow: 1px 1px 1px #000;
+}
+
+.confirm_selection {
+-webkit-transition: text-shadow 1s linear;
+-moz-transition: text-shadow 1s linear;
+-ms-transition: text-shadow 1s linear;
+-o-transition: text-shadow 1s linear;
+transition: text-shadow 1s linear;
+}
+.confirm_selection.glow {
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+
+input[type='submit']:hover {
+-moz-box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+-webkit-box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+color: #ffffff;
+}
+
+
+input[type="submit"] {
+background-color: #2e0854 !important;
+border-color: #000000 !important;
+border-style: solid !important;
+border-width: 2px !important;
+color: #fdf8ff !important;
+background-color: #D5ADE1;
+background-image: -moz-linear-gradient(2deg, #3B1446, #D5ADE1);
+background-image: -ms-linear-gradient(2deg, #3B1446, #D5ADE1);
+background-image: -o-linear-gradient(2deg, #3B1446, #D5ADE1);
+background-image: -webkit-linear-gradient(2deg, #3B1446, #D5ADE1);
+background-image: linear-gradient(2deg, #3B1446, #D5ADE1);
+}
+
+#BackgroundConcert {
+background-image: url('/images/Concert.png');
+background-repeat: no-repeat;
+background-position: top center;
+/* background-size: cover; */
+min-height: 480px;
+border-style: solid; 
+border-width: 1px;
+border-top: 0px;
+}
+
+.yt-playlist-list a {
+display: block;
+border: 1px solid #e1e1e1;
+background: #2e0854;
+color: #fdf8ff;
+text-decoration: none;
+text-shadow: 0px 1px 1px rgba(255, 255, 255, 6);
+font-family: helvetica, arial, sans-serif;
+}
+
+.yt-playlist-list a.yt-playlist-active {
+-moz-box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+-webkit-box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+color: #fdf8ff;
+}
+
+.yt-playlist-player {
+width: 300px;
+height: 240px;
+background: #2e0854;
+}
+  </style>
+  <link href="stylesheets/jquery-ui.css" rel="stylesheet"/>
+  <script src="javascript/jquery-ui.js">
+  </script>
+  <script>
+   $(function() {
+$( "#slider-range-years" ).slider({
+range: true,
+min: 1946,
+max: 2014,
+values: [ 1946, 2014 ],
+slide: function( event, ui ) {
+$( "#YearStarting" ).val(ui.values[ 0 ] );
+$( "#YearEnding" ).val(ui.values[ 1 ] );
+}
+});
+$( "#YearStarting" ).val( $( "#slider-range-years" ).slider( "values", 0 ) );
+$( "#YearEnding" ).val( $( "#slider-range-years" ).slider( "values", 1 ) );
+});
+  </script>
+  <script>
+   $(function() {
+$( "#slider-range-position" ).slider({
+range: true,
+min: 1,
+max: 100,
+values: [ 1, 100 ],
+slide: function( event, ui ) {
+$( "#PositionStarting" ).val(ui.values[ 0 ] );
+$( "#PositionEnding" ).val(ui.values[ 1 ] );
+}
+});
+$( "#PositionStarting" ).val( $( "#slider-range-position" ).slider( "values", 0 ) );
+$( "#PositionEnding" ).val( $( "#slider-range-position" ).slider( "values", 1 ) );
+});
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="confirm_selection" style="overflow-x: hidden; overflow-y: hidden; opacity: 1; background: #2e0854; border-style: solid; border-width: 1px;">
+    <a href="/">
+     <img alt="Home" src="images/Home.png" style="position: absolute; left: 4px; top: 8px; z-index:1;"/>
+    </a>
+    <h1>
+     Chappy Tunes
+    </h1>
+    <h2>
+     YouTube Music Playlist Generator
+    </h2>
+   </div>
+   <div id="BackgroundConcert">
+    <noscript>
+     <div style="display: inline-block; text-align: justify; padding: 8px; color: red; font-weight: bold;">
+      This site requires Javascript to function properly but Javascript is not enabled in your browser settings. Please update your settings.
+     </div>
+    </noscript>
+    <br/>
+    <form action="#Play" id="Play" method="post" name="PlayTuneForm">
+     Play songs between the years:
+     <br/>
+     <input id="YearStarting" maxlength="4" name="YearStarting" onclick="this.value='';" size="4" style="display: inline-block; vertical-align: top; width: 20%; text-align: center;" type="text" value="1946"/>
+     and
+     <input id="YearEnding" maxlength="4" name="YearEnding" onclick="this.value='';" size="4" style="display: inline-block; vertical-align: top; width: 20%; text-align: center;" type="text" value="2014"/>
+     <div id="slider-range-years" style="margin-top: -12px;">
+     </div>
+     <br/>
+     Chart Position (1 - 100):
+     <br/>
+     <input id="PositionStarting" maxlength="2" name="PositionStarting" onclick="this.value='';" size="3" style="display: inline-block; vertical-align: top; width: 20%; text-align: center;" type="text" value="1"/>
+     to
+     <input id="PositionEnding" maxlength="3" name="PositionEnding" onclick="this.value='';" size="3" style="display: inline-block; vertical-align: top; width: 20%; text-align: center;" type="text" value="100"/>
+     <div id="slider-range-position" style="margin-top: -12px;">
+     </div>
+     <br/>
+     <input name="PlayTune" type="submit" value="Load random tunes"/>
+    </form>
+   </div>
+  </div>
+  <div>
+   <script type="text/javascript">
+    google_ad_client = "ca-pub-9011059519487893";
+     width = document.documentElement.clientWidth;
+     google_ad_slot = "1250398009";
+     google_ad_width = 234;
+     google_ad_height = 60;
+         if (width &gt; 500) {
+         google_ad_slot = "2866732008";
+         google_ad_width = 468;
+         google_ad_height = 60;
+     }
+     if (width &gt; 800) {
+         google_ad_slot = "8913265602";
+         google_ad_width = 728;
+        google_ad_height = 90;
+     }
+   </script>
+   <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript">
+   </script>
+  </div>
+ </body>
+</html>

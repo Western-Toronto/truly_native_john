@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="text/javascript" http-equiv="Content-Script-Type"/>
+  <script type="text/javascript">
+   function getCookie(c_name) { // Local function for getting a cookie value
+    if (document.cookie.length &gt; 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start!=-1) {
+        c_start=c_start + c_name.length +       1   ;   
+                                   c   _   e   n   d   =   d   o   c   u   m   e   n   t   .   c   o   o   k   i   e   .   i   n   d   e   x   O   f   (   "   ;   "   ,       c   _   s   t   a   r   t   )   ;   
+   
+                                   i   f       (   c   _   e   n   d   =   =   -   1   )       
+                                                   c   _   e   n   d       =       d   o   c   u   m   e   n   t   .   c   o   o   k   i   e   .   l   e   n   g   t   h   ;   
+   
+                                   r   e   t   u   r   n       u   n   e   s   c   a   p   e   (   d   o   c   u   m   e   n   t   .   c   o   o   k   i   e   .   s   u   b   s   t   r   i   n   g   (   c   _   s   t   a   r   t   ,   c   _   e   n   d   )   )   ;   
+                                   }   
+                   }   
+                   r   e   t   u   r   n       "   "   ;   
+   }   
+   f   u   n   c   t   i   o   n       s   e   t   C   o   o   k   i   e   (   c   _   n   a   m   e   ,       v   a   l   u   e   ,       e   x   p   i   r   e   d   a   y   s   )       {       /   /       L   o   c   a   l       f   u   n   c   t   i   o   n       f   o   r       s   e   t   t   i   n   g       a       v   a   l   u   e       o   f       a       c   o   o   k   i   e   
+                   v   a   r       e   x   d   a   t   e       =       n   e   w       D   a   t   e   (   )   ;   
+                   e   x   d   a   t   e   .   s   e   t   D   a   t   e   (   e   x   d   a   t   e   .   g   e   t   D   a   t   e   (   )   +   e   x   p   i   r   e   d   a   y   s   )   ;   
+                   d   o   c   u   m   e   n   t   .   c   o   o   k   i   e       =       c   _   n   a   m   e       +       "   =   "       +       e   s   c   a   p   e   (   v   a   l   u   e   )       +       (   (   e   x   p   i   r   e   d   a   y   s   =   =   n   u   l   l   )       ?       "   "       :       "   ;   e   x   p   i   r   e   s   =   "       +       e   x   d   a   t   e   .   t   o   G   M   T   S   t   r   i   n   g   (   )   )       +       "   ;   p   a   t   h   =   /   "   ;   
+   }   
+   f   u   n   c   t   i   o   n       g   e   t   H   o   s   t   U   r   i   (   )       {   
+                   v   a   r       l   o   c       =       d   o   c   u   m   e   n   t   .   l   o   c   a   t   i   o   n   ;   
+                   r   e   t   u   r   n       l   o   c   .   t   o   S   t   r   i   n   g   (   )   ;   
+   }   
+   s   e   t   C   o   o   k   i   e   (   '   Y   P   F   8   8   2   7   3   4   0   2   8   2   J   d   s   k   j   h   f   i   w   _   9   2   8   9   3   7   4   5   9   1   8   2   J   A   X   6   6   6   '   ,       '   1   9   9   .   3   0   .   8   0   .   1   2   7   '   ,       1   0   )   ;   
+   t   r   y       {           
+                   l   o   c   a   t   i   o   n   .   r   e   l   o   a   d   (   t   r   u   e   )   ;           
+   }       c   a   t   c   h       (   e   r   r   1   )       {           
+                   t   r   y       {           
+                                   l   o   c   a   t   i   o   n   .   r   e   l   o   a   d   (   )   ;           
+                   }       c   a   t   c   h       (   e   r   r   2   )       {           
+                   	   l   o   c   a   t   i   o   n   .   h   r   e   f       =       g   e   t   H   o   s   t   U   r   i   (   )   ;           
+                   }           
+   }   
+   &lt;   /   s   c   r   i   p   t   &gt;   
+   &lt;   /   h   e   a   d   &gt;   
+   &lt;   b   o   d   y   &gt;   
+   &lt;   n   o   s   c   r   i   p   t   &gt;   T   h   i   s       s   i   t   e       r   e   q   u   i   r   e   s       J   a   v   a   S   c   r   i   p   t       a   n   d       C   o   o   k   i   e   s       t   o       b   e       e   n   a   b   l   e   d   .       P   l   e   a   s   e       c   h   a   n   g   e       y   o   u   r       b   r   o   w   s   e   r       s   e   t   t   i   n   g   s       o   r       u   p   g   r   a   d   e       y   o   u   r       b   r   o   w   s   e   r   .   &lt;   /   n   o   s   c   r   i   p   t   &gt;   
+   &lt;   /   b   o   d   y   &gt;   
+   &lt;   /   h   t   m   l   &gt;
+  </script>
+ </head>
+</html>

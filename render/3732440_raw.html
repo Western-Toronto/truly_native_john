@@ -1,0 +1,355 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <!-- &lt;meta http-equiv="refresh" content="0; url=http://www.fundamine.com/" /&gt; -->
+  <link href="./images/logo_lifetym.png" rel="shortcut icon"/>
+  <title>
+   Lifetym: The best planning app
+  </title>
+  <meta content="Lifetym is an extremely simple app that allows you to explore amazing hangout recommednations and plan hangouts quickly without bringing in the hassles involved with messaging. It also automatically maintains a timeline of all the real hangouts that you have!" name="Description"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <link href="./css/style.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css"/>
+  <script src="./js/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="./js/modernizr.custom.js" type="text/javascript">
+  </script>
+  <script src="./js/move-top.js" type="text/javascript">
+  </script>
+  <script src="./js/easing.js" type="text/javascript">
+  </script>
+  <script src="./js/jquery.validate.js" type="text/javascript">
+  </script>
+  <script src="./js/jquery.additionalmethods.js" type="text/javascript">
+  </script>
+  <!-- Google Analytics-->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46391576-1', 'lifetym.me');
+  ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-46391576-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+  </script>
+  <!-- Javascript to animate scroll! -->
+  <script type="text/javascript">
+   jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		}); //end animate scroll
+  </script>
+  <!-- Javascript to validate form and submit it! -->
+  <script type="text/javascript">
+   $(document).ready(function() {
+ $('#myform').validate({
+  rules: {
+   email: {
+    required: true,
+    email: true
+   },
+  },
+messages: {
+  email: {
+  required: "Please enter a valid email id!",
+  email: "Please enter a valid email id!"
+    }
+}, 
+errorPlacement: function(error, element) {
+  if (("#errormsg").innerHTML===""){
+  error.appendTo("#errormsg");
+  }
+  else{
+  $("#errormsg").empty();
+  $("#msg_normal").empty();
+  error.appendTo("#errormsg");
+  }
+},
+submitHandler: function(form) {
+   // submitting and disabling form and showing success message
+   $.post('process.php', $("#myform").serialize(), function(data) {
+    $('#results').html(data);
+       });
+	$("#errormsg").hide();
+	$("#msg_normal").hide();
+	$("#submit").attr("disabled","disabled");
+	$("#email").attr("disabled","disabled");
+	$("#submit").css("background-image","url(../images/ic_tick.png)");
+  }
+ });
+}); // end validate form
+  </script>
+ </head>
+ <body>
+  <!-- Header Section starts here! -->
+  <div class="header">
+   <div class="wrap">
+    <div class="header_top">
+     <div class="menu">
+      <a class="right_bt" href="#" id="activator">
+       <img alt="" src="./images/nav.png"/>
+      </a>
+      <div class="box" id="box">
+       <div class="box_content">
+        <div class="box_content_center">
+         <div class="form_content">
+          <div class="menu_box_list">
+           <ul>
+            <li>
+             <a href="http://blog.lifetym.me" target="_blank">
+              <i>
+               <img alt="" src="./images/ic_blog.png"/>
+              </i>
+              <span>
+               blog
+              </span>
+             </a>
+            </li>
+            <li class="active">
+             <a class="scroll" href="#">
+              <i>
+               <img alt="" src="./images/ic_team.png"/>
+              </i>
+              <span>
+               team
+              </span>
+             </a>
+            </li>
+            <li>
+             <a href="mailto:tarkeshwar@lifetym.me" target="_blank">
+              <i>
+               <img alt="" src="./images/ic_contact.png"/>
+              </i>
+              <span>
+               contact
+              </span>
+             </a>
+            </li>
+            <li id="box1">
+             <a href="#">
+              <i>
+               <img alt="" src="./images/ic_home.png"/>
+              </i>
+              <span>
+               home
+              </span>
+             </a>
+            </li>
+           </ul>
+          </div>
+          <a class="boxclose" id="boxclose">
+           <img alt="" src="./images/close.png"/>
+          </a>
+         </div>
+         <div class="clear">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="clear">
+     </div>
+     <script type="text/javascript">
+      var $ = jQuery.noConflict();
+                  $(function() {
+                    $('#activator').click(function(){
+                        $('#box').animate({'top':'0px'},500);
+                    });
+                    $('#boxclose').click(function(){
+                        $('#box').animate({'top':'-700px'},500);
+                    });
+                    $('#box1').click(function(){
+                        $('#box').animate({'top':'-700px'},500);
+                    });
+                  });
+                  $(document).keyup(function(e) {
+                  if (e.keyCode == 27) { $('#box').animate({'top':'-700px'},500); }   // esc
+                  });
+                  $(document).ready(function(){
+                  
+                  //Hide (Collapse) the toggle containers on load
+                  $(".toggle_container").hide(); 
+                  
+                  //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+                  $(".trigger").click(function(){
+                    $(this).toggleClass("active").next().slideToggle("slow");
+                    return false; //Prevent the browser jump to the link anchor
+                  });
+                  
+                  });
+     </script>
+    </div>
+    <div class="clear">
+    </div>
+   </div>
+   <div class="wrap">
+    <div class="header_desc">
+     <div class="iphone_img">
+      <img src="./images/iPhone_lifetymweb_top.png"/>
+     </div>
+     <div class="text_logo">
+      <div>
+       <img src="./images/Lifetym_textlogo.png"/>
+      </div>
+      <p>
+       Your Friendly Hangout Planner!
+      </p>
+      <div class="button">
+       <a class="scroll" href="#contact_us">
+        Early Access
+        <i>
+         <img alt="" src="./images/download-icon.png"/>
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="clear">
+  </div>
+  <!-- Content Section starts here! -->
+  <div class="main_content">
+   <div class="cbp-so-scroller" id="cbp-so-scroller">
+    <div class="wrap">
+     <!-- Plan Moments Section starts here! -->
+     <div class="plan_moments">
+      <div class="plan_moments_img">
+       <img alt="" src="./images/plan_section_graphic.png"/>
+      </div>
+      <div class="plan_moments_desc">
+       <h2>
+        Explore Amazing Recommendations!
+       </h2>
+       <p>
+        Make your weekends awesome!
+        <br/>
+        Explore our suggestions or collaborate with friends and create your own private plan.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="decide_section">
+     <!-- Capture Memories Section starts here! -->
+     <div class="wrap">
+      <div class="decide_section_img">
+       <img alt="" src="./images/decide_section_graphic.png"/>
+      </div>
+      <div class="decide_section_desc">
+       <h2>
+        Decide and Finalize Plans!
+       </h2>
+       <p>
+        Get over the planning hassles!
+        <br/>
+        Vote on each others suggestions and before you know the plan is finalized!
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="">
+   </div>
+   <div class="contact_us" id="contact_us">
+    <!-- Contact Us Section starts here! -->
+    <div class="wrap">
+     <h2>
+      Like What You See? SignUp for Early Access!
+     </h2>
+     <div class="force_msg">
+      <div class="msg_normal" id="msg_normal" name="msg_normal">
+       <p>
+        We don't spam. Promise!
+       </p>
+      </div>
+      <div class="errormsg" id="errormsg" name="errormsg">
+      </div>
+      <div class="results" id="results" name="results">
+      </div>
+     </div>
+     <div class="email_signup">
+      <div class="email_signup_form">
+       <form action="" id="myform" method="post">
+        <input class="textbox" id="email" name="email" onblur="if (this.value == '') {this.value = 'Enter Email';}" onfocus="this.value = '';" type="text" value="Enter Email"/>
+        <input id="submit" name="submit" type="submit" value=""/>
+       </form>
+      </div>
+     </div>
+     <div class="social_icons">
+      <p>
+       Follow Us!
+      </p>
+      <ul>
+       <li class="facebook">
+        <a href="https://www.facebook.com/lifetymapp" target="_blank">
+         <img src="./images/ic_facebook.png"/>
+        </a>
+       </li>
+       <li class="twitter">
+        <a href="https://twitter.com/lifetymapp" target="_blank">
+         <img src="./images/ic_twitter.png"/>
+        </a>
+       </li>
+       <li class="mail">
+        <a href="mailto:tarkeshwar@lifetym.me" target="_blank">
+         <img src="./images/ic_mail.png"/>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="wrap">
+    <!-- Copyright Section starts here! -->
+    <div class="copyright">
+     <p class="copy">
+       2013
+      <a href="http://w3layouts.com/perth-flat-responsive-design-mobile-website-template" target="_blank">
+       Perth.
+      </a>
+      Breeding pixels since the naughties.
+     </p>
+    </div>
+   </div>
+   <script type="text/javascript">
+    $(document).ready(function() {      
+                $().UItoTop({ easingType: 'easeOutQuart' });
+                
+              });
+   </script>
+   <a href="#" id="toTop">
+    <span id="toTopHover">
+    </span>
+   </a>
+   <script src="./js/classie.js">
+   </script>
+   <script src="./js/cbpScroller.js">
+   </script>
+   <script>
+    new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+   </script>
+  </div>
+ </body>
+</html>

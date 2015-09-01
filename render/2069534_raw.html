@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={xpid:"UQEPVlVQGwIDV1ZbAQcD"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o&lt;n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&amp;&amp;t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f&gt;d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&amp;&amp;console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&amp;&amp;"function"==typeof console.log&amp;&amp;(i.console=!0,-1!==n.indexOf("dev")&amp;&amp;(i.dev=!0),-1!==n.indexOf("nr_dev")&amp;&amp;(i.nrDev=!0))}catch(a){}i.nrDev&amp;&amp;r.on("internal-error",function(t){e(t.stack)}),i.dev&amp;&amp;r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&amp;&amp;(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&amp;&amp;(t(1),t(2),"addEventListener"in window&amp;&amp;t(3),window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)&amp;&amp;t(4),s=!0)}i.on("fn-start",function(){s&amp;&amp;(c+=1)}),i.on("fn-err",function(t,e,r){s&amp;&amp;(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&amp;&amp;!this.thrown&amp;&amp;c&gt;0&amp;&amp;(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&amp;&amp;window.performance.timing&amp;&amp;window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&amp;&amp;(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&amp;&amp;r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&amp;&amp;(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&amp;&amp;!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&amp;&amp;n(s);for(var c=XMLHttpRequest.prototype;c&amp;&amp;!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&amp;&amp;n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&amp;&amp;n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&amp;&amp;i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&amp;&amp;(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c&gt;i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&amp;&amp;(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&amp;&amp;(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&amp;&amp;t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&amp;&amp;t instanceof ArrayBuffer&amp;&amp;t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&amp;&amp;t instanceof Blob&amp;&amp;t.size)return t.size;if("undefined"!=typeof FormData&amp;&amp;t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&amp;&amp;XMLHttpRequest.prototype&amp;&amp;XMLHttpRequest.prototype.addEventListener&amp;&amp;!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&amp;&amp;"xpid"in NREUM.loader_config&amp;&amp;this.sameOrigin&amp;&amp;e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&amp;&amp;o){var f=n(o);f&amp;&amp;(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&amp;&amp;(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&amp;&amp;(i.onloadCalled||"function"!=typeof e.onload))&amp;&amp;i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c&gt;u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&amp;&amp;"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;!this.xhrGuids[n]&amp;&amp;(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&amp;&amp;this.xhrGuids[n]&amp;&amp;(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&amp;&amp;"load"===t[0]&amp;&amp;a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&amp;&amp;("onload"===n&amp;&amp;(this.onload=!0),("load"===(t[0]&amp;&amp;t[0].type)||this.onload)&amp;&amp;(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&amp;&amp;a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&amp;&amp;o[1]&amp;&amp;(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&amp;&amp;"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&amp;&amp;(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&amp;&amp;e.port===n.port&amp;&amp;e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&amp;&amp;(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&amp;&amp;Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&amp;&amp;"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&amp;&amp;t.licenseKey&amp;&amp;t.applicationID&amp;&amp;e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&amp;&amp;o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&amp;&amp;(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&amp;&amp;(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0&gt;o?0:o);++r&lt;o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&amp;&amp;"function"==typeof t&amp;&amp;t.apply&amp;&amp;!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&amp;&amp;r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c&lt;r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&amp;&amp;Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&amp;&amp;(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"queueTime":0,"beacon":"bam.nr-data.net","licenseKey":"5b28f6b824","agent":"js-agent.newrelic.com/nr-632.min.js","applicationID":"13379664","applicationTime":114,"transactionName":"MgABMkcFVkdXAUJbWQtKJRNbB0xdWQwZUEMBAQ8fGxJRUUERGFBaCgJZD1sAXUw=","errorBeacon":"bam.nr-data.net"}
+  </script>
+  <title>
+   Gill Hobbs | Buddly Crafts
+  </title>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <script type="text/javascript">
+   window._trackJs = { token: 'f5dafe43dd764650922228d2ae122e6d' };
+  </script>
+  <script crossorigin="anonymous" src="//d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js" type="text/javascript">
+  </script>
+  <script crossorigin="anonymous" src="//use.typekit.net/lfr4epv.js">
+  </script>
+  <script>
+   try{Typekit.load();}catch(e){}
+  </script>
+  <!--[if lt IE 9]&gt;
+	    &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+	    &lt;link rel="stylesheet" href="https://dcineylmyx2io.cloudfront.net/s/css/style-ie8.v1432658221.css"&gt;
+	&lt;![endif]-->
+  <!--[if gt IE 8]&gt;&lt;!-->
+  <link href="https://dcineylmyx2io.cloudfront.net/s/css/style.v1432658221.css" rel="stylesheet"/>
+  <!--&lt;![endif]-->
+  <meta content="190612264373430" property="fb:app_id"/>
+  <meta content="Buddly Crafts" property="og:site_name"/>
+  <link href="https://dcineylmyx2io.cloudfront.net/s/img/favicon.v1427491436.ico" rel="shortcut icon"/>
+  <link href="https://dcineylmyx2io.cloudfront.net/s/img/apple-touch-icon-precomposed.v1427491436.png" rel="apple-touch-icon-precomposed"/>
+  <meta content="noindex,follow" name="robots"/>
+  <link href="//buddlycrafts.com/blog/author/2/gill-hobbs/" rel="canonical"/>
+ </head>
+ <body>
+  <header>
+   <nav class="top-nav">
+    <ul>
+     <li class="menu side-nav-button">
+      <a href="#">
+       Menu
+      </a>
+     </li>
+     <li class="logo">
+      <a href="/">
+       <!--[if lt IE 9]&gt;&lt;img src="https://dcineylmyx2io.cloudfront.net/s/img/logo.png" alt="Buddly Crafts Logo" /&gt;&lt;![endif]-->
+       <!--[if gt IE 8]&gt;&lt;!-->
+       <img alt="Buddly Crafts Logo" src="https://dcineylmyx2io.cloudfront.net/s/img/logo.svg"/>
+       <!--&lt;![endif]-->
+      </a>
+     </li>
+     <li class="right">
+      <ul>
+       <li class="link">
+        <a href="/shop/">
+         Shop
+        </a>
+       </li>
+       <li class="link">
+        <a href="/blog/">
+         Blog
+        </a>
+       </li>
+       <li class="link">
+        <a href="/gallery/">
+         Gallery
+        </a>
+       </li>
+       <li class="search-icon">
+        <a href="/search/">
+         Search
+        </a>
+       </li>
+       <li class="basket">
+        <a data-qty="0" href="/basket/">
+         Basket
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </nav>
+   <nav class="side-nav off-canvas">
+    <div>
+     <ul>
+      <li class="divider">
+       Buddly Crafts
+      </li>
+      <li>
+       <a href="/">
+        <b>
+         Home
+        </b>
+        <i>
+         Craft &amp; inspiration
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/search/">
+        <b>
+         Search
+        </b>
+        <i>
+         Find products &amp; articles
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/shop/">
+        <b>
+         Shop
+        </b>
+        <i>
+         Buy arts &amp; crafts supplies
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/blog/">
+        <b>
+         Blog
+        </b>
+        <i>
+         Ideas &amp; tutorials
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/gallery/">
+        <b>
+         Gallery
+        </b>
+        <i>
+         Cards &amp; other creations
+        </i>
+       </a>
+      </li>
+      <li class="divider">
+       My Account
+      </li>
+      <li>
+       <a href="/downloads/">
+        <b>
+         Downloads
+        </b>
+        <i>
+         Download your digital purchases
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/giftcertificates/">
+        <b>
+         Gift Certificates
+        </b>
+        <i>
+         Print your gift certificates
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/accounts/orders/">
+        <b>
+         Order History
+        </b>
+        <i>
+         View your past orders
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/accounts/settings/">
+        <b>
+         Settings
+        </b>
+        <i>
+         Change your e-mail &amp; password
+        </i>
+       </a>
+      </li>
+      <li class="divider">
+       Contact
+      </li>
+      <li>
+       <a href="tel:+448000337651">
+        <b>
+         UK: 0800 033 7651
+        </b>
+        <i>
+         Call us from inside the UK
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="tel:+448000337651">
+        <b>
+         Int: +44 80 0033 7651
+        </b>
+        <i>
+         Call us from outside the UK
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="https://cuddlybuddly.desk.com/customer/portal/emails/new">
+        <b>
+         E-mail
+        </b>
+        <i>
+         Contact us by e-mail
+        </i>
+       </a>
+      </li>
+      <li class="divider">
+       Help
+      </li>
+      <li>
+       <a href="/about-us/">
+        <b>
+         About Us
+        </b>
+        <i>
+         Learn about our history
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/delivery-info/">
+        <b>
+         Delivery Info
+        </b>
+        <i>
+         Shipping times &amp; prices
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/privacy-policy/">
+        <b>
+         Privacy Policy
+        </b>
+        <i>
+         Our privacy policy
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/returns-policy/">
+        <b>
+         Returns Policy
+        </b>
+        <i>
+         Refunds &amp; returns information
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="/terms-of-use/">
+        <b>
+         Terms of Use
+        </b>
+        <i>
+         What you can do with our images
+        </i>
+       </a>
+      </li>
+      <li>
+       <a href="https://cuddlybuddly.desk.com">
+        <b>
+         More Help
+        </b>
+        <i>
+         Help centre
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+  </header>
+  <main role="main">
+   <noscript>
+    <ul class="messages">
+     <li class="error">
+      This site will not work correctly without Javascript enabled. Please enable javascript to use this site.
+     </li>
+    </ul>
+   </noscript>
+   <nav class="row">
+    <ol class="breadcrumbs">
+     <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+      <a href="/blog/" itemprop="url">
+       <span itemprop="title">
+        Blog
+       </span>
+      </a>
+     </li>
+    </ol>
+   </nav>
+   <h1 class="page-title">
+    Gill Hobbs
+   </h1>
+   <div class="blog-author">
+    <div>
+     <img alt="" src="https://dcineylmyx2io.cloudfront.net/cms/images/avatar/gill2.png"/>
+    </div>
+    <div>
+     <p>
+      Hi Everyone, Im Gill Hobbs, a Decorative Painter &amp; Teacher from North Cornwall. Visit my
+      <a href="http://fromlittleacorns-bigoaktreesgrow.blogspot.co.uk/">
+       Blog
+      </a>
+      and
+      <a href="https://www.youtube.com/channel/UCnUhkT6TtcEyjlkR4A_gfYA">
+       YouTube Channel
+      </a>
+      to see more of what can be achieved with brushes and paint.
+     </p>
+    </div>
+   </div>
+   <ol class="blog-articles">
+    <li>
+     <a href="/blog/128/decorated-box-for-sweeties/">
+      <img alt="Decorated Box for Sweeties" src="https://dcineylmyx2io.cloudfront.net/blog/covers/gill-ico2.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/128/decorated-box-for-sweeties/">
+        Decorated Box for Sweeties
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Decorated Box for Sweeties
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/123/painting-a-birdhouse-powertex-roof/">
+      <img alt="Painting A Birdhouse &amp; Powertex Roof" src="https://dcineylmyx2io.cloudfront.net/blog/covers/gillpow-main.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/123/painting-a-birdhouse-powertex-roof/">
+        Painting A Birdhouse &amp; Powertex Roof
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Add a splash of colour to your garden or conservatory with a fun painted birdhouse with a textured roof.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/119/faux-marble-photo-frame/">
+      <img alt="Faux Marble Photo Frame" src="https://dcineylmyx2io.cloudfront.net/blog/covers/gillcwc-main_nV9p221.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/119/faux-marble-photo-frame/">
+        Faux Marble Photo Frame
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       This month Gill painted a faux marble photo frame and added her own embellishments made of clay.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/115/decorative-painted-shabby-heart-video-tutorial/">
+      <img alt="Decorative Painted Shabby Heart Video Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/PIC%201_2.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/115/decorative-painted-shabby-heart-video-tutorial/">
+        Decorative Painted Shabby Heart Video Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       A video tutorial by Gill for Mother's Day.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/109/acrylic-painting-teddy-bear-valentines-heart/">
+      <img alt="Acrylic Painting Teddy Bear Valentines Heart" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/gfml-main.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/109/acrylic-painting-teddy-bear-valentines-heart/">
+        Acrylic Painting Teddy Bear Valentines Heart
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Painted Wooden Valentines Heart by Gill
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/104/acrylic-painting-on-jute-tutorial/">
+      <img alt="Acrylic Painting on Jute Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201_4.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/104/acrylic-painting-on-jute-tutorial/">
+        Acrylic Painting on Jute Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Painted jute bag tutorial by Gill
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/97/crackle-painting-tree-decoration-tutorial/">
+      <img alt="Crackle Painting Tree Decoration Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201_3.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/97/crackle-painting-tree-decoration-tutorial/">
+        Crackle Painting Tree Decoration Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Ice skate Christmas tree decoration by Gill for our "for the tree" theme.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/91/snowman-stencil-painting-video/">
+      <img alt="Snowman Stencil Painting &amp; Video" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201_1.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/91/snowman-stencil-painting-video/">
+        Snowman Stencil Painting &amp; Video
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       A snowy coaster by Gill for our stocking fillers theme
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/85/painting-penguins-tutorial/">
+      <img alt="Painting Penguins Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/Pic%201_1.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/85/painting-penguins-tutorial/">
+        Painting Penguins Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       A chocolate wrapper by Gill for our Teen Christmas theme
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/79/stipple-painted-sheep-wine-bottle-gift-bag-video/">
+      <img alt="Stipple Painted Sheep Wine Bottle Gift Bag &amp; Video" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/79/stipple-painted-sheep-wine-bottle-gift-bag-video/">
+        Stipple Painted Sheep Wine Bottle Gift Bag &amp; Video
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Wine bottle gift bag by Gill for our Thank You theme.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/69/butterfly-napkin-painted-tray-tutorial/">
+      <img alt="Butterfly Napkin Painted Tray Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/Pic%201.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/69/butterfly-napkin-painted-tray-tutorial/">
+        Butterfly Napkin Painted Tray Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       A butterfly tray tutorial by Gill for our butterflies theme.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/67/blue-denim-peony-tutorial-with-video/">
+      <img alt="Blue Denim Peony Tutorial with Video" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201%20Blue%20Denim%20Peony.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/67/blue-denim-peony-tutorial-with-video/">
+        Blue Denim Peony Tutorial with Video
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       A blue denim peony tutorial by Gill for our June beads &amp; charms theme.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/42/alice-in-wonderland-daisy-painted-candlestick-tutorial/">
+      <img alt="Alice in Wonderland Daisy Painted Candlestick Tutorial" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/PIC%201.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/42/alice-in-wonderland-daisy-painted-candlestick-tutorial/">
+        Alice in Wonderland Daisy Painted Candlestick Tutorial
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Candlestick painting tutorial by Gill Hobbs for our Daisies challenge
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/34/mermaid-lilys-pearl-acrylics-painting/">
+      <img alt="Mermaid Lily's Pearl Acrylics Painting" src="https://dcineylmyx2io.cloudfront.net/cms/images/content/No%201%20Project%20Photo.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/34/mermaid-lilys-pearl-acrylics-painting/">
+        Mermaid Lily's Pearl Acrylics Painting
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Learn how to paint a mermaid on canvas.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+    <li>
+     <a href="/blog/27/decorative-painted-feather-tissue-box-cover/">
+      <img alt="Decorative Painted Feather Tissue Box Cover" src="https://dcineylmyx2io.cloudfront.net/cms/feather_1.jpg"/>
+     </a>
+     <div>
+      <h2>
+       <a href="/blog/27/decorative-painted-feather-tissue-box-cover/">
+        Decorative Painted Feather Tissue Box Cover
+       </a>
+      </h2>
+      <p>
+       by
+       <a href="/blog/author/2/gill-hobbs/">
+        Gill Hobbs
+       </a>
+      </p>
+      <p>
+       Step by step decorative feather painted tissue box cover.
+      </p>
+      <p>
+       Tags:
+       <a href="/blog/tag/5/decorative-painting/">
+        Decorative Painting
+       </a>
+      </p>
+     </div>
+    </li>
+   </ol>
+  </main>
+  <footer>
+   <div class="grid">
+    <div class="currency-shipping">
+     <h2>
+      Currency
+     </h2>
+     <form action="." method="post" novalidate="">
+      <span class="select">
+       <select name="global_currency">
+        <option value="EUR">
+          - EUR
+        </option>
+        <option value="GBP">
+          - GBP
+        </option>
+        <option selected="" value="USD">
+         $ - USD
+        </option>
+       </select>
+      </span>
+     </form>
+     <h2>
+      Ship To
+     </h2>
+     <form action="." method="post" novalidate="">
+      <span class="select">
+       <select name="global_country">
+        <option value="AF">
+         Afghanistan
+        </option>
+        <option value="AX">
+         land Islands
+        </option>
+        <option value="AL">
+         Albania
+        </option>
+        <option value="DZ">
+         Algeria
+        </option>
+        <option value="AS">
+         American Samoa
+        </option>
+        <option value="AD">
+         Andorra
+        </option>
+        <option value="AO">
+         Angola
+        </option>
+        <option value="AI">
+         Anguilla
+        </option>
+        <option value="AQ">
+         Antarctica
+        </option>
+        <option value="AG">
+         Antigua and Barbuda
+        </option>
+        <option value="AR">
+         Argentina
+        </option>
+        <option value="AM">
+         Armenia
+        </option>
+        <option value="AW">
+         Aruba
+        </option>
+        <option value="AC">
+         Ascension Island
+        </option>
+        <option value="AU">
+         Australia
+        </option>
+        <option value="AT">
+         Austria
+        </option>
+        <option value="AZ">
+         Azerbaijan
+        </option>
+        <option value="BS">
+         Bahamas
+        </option>
+        <option value="BH">
+         Bahrain
+        </option>
+        <option value="BD">
+         Bangladesh
+        </option>
+        <option value="BB">
+         Barbados
+        </option>
+        <option value="BY">
+         Belarus
+        </option>
+        <option value="BE">
+         Belgium
+        </option>
+        <option value="BZ">
+         Belize
+        </option>
+        <option value="BJ">
+         Benin
+        </option>
+        <option value="BM">
+         Bermuda
+        </option>
+        <option value="BT">
+         Bhutan
+        </option>
+        <option value="BO">
+         Bolivia, Plurinational State of
+        </option>
+        <option value="BQ">
+         Bonaire, Sint Eustatius and Saba
+        </option>
+        <option value="BA">
+         Bosnia and Herzegovina
+        </option>
+        <option value="BW">
+         Botswana
+        </option>
+        <option value="BV">
+         Bouvet Island
+        </option>
+        <option value="BR">
+         Brazil
+        </option>
+        <option value="IO">
+         British Indian Ocean Territory
+        </option>
+        <option value="BN">
+         Brunei Darussalam
+        </option>
+        <option value="BG">
+         Bulgaria
+        </option>
+        <option value="BF">
+         Burkina Faso
+        </option>
+        <option value="BI">
+         Burundi
+        </option>
+        <option value="KH">
+         Cambodia
+        </option>
+        <option value="CM">
+         Cameroon
+        </option>
+        <option value="CA">
+         Canada
+        </option>
+        <option value="IC">
+         Canary Islands
+        </option>
+        <option value="CV">
+         Cape Verde
+        </option>
+        <option value="KY">
+         Cayman Islands
+        </option>
+        <option value="CF">
+         Central African Republic
+        </option>
+        <option value="EA">
+         Ceuta, Melilla
+        </option>
+        <option value="TD">
+         Chad
+        </option>
+        <option value="CL">
+         Chile
+        </option>
+        <option value="CN">
+         China
+        </option>
+        <option value="CX">
+         Christmas Island
+        </option>
+        <option value="CC">
+         Cocos (Keeling) Islands
+        </option>
+        <option value="CO">
+         Colombia
+        </option>
+        <option value="KM">
+         Comoros
+        </option>
+        <option value="CG">
+         Congo
+        </option>
+        <option value="CD">
+         Congo, The Democratic Republic of the
+        </option>
+        <option value="CK">
+         Cook Islands
+        </option>
+        <option value="CR">
+         Costa Rica
+        </option>
+        <option value="CI">
+         Cte d'Ivoire
+        </option>
+        <option value="HR">
+         Croatia
+        </option>
+        <option value="CU">
+         Cuba
+        </option>
+        <option value="CW">
+         Curaao
+        </option>
+        <option value="CY">
+         Cyprus
+        </option>
+        <option value="CZ">
+         Czech Republic
+        </option>
+        <option value="DK">
+         Denmark
+        </option>
+        <option value="DJ">
+         Djibouti
+        </option>
+        <option value="DM">
+         Dominica
+        </option>
+        <option value="DO">
+         Dominican Republic
+        </option>
+        <option value="EC">
+         Ecuador
+        </option>
+        <option value="EG">
+         Egypt
+        </option>
+        <option value="SV">
+         El Salvador
+        </option>
+        <option value="GQ">
+         Equatorial Guinea
+        </option>
+        <option value="ER">
+         Eritrea
+        </option>
+        <option value="EE">
+         Estonia
+        </option>
+        <option value="ET">
+         Ethiopia
+        </option>
+        <option value="FK">
+         Falkland Islands (Malvinas)
+        </option>
+        <option value="FO">
+         Faroe Islands
+        </option>
+        <option value="FJ">
+         Fiji
+        </option>
+        <option value="FI">
+         Finland
+        </option>
+        <option value="FR">
+         France
+        </option>
+        <option value="GF">
+         French Guiana
+        </option>
+        <option value="PF">
+         French Polynesia
+        </option>
+        <option value="TF">
+         French Southern Territories
+        </option>
+        <option value="GA">
+         Gabon
+        </option>
+        <option value="GM">
+         Gambia
+        </option>
+        <option value="GE">
+         Georgia
+        </option>
+        <option value="DE">
+         Germany
+        </option>
+        <option value="GH">
+         Ghana
+        </option>
+        <option value="GI">
+         Gibraltar
+        </option>
+        <option value="GR">
+         Greece
+        </option>
+        <option value="GL">
+         Greenland
+        </option>
+        <option value="GD">
+         Grenada
+        </option>
+        <option value="GP">
+         Guadeloupe
+        </option>
+        <option value="GU">
+         Guam
+        </option>
+        <option value="GT">
+         Guatemala
+        </option>
+        <option value="GG">
+         Guernsey
+        </option>
+        <option value="GN">
+         Guinea
+        </option>
+        <option value="GW">
+         Guinea-Bissau
+        </option>
+        <option value="GY">
+         Guyana
+        </option>
+        <option value="HT">
+         Haiti
+        </option>
+        <option value="HM">
+         Heard Island and Mcdonald Islands
+        </option>
+        <option value="VA">
+         Holy See (Vatican City State)
+        </option>
+        <option value="HN">
+         Honduras
+        </option>
+        <option value="HK">
+         Hong Kong
+        </option>
+        <option value="HU">
+         Hungary
+        </option>
+        <option value="IS">
+         Iceland
+        </option>
+        <option value="IN">
+         India
+        </option>
+        <option value="ID">
+         Indonesia
+        </option>
+        <option value="IR">
+         Iran, Islamic Republic of
+        </option>
+        <option value="IQ">
+         Iraq
+        </option>
+        <option value="IE">
+         Ireland
+        </option>
+        <option value="IM">
+         Isle of Man
+        </option>
+        <option value="IL">
+         Israel
+        </option>
+        <option value="IT">
+         Italy
+        </option>
+        <option value="JM">
+         Jamaica
+        </option>
+        <option value="JP">
+         Japan
+        </option>
+        <option value="JE">
+         Jersey
+        </option>
+        <option value="JO">
+         Jordan
+        </option>
+        <option value="KZ">
+         Kazakhstan
+        </option>
+        <option value="KE">
+         Kenya
+        </option>
+        <option value="KI">
+         Kiribati
+        </option>
+        <option value="KP">
+         Korea, Democratic People's Republic of
+        </option>
+        <option value="KR">
+         Korea, Republic of
+        </option>
+        <option value="XK">
+         Kosovo
+        </option>
+        <option value="KW">
+         Kuwait
+        </option>
+        <option value="KG">
+         Kyrgyzstan
+        </option>
+        <option value="LA">
+         Lao People's Democratic Republic
+        </option>
+        <option value="LV">
+         Latvia
+        </option>
+        <option value="LB">
+         Lebanon
+        </option>
+        <option value="LS">
+         Lesotho
+        </option>
+        <option value="LR">
+         Liberia
+        </option>
+        <option value="LY">
+         Libya
+        </option>
+        <option value="LI">
+         Liechtenstein
+        </option>
+        <option value="LT">
+         Lithuania
+        </option>
+        <option value="LU">
+         Luxembourg
+        </option>
+        <option value="MO">
+         Macao
+        </option>
+        <option value="MK">
+         Macedonia, The Former Yugoslav Republic of
+        </option>
+        <option value="MG">
+         Madagascar
+        </option>
+        <option value="MW">
+         Malawi
+        </option>
+        <option value="MY">
+         Malaysia
+        </option>
+        <option value="MV">
+         Maldives
+        </option>
+        <option value="ML">
+         Mali
+        </option>
+        <option value="MT">
+         Malta
+        </option>
+        <option value="MH">
+         Marshall Islands
+        </option>
+        <option value="MQ">
+         Martinique
+        </option>
+        <option value="MR">
+         Mauritania
+        </option>
+        <option value="MU">
+         Mauritius
+        </option>
+        <option value="YT">
+         Mayotte
+        </option>
+        <option value="MX">
+         Mexico
+        </option>
+        <option value="FM">
+         Micronesia, Federated States of
+        </option>
+        <option value="MD">
+         Moldova, Republic of
+        </option>
+        <option value="MC">
+         Monaco
+        </option>
+        <option value="MN">
+         Mongolia
+        </option>
+        <option value="ME">
+         Montenegro
+        </option>
+        <option value="MS">
+         Montserrat
+        </option>
+        <option value="MA">
+         Morocco
+        </option>
+        <option value="MZ">
+         Mozambique
+        </option>
+        <option value="MM">
+         Myanmar
+        </option>
+        <option value="NA">
+         Namibia
+        </option>
+        <option value="NR">
+         Nauru
+        </option>
+        <option value="NP">
+         Nepal
+        </option>
+        <option value="NL">
+         Netherlands
+        </option>
+        <option value="AN">
+         Netherlands Antilles
+        </option>
+        <option value="NC">
+         New Caledonia
+        </option>
+        <option value="NZ">
+         New Zealand
+        </option>
+        <option value="NI">
+         Nicaragua
+        </option>
+        <option value="NE">
+         Niger
+        </option>
+        <option value="NG">
+         Nigeria
+        </option>
+        <option value="NU">
+         Niue
+        </option>
+        <option value="NF">
+         Norfolk Island
+        </option>
+        <option value="MP">
+         Northern Mariana Islands
+        </option>
+        <option value="NO">
+         Norway
+        </option>
+        <option value="OM">
+         Oman
+        </option>
+        <option value="PK">
+         Pakistan
+        </option>
+        <option value="PW">
+         Palau
+        </option>
+        <option value="PS">
+         Palestine, State of
+        </option>
+        <option value="PA">
+         Panama
+        </option>
+        <option value="PG">
+         Papua New Guinea
+        </option>
+        <option value="PY">
+         Paraguay
+        </option>
+        <option value="PE">
+         Peru
+        </option>
+        <option value="PH">
+         Philippines
+        </option>
+        <option value="PN">
+         Pitcairn
+        </option>
+        <option value="PL">
+         Poland
+        </option>
+        <option value="PT">
+         Portugal
+        </option>
+        <option value="PR">
+         Puerto Rico
+        </option>
+        <option value="QA">
+         Qatar
+        </option>
+        <option value="RE">
+         Runion
+        </option>
+        <option value="RO">
+         Romania
+        </option>
+        <option value="RU">
+         Russian Federation
+        </option>
+        <option value="RW">
+         Rwanda
+        </option>
+        <option value="BL">
+         Saint Barthlemy
+        </option>
+        <option value="SH">
+         Saint Helena, Ascension and Tristan da Cunha
+        </option>
+        <option value="KN">
+         Saint Kitts and Nevis
+        </option>
+        <option value="LC">
+         Saint Lucia
+        </option>
+        <option value="MF">
+         Saint Martin, French Part
+        </option>
+        <option value="PM">
+         Saint Pierre and Miquelon
+        </option>
+        <option value="VC">
+         Saint Vincent and The Grenadines
+        </option>
+        <option value="WS">
+         Samoa
+        </option>
+        <option value="SM">
+         San Marino
+        </option>
+        <option value="ST">
+         Sao Tome and Principe
+        </option>
+        <option value="SA">
+         Saudi Arabia
+        </option>
+        <option value="SN">
+         Senegal
+        </option>
+        <option value="RS">
+         Serbia
+        </option>
+        <option value="SC">
+         Seychelles
+        </option>
+        <option value="SL">
+         Sierra Leone
+        </option>
+        <option value="SG">
+         Singapore
+        </option>
+        <option value="SX">
+         Sint Maarten, Dutch part
+        </option>
+        <option value="SK">
+         Slovakia
+        </option>
+        <option value="SI">
+         Slovenia
+        </option>
+        <option value="SB">
+         Solomon Islands
+        </option>
+        <option value="SO">
+         Somalia
+        </option>
+        <option value="ZA">
+         South Africa
+        </option>
+        <option value="GS">
+         South Georgia and The South Sandwich Islands
+        </option>
+        <option value="SS">
+         South Sudan
+        </option>
+        <option value="ES">
+         Spain
+        </option>
+        <option value="LK">
+         Sri Lanka
+        </option>
+        <option value="SD">
+         Sudan
+        </option>
+        <option value="SR">
+         Suriname
+        </option>
+        <option value="SJ">
+         Svalbard and Jan Mayen
+        </option>
+        <option value="SZ">
+         Swaziland
+        </option>
+        <option value="SE">
+         Sweden
+        </option>
+        <option value="CH">
+         Switzerland
+        </option>
+        <option value="SY">
+         Syrian Arab Republic
+        </option>
+        <option value="TW">
+         Taiwan, Province of China
+        </option>
+        <option value="TJ">
+         Tajikistan
+        </option>
+        <option value="TZ">
+         Tanzania, United Republic of
+        </option>
+        <option value="TH">
+         Thailand
+        </option>
+        <option value="TL">
+         Timor-Leste
+        </option>
+        <option value="TG">
+         Togo
+        </option>
+        <option value="TK">
+         Tokelau
+        </option>
+        <option value="TO">
+         Tonga
+        </option>
+        <option value="TT">
+         Trinidad and Tobago
+        </option>
+        <option value="TA">
+         Tristan da Cunha
+        </option>
+        <option value="TN">
+         Tunisia
+        </option>
+        <option value="TR">
+         Turkey
+        </option>
+        <option value="TM">
+         Turkmenistan
+        </option>
+        <option value="TC">
+         Turks and Caicos Islands
+        </option>
+        <option value="TV">
+         Tuvalu
+        </option>
+        <option value="UG">
+         Uganda
+        </option>
+        <option value="UA">
+         Ukraine
+        </option>
+        <option value="AE">
+         United Arab Emirates
+        </option>
+        <option value="GB">
+         United Kingdom
+        </option>
+        <option selected="" value="US">
+         United States
+        </option>
+        <option value="UM">
+         United States Minor Outlying Islands
+        </option>
+        <option value="UY">
+         Uruguay
+        </option>
+        <option value="UZ">
+         Uzbekistan
+        </option>
+        <option value="VU">
+         Vanuatu
+        </option>
+        <option value="VE">
+         Venezuela, Bolivarian Republic of
+        </option>
+        <option value="VN">
+         Viet Nam
+        </option>
+        <option value="VG">
+         Virgin Islands, British
+        </option>
+        <option value="VI">
+         Virgin Islands, U.S.
+        </option>
+        <option value="WF">
+         Wallis and Futuna
+        </option>
+        <option value="EH">
+         Western Sahara
+        </option>
+        <option value="YE">
+         Yemen
+        </option>
+        <option value="ZM">
+         Zambia
+        </option>
+        <option value="ZW">
+         Zimbabwe
+        </option>
+       </select>
+      </span>
+     </form>
+    </div>
+    <div class="accept">
+     <h2>
+      Accepted Payments
+     </h2>
+     <ul>
+      <li>
+       <span class="visa">
+        Visa
+       </span>
+      </li>
+      <li>
+       <span class="mastercard">
+        MasterCard
+       </span>
+      </li>
+      <li>
+       <span class="maestro">
+        Maestro
+       </span>
+      </li>
+      <li>
+       <span class="discover">
+        Discover
+       </span>
+      </li>
+      <li>
+       <span class="paypal">
+        PayPal
+       </span>
+      </li>
+     </ul>
+    </div>
+    <div class="maillist">
+     <h2>
+      Join Our Maillist
+     </h2>
+     <form action="/mc/" class="maillist-form" method="post" novalidate="">
+      <input name="email" placeholder="Enter your e-mail" type="email"/>
+      <input type="submit" value="Subscribe"/>
+      <p>
+       To get an idea of what you'll receive check out
+       <a href="http://us2.campaign-archive2.com/home/?u=14d5454fa5e6498d0c6f8ad89&amp;id=7ed08e30e8">
+        some of the past issues.
+       </a>
+      </p>
+     </form>
+    </div>
+    <div class="contact-help">
+     <h2>
+      Contact &amp; Help
+     </h2>
+     <nav>
+      <ul>
+       <li>
+        <a href="https://cuddlybuddly.desk.com/customer/portal/emails/new">
+         E-mail Us
+        </a>
+       </li>
+       <li>
+        <a href="tel:+448000337651">
+         UK Tel: 0800 033 7651
+        </a>
+       </li>
+       <li>
+        <a href="tel:+448000337651">
+         Int Tel: +44 80 0033 7651
+        </a>
+       </li>
+       <li>
+        <a href="/about-us/">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a href="/delivery-info/">
+         Delivery Info
+        </a>
+       </li>
+       <li>
+        <a href="/privacy-policy/">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a href="/returns-policy/">
+         Returns Policy
+        </a>
+       </li>
+       <li>
+        <a href="/terms-of-use/">
+         Terms of Use
+        </a>
+       </li>
+       <li>
+        <a href="https://cuddlybuddly.desk.com">
+         More Help
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+    <div class="address">
+     <h2>
+      Address &amp; Collections
+     </h2>
+     <p>
+      If you have made an appointment to Click &amp; Collect your order you may find the map below helpful. Please note that we can't accommodate visits without a prearranged collection.
+     </p>
+     <div class="lazy-html">
+      &lt;iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Cuddly%20Buddly%20Crafts%2C%20Gedney%20Hill%2C%20United%20Kingdom&amp;key=AIzaSyB1u_2ZYBBUQ47w0odFfwye1WuX3oEvOMA&amp;zoom=16"&gt;&lt;/iframe&gt;
+     </div>
+     <ol>
+      <li>
+       Buddly Crafts
+      </li>
+      <li>
+       104 Luttongate
+      </li>
+      <li>
+       Gedney Hill, SPALDING
+      </li>
+      <li>
+       PE12 0QJ
+      </li>
+      <li>
+       United Kingdom
+      </li>
+     </ol>
+    </div>
+    <div class="social">
+     <h2>
+      Facebook
+     </h2>
+     <div>
+      <div class="lazy-html">
+       &lt;div class="fb-like-box" data-href="https://www.facebook.com/BuddlyCrafts" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"&gt;&lt;/div&gt;
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <div class="loading-spinner">
+   <div>
+   </div>
+  </div>
+  <div data-appid="190612264373430" id="fb-root">
+  </div>
+  <!--[if lt IE 9]&gt;&lt;script src="https://dcineylmyx2io.cloudfront.net/s/js/script-ie8.v1430411991.js" crossorigin="anonymous"&gt;&lt;/script&gt;&lt;![endif]-->
+  <script crossorigin="anonymous" src="https://dcineylmyx2io.cloudfront.net/s/js/script.v1432658221.js">
+  </script>
+  <script>
+   var dataLayer = [], google_tag_params = {'ecomm_pagetype': 'other'};
+  </script>
+  <script>
+   dataLayer.push({'google_tag_params': google_tag_params});
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-5M4H6P" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5M4H6P');
+  </script>
+  <!-- End Google Tag Manager -->
+ </body>
+</html>

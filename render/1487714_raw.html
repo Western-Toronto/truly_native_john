@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+ <head profile="http://gmpg.org/xfn/11">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Viberaid | A music player for streaming discoveries
+  </title>
+  <link href="https://viberaid.com/" rel="canonical"/>
+  <link href="http://viberaid.com" hreflang="x-default" rel="alternate"/>
+  <link href="http://viberaid.com/en" hreflang="en" rel="alternate"/>
+  <link href="http://viberaid.com/es" hreflang="es" rel="alternate"/>
+  <link href="http://www.viberaid.com/en/xmlrpc.php" rel="pingback"/>
+  <!--META TAGS-->
+  <!--Google-->
+  <meta content="H5oL1emoJ02HiPqVWLNk7O3gqLqtMxVL65t0UABxahc" name="google-site-verification"/>
+  <meta content="Discover new music with Viberaid. The only criteria its just excelent music. Every day, a little piece of it." name="description"/>
+  <script type="application/ld+json">
+   {  "@context" : "http://schema.org",
+       "@type" : "WebSite",
+       "name" : "Viberaid",
+       "alternateName" : "",
+       "url" : "http://viberaid.com"
+    }
+  </script>
+  <!-- Twitter Card data -->
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@viberaid" name="twitter:site"/>
+  <meta content="Glimpse  Ambitions" name="twitter:title"/>
+  <meta content="The only criteria its just excelent music. Every day, a little piece of it." name="twitter:description"/>
+  <meta content="@viberaid" name="twitter:creator"/>
+  <!-- Twitter Summary card images must be at least 200x200px -->
+  <meta content="http://www.viberaid.com/wp-content/uploads/2015/06/Glimpse.jpg" name="twitter:image"/>
+  <!-- Open Graph data -->
+  <meta content="Glimpse  Ambitions" property="og:title"/>
+  <meta content="http://www.viberaid.com/wp-content/uploads/2015/06/Glimpse.jpg" property="og:image"/>
+  <meta content="website" property="og:type"/>
+  <meta content="http://www.viberaid.com/en/glimpse-ambitions/" property="og:url"/>
+  <meta content="" property="og:description"/>
+  <!--STYLESHEETS-->
+  <link href="http://www.viberaid.com/wp-content/themes/Blank/skin/jplayer.blue.monday.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.viberaid.com/wp-content/themes/Blank/style.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="http://www.viberaid.com/wp-content/themes/Blank/jquery.mCustomScrollbar.min.css" media="screen" rel="stylesheet" type="text/css"/>
+  <script src="http://www.viberaid.com/wp-includes/js/jquery/jquery.js?ver=1.11.0" type="text/javascript">
+  </script>
+  <script src="http://www.viberaid.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript">
+  </script>
+  <link href="http://www.viberaid.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://www.viberaid.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <meta content="WordPress 3.9.6" name="generator"/>
+  <meta content="en-US" http-equiv="Content-Language"/>
+  <style media="screen" type="text/css">
+   .qtrans_flag span { display:none }
+.qtrans_flag { height:12px; width:18px; display:block }
+.qtrans_flag_and_text { padding-left:20px }
+.qtrans_flag_en { background:url(http://www.viberaid.com/wp-content/plugins/qtranslate/flags/gb.png) no-repeat }
+.qtrans_flag_es { background:url(http://www.viberaid.com/wp-content/plugins/qtranslate/flags/es.png) no-repeat }
+  </style>
+  <link href="http://www.viberaid.com/es/" hreflang="es" rel="alternate"/>
+  <style type="text/css">
+   .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+  </style>
+ </head>
+ <body class="home blog">
+  <div class="showMobile" id="header" role="banner" style="top:0!important;">
+   <div class="setBgIMG setBgIMG_apunte">
+   </div>
+   <div class="setDkGrad">
+   </div>
+   <div class="nav-back">
+    <div class="closeButton" id="nav-icon">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </div>
+   </div>
+   <div class="containHead">
+    <div id="headerimg">
+     <h1>
+      <a class="vibelogo" href="http://www.viberaid.com/">
+       <img height="46px" src="http://www.viberaid.com/wp-content/themes/Blank/images/logo.png" style="margin-top: 8px;float: left;height: 32px;width: 40px;"/>
+      </a>
+     </h1>
+    </div>
+   </div>
+  </div>
+  <div class="scrollHeader mobilePlayer" id="header" role="banner">
+   <div class="setBgIMG">
+   </div>
+   <div class="setDkGrad">
+   </div>
+   <img class="hideMobile logoBig" src="http://www.viberaid.com/wp-content/themes/Blank/images/logo-big.png"/>
+   <div class="containHead">
+    <div class="hideMobile leftHeader" id="headerimg">
+     <a class="vibelogo" href="http://www.viberaid.com/">
+      <img height="46px" src="http://www.viberaid.com/wp-content/themes/Blank/images/logo.png"/>
+     </a>
+    </div>
+    <div class="hideMobile">
+     <div class="widget widget_qtranslate">
+      <ul class="qtrans_language_chooser" id="qtranslate--1-chooser">
+       <li class="lang-en active">
+        <a href="http://www.viberaid.com/en/" hreflang="en" title="English">
+         <span>
+          English
+         </span>
+        </a>
+       </li>
+       <li class="lang-es">
+        <a href="http://www.viberaid.com/es/" hreflang="es" title="Espaol">
+         <span>
+          Espaol
+         </span>
+        </a>
+       </li>
+      </ul>
+      <div class="qtrans_widget_end">
+      </div>
+     </div>
+    </div>
+    <div class="jp-jplayer" id="jquery_jplayer_1">
+    </div>
+    <div class="jp-audio" id="jp_container_1">
+     <div class="jp-type-single">
+      <div class="jp-gui jp-interface">
+       <ul class="jp-controls">
+        <li>
+         <a class="jp-previous" href="javascript:;" tabindex="1">
+          previous
+         </a>
+        </li>
+        <li>
+         <a class="jp-play" href="javascript:;" tabindex="1">
+          play
+         </a>
+        </li>
+        <li>
+         <a class="jp-pause" href="javascript:;" tabindex="1">
+          pause
+         </a>
+        </li>
+        <!--&lt;li&gt;&lt;a href="javascript:;" class="jp-stop" tabindex="1"&gt;stop&lt;/a&gt;&lt;/li&gt;-->
+        <li>
+         <a class="jp-next" href="javascript:;" tabindex="1">
+          next
+         </a>
+        </li>
+        <li>
+         <a class="jp-mute hideMobile" href="javascript:;" tabindex="1" title="mute">
+          mute
+         </a>
+        </li>
+        <li>
+         <a class="jp-unmute hideMobile" href="javascript:;" tabindex="1" title="unmute">
+          unmute
+         </a>
+        </li>
+        <li>
+         <a class="jp-volume-max hideMobile" href="javascript:;" tabindex="1" title="max volume">
+          max volume
+         </a>
+        </li>
+       </ul>
+       <div class="jp-progress">
+        <div class="jp-seek-bar">
+         <div class="jp-play-bar">
+         </div>
+        </div>
+       </div>
+       <div class="jp-volume-bar hideMobile">
+        <div class="littleShit">
+         |
+        </div>
+        <div class="jp-volume-bar-value">
+        </div>
+       </div>
+       <div class="jp-time-holder">
+        <div class="jp-current-time">
+        </div>
+        <div class="jp-duration">
+        </div>
+        <ul class="jp-toggles">
+         <li>
+          <a class="jp-repeat" href="javascript:;" tabindex="1" title="repeat">
+           repeat
+          </a>
+         </li>
+         <li>
+          <a class="jp-repeat-off" href="javascript:;" tabindex="1" title="repeat off">
+           repeat off
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="jp-details">
+       <ul>
+        <li>
+         <span class="jp-title">
+         </span>
+        </li>
+       </ul>
+      </div>
+      <div class="jp-no-solution">
+       <span>
+        Update Required
+       </span>
+       To play the media you will need to either update your browser to a recent version or update your
+       <a href="http://get.adobe.com/flashplayer/" target="_blank">
+        Flash plugin
+       </a>
+       .
+      </div>
+     </div>
+    </div>
+    <a class="SClink hideMobile">
+     <img src="http://www.viberaid.com/wp-content/themes/Blank/skin/vibe4player/soundcloud.png"/>
+    </a>
+    <div class="hideMobile" id="headerSearchButton">
+     <h1>
+      <a>
+       <img src="http://www.viberaid.com/wp-content/themes/Blank/skin/vibe4player/search.png" style="padding-top: 11px;"/>
+      </a>
+     </h1>
+    </div>
+    <div class="hideMobile" id="SearchButton">
+     <div class="widget widget_search">
+      <form action="http://www.viberaid.com/en/" class="searchform" id="searchform" method="get" role="search">
+       <div>
+        <label class="screen-reader-text" for="s">
+         Search for:
+        </label>
+        <input id="s" name="s" type="text" value=""/>
+        <input id="searchsubmit" type="submit" value="Search"/>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+   <!--close contain-->
+  </div>
+  <div id="page">
+   <hr/>
+   <!--Google Search Thing-->
+   <script type="application/ld+json">
+    {
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://viberaid.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://viberaid.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+   </script>
+   <!--------------------------------->
+   <!--Google Social Thing-->
+   <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Viberaid",
+  "url" : "http://viberaid.com",
+  "sameAs" : [ "http://www.facebook.com/Viberaid",
+    "http://www.twitter.com/viberaid",
+    "http://plus.google.com/109046238518266019089"] 
+}
+   </script>
+   <!--------------------------------->
+   <div id="content" role="main">
+    <div class="feedback">
+     <p>
+      Each time you avoid giving feedback, The Lumineers get a song on Viberaid
+     </p>
+     <a href="https://viberaid.typeform.com/to/dMg2mW" target="_blank">
+      <button class="okgo">
+       Please no, I volunteer
+      </button>
+     </a>
+     <button class="nogo">
+      <img src="http://www.viberaid.com/wp-content/themes/Blank/images/fuckyou.jpg"/>
+     </button>
+    </div>
+    <div class="modalOverlay">
+     <div class="modal">
+      <button class="closeButton closeButtoncss hideMobile" style="background: url(http://www.viberaid.com/wp-content/themes/Blank/images/exit.png)">
+      </button>
+      <div id="single-post-container">
+      </div>
+     </div>
+    </div>
+    <!--LOOPING FRIGGING AWESOME NEWPOST STARTS
+  ============================================-->
+    <div class="bigPostCont">
+     <!--BIGPOSTS 1&amp;2
+  ============================================-->
+     <div class="post-1211 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile first-posts noNext" id="post-1211">
+      <div class="normalPost">
+       <div class="getMP3 post-thumb-image getIMG" data-group="Glimpse" data-mp3="https://soundcloud.com/glimpse_official/glimpse-ambitions" data-song="Ambitions" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Glimpse.jpg);">
+        <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+       </div>
+      </div>
+      <a href="http://www.viberaid.com/en/glimpse-ambitions/" rel="bookmark" title="Permanent Link to Glimpse  Ambitions">
+       <div class="normalPostContainer">
+        <h2>
+         <a class="post-link" href="http://www.viberaid.com/en/glimpse-ambitions/" style="padding-left:20px;">
+          Glimpse
+         </a>
+        </h2>
+        <div id="songtitle">
+         Ambitions
+        </div>
+        <small class="postTime hideMobile">
+         June 24th, 2015
+         <!-- by Superhexagon -->
+        </small>
+       </div>
+      </a>
+     </div>
+     <div class="post-1211 featured-med-post first-posts bigPost noNext hideMobile" id="post-1211">
+      <div class="background-image-size getIMG" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Glimpse.jpg);">
+       <div class="darken-featured-post darken-featured-post-large" data-group="Glimpse" data-mp3="https://soundcloud.com/glimpse_official/glimpse-ambitions" data-song="Ambitions">
+        <a class="post-link" href="http://www.viberaid.com/en/glimpse-ambitions/" rel="bookmark" title="Permanent Link to Glimpse  Ambitions">
+         <h2>
+          Glimpse
+         </h2>
+        </a>
+       </div>
+       <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <div class="post-1203 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile" id="post-1203">
+      <div class="normalPost">
+       <div class="getMP3 post-thumb-image getIMG" data-group="Vanic X K.Flay" data-mp3="https://soundcloud.com/djvanic/vanic-kflay-make-me-fade" data-song="Make Me Fade" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/kflay.jpg);">
+        <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+       </div>
+      </div>
+      <a href="http://www.viberaid.com/en/vanic-x-k-flay-make-me-fade/" rel="bookmark" title="Permanent Link to Vanic X K.Flay  Make Me Fade">
+       <div class="normalPostContainer">
+        <h2>
+         <a class="post-link" href="http://www.viberaid.com/en/vanic-x-k-flay-make-me-fade/" style="padding-left:20px;">
+          Vanic X K.Flay
+         </a>
+        </h2>
+        <div id="songtitle">
+         Make Me Fade
+        </div>
+        <small class="postTime hideMobile">
+         June 21st, 2015
+         <!-- by Superhexagon -->
+        </small>
+       </div>
+      </a>
+     </div>
+     <div class="post-1203 featured-med-post first-posts bigPost hideMobile" id="post-1203">
+      <div class="background-image-size" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/kflay.jpg);">
+       <div class="darken-featured-post darken-featured-post-large" data-group="Vanic X K.Flay" data-mp3="https://soundcloud.com/djvanic/vanic-kflay-make-me-fade" data-song="Make Me Fade">
+        <a class="post-link" href="http://www.viberaid.com/en/vanic-x-k-flay-make-me-fade/" rel="bookmark" title="Permanent Link to Vanic X K.Flay  Make Me Fade">
+         <h2>
+          Vanic X K.Flay
+         </h2>
+        </a>
+       </div>
+       <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+    </div>
+    <!--POST 3
+  ============-->
+    <div class="post-1197 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile" id="post-1197">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Netsky" data-mp3="https://soundcloud.com/netsky/ed-sheeran-dont-netsky-remix" data-song="Don't (Ed Sheeran Original)" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/netsky.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/ed-sheeran-dont-netsky-remix/" rel="bookmark" title="Permanent Link to Ed Sheeran  Dont (Netsky Remix)">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/ed-sheeran-dont-netsky-remix/" style="padding-left:20px;">
+         Netsky
+        </a>
+       </h2>
+       <div id="songtitle">
+        Don't (Ed Sheeran Original)
+       </div>
+       <small class="postTime hideMobile">
+        June 19th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1197 featured-med-post medPost hideMobile" id="post-1197">
+     <div class="background-image-size" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/netsky.jpg);">
+      <div class="darken-featured-post darken-featured-post-small" data-group="Netsky" data-mp3="https://soundcloud.com/netsky/ed-sheeran-dont-netsky-remix" data-song="Don't (Ed Sheeran Original)">
+       <a class="post-link" href="http://www.viberaid.com/en/ed-sheeran-dont-netsky-remix/" rel="bookmark" title="Permanent Link to Ed Sheeran  Dont (Netsky Remix)">
+        <h2>
+         Netsky
+        </h2>
+       </a>
+      </div>
+      <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+    </div>
+    <!--POST 4
+  ============-->
+    <div class="post-1193 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile" id="post-1193">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Toydrum" data-mp3="https://soundcloud.com/noelgallagher/in-the-heat-of-the-moment-toydrum-rework" data-song="In The Heat Of The Moment (Remix)" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/toydrum.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/noel-gallagher-in-the-heat-of-the-moment-toydrum-remix/" rel="bookmark" title="Permanent Link to Noel Gallagher  In The Heat Of The Moment (Toydrum Remix)">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/noel-gallagher-in-the-heat-of-the-moment-toydrum-remix/" style="padding-left:20px;">
+         Toydrum
+        </a>
+       </h2>
+       <div id="songtitle">
+        In The Heat Of The Moment (Remix)
+       </div>
+       <small class="postTime hideMobile">
+        June 16th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1193 featured-med-post medPost hideMobile" id="post-1193" style="margin:0 3px 3px 3px;">
+     <div class="background-image-size" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/toydrum.jpg);">
+      <div class="darken-featured-post darken-featured-post-small" data-group="Toydrum" data-mp3="https://soundcloud.com/noelgallagher/in-the-heat-of-the-moment-toydrum-rework" data-song="In The Heat Of The Moment (Remix)">
+       <a class="post-link" href="http://www.viberaid.com/en/noel-gallagher-in-the-heat-of-the-moment-toydrum-remix/" rel="bookmark" title="Permanent Link to Noel Gallagher  In The Heat Of The Moment (Toydrum Remix)">
+        <h2>
+         Toydrum
+        </h2>
+       </a>
+      </div>
+      <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+    </div>
+    <!--CONTACT
+  ============-->
+    <div class="featured-med-post fixedPostLink hideMobile">
+     <div class="darken-featured-post">
+      <img src="http://www.viberaid.com/wp-content/themes/Blank/images/contact.png"/>
+      <a class="page-link" href="http://viberaid.com/feedback">
+       <h2 class="contactBackground" style="background-image: none;">
+        <h2 style="background-image: none;">
+         Feedback
+        </h2>
+       </h2>
+      </a>
+     </div>
+    </div>
+    <!--POST 5
+  ============-->
+    <div class="post-1189 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile" id="post-1189">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Kidswaste" data-mp3="https://soundcloud.com/mrsuicidesheep/kidswaste-underwater" data-song="Underwater" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/im_by_kidswaste-d8fqxj4.png);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/kidswaste-underwater/" rel="bookmark" title="Permanent Link to Kidswaste  Underwater">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/kidswaste-underwater/" style="padding-left:20px;">
+         Kidswaste
+        </a>
+       </h2>
+       <div id="songtitle">
+        Underwater
+       </div>
+       <small class="postTime hideMobile">
+        June 14th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1189 featured-med-post medPost hideMobile" id="post-1189" style="margin:0 3px 0 0;">
+     <div class="background-image-size" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/im_by_kidswaste-d8fqxj4.png);">
+      <div class="darken-featured-post darken-featured-post-small" data-group="Kidswaste" data-mp3="https://soundcloud.com/mrsuicidesheep/kidswaste-underwater" data-song="Underwater">
+       <a class="post-link" href="http://www.viberaid.com/en/kidswaste-underwater/" rel="bookmark" title="Permanent Link to Kidswaste  Underwater">
+        <h2>
+         Kidswaste
+        </h2>
+       </a>
+      </div>
+      <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+    </div>
+    <!--RANDOM
+  ============-->
+    <div class="featured-med-post medPost hideMobile" style="margin:0 3px 0 0;">
+     <img src="http://www.viberaid.com/wp-content/themes/Blank/images/shuffle.png" style="position:absolute;padding:50px 0px 0 33px;"/>
+     <a class="post-rand" href="http://www.viberaid.com/en/gramatik-corporate-demons-feat-luxas/">
+      <h2 class="randomBackground">
+       <h2 class="randomtitle">
+        Random
+       </h2>
+      </h2>
+     </a>
+     <a class="post-rand" href="http://www.viberaid.com/en/lemaitre-iron-pyrite/">
+      <h2 class="randomBackground">
+       <h2 class="randomtitle">
+        Random
+       </h2>
+      </h2>
+     </a>
+     <a class="post-rand" href="http://www.viberaid.com/en/frank-turner-the-way-i-tend-to-be/">
+      <h2 class="randomBackground">
+       <h2 class="randomtitle">
+        Random
+       </h2>
+      </h2>
+     </a>
+     <a class="post-rand" href="http://www.viberaid.com/en/tourist-placid-acid/">
+      <h2 class="randomBackground">
+       <h2 class="randomtitle">
+        Random
+       </h2>
+      </h2>
+     </a>
+     <a class="post-rand" href="http://www.viberaid.com/en/ghosts-the-woods/">
+      <h2 class="randomBackground">
+       <h2 class="randomtitle">
+        Random
+       </h2>
+      </h2>
+     </a>
+    </div>
+    <!--POST 6
+  ============-->
+    <div class="post-1182 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont showMobile" id="post-1182">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Dylan Stark" data-mp3="https://soundcloud.com/dylanstark/shelter-1" data-song="Shelter" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/DYLAN-STARK.png);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/dylan-stark-shelter/" rel="bookmark" title="Permanent Link to Dylan Stark  Shelter">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/dylan-stark-shelter/" style="padding-left:20px;">
+         Dylan Stark
+        </a>
+       </h2>
+       <div id="songtitle">
+        Shelter
+       </div>
+       <small class="postTime hideMobile">
+        June 11th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1182 featured-med-post medPost hideMobile" id="post-1182" style="margin:0px;">
+     <div class="background-image-size" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/DYLAN-STARK.png);">
+      <div class="darken-featured-post darken-featured-post-small" data-group="Dylan Stark" data-mp3="https://soundcloud.com/dylanstark/shelter-1" data-song="Shelter">
+       <a class="post-link" href="http://www.viberaid.com/en/dylan-stark-shelter/" rel="bookmark" title="Permanent Link to Dylan Stark  Shelter">
+        <h2>
+         Dylan Stark
+        </h2>
+       </a>
+      </div>
+      <img class="playItNigga" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+    </div>
+    <div class="mainSeparator hideMobile">
+    </div>
+    <!--GENERAL: THE LOOP BIATCH
+  ============================================-->
+    <!--STARRED POST
+    ============================================-->
+    <!--RIGHT LARGE IMG
+        ===================-->
+    <div class="starredPost hideMobile">
+    </div>
+    <div class="post-1179 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized starredPostRight hideMobile ajaxScriptReload" id="post-1179">
+     <div class="starredBackground">
+      <svg height="0" xmlns="http://www.w3.org/2000/svg">
+       <filter height="110%" id="svgBlur" width="110%" x="-3%" y="-3%">
+        <fegaussianblur in="SourceGraphic" stddeviation="15">
+        </fegaussianblur>
+       </filter>
+      </svg>
+      <div class="post-thumb-image bigPostHover getIMG" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/The-Vaccines.jpg);">
+      </div>
+     </div>
+     <h2 class="bigPostTitle" style="margin:0;">
+      <a class="post-link" href="http://www.viberaid.com/en/the-vaccines-handsome/" rel="bookmark" title="Permanent Link to The Vaccines  Handsome">
+       The Vaccines
+      </a>
+     </h2>
+     <div class="getMP3" data-group="The Vaccines" data-mp3="https://soundcloud.com/fake-dj-1/the-vaccines-handsomefake-dj-extended-mix" data-song="Handsome (Fake Dj Extended Mix)" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/The-Vaccines.jpg);">
+      <img class="playSymbol adjustPlay" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+     <small>
+      <!-- by  -->
+     </small>
+     <div id="excerpt">
+      <p>
+       Fast and dirty, thats how i like my rock. The Vaccines know how to make a good single and here is one of a kind. With a two minute song you could make it ring in a North Korean radio []
+      </p>
+     </div>
+    </div>
+    <!--LEFT LARGE IMG
+        ==================-->
+    <!--NORMAL POST
+    ============================================-->
+    <div class="post-1175 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1175">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Hohokum" data-mp3="https://soundcloud.com/tycho/a-walk" data-song="Tycho - A Walk" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Hohokum_city_screenshot.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/hohokum-soundtrack-tycho-a-walk/" rel="bookmark" title="Permanent Link to Hohokum Soundtrack: Tycho  A Walk">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/hohokum-soundtrack-tycho-a-walk/" style="padding-left:20px;">
+         Hohokum
+        </a>
+       </h2>
+       <div id="songtitle">
+        Tycho - A Walk
+       </div>
+       <small class="postTime hideMobile">
+        June 8th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1171 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1171">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Ary" data-mp3="https://soundcloud.com/eskimorecordings/ary-higher" data-song="Higher" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Ary-Higher.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/ary-higher/" rel="bookmark" title="Permanent Link to Ary  Higher">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/ary-higher/" style="padding-left:20px;">
+         Ary
+        </a>
+       </h2>
+       <div id="songtitle">
+        Higher
+       </div>
+       <small class="postTime hideMobile">
+        June 6th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1166 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1166">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Tep No" data-mp3="https://soundcloud.com/mrsuicidesheep/tep-no-pacing" data-song="Pacing" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Tep-No-Pacing.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/tep-no-pacing/" rel="bookmark" title="Permanent Link to Tep No  Pacing">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/tep-no-pacing/" style="padding-left:20px;">
+         Tep No
+        </a>
+       </h2>
+       <div id="songtitle">
+        Pacing
+       </div>
+       <small class="postTime hideMobile">
+        June 5th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1162 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1162">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="MURS" data-mp3="https://soundcloud.com/creature2103/murs-have-a-nice-life" data-song="Have A Nice Life" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/Murs.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/murs-have-a-nice-life/" rel="bookmark" title="Permanent Link to MURS  Have A Nice Life">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/murs-have-a-nice-life/" style="padding-left:20px;">
+         MURS
+        </a>
+       </h2>
+       <div id="songtitle">
+        Have A Nice Life
+       </div>
+       <small class="postTime hideMobile">
+        June 4th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <!--STARRED POST
+    ============================================-->
+    <!--RIGHT LARGE IMG
+        ===================-->
+    <div class="starredPost hideMobile">
+    </div>
+    <div class="post-1156 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized starredPostLeft hideMobile" id="post-1156">
+     <div class="starredBackground">
+      <svg height="0" xmlns="http://www.w3.org/2000/svg">
+       <filter height="110%" id="svgBlur" width="110%" x="-3%" y="-3%">
+        <fegaussianblur in="SourceGraphic" stddeviation="15">
+        </fegaussianblur>
+       </filter>
+      </svg>
+      <div class="post-thumb-image bigPostHover getIMG" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/oh-wonder-members.jpg);">
+      </div>
+     </div>
+     <h2 class="bigPostTitle" style="margin:0;">
+      <a class="post-link" href="http://www.viberaid.com/en/oh-wonder-lose-it/" rel="bookmark" title="Permanent Link to Oh Wonder  Lose It">
+       Oh Wonder
+      </a>
+     </h2>
+     <div class="getMP3" data-group="Oh Wonder" data-mp3="https://soundcloud.com/ohwondermusic/lose-it" data-song="Lose It" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/06/oh-wonder-members.jpg);">
+      <img class="playSymbol adjustPlay" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+     </div>
+     <small>
+      <!-- by  -->
+     </small>
+     <div id="excerpt">
+      <p>
+       Ladies and gentleman, lets get classy. Oh Wonder is one of a kind type of band, each month they release a new song and taking a look to the past nine months we can honestly say that they managed to []
+      </p>
+     </div>
+    </div>
+    <!--NORMAL POST
+    ============================================-->
+    <div class="post-1152 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1152">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Freedom Fry" data-mp3="https://soundcloud.com/freedomfry/freedom-fry-21" data-song="21" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/05/freedom-fry.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/freedom-fry-21/" rel="bookmark" title="Permanent Link to Freedom Fry  21">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/freedom-fry-21/" style="padding-left:20px;">
+         Freedom Fry
+        </a>
+       </h2>
+       <div id="songtitle">
+        21
+       </div>
+       <small class="postTime hideMobile">
+        May 31st, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1149 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1149">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Vk" data-mp3="https://soundcloud.com/vokmusic/waterfall" data-song="Waterfall" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/05/vok.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/vok-waterfall/" rel="bookmark" title="Permanent Link to Vk  Waterfall">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/vok-waterfall/" style="padding-left:20px;">
+         Vk
+        </a>
+       </h2>
+       <div id="songtitle">
+        Waterfall
+       </div>
+       <small class="postTime hideMobile">
+        May 29th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1144 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1144">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="Crush Effect" data-mp3="https://soundcloud.com/crusheffect/white-lies-ft-jenni-potts-crush-effect-remix" data-song="White Lies (ft. Jenni Potts) [Remix]" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/05/Crush-Effect-Coachella.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/odesza-white-lies-ft-jenni-potts-crush-effect-remix/" rel="bookmark" title="Permanent Link to Odesza  White Lies (ft. Jenni Potts) [Crush Effect Remix]">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/odesza-white-lies-ft-jenni-potts-crush-effect-remix/" style="padding-left:20px;">
+         Crush Effect
+        </a>
+       </h2>
+       <div id="songtitle">
+        White Lies (ft. Jenni Potts) [Remix]
+       </div>
+       <small class="postTime hideMobile">
+        May 27th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="post-1139 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized normalPostCont" id="post-1139">
+     <div class="normalPost">
+      <div class="getMP3 post-thumb-image getIMG" data-group="OMN" data-mp3="https://soundcloud.com/olliemn/all-blackbird-blackbird-remix" data-song="All (Blackbird Blackbird Cover)" style="background-image: url(http://www.viberaid.com/wp-content/uploads/2015/05/ollie-mckendrick-ness-omn.jpg);">
+       <img class="playSymbol" src="http://www.viberaid.com/wp-content/themes/Blank/images/playSymbol.png"/>
+      </div>
+     </div>
+     <a href="http://www.viberaid.com/en/blackbird-blackbird-all-omn-remix/" rel="bookmark" title="Permanent Link to Blackbird Blackbird  All (OMN Remix)">
+      <div class="normalPostContainer">
+       <h2>
+        <a class="post-link" href="http://www.viberaid.com/en/blackbird-blackbird-all-omn-remix/" style="padding-left:20px;">
+         OMN
+        </a>
+       </h2>
+       <div id="songtitle">
+        All (Blackbird Blackbird Cover)
+       </div>
+       <small class="postTime hideMobile">
+        May 26th, 2015
+        <!-- by Superhexagon -->
+       </small>
+      </div>
+     </a>
+    </div>
+    <div class="navigation">
+     <div class="alignleft">
+      <a href="http://www.viberaid.com/en/page/2/">
+        Older Entries
+      </a>
+     </div>
+     <div class="alignright">
+     </div>
+    </div>
+   </div>
+   <hr/>
+   <div class="hideMobile" id="footer" role="contentinfo">
+    <!-- If you'd like to support WordPress, having the "powered by" link somewhere on your blog is the best way; it's our only promotion or advertising. -->
+    <p>
+     Viberaid 
+     <a href="http://wordpress.org/">
+      WordPress
+     </a>
+     <br/>
+    </p>
+    <p>
+     Viberaid is a music page created with the solely purpose of helping you out to find new songs and discover music, also subscribe, also forget to subscribe.
+							
+								- Megatrn X , 2002
+    </p>
+    <a href="https://plus.google.com/112078170074684677280" rel="publisher">
+     Google+
+    </a>
+    <br/>
+    <a href="http://www.viberaid.com/en/feed/">
+     Entries (RSS)
+    </a>
+    and
+    <a href="https://viberaid.disqus.com/latest.rss">
+     Comments (RSS)
+    </a>
+    .
+    <!-- 62 queries. 0.237 seconds. -->
+    <a href="http://shuffler.fm/channels/site:7974" style="width: 100%;display: table;">
+     <img alt="Play this site on Shuffler.fm" src="https://s3.amazonaws.com/production-shuffler/assets/static/images/pages/branding/logo-circle.png" style="width: 35px;margin: 0 auto 20px auto;display: table;"/>
+    </a>
+   </div>
+  </div>
+  <!-- Gorgeous design by Michael Heilemann - http://binarybonsai.com/kubrick/ -->
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var infinite_scroll = "{\"loading\":{\"msgText\":\"&lt;em&gt;Loading...&lt;\\\/em&gt;\",\"finishedMsg\":\"&lt;em&gt;No additional posts.&lt;\\\/em&gt;\",\"img\":\"http:\\\/\\\/localhost\\\/vibeNew\\\/wp-content\\\/plugins\\\/infinite-scroll\\\/img\\\/ajax-loader.gif\"},\"nextSelector\":\".navigation .alignleft a\",\"navSelector\":\".navigation\",\"itemSelector\":\".post\",\"contentSelector\":\"#content\",\"debug\":true,\"behavior\":\"\",\"callback\":\"\"}";
+/* ]]&gt; */
+  </script>
+  <script src="http://www.viberaid.com/wp-content/plugins/infinite-scroll/js/front-end/jquery.infinitescroll.js?ver=2.6.1" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var countVars = {"disqusShortname":"viberaid"};
+/* ]]&gt; */
+  </script>
+  <script src="http://www.viberaid.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=3.9.6" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   // Because the `wp_localize_script` method makes everything a string
+infinite_scroll = jQuery.parseJSON(infinite_scroll);
+
+jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll, function(newElements, data, url) { eval(infinite_scroll.callback); });
+  </script>
+ </body>
+</html>
+<!--SCRIPTS-->

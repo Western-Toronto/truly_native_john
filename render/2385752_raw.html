@@ -1,0 +1,3608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xmlns:addthis="http://www.addthis.com/help/api-spec" xmlns:fb="http://ogp.me/ns/fb#">
+ <head profile="http://gmpg.org/xfn/11">
+  <title>
+   Top 45 Big Data Tools for Developers | ProfitBricks Blog
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link href="https://www.profitbricks.com/sites/default/files/favicon_32.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blog.profitbricks.com/wp-content/themes/convergence/style.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/themes/convergence/superfish.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/feed/" rel="alternate" title="ProfitBricks Blog RSS Feed" type="application/rss+xml"/>
+  <link href="https://blog.profitbricks.com/xmlrpc.php" rel="pingback"/>
+  <script src="https://blog.profitbricks.com/wp-content/themes/convergence/js/jquery.js" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/themes/convergence/js/hoverintent.js" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/themes/convergence/js/superfish.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function(){ 
+		$("ul.sf-menu").superfish({
+			autoArrows:  false,
+			delay:       400,                             // one second delay on mouseout 
+			animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 
+			speed:       'fast',                          // faster animation speed 
+			autoArrows:  false,                           // disable generation of arrow mark-up 
+			dropShadows: false                            // disable drop shadows 			
+			}); 
+	});
+  </script>
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v2.1.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <link href="https://blog.profitbricks.com/top-45-big-data-tools-for-developers/" rel="canonical"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="article" property="og:type"/>
+  <meta content="Top 45 Big Data Tools for Developers | ProfitBricks Blog" property="og:title"/>
+  <meta content="Big Data is everywhere. Even small to medium-sized businesses are seeking ways to gain more visibility into processes, monetize additional streams, and derive more actionable insights from their data. With data traditionally contained in information silos within applications or databases, taking advantage of Big Data was initially a tedious and complex process. But thanks to Big Data tools, Big Data " property="og:description"/>
+  <meta content="https://blog.profitbricks.com/top-45-big-data-tools-for-developers/" property="og:url"/>
+  <meta content="ProfitBricks Blog" property="og:site_name"/>
+  <meta content="https://www.facebook.com/ProfitBricksUS" property="article:publisher"/>
+  <meta content="#GigaOMLive,BigData,BigData Tools,Developers" property="article:tag"/>
+  <meta content="Cloud Computing" property="article:section"/>
+  <meta content="2014-03-20T13:30:13+00:00" property="article:published_time"/>
+  <meta content="2014-03-25T16:40:21+00:00" property="article:modified_time"/>
+  <meta content="2014-03-25T16:40:21+00:00" property="og:updated_time"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/splicemachine.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/planatir.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/attivio.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/googledevs.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/mortar.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/sap.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/cambridge.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/fusioncharts.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/marklogic.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/syncsort.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/datastax.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/Guavus.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/MongoDB.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/infochimps.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/pentaho.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/karmasphere.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/placed.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/Upsight.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/talend.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/jaspersoft.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/keenio.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/skytree.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/tableau.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/splunk.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/platfora.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/continuity.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/bitdeli.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/Flurry.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/Spring-Data.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/hortonworks.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/statsmix.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/actian.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/infinidb.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/gridgrain.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/Deepdive.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/lavastorm.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/spagoworld.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/rapidminer.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/orange.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/opendatasoft.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/angoss.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/musigma.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/erwin.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/hpcc.png" property="og:image"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/pmone.png" property="og:image"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="Big Data is everywhere. Even small to medium-sized businesses are seeking ways to gain more visibility into processes, monetize additional streams, and derive more actionable insights from their data. With data traditionally contained in information silos within applications or databases, taking advantage of Big Data was initially a tedious and complex process. But thanks to Big Data tools, Big Data []" name="twitter:description"/>
+  <meta content="Top 45 Big Data Tools for Developers | ProfitBricks Blog" name="twitter:title"/>
+  <meta content="@ProfitBricksUSA" name="twitter:site"/>
+  <meta content="ProfitBricks Blog" name="twitter:domain"/>
+  <meta content="https://blog.profitbricks.com/wp-content/uploads/2014/03/splicemachine.png" name="twitter:image:src"/>
+  <meta content="@utollwi" name="twitter:creator"/>
+  <script type="application/ld+json">
+   {"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/blog.profitbricks.com\/","name":"ProfitBricks Blog","alternateName":"ProfitBricks"}
+  </script>
+  <!-- / Yoast WordPress SEO plugin. -->
+  <link href="https://blog.profitbricks.com/feed/" rel="alternate" title="ProfitBricks Blog  Feed" type="application/rss+xml"/>
+  <link href="https://blog.profitbricks.com/comments/feed/" rel="alternate" title="ProfitBricks Blog  Comments Feed" type="application/rss+xml"/>
+  <script type="text/javascript">
+   window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/blog.profitbricks.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&amp;&amp;c.getContext("2d");return d&amp;&amp;d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length&gt;3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&amp;&amp;c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&amp;&amp;c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&amp;&amp;f.twemoji&amp;&amp;(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+  </script>
+  <style type="text/css">
+   img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+  </style>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/addthis/css/output.css?ver=4.2.2" id="output-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.7.1" id="crayon-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/css/blueimp-gallery.css?ver=1.0.0" id="blueimp-gallery-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/css/blueimp-gallery-indicator.css?ver=1.0.0" id="blueimp-gallery-indicator-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/css/blueimp-gallery-video.css?ver=1.0.0" id="blueimp-gallery-video-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://blog.profitbricks.com/wp-content/plugins/cardoza-facebook-like-box/cardozafacebook.css?ver=4.2.2" id="cfblbcss-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="https://blog.profitbricks.com/wp-includes/js/jquery/jquery.js?ver=1.11.2" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* &lt;![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.7.1","is_admin":"0","ajaxurl":"https:\/\/blog.profitbricks.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]&gt; */
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.7.1" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/cardoza-facebook-like-box/cardozafacebook.js?ver=4.2.2" type="text/javascript">
+  </script>
+  <link href="https://blog.profitbricks.com/?p=2938" rel="shortlink"/>
+  <style type="text/css">
+   ul.scfw_16px li, ul.scfw_24px li, ul.scfw_32px li, ul.scfw_16px li a, ul.scfw_24px li a, ul.scfw_32px li a {
+	display:inline !important;
+	float:none !important;
+	border:0 !important;
+	background:transparent none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+ul.scfw_16px li {
+	margin:0 2px 0 0 !important;
+}
+ul.scfw_24px li {
+	margin:0 3px 0 0 !important;
+}
+ul.scfw_32px li {
+	margin:0 5px 0 0 !important;
+}
+ul.scfw_text_img li:before, ul.scfw_16px li:before, ul.scfw_24px li:before, ul.scfw_32px li:before {
+	content:none !important;
+}
+.scfw img {
+	float:none !important;
+}
+  </style>
+ </head>
+ <body>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44474328-5', 'profitbricks.com');
+  ga('send', 'pageview');
+  </script>
+  <div id="page">
+   <div class="topnav">
+    <p class="blog-block" style="float:left;margin:5px 0 0 10px;font-size:1.5em;color:#fff;">
+     BLOG
+    </p>
+    <ul class="fr">
+     <li class="first">
+      <a href="https://my.profitbricks.com/dashboard/dcdr2/?testDrive=true&amp;region=us&amp;lang=en" target="_blank">
+       Live Demo
+      </a>
+     </li>
+     <li class="second">
+      <a href="https://www.profitbricks.com/about-us#contact-us" target="_blank">
+       Contact Us
+      </a>
+     </li>
+     <li>
+      <a href="https://blog.profitbricks.com/feed/" target="_blank" title="Subscribe To Our Posts RSS Feed">
+       <img alt="RSS Feeds" src="https://blog.profitbricks.com/wp-content/themes/convergence/images/ico-rss.gif"/>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!--new-header-->
+   <div id="header">
+    <!--&lt;div class="blog-icon"&gt;&lt;img src="https://blog.profitbricks.com/wp-content/themes/convergence/images/blog-icon.png" alt="ProfitBricks Blog"/&gt;&lt;/div&gt;-->
+    <h1>
+     <a href="https://www.profitbricks.com/">
+      ProfitBricks Blog - Cloud Computing and IaaS Blog
+     </a>
+    </h1>
+    <form action="https://blog.profitbricks.com/" id="searchform" method="get">
+     <fieldset id="search">
+      <input id="s" name="s" onclick="this.value='';" type="text" value="Site Search"/>
+      <input class="btn" id="searchsubmit" name="" src="https://blog.profitbricks.com/wp-content/themes/convergence/images/btn-search.gif" type="image" value="Search"/>
+     </fieldset>
+    </form>
+    <!-- &lt;a href="http://info.profitbricks.com/Cloud-Computing-Demo.html"&gt;&lt;div class="topband-message"&gt;&lt;p&gt;LIVE DEMO&lt;/p&gt;&lt;/div&gt;&lt;/a&gt;-->
+   </div>
+   <!--/header -->
+   <!--end of new header-->
+   <div id="nav1">
+    <div class="menu-main-menu-container">
+     <ul class="sf-menu" id="menu-main-menu">
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-338" id="menu-item-338">
+       <a href="https://blog.profitbricks.com/">
+        Blog Home
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-339" id="menu-item-339">
+       <a href="https://www.profitbricks.com/about-us" title="ProfitBricks Cloud Computing About Us">
+        About Us
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340" id="menu-item-340">
+       <a href="https://www.profitbricks.com/" title="ProfitBricks Cloud Computing">
+        Products
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341" id="menu-item-341">
+       <a href="https://www.profitbricks.com/technical-info">
+        Services
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342" id="menu-item-342">
+       <a href="https://devops.profitbricks.com/" target="_blank" title="DevOps Central Website">
+        DevOps Central
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-343" id="menu-item-343">
+       <a href="https://www.profitbricks.com/pricing" title="Cloud Computing Costs">
+        Prices
+       </a>
+      </li>
+      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2705" id="menu-item-2705">
+       <a href="https://www.profitbricks.com/trial">
+        14 DAY TRIAL
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <!--/nav1-->
+   <div id="columns">
+    <div id="centercol">
+     <div class="box post" id="post-2938">
+      <div class="content post-content">
+       <div class="pic fl">
+       </div>
+       <div class="post-title">
+        <h2>
+         <a href="https://blog.profitbricks.com/top-45-big-data-tools-for-developers/" rel="bookmark" title="Permanent Link to Top 45 Big Data Tools for Developers">
+          Top 45 Big Data Tools for Developers
+         </a>
+        </h2>
+       </div>
+       <!--/post-title -->
+       <div class="post-date">
+        <em>
+         On 03.20.14, In
+         <a href="https://blog.profitbricks.com/cloud-computing-news/" rel="category tag">
+          Cloud Computing
+         </a>
+         , by
+         <a href="https://blog.profitbricks.com/author/william/" rel="author" title="Posts by William Toll">
+          William Toll
+         </a>
+        </em>
+       </div>
+       <p>
+        Big Data is everywhere. Even small to medium-sized businesses are seeking ways to gain more visibility into processes, monetize additional streams, and derive more actionable insights from their data. With data traditionally contained in information silos within applications or databases, taking advantage of Big Data was initially a tedious and complex process. But thanks to Big Data tools, Big Data management can now streamlined in a comprehensive dashboard.
+       </p>
+       <p>
+        Sophisticated platforms enable end-to-end data management and business intelligence with solutions for gathering, integrating, analyzing, and even predicting data in ways never before possible.Listed in no particular order of importance, the following Big Data tools for developers offer platforms for rapid deployment of apps, the ability to integrated data collection and analysis from multitudes of sources and applications, and even integrating offline and online data to put actions and events into context.
+        <strong>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         1.
+         <a href="http://www.splicemachine.com/" target="_blank">
+          SpliceMachine
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/splicemachine" target="_blank" title="Splice Machine on Twitter">
+          @SpliceMachine
+         </a>
+         <a href="http://www.splicemachine.com/" target="_blank">
+          <br/>
+         </a>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/splicemachine.png">
+          <img alt="splicemachine" class="alignnone wp-image-2951" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/splicemachine.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        A real-time SQL-on-Hadoop database, Splice Machine takes Big Data beyond analytics with the ability to derive real-time, actionable insights for rapid decision-making. Not only can Splice Machine process real-time updates, but it offers the ability to utilize standard SQL and is capable of scaling out on commodity hardware. Splice Machine can be used in circumstances where MySQL or Oracle cant scale.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         SQL-99 compliant, with standard ANSI SQL
+        </li>
+        <li>
+         Easily scales fromgigabytes to petabytes using cost-effective, commodity hardware
+        </li>
+        <li>
+         Real-time updates with transactional integrity
+        </li>
+        <li>
+         Distributed computing architecture
+        </li>
+        <li>
+         Multiple Version Concurrency Control (MVCC)
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         2.
+         <a href="https://www.palantir.com/" target="_blank">
+          Palantir
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/palantirtech" target="_blank" title="Palantir Tech on Twitter">
+          @PalantirTech
+         </a>
+         <a href="https://www.palantir.com/" target="_blank">
+          <br/>
+         </a>
+        </strong>
+        <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/planatir.png">
+         <img alt="planatir" class="alignnone wp-image-2953" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/planatir.png" width="438"/>
+        </a>
+        <br/>
+        Palantir was founded in 2004 by a group of former PayPal employees and Stanford computer scientists. The company has doubled in size every year to date, but strives to maintain its startup culture. Offering a suite Big Data solutions for integrating, visualizing and analyzing information, Palantirs product line emphasizes scalability, security, ease of use, and collaboration. Palantirs solutions are most commonly used in intelligence, defense, financial and law enforcement applications, but its quickly growing in other verticals.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Solutions for integrating, visualizing and analyzing data
+        </li>
+        <li>
+         Serves a multitude of industries with custom solutions
+        </li>
+        <li>
+         Exploit and analyze data
+        </li>
+        <li>
+         Extract data from multiple sources
+        </li>
+        <li>
+         Privacy and data protection policies
+        </li>
+        <li>
+         Simplify workflows by integrating data into a single dashboard
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         3.
+        </strong>
+        <a href="http://www.attivio.com/what-we-do/business-solutions/aie-for-big-data" target="_blank">
+         <strong>
+          Attivio
+         </strong>
+        </a>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/attivio" target="_blank" title="Attivio on Twitter">
+          @Attivio
+         </a>
+         <a href="http://www.attivio.com/what-we-do/business-solutions/aie-for-big-data" target="_blank">
+          <br/>
+         </a>
+        </strong>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/attivio.png">
+          <img alt="attivio" class="alignnone wp-image-2954" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/attivio.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        As enterprises are coping with a broader variety of information sources, eliminating information silos is critical to gaining comprehensive insights and identifying key relationships among data.Attivios Active Intelligence Engine combines Big Data and Big Content to analyze everything, including human-generated text through advanced text analytics. Combined with universal indexing and automatic ad-hoc JOIN, Attivio is a powerful solution for making valuable connections between all your data.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Combines Big Data and Big Content
+        </li>
+        <li>
+         Eliminates information silos
+        </li>
+        <li>
+         Adds context and signals from human-generated information sources
+        </li>
+        <li>
+         Supports BI/data visualization tools
+        </li>
+        <li>
+         In-engine analytics
+        </li>
+       </ul>
+       <p>
+        <b>
+         Cost:
+        </b>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         4.
+        </strong>
+        <strong>
+         <a href="https://developers.google.com/chart/interactive/docs/index" target="_blank" title="Google Charts">
+          Google Charts
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/googledevs.png">
+          <img alt="googledevs" class="alignnone wp-image-2955" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/googledevs.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Google Charts is a free tool with a wide range of capabilities for visualizing data from a website. From simple charts to complex hierarchical tree maps, Google Charts offers a gallery with a multitude of pre-configured chart types to choose from. Google Charts is easily implemented by embedding simple JavaScript code on a website, yet it offers complex functionality with the ability to connect to dashboards, sort, modify, and filter data, connect to a database or integrate with and pull data from a website. Take it a step further by implementing the
+        <a href="https://developers.google.com/chart/interactive/docs/queries">
+         Chart Tools Datasource
+        </a>
+        protocol and allow other entities to source data from your website.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Charts exposed as JavaScript classes
+        </li>
+        <li>
+         Customize to match the look and feel of a website
+        </li>
+        <li>
+         Charts populated using DataTable class
+        </li>
+        <li>
+         Sort, modify, filter data
+        </li>
+        <li>
+         Populate data from a variety of sources
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         5.
+         <a href="http://mortardata.com/" target="_blank" title="Mortar">
+          Mortar
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/mortardata" target="_blank" title="Mortar Data">
+          @Mortardata
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/mortar.png">
+          <img alt="mortar" class="alignnone wp-image-2956" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/mortar.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Mortar is a general purpose platform for high-scale data science designed to help data scientists spend more time analyzing their data and deriving actionable insights, instead of dedicating valuable time to building infrastructure and re-configuring systems. With Mortar, you can build a custom-built recommendation engine in days, not months.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Open-source tools for building a recommendation engine
+        </li>
+        <li>
+         Built on Hadoop and Apache Pig
+        </li>
+        <li>
+         Create, test and run jobs from in-browser IDE
+        </li>
+        <li>
+         Snapshots monitor changes and progress
+        </li>
+        <li>
+         Instant feedback on code for fewer bugs
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Public  FREE
+        </li>
+        <li>
+         Solo  $99/month
+        </li>
+        <li>
+         Team  $499/month
+        </li>
+       </ul>
+       <p>
+        <strong>
+         6.
+         <a href="http://www.sap.com/solution/big-data.html" target="_blank" title="SAP">
+          SAP
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/sapinmemory" target="_blank" title="SAP HANA on Twitter">
+          @SAPInMemory
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/sap.png">
+          <img alt="sap" class="alignnone wp-image-2957" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/sap.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        SAPs HANA platform can be combined with Apache Hadoop for the ability to integrate and analyze massive loads of data in real time. The platform makes it possible to derive actionable insights by making valuable connections between all types of information, from a multitude of sources. Combine
+        <a href="http://www.sapbigdata.com/#sthash.09r22678.dpbs" target="_blank" title="SAP HANA ">
+         SAP HANA
+        </a>
+        with applications that leverage Big Data insights to quickly create additional revenue streams and improve operations.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Infinite storage
+        </li>
+        <li>
+         Flexible data management for all types of data
+        </li>
+        <li>
+         Discover insights with analytics solutions
+        </li>
+        <li>
+         Runs processes 1,000 to 100,000 times faster in-memory
+        </li>
+        <li>
+         SAP IQ analytics holds theGuinness World Record for data loading
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         7.
+        </strong>
+        <a href="http://www.cambridgesemantics.com/home" target="_blank" title="Cambridge Semantics">
+         <strong>
+          Cambridge Semantics
+         </strong>
+        </a>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/CamSemantics" target="_blank" title="Cambridge Semantics on Twitter">
+          @CamSemantics
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/cambridge.png">
+          <img alt="cambridge" class="alignnone wp-image-2958" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/cambridge.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Collecting, integrating, and analyzing Big Data doesnt have to be a major effort. Cambridge Semantics makes it all possible with the Anzo Software Suite, an open platform for building Unified Information Access (UIA) solutions. That means replacing the information silos that leave data isolated and useless with a powerful, seamless data integration machine that streamlines data collection and enables sophisticated analysis for rapid decision making. And you can implement all this within hours or days  not the typical weeks or months required for an initiative at this level.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Combine data from a multitude of sources
+        </li>
+        <li>
+         Customized, interactive web dashboards for analysis
+        </li>
+        <li>
+         Share spreadsheets in sync automatically
+        </li>
+        <li>
+         Useful for CRM, billing, project management and more
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         8.
+         <a href="http://www.fusioncharts.com/" target="_blank" title="Fusion Charts">
+          Fusion Charts
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/FusionCharts" target="_blank" title="Fusion Charts on Twitter">
+          @FusionCharts
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/fusioncharts.png">
+          <img alt="fusioncharts" class="alignnone wp-image-2959" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/fusioncharts.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Just because development is in your blood doesnt mean you should embrace complexity when simpler solutions are readily available. Fusion Charts enables you to create sophisticated, cross-device compatible JavaScript charts with animation, rich interactivity, and impressive design with ease. Dont spend your valuable time on childs play; with Fusion Charts, you can spend more time on complex development tasks and deliver even better results.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Developer resources center
+        </li>
+        <li>
+         Interactive zooming and scrolling
+        </li>
+        <li>
+         Real-time charts and gauges
+        </li>
+        <li>
+         Multi-lingual charts
+        </li>
+        <li>
+         Visually editable charts and gauges
+        </li>
+        <li>
+         Linked charts and a variety of effects
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         9.
+         <a href="http://www.marklogic.com/" target="_blank" title="MarkLogic">
+          MarkLogic
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/marklogic" target="_blank" title="MarkLogic in Twitter">
+          @MarkLogic
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/marklogic.png">
+          <img alt="marklogic" class="alignnone wp-image-2960" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/marklogic.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        MarkLogic is built to support the worlds biggest data loads, bringing all types of relevant content back to users who can turn it into action. With real-time updates and alerts, connections between information make new opportunities immediately obvious. MarkLogic is ideal for enterprises that count on revenue through paid content search. With geographic data combined with content, location relevance is built in, and geographic boundaries make advanced data filtering possible.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Range of Big Data solutions
+        </li>
+        <li>
+         Speeds development
+        </li>
+        <li>
+         Flexible APIs
+        </li>
+        <li>
+         NoSQL
+        </li>
+        <li>
+         Real-time analysis and updates
+        </li>
+        <li>
+         Bring all types of content back to end users
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         10.
+         <a href="http://www.syncsort.com/en/Home" target="_blank" title="Syncsort">
+          Syncsort
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/Syncsort" target="_blank" title="Syncsort on Twitter">
+          @Syncsort
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/syncsort.png">
+          <img alt="syncsort" class="alignnone wp-image-2961" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/syncsort.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Syncsort offers a range of products and solutions to help you tap into Big Data. Hadoop, Linux, Unix and Windows, and Mainframe solutions, Syncsorts product lineup offers a solution to meet practically any configuration needs. A GUI-based solution, Syncsort enables developers to create solutions for collecting, processing, and distributing more data in less time.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Solutions for Hadoop, Mainframe, Windows, Linux, Unix
+        </li>
+        <li>
+         Lowers the barriers to Hadoop adoption
+        </li>
+        <li>
+         Eliminates the need for custom code for Hadoop implementation
+        </li>
+        <li>
+         High-performance sorting
+        </li>
+        <li>
+         Improve efficiency
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         11.
+         <a href="http://www.datastax.com/" target="_blank" title="DataStax">
+          DataStax
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/datastax" target="_blank" title="DataStax on Twitter">
+          @DataStax
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/datastax.png">
+          <img alt="datastax" class="alignnone wp-image-2962" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/datastax.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        DataStax helps companies like Netflix, Healthcare Anytime, eBay, and even Adobe harness the power of Big Data with less effort and at a lower cost than traditional solutions. Tapped as the first alternative to Oracle, DataStax provides the constant uptime and lightning speed required for modern customer-facing applications. When you need the capacity to handle massive data loads at maximum speed for real-time analysis, DataStax packs a major punch with a robust visual query tool for developers.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Visual query tool for developers
+        </li>
+        <li>
+         Create and runCassandra Query Language (CQL) queries and commands
+        </li>
+        <li>
+         Visually navigate and interact with data clusters
+        </li>
+        <li>
+         Works with DataStax Community and Enterprise editions
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         12.
+         <a href="http://www.guavus.com/" target="_blank" title="Guavus">
+          Guavus
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/guavus" target="_blank" title="Guavus on Twitter">
+          @Guavus
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/Guavus.png">
+          <img alt="Guavus" class="alignnone wp-image-2963" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/Guavus.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Need to create a rich, engaging and meaningful customer experience? Guavus drives better decision making with powerful analytics capabilities combined with advanced data science and the ability to distill data in real time to derive actionable insights at the precise moment of opportunity. Through continuous correlation and ongoing analysis, vast amounts of static and dynamic data are handled with ease and revealing opportunities to generate more revenue, reduce overhead costs, and monetize new streams.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Analyze-First Analytics Architecture
+        </li>
+        <li>
+         Analyze high-volume data streams in near real time
+        </li>
+        <li>
+         Handles multiple data sources with ease
+        </li>
+        <li>
+         Continual data analysis from moment of capture
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         13.
+         <a href="http://www.mongodb.org/" target="_blank" title="mongoDB">
+          mongoDB
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/MongoDB" target="_blank" title="MongoDB on Twitter">
+          @MongoDB
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/MongoDB.png">
+          <img alt="MongoDB" class="alignnone wp-image-2964" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/MongoDB.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        An open-source document database, mongoDB is ideal for developers who want precise control over the final results and processes for handling Big Data. With full index support, you have flexibility to index any attribute and scale horizontally without compromising functionality. Rich, document-based queries and GridFS for storing files of any size without the risk of compromising your stack, mongoDB is a scaleable, flexible, and powerful solution for Big Data.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Open-source platform
+        </li>
+        <li>
+         Document-oriented storage
+        </li>
+        <li>
+         Flexible aggregation and data processing
+        </li>
+        <li>
+         Full index support
+        </li>
+        <li>
+         GridFS
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         14.
+         <a href="http://www.infochimps.com/" target="_blank" title="Infochimps Cloud">
+          Infochimps Cloud
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/infochimps" target="_blank" title="Infochimps on Twitter">
+         @Infochimps
+        </a>
+       </p>
+       <p>
+        <a href="https://twitter.com/infochimps" target="_blank" title="Infochimps on Twitter">
+         <strong>
+          <img alt="infochimps" class="alignnone wp-image-2965" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/infochimps.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        A cloud service solution for Big Data, Infochimps Cloud makes it possible to deploy Big Data applications rapidly and without the typical time commitment. For applications requiring real-time analysis, multi-source streaming data, a NoSQL database, or a Hadoop cluster, Infochimps Cloud offers a solution that facilitates rapid implementation. Real-time analytics, ad hoc analytics, and batch analytics comprise Infochimps Clouds three essential cloud services.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Integrate with any data source  CRM solutions, etc.
+        </li>
+        <li>
+         Log analysis
+        </li>
+        <li>
+         Mobile data analytics
+        </li>
+        <li>
+         Fraud detection and risk analysis
+        </li>
+        <li>
+         Ad targeting
+        </li>
+        <li>
+         Customer insights via social media sources, website clickstreams and more
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         15.
+         <a href="http://www.pentahobigdata.com/" target="_blank" title="Pentaho">
+          Pentaho
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/Pentaho" target="_blank" title="Pentaho on Twitter">
+         @Pentaho
+        </a>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/pentaho.png">
+          <img alt="pentaho" class="alignnone wp-image-2967" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/pentaho.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Pentaho brings IT and business users together by joining data integration and business analytics for integrating, visualizing, analyzing and blending Big Data in ways never before possible for better business results. When you need the ability to put robust information at your users fingertips in real time and at a reasonable cost, Pentahos open, embeddable and extensible analytics platform makes it easy to visualize, explore, and predict  turning data into value.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         High-volume data processing
+        </li>
+        <li>
+         Adaptive Big Data layer
+        </li>
+        <li>
+         Data mining and predictive analysis
+        </li>
+        <li>
+         Instaview  data to insights in 3 steps
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         16.
+         <a href="http://www.karmasphere.com/" target="_blank" title="Karmasphere">
+          Karmasphere
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/karmasphere" target="_blank" title="Karmasphere on Twitter">
+         @Karmasphere
+        </a>
+       </p>
+       <p>
+        <a href="https://twitter.com/karmasphere" target="_blank" title="Karmasphere on Twitter">
+         <strong>
+          <img alt="karmasphere" class="alignnone wp-image-2968" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/karmasphere.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/karmasphere" target="_blank" title="Karmasphere on Twitter">
+         Designed for teams of analysts who need to explore and analyze Big Data on Hadoop, Karmasphere is a key solution for self-service analytics on Hadoop. With companies seeking more effective and efficient ways to make use of Big Data, users can turn data into real business value by discovering insights and influencing outcomes.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Organized dashboard
+        </li>
+        <li>
+         SQL data explorer
+        </li>
+        <li>
+         250-plus pre-packaged Hadoop algorithms
+        </li>
+        <li>
+         SAS, SPSS and R Analytic Models
+        </li>
+        <li>
+         Dynamic data lenses for self-service analytics
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         17.
+         <a href="http://www.placed.com/" target="_blank" title="Placed">
+          Placed
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/Placed" target="_blank" title="Placed on Twitter">
+          @Placed
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/placed.png">
+          <img alt="placed" class="alignnone wp-image-2969" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/placed.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Placed facilitates data collection from offline sources, enabling enterprises to derive actionable insights through a combined analysis of both offline and online behavior and data metrics. Placed targeting and placed attribution facilitates better results from mobile advertising by mapping the relationship between people and places by capitalizing on Big Data capabilities.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Measure visitation trends over time
+        </li>
+        <li>
+         Measures 100 million locations a day, across more than 100,000 opted-in US smartphones
+        </li>
+        <li>
+         Inference Pipeline references a place database with nearly 300 million features for the US alone
+        </li>
+        <li>
+         Largest repository ofoffline insights into the paths and behaviors of consumers
+        </li>
+        <li>
+         Audience segmentation by demographics and other data points
+        </li>
+        <li>
+         Affinity modeling for understanding relationships between data
+        </li>
+        <li>
+         Monitor and understand how consumer behavior changes over time
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         18.
+         <a href="http://www.kontagent.com/" target="_blank" title="Upsight">
+          Upsight
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/GetUpsight" target="_blank" title="Upsight on Twitter">
+         @GetUpsight
+        </a>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/Upsight.png">
+          <img alt="Upsight" class="alignnone wp-image-2970" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/Upsight.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Upsight, formerly Kontagent, provides actionable analytics for developers to understand whats happening with your apps and derive actionable insights from data toimpact acquisition, engagement, retention and revenue.The platform also enables the creation of targeted in-app and out-of-app metrics in line with KPIs.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Free, enterprise-grade analytics
+        </li>
+        <li>
+         Unlimited data storage
+        </li>
+        <li>
+         Data mining with Hadoop
+        </li>
+        <li>
+         Measure anything from social apps to games and mobile dating apps
+        </li>
+        <li>
+         Funnel analysis
+        </li>
+        <li>
+         Cohort explorer
+        </li>
+        <li>
+         Predictive LTV
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         FREE  Analytics and unlimited data storage, 250k push
+        </li>
+        <li>
+         Core  $500/month Custom Events up to 100k MAU, 500k push
+        </li>
+        <li>
+         Pro  $2,000/month Custom Events up to 250K MAU, 1M push
+        </li>
+        <li>
+         Enterprise  Starting at $3,000/month Unlimited Data Storage &amp; Custom Events + Data Mine + Predictive LTV + A/B, unlimited push
+        </li>
+       </ul>
+       <p>
+        <strong>
+         19.
+         <a href="http://www.talend.com/products/talend-open-studio" target="_blank" title="Talend">
+          Talend
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/talend" target="_blank" title="Talend on Twitter">
+          @Talend
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/talend.png">
+          <img alt="talend" class="alignnone wp-image-2971" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/talend.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Talend Open Studio is apowerful and versatile set of open source products for developing, testing, deploying and administrating data management and application integration projects. Providing a unified environment for managing the full lifecycle, even across enterprise boundaries, Talend enables developers to reclaim their productivity with a fully integrated platform for joiningdata integration, data quality, MDM, application integration and big data.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Data integration at a cluster scale
+        </li>
+        <li>
+         No need to write or maintain code
+        </li>
+        <li>
+         Works with leading Hadoop distributions
+        </li>
+        <li>
+         Pull source data from anywhere, including NoSQL
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         20.
+         <a href="http://www.jaspersoft.com/big-data" target="_blank" title="Jaspersoft">
+          Jaspersoft
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/jaspersoft" target="_blank" title="Jaspersoft on Twitter">
+          @Jaspersoft
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/jaspersoft.png">
+          <img alt="jaspersoft" class="alignnone wp-image-2972" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/jaspersoft.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Connect and visualize data forHadoop Analytics, MongoDB Analytics, Cassandra Analytics, and other platforms in one central repository. Using Big Data, developers can configure reports, analytics, dashboards, and more, without having to migrate data to multiple databases.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Real-time analytics
+        </li>
+        <li>
+         Integrate all your data
+        </li>
+        <li>
+         Blend data throughinnovative data virtualization metadata layer orraditional data warehouse using ETL
+        </li>
+        <li>
+         Present integrated visualizations and dashboards within your apps
+        </li>
+        <li>
+         Create intuitive design tools for non-designers to create visualizations
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Free
+        </li>
+        <li>
+         Jaspersoft for AWS  Less than $1/hour
+        </li>
+       </ul>
+       <p>
+        <strong>
+         21.
+         <a href="https://keen.io/" target="_blank" title="Keen IO ">
+          Keen IO
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/keen_io" target="_blank" title="Keen IO on Twitter">
+         @Keen_io
+        </a>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/keenio.png">
+          <img alt="keenio" class="alignnone wp-image-2973" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/keenio.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        With powerful APIs for gathering all the data you need and deriving the actionable insights you need to drive your business forward, Keen IO is a powerful, flexible, and scaleable solution thats literally Big Data, easy-to-implement and at your fingertips.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Send as much data as you want, from any source
+        </li>
+        <li>
+         Set up event data on any action, such as upgrades, impressions or purchases
+        </li>
+        <li>
+         Arbitrary JSON format
+        </li>
+        <li>
+         Custom properties
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Developer  FREE  50,000 events/month
+        </li>
+        <li>
+         Startup  $20/month  100,000 events/month
+        </li>
+        <li>
+         Growth  $125/month  1M events/month
+        </li>
+        <li>
+         Premium  $300/month  4M events/month
+        </li>
+        <li>
+         Professional  $600/month  8M events/month
+        </li>
+        <li>
+         Business  $1,000/month  15M events/month
+        </li>
+        <li>
+         Enterprise  $2,000/month  50M events/month
+        </li>
+        <li>
+         Custom  Negotiable  50M  100B events/month
+        </li>
+       </ul>
+       <p>
+        <strong>
+         22.
+         <a href="http://www.skytree.net/" target="_blank" title="Skytree">
+          Skytree
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="http://www.skytree.net/" target="_blank" title="Skytree on Twitter">
+          @SkytreeHQ
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/skytree.png">
+          <img alt="skytree" class="alignnone wp-image-2974" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/skytree.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        High-performance machine learning on Big Data for advanced analytics, Skytree offers the ideal platform for fully exploiting the opportunities presented by Big Data. With a multitude of industry-focused solutions as well as solutions encompassing everything from predictive analytics to algorithmic pricing, Skytree is a comprehensive Machine Learning platform emphasizing the growing importance of Predictive Analytics in Big Data.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Business Analytics range from value analytics to fraud detection and what-if analytics
+        </li>
+        <li>
+         Marketing Analytics offer solutions ranging from ad optimization to lead scoring and recommender systems
+        </li>
+        <li>
+         Only general purpose scalable Machine Learning system on the market
+        </li>
+        <li>
+         Highest accuracy on the market; unprecedented speed and scale
+        </li>
+        <li>
+         Power Packs modules are plugged into the Skytree Server Foundation
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         23.
+         <a href="http://www.tableausoftware.com/" target="_blank" title="Tableau Software">
+          Tableau Software
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/tableau" target="_blank" title="Tableau Software on Twitter">
+          @tableau
+         </a>
+         <a href="http://www.tableausoftware.com/" target="_blank" title="Tableau Software">
+          <br/>
+         </a>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/tableau.png">
+          <img alt="tableau" class="alignnone wp-image-2975" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/tableau.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Tableau was launched by a computer scientist, an Academy Award-winning professor, and a business leader with a passion for data. This perfect trio created a powerful suite of solutions designed to put more data at users fingertips  and help them understand it in more meaningful ways. With an advanced query language for powerful visualizations, the ability to natively query databases, cubes, warehouses, and more, a lightning-fast in-memory analytics database designed to eliminate silos and more, Tableau addresses every corner of Big Data demands.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         In-memory analytics database eliminates memory silos
+        </li>
+        <li>
+         Leverages the complete memory hierarchy from disk to L1 cache
+        </li>
+        <li>
+         Tableau Public  free tool bringing data to life on the web
+        </li>
+        <li>
+         Touch, swipe and tab functionality for mobile
+        </li>
+        <li>
+         Easily layer in additional data sources
+        </li>
+        <li>
+         Access any data with a few clicks
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Tableau Public  FREE
+        </li>
+        <li>
+         Tableau Desktop, Tableau Server, and Tableau Online  Contact for a quote
+        </li>
+       </ul>
+       <p>
+        <strong>
+         24.
+         <a href="http://www.splunk.com/" target="_blank" title="Splunk ">
+          Splunk
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/splunk" target="_blank" title="Splunk on Twitter">
+          @Splunk
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/splunk" target="_blank" title="Splunk on Twitter">
+         <strong>
+          <img alt="splunk" class="alignnone wp-image-2976" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/splunk.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/splunk" target="_blank" title="Splunk on Twitter">
+         Splunk harnesses all the machine data created by websites, applications, servers, networks, sensors, mobile devices, and other sources to monitor actions, activities and events, analyzing those data sources to derive actionable insights. Splunk is a self-contained software package downloadable and functional on any device.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Derive insights from Big Data with speed and simplicity
+        </li>
+        <li>
+         Works on most major Hadoop distributions, includingincluding first-generation MapReduce and YARN
+        </li>
+        <li>
+         Splunk Hadoop Connect enables bi-directional integration
+        </li>
+        <li>
+         Real-time collection, indexing, and analyzing
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Splunk Storm  FREE cloud service for developers
+        </li>
+        <li>
+         Splunk Enterprise  Perpetual License  Starts at$4,500 for 1 GB/day, plus annual support fees
+        </li>
+        <li>
+         Splunk Enterprise  Term License  Start at $1,800 per year, which include annual support fees
+        </li>
+        <li>
+         Hunk  One-year term license of Hunk starts at $2,500 per Hadoop TaskTracker or Compute Node with a minimum of ten TaskTrackers or Compute Nodes
+        </li>
+        <li>
+         Splunk Cloud  Annual subscription pricing, data volumes of 5GB/day to 1TB/day
+        </li>
+       </ul>
+       <p>
+        <strong>
+         25.
+         <a href="http://www.platfora.com/" target="_blank" title="Platfora">
+          Platfora
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/platfora" target="_blank" title="Platfora on Twitter">
+          @Platfora
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/platfora.png">
+          <img alt="platfora" class="alignnone wp-image-2977" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/platfora.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Platfora hides the complex nature of Hadoop, making it simpler for enterprises to discover and understandfacts in their business across events, actions, behaviors and time. Built by Silicon Valley veterans who have built market-leading companies around big ideas, the Platfora team understands the power of Big Data and aims to change customers lives with Platfora as theyve done with companies in the past.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Vizboards for self-service, interactive data visualization
+        </li>
+        <li>
+         Analytics Engine,In-Memory Accelerator, andHadoop Processor
+        </li>
+        <li>
+         Entity-centric data catalog
+        </li>
+        <li>
+         Build interest-driven pipelines of facts
+        </li>
+        <li>
+         Analyze data iteratively with segmentation
+        </li>
+        <li>
+         Collaboration features
+        </li>
+        <li>
+         On-premise or cloud deployment
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         26.
+         <a href="http://www.continuuity.com/" target="_blank" title="Continuity ">
+          Continuuity
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/continuuity" target="_blank" title="Continuuity on Twitter">
+          @Continunity
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/continuuity" target="_blank" title="Continuuity on Twitter">
+         <strong>
+          <img alt="continuity" class="alignnone wp-image-2978" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/continuity.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/continuuity" target="_blank" title="Continuuity on Twitter">
+         Continuuity enables developers to build Big Data applications quickly, easily, and seamlessly, deploying instantly on-premise or to the cloud. Its all made possible through simple APIs that can be used with virtually any platforms.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         User-implemented real-time stream processors (Flows)
+        </li>
+        <li>
+         Process a batch of data objects with the same transaction
+        </li>
+        <li>
+         More than one instance possible with each Flowlet
+        </li>
+        <li>
+         Programmatic control with REST interfaces
+        </li>
+        <li>
+         Three partitioning strategies to choose from
+        </li>
+        <li>
+         DataSets for higher-level abstractions
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         27.
+         <a href="https://bitdeli.com/" target="_blank" title="BitDeli">
+          BitDeli
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/bitdeli" target="_blank" title="Bitdeli on Twitter">
+          @Bitdeli
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/bitdeli" target="_blank" title="Bitdeli on Twitter">
+         <strong>
+          <img alt="bitdeli" class="alignnone wp-image-2979" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/bitdeli.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/bitdeli" target="_blank" title="Bitdeli on Twitter">
+         BitDeli is an analytics tool for GitHub, enabling developers to gather data on who is viewing their repositories, where and when. With a one-click install, you can easily add analytics to your repositories and start gathering valuable data, including aggregate statistics across all forks for a given repository.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         One-click install
+        </li>
+        <li>
+         Automatically generated pull requests
+        </li>
+        <li>
+         Trending badge indicator shows repository popularity
+        </li>
+        <li>
+         Global rankings for comparison
+        </li>
+        <li>
+         Fork aggregation for a broad picture of project health
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Based on GitHub Enterprise pricing
+       </p>
+       <p>
+        <strong>
+         28.
+         <a href="http://www.flurry.com/" target="_blank" title="Flurry ">
+          Flurry
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/FlurryMobile" target="_blank" title="Flurry on Twitter">
+          @FlurryMobile
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/FlurryMobile" target="_blank" title="Flurry on Twitter">
+         <strong>
+          <img alt="Flurry" class="alignnone wp-image-2980" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/Flurry.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        Flurry is an end-to-end solution for analyzing consumer behavior, advertising to the right audience, at the right time, and discovering new ways to monetize audiences. Flurry makes use of3.5 billion app session reports per day totaling more than 3 terabytes to provide valuable insights for app developers, such as a deep understanding of the user base, engagement benchmarks, and other key metrics.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Demographic estimations
+        </li>
+        <li>
+         App engagement benchmarks
+        </li>
+        <li>
+         App category and consumer interests
+        </li>
+        <li>
+         Worlds largest app-audience data set
+        </li>
+        <li>
+         Reach more than 250 million customers per month
+        </li>
+        <li>
+         Data-powered targeting
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Flurry Analytics  FREE
+        </li>
+        <li>
+         Flurry AppCircle, FlurryPersonas, Flurry AppSpot  Contact for a quote
+        </li>
+       </ul>
+       <p>
+        <strong>
+         29.
+         <a href="http://projects.spring.io/spring-data/" target="_blank" title="Spring Data">
+          Spring Data
+         </a>
+         /Pivotal
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/springcentral" target="_blank" title="Spring on Twitter">
+          @springcentral
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/springcentral" target="_blank" title="Spring on Twitter">
+         <strong>
+          <img alt="Spring Data" class="alignnone wp-image-2981" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/Spring-Data.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/springcentral" target="_blank" title="Spring on Twitter">
+         Spring Data is a set of projects designed to make it easier to use new data access technologies and provide improved support for relational database technologies. An umbrella project with many sub-projects designed for specific databases, Spring Data is an excellent source of Big Data tools to streamline the use of Big Data in the modern enterprise environment.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Support for Hadoop, mongoDB, Data Rest and more
+        </li>
+        <li>
+         Also provides consulting services
+        </li>
+        <li>
+         Customized, all-in-one Eclipse-based distribution
+        </li>
+        <li>
+         Tool suites for ready-to-use solutions
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         30.
+         <a href="http://hortonworks.com/" target="_blank" title="Hortonworks">
+          Hortonworks
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/hortonworks" target="_blank" title="Hortonworks on Twitter">
+          @hortonworks
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/hortonworks" target="_blank" title="Hortonworks on Twitter">
+         <strong>
+          <img alt="hortonworks" class="alignnone wp-image-2982" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/hortonworks.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/hortonworks" target="_blank" title="Hortonworks on Twitter">
+         Hortonworks offers a complete distribution for fully harnessing the power of Hadoop. With Hortonworks, you can process and analyze everything from Sentiment to Sensors with a 100% open-source, enterprise-grade distribution of Hadoop for every platform.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Interact with all data, in multiple ways, simultaneously
+        </li>
+        <li>
+         Stable, tested, complete package of all services required for the platform
+        </li>
+        <li>
+         Integrates with other tools
+        </li>
+        <li>
+         HDP is built and supported by original architects, builders and operators of Hadoop
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         31.
+         <a href="https://www.statsmix.com/" target="_blank" title="StatsMix">
+          StatsMix
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/copperio" title="Cooper.io on Twitter">
+          @cooperio
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/copperio" title="Cooper.io on Twitter">
+         <strong>
+          <img alt="statsmix" class="alignnone wp-image-2983" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/statsmix.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/copperio" title="Cooper.io on Twitter">
+         A complete dashboard for all your business needs, StatsMix dashboards are customized to your specific requirements, with the data you need from sources like Salesforce, MySQL, Google Analytics, and other tools and services.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Chart and track anything
+        </li>
+        <li>
+         Measure KPIs
+        </li>
+        <li>
+         Track any metric with API
+        </li>
+        <li>
+         Automatic social monitoring
+        </li>
+        <li>
+         Share metrics and dashboards via email, embed them, or create guest accounts
+        </li>
+        <li>
+         Aggregate metrics to eliminate silos
+        </li>
+        <li>
+         Custom dashboards
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Basic  $24/month  100k API requests
+        </li>
+        <li>
+         Standard  $49/month  300k API requests
+        </li>
+        <li>
+         Pro  $99/month  1M API requests
+        </li>
+        <li>
+         Premium  $199/month  3M API requests
+        </li>
+        <li>
+         Enterprise  $499/month  8M API requests
+        </li>
+       </ul>
+       <p>
+        <strong>
+         32.
+         <a href="http://bigdata.pervasive.com/" target="_blank" title="Pervasive">
+          Pervasive
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/actiancorp" target="_blank" title="Actian Corporation on Twitter">
+          @ActianCorp
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/actiancorp" target="_blank" title="Actian Corporation on Twitter">
+         <strong>
+          <img alt="actian" class="alignnone wp-image-2984" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/actian.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/actiancorp" target="_blank" title="Actian Corporation on Twitter">
+         Pervasive offers a number of Big Data tools, including several solutions for Hadoop and a free RushLoader for Hadoop. From DataFlow Analytics toParAccel Dataflow ETL/DQ for designing end-to-end ETL and quality data workflows, Pervasive is a Big Data power suite.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Partnership with Actian for powering Big Data 2.0
+        </li>
+        <li>
+         Predictive Analytics for Big Data
+        </li>
+        <li>
+         Simple interface for loading massive amounts of data at rapid speeds
+        </li>
+        <li>
+         Fastest data-crunching engine in the world
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         RushLoader for Hadoop  FREE
+        </li>
+        <li>
+         ParAccel Dataflow Loader for Hadoop  FREE for 12 months
+        </li>
+        <li>
+         All other products  Contact for a quote
+        </li>
+       </ul>
+       <p>
+        <strong>
+         33.
+         <a href="http://infinidb.co/" target="_blank" title="InfiniDB ">
+          InfiniDB
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/InfiniDB" target="_blank" title="InfiniDB on Twitter">
+          @InfiniDB
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/InfiniDB" target="_blank" title="InfiniDB on Twitter">
+         <strong>
+          <img alt="infinidb" class="alignnone wp-image-2985" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/infinidb.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/InfiniDB" target="_blank" title="InfiniDB on Twitter">
+         Real-time enablement of Big Data insights is yours with InfiniDB. A 100% open-source platform, you can harness the power of Big Data without the typical cost.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Three open-source versions available
+        </li>
+        <li>
+         Completely MySQL-accessible
+        </li>
+        <li>
+         Familiar, MySQL interface for large-scale, ad hoc BI
+        </li>
+        <li>
+         Dimensional and predictive analytics
+        </li>
+        <li>
+         Integrates with the Hadoop  Distributed File System (HDFS)
+        </li>
+        <li>
+         Real-time, ad hoc analytics within an Apache Hadoop cluster
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         34.
+         <a href="http://www.gridgain.com/" target="_blank" title="GridGrain ">
+          GridGain
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/gridgain" target="_blank" title="GridGrain on Twitter">
+          @GridGain
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/gridgain" target="_blank" title="GridGrain on Twitter">
+         <strong>
+          <img alt="gridgrain" class="alignnone wp-image-2986" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/gridgrain.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        GridGain reimagines in-memory computing for a competitive edge in the modern business environment.Nikita Ivanov and Dmitriy Setrakyan share a passion for high-performance computing, a shared vision on which they based the first release of GridGain in 2007. The list of features, functionality and capabilities of these solutions is astounding.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         In-Memory Data Grid
+        </li>
+        <li>
+         Supports SQL, K/V, MongoDB, MPP, MapReduce
+        </li>
+        <li>
+         Hyper Clustering
+        </li>
+        <li>
+         Zero Deployment
+        </li>
+        <li>
+         Advanced Security
+        </li>
+        <li>
+         Fault Tolerance
+        </li>
+        <li>
+         Load Balancing
+        </li>
+        <li>
+         Customizable Event Workflow
+        </li>
+        <li>
+         Programmatic Querying
+        </li>
+        <li>
+         Minimal or no integration
+        </li>
+        <li>
+         No ETL required
+        </li>
+        <li>
+         Eliminate MapReduce overhead
+        </li>
+        <li>
+         Works with any Hadoop distribution
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         35.
+         <a href="http://deepdive.stanford.edu/index.html" target="_blank" title="DeepDive">
+          DeepDive
+          <br/>
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="http://twitter.com/@HazyResearch" target="_blank">
+          @HazyResearch
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/Deepdive.png">
+          <img alt="Deepdive" class="alignnone wp-image-2987" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/Deepdive.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        A new type of system to help developers analyze data on a deeper level, DeepDive is an open-source project with a simple four-step process for writing applications on the platform. With calibrated probabilities for every assertion it makes, DeepDive is designed to navigate around the problematic nature of human error in development.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Handles large amounts of data from multiple sources
+        </li>
+        <li>
+         Write simple rules and offer feedback on prediction accuracy
+        </li>
+        <li>
+         Distantly learns, rather than requiring a tedious machine-learning process for training predictions
+        </li>
+        <li>
+         Scaleable, high-performance inference and learning engine
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         36.
+         <a href="http://www.lavastorm.com/" target="_blank" title="Lavastorm Analytics ">
+          Lavastorm Analytics
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/Lavastorm_News" target="_blank" title="Lavastorm Analytics on Twitter">
+          @Lavastorm_News
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/Lavastorm_News" target="_blank" title="Lavastorm Analytics on Twitter">
+         <strong>
+          <img alt="lavastorm" class="alignnone wp-image-2988" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/lavastorm.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/Lavastorm_News" target="_blank" title="Lavastorm Analytics on Twitter">
+         Business turn to analytics to develop faster, better, and cheaper methods and processes. Interestingly, thats precisely what Lavastorm offers in its platform: faster, better, and cheaper analytics for achieving business goals. Enterprises are demanding more capabilities and faster speeds, and Lavastorm eliminates the need for a disjointed approach with visualization tools, spreadsheets, BI applications, databases and other information silos with a seamless solution delivering end-to-end analytics.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Reduce analytic development by 90% or more
+        </li>
+        <li>
+         Large volumes of data in short amounts of time
+        </li>
+        <li>
+         Reuse and share analytics knowledge across teams
+        </li>
+        <li>
+         Detect hard-to-find issues with 40% less false positives
+        </li>
+        <li>
+         Visibility control for management and executives
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         37.
+         <a href="http://www.spagoworld.org/" target="_blank" title="Spago World">
+          SpagoWorld
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/spagoworld" target="_blank" title="Spago World on Twitter">
+          @SpagoWorld
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/spagoworld" target="_blank" title="Spago World on Twitter">
+         <strong>
+          <img alt="spagoworld" class="alignnone wp-image-2989" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/spagoworld.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/spagoworld" target="_blank" title="Spago World on Twitter">
+         From business intelligence to middleware, SpagoWorld offers a range of solutions for enterprises  all on an open-source platform. SpagoWorlds Big Data BI solution enables the collection of massive quantities of data, in rapid timeframes, for use across SpagoWorlds other platforms for further analysis and business intelligence derivatives.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Extract data from various platforms, from database and analytics platforms to NoSQL databases or enriched distributions
+        </li>
+        <li>
+         Supports real-time analysis of streaming data
+        </li>
+        <li>
+         Charts, reports, thematic maps, cockpits
+        </li>
+        <li>
+         Translate information to self-service BI
+        </li>
+        <li>
+         Reporting, multi-dimensional analysis
+        </li>
+        <li>
+         Ad hoc reporting
+        </li>
+        <li>
+         Location intelligence
+        </li>
+        <li>
+         Real-time dashboards and console
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         38.
+         <a href="http://rapidminer.com/" target="_blank" title="RapidMiner">
+          RapidMiner
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/RapidMiner" target="_blank" title="RapidMiner on Twitter">
+          @RapidMiner
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/RapidMiner" target="_blank" title="RapidMiner on Twitter">
+         <strong>
+          <img alt="rapidminer" class="alignnone wp-image-2990" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/rapidminer.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/RapidMiner" target="_blank" title="RapidMiner on Twitter">
+         A code-free zone, RapidMiner provides advanced analytics with no programming required for configuration. With all-new application wizards for churn reduction, sentiment analysis, predictive maintenance and direct marketing in RapidMiner 6.0, this tool is one of the fastest advanced analytics solutions available.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Hundreds of methods for data integration
+        </li>
+        <li>
+         Runs on every major platform
+        </li>
+        <li>
+         No programming required
+        </li>
+        <li>
+         Drag-and-drop interface
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         39.
+         <a href="http://orange.biolab.si/" target="_blank" title="Orange">
+          Orange
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/orange.png">
+          <img alt="orange" class="alignnone wp-image-2991" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/orange.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        Orange is an open-source data visualization and analysis tool for both novices and experts. Data mining is conducted either through visual programming or Python scripting, with components for machine learning and ad-ons for bioinformatics and text mining.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Remembers choices and makes suggestions
+        </li>
+        <li>
+         Intelligently chooses communication channels between widgets
+        </li>
+        <li>
+         Packed with visualization options from bar charts to dendograms
+        </li>
+        <li>
+         Integration and data analytics
+        </li>
+        <li>
+         Combine widgets to design the framework of your choice
+        </li>
+        <li>
+         Toolbox with more than 100 widgets
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         40.
+         <a href="http://www.opendatasoft.com/" target="_blank" title="OpenDataSoft">
+          OpenDataSoft
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/opendatasoft" target="_blank" title="OpenDataSoft on Twitter">
+          @opendatasoft
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/opendatasoft" target="_blank" title="OpenDataSoft on Twitter">
+         <strong>
+          <img alt="opendatasoft" class="alignnone wp-image-2993" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/opendatasoft.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        OpenDataSoft is a comprehensive discovery tool with maps, charts, and graphs to explore public data sets. A cloud-based platform, OpenDataSoft is designed for seamless and unlimited data publishing, sharing, and resuse.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Reuse data through APIs and apps models
+        </li>
+        <li>
+         Collect data from any source
+        </li>
+        <li>
+         Read and understand all formats
+        </li>
+        <li>
+         Make databases findable and reusable
+        </li>
+        <li>
+         Standard access formats
+        </li>
+        <li>
+         Interactive &amp; shareable visualization
+        </li>
+        <li>
+         API factory
+        </li>
+        <li>
+         Web extensions and open source
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost (pricing based on Euros):
+        </strong>
+       </p>
+       <ul>
+        <li>
+         FREE  Civic initiatives and academic projects
+        </li>
+        <li>
+         200/month  100k records,20KUI/API queries/day
+        </li>
+        <li>
+         700/month  10M records, 100K UI/API queries/day
+        </li>
+        <li>
+         Contact for a quote  Unlimited records, UI/API queries/day
+        </li>
+       </ul>
+       <p>
+        <strong>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         41.
+         <a href="http://www.angoss.com/" target="_blank" title="Angoss">
+          Angoss
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/Angoss" target="_blank" title="Angoss on Twitter">
+          @Angoss
+         </a>
+         <br/>
+         <a href="https://blog.profitbricks.com/wp-content/uploads/2014/03/angoss.png">
+          <img alt="angoss" class="alignnone wp-image-2995" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/angoss.png" width="438"/>
+         </a>
+        </strong>
+        <br/>
+        A comprehensive marketing analytics solution, Angoss offers real-time Big Data insights for a variety of verticals and business sectors. From credit scoring to opportunity and lead scoring, fraud deterrence and claims management, Angoss is capable of capturing and analyzing data for a multitude of applications.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Automated workflows to develop scorecards
+        </li>
+        <li>
+         Select the most predictive variables
+        </li>
+        <li>
+         Advanced predictive modeling
+        </li>
+        <li>
+         Angoss Decision and Strategy Trees
+        </li>
+        <li>
+         Data preparation and profiling
+        </li>
+        <li>
+         Model validation and deployment
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         42.
+         <a href="http://www.mu-sigma.com/" target="_blank" title="Mu Sigma">
+          Mu Sigma
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/MuSigmaInc" target="_blank" title="Mu Sigma on Twitter">
+         @MuSigmaInc
+        </a>
+       </p>
+       <p>
+        <a href="https://twitter.com/MuSigmaInc" target="_blank" title="Mu Sigma on Twitter">
+         <strong>
+          <br/>
+          <img alt="musigma" class="alignnone wp-image-2996" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/musigma.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        Mu Sigma is one of the worlds largest Decision Sciences and analytics firms, helping companies to institutionalize data-driven decision making by harnessing Big Data. With a set of proprietary platforms to enable rapid decision-making and comprehensive data collection and integration that eliminates information silos, Mu Sigma is a powerful tool for machine learning, operational research, artificial intelligence, and more.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         HostsMu Sigma problem DNAs
+        </li>
+        <li>
+         Real-time analytics and event stream processing
+        </li>
+        <li>
+         Load models into an enterprise ecosystem for consumption
+        </li>
+        <li>
+         Embedded advanced analytics engine
+        </li>
+        <li>
+         Influence analysis and topic modeling
+        </li>
+        <li>
+         Sentiment evaluation
+        </li>
+        <li>
+         Easily scaled on commodity hardware
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        <strong>
+         43.
+         <a href="http://erwin.com/products" target="_blank" title="ERwin">
+          ERwin
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/erwinmodeling" target="_blank" title="ERwin Modeling on Twitter">
+         <strong>
+          @ERwinModeling
+         </strong>
+        </a>
+       </p>
+       <p>
+        <a href="https://twitter.com/erwinmodeling" target="_blank" title="ERwin Modeling on Twitter">
+         <strong>
+          <br/>
+          <img alt="erwin" class="alignnone wp-image-2997" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/erwin.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        A collaborative data-monitoring environment, ERwin offers an intuitive, graphical interface with a centralized view of key definitions, enabling the leveraging of data as strategic business asset. The product is comprised of a number of editions designed for different stakeholders within an organization, providing a targeted level of information availability and display and configurations for better understanding and usability.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Achieve business agility through model-driven collaboration
+        </li>
+        <li>
+         Collaborate via web or desktop
+        </li>
+        <li>
+         Active model templates and naming standards
+        </li>
+        <li>
+         Display themes, custom data types, macro language and API
+        </li>
+        <li>
+         Custom reporting
+        </li>
+        <li>
+         Metadata integration tools
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         CA ERwin Data Modeler Standard Edition r9.5  Product plus 1 Year Enterprise Maintenance  $4,794
+        </li>
+        <li>
+         CA ERwin Data Modeler Standard Edition r9.5  Product plus 3 Years Enterprise Maintenance  $6,392
+        </li>
+        <li>
+         CA ERwin Data Modeler Workgroup Edition r9.5  Product plus 1 Year Enterprise Maintenance  $6,708
+        </li>
+        <li>
+         CA ERwin Data Modeler Workgroup Edition r9.5  Product plus 3 Years Enterprise Maintenance  $8,944
+        </li>
+        <li>
+         CA ERwin r9.5 Data Modeler for Microsoft SQL Azure  Product plus 1 Year Enterprise Maintenance  $1,679.94
+        </li>
+        <li>
+         CA ERwin r9.5 Data Modeler for Microsoft SQL Azure  Product plus 3 Years Enterprise Maintenance  $2,239.92
+        </li>
+        <li>
+         CA ERwin r9.5 Web Portal Standard Edition 1-5 Users  Product plus 1 Year Enterprise Maintenance  $8,399.70
+        </li>
+        <li>
+         CA ERwin 9.5 Web Portal Standard Edition 1-5 Users  Product plus 3 Years Enterprise Maintenance  $11,199.60
+        </li>
+       </ul>
+       <p>
+        <strong>
+         44.
+         <a href="http://hpccsystems.com/" target="_blank" title="HPCC Systems">
+          HPCC Systems
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/hpccsystems" target="_blank" title="HPCC Systems">
+          @hpccsystems
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/hpccsystems" target="_blank" title="HPCC Systems">
+         <strong>
+          <img alt="hpcc" class="alignnone wp-image-2998" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/hpcc.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        <a href="https://twitter.com/hpccsystems" target="_blank" title="HPCC Systems">
+         A proven and battle-tested platform for manipulating, querying, transforming, and data warehousing Big Data, HPCC Systems solves Big Data problems facing modern enterprises in any vertical.
+        </a>
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Processing clusters use off-the-shelf hardware
+        </li>
+        <li>
+         Clusters typically homogeneous, but not required
+        </li>
+        <li>
+         Distributed, Thor, Roxie file systems
+        </li>
+        <li>
+         Linux operating system
+        </li>
+        <li>
+         Build multi-key, multi-field (aka compound) indexes on DFS files
+        </li>
+        <li>
+         Data warehouse capabilities for structured queries and data analysis applications
+        </li>
+        <li>
+         Supports thousands of users with sub-second response time, depending on application
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        FREE
+       </p>
+       <p>
+        <strong>
+         45.
+         <a href="http://www.pmone.com/en/solutions/cmore/" target="_blank" title="pmOne">
+          pmOne
+         </a>
+        </strong>
+       </p>
+       <p>
+        <strong>
+         <a href="https://twitter.com/pmOneAG" target="_blank" title="pmOne AG on Twitter">
+          @pmOneAG
+         </a>
+        </strong>
+       </p>
+       <p>
+        <a href="https://twitter.com/pmOneAG" target="_blank" title="pmOne AG on Twitter">
+         <strong>
+          <img alt="pmone" class="alignnone wp-image-2999" height="203" src="https://blog.profitbricks.com/wp-content/uploads/2014/03/pmone.png" width="438"/>
+         </strong>
+        </a>
+        <br/>
+        Offering Big Data and Business Intelligence solutions, pmOnes cMORE enables users to quickly build, flexibly grow and efficiently administer solutions. It leverages and extends SQL Server functionality, as well as that of Excel, SharePoint, and other components in the Microsoft BI stack.
+       </p>
+       <p>
+        <strong>
+         Key Features:
+        </strong>
+       </p>
+       <ul>
+        <li>
+         Simplified standard and ad hoc reporting
+        </li>
+        <li>
+         Credible alternative to SAP-based data warehouse
+        </li>
+        <li>
+         Consistent reporting company-wide
+        </li>
+        <li>
+         Personalize reports; distribute books
+        </li>
+        <li>
+         Easy access to SAP data and other systems
+        </li>
+        <li>
+         Based on Microsoft BI
+        </li>
+       </ul>
+       <p>
+        <strong>
+         Cost:
+        </strong>
+        Contact for a quote
+       </p>
+       <p>
+        Are Big Data tools changing the way you develop apps? What Big Data tools are changing the way you architect and run your big data projects?
+       </p>
+       <p>
+        Did you know that Big Data projects love to be developed, tested and run in production at ProfitBricks? With 2x the performance and 1/2 the price of Amazon EC2  Big Data architects are moving and deploying their workloads to ProfitBricks everyday.
+        <a href="https://www.profitbricks.com/why-profitbricks#section=big-data" target="_blank" title="Big Data and Cloud Computing at ProfitBricks">
+         Learn more about Big Data and Cloud Cloud Computing
+        </a>
+        at ProfitBricks.
+       </p>
+       <p>
+       </p>
+       <div addthis:title="Top 45 Big Data Tools for Developers" addthis:url="https://blog.profitbricks.com/top-45-big-data-tools-for-developers/" class="addthis_toolbox addthis_default_style">
+        <a class="addthis_button_facebook_like">
+        </a>
+        <a class="addthis_button_tweet">
+        </a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium">
+        </a>
+        <a class="addthis_button_pinterest_pinit">
+        </a>
+        <a class="addthis_counter addthis_pill_style">
+        </a>
+       </div>
+      </div>
+      <!--/content -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <div class="pic fl">
+        <img alt="" class="avatar from-gravatar-default avatar-80 photo" height="80" src="https://secure.gravatar.com/avatar/225345f56b7a71f9b90db08846a5fd83?s=80&amp;d=https%3A%2F%2Fblog.profitbricks.com%2Fwp-content%2Fthemes%2Fconvergence%2Fimages%2Fdefault_avatar_author.gif&amp;r=G" width="80"/>
+       </div>
+       <div class="post-author">
+        <div class="author-descr">
+         <h3>
+          William Toll
+         </h3>
+         <p>
+          William Toll, VP, Marketing at ProfitBricks, has held Marketing and Product Management positions in the Web hosting and Internet infrastructure industry since the late 1990s. Currently William is driving the marketing strategy and implementation for ProfitBricks US market. ProfitBricks is a global cloud infrastructure provider with a  platform engineered from the ground up to provide class leading Cloud Computing  IaaS services as the price/performance leader.
+Most recently William was leading the marketing efforts at Yottaa, a Boston-based website optimization company. Prior to that he managed the small business offerings of hosting and cloud services provider, NaviSite. At NaviSite, William was responsible for developing and marketing the companys hosted product lines, including managed cloud services, managed hosting, managed business applications and shared and dedicated hosting. In past positions at companies such as Affinity Internet, Inc., Intermedia.NET, and NTT/VERIO, William was the driving force in launching and enhancing successful SMB focused services including: Shared Hosting services, Microsoft Exchange and hosting add-on services like online marketing and Web design. William received a BA in Marketing from New England College.
+         </p>
+         <div class="author-details">
+          <a href="http://www.profitbricks.com" target="_blank">
+           Visit Authors Website
+          </a>
+          |
+          <a href="https://blog.profitbricks.com/author/william/">
+           All Articles From This Author
+          </a>
+         </div>
+        </div>
+        <!--/author-descr -->
+        <br class="fix"/>
+       </div>
+       <!--/post-author -->
+      </div>
+      <!--/content -->
+      <div class="hl">
+      </div>
+      <div class="social-links">
+       <div class="fl">
+        If you enjoyed this article, please consider sharing it!
+       </div>
+       <br class="fix"/>
+      </div>
+      <!--/social-links -->
+     </div>
+     <!--/box -->
+     <div class="box post-rel">
+      <div class="content">
+       <div class="subcols">
+        <div class="col1">
+         <h2>
+          Popular Posts
+         </h2>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/startups-guide-to-patents/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/startups-guide-to-patents/" title="Permanent Link to Startups Guide to Patents">
+           Startups Guide to Patents
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/how-to-automate-cloud-infrastructure-using-net/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/how-to-automate-cloud-infrastructure-using-net/" title="Permanent Link to How to Automate Cloud Infrastructure Using .NET">
+           How to Automate Cloud Infrastructure Using .NET
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/ascii-it-smb-success-summit-preview/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/ascii-it-smb-success-summit-preview/" title="Permanent Link to ASCII IT SMB Success Summit  Cloud &amp; the Channel Preview">
+           ASCII IT SMB Success Summit  Cloud &amp; the Channel Preview
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/the-paradox-of-ephemeral-cloud-storage/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/the-paradox-of-ephemeral-cloud-storage/" title="Permanent Link to The Paradox of Ephemeral aka Temporary Cloud Storage">
+           The Paradox of Ephemeral aka Temporary Cloud Storage
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+        </div>
+        <div class="col2">
+         <h2 class="widget-title">
+          Related Posts
+         </h2>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/live-webinar-how-msps-are-taking-over-the-public-cloud/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/live-webinar-how-msps-are-taking-over-the-public-cloud/" rel="bookmark" title="Live Webinar  How MSPs are taking over the public cloud">
+           Live Webinar  How MSPs are taking over the public cloud
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/49-cloud-server-cloud-infrastructure-implementation-tips/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/49-cloud-server-cloud-infrastructure-implementation-tips/" rel="bookmark" title="49 Cloud Server &amp; Cloud Infrastructure Implementation Tips">
+           49 Cloud Server &amp; Cloud Infrastructure Implementation Tips
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/ascii-roadshow-event-msp-cloud-infrastructure-interest-accelerates-asciisuccess/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/ascii-roadshow-event-msp-cloud-infrastructure-interest-accelerates-asciisuccess/" rel="bookmark" title="ASCII Roadshow  MSP Cloud Infrastructure Interest Accelerates  #ASCIISUCCESS">
+           ASCII Roadshow  MSP Cloud Infrastructure Interest Accelerates  #ASCIISUCCESS
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/dockercon-day-2-talks-on-docker-in-production-new-enablement-tools/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/dockercon-day-2-talks-on-docker-in-production-new-enablement-tools/" rel="bookmark" title="DockerCon Day 2  Talks on Docker in Production &amp; New Enablement Tools">
+           DockerCon Day 2  Talks on Docker in Production &amp; New Enablement Tools
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+         <div class="th fl">
+          <a href="https://blog.profitbricks.com/dockercon-day-one/">
+          </a>
+         </div>
+         <div>
+          <a href="https://blog.profitbricks.com/dockercon-day-one/" rel="bookmark" title="DockerCon Day 1  News About The Great Container Race To Build A Better Ship">
+           DockerCon Day 1  News About The Great Container Race To Build A Better Ship
+          </a>
+         </div>
+         <div class="hl2">
+         </div>
+        </div>
+        <br class="fix"/>
+       </div>
+       <!--/subcols -->
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <!-- You can start editing here. -->
+     <div class="box post-comments" id="comments">
+      <div class="content">
+       <h2>
+        One Response
+       </h2>
+       <div class="fl ar" id="comment-5114">
+        <div class="pic">
+         <img alt="" class="avatar from-google avatar-80 photo" height="80" src="https://blog.profitbricks.com/wp-content/uploads/gravatars/729cff251846e7f4b05bf2c0a8844801.jpeg" width="80"/>
+        </div>
+        <div class="comm-name">
+         <a href="http://www.zementis.com" target="_blank">
+          Mark Rabkin
+         </a>
+        </div>
+        <div class="comm-date">
+         <small>
+          <em>
+           3.24.2014
+          </em>
+         </small>
+        </div>
+       </div>
+       <div class="fr">
+        <div class="box2 alt">
+         <p>
+          Should have also mentioned Zementis the leading operational predictive analytics company enabling the rapid deployment, execution and management of predictive models by leveraging the industry supported PMML standard. Mor information at
+          <a href="http://www.zementis.com" rel="nofollow">
+           http://www.zementis.com
+          </a>
+          .
+         </p>
+        </div>
+        <!--/box2 -->
+       </div>
+       <div class="fix">
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box post-comments" id="respond">
+      <div class="content">
+       <h2>
+        Leave Your Response
+       </h2>
+       <div class="fl">
+        <div class="pic">
+         <img alt="" src="https://blog.profitbricks.com/wp-content/themes/convergence/images/default_avatar_visitor.gif"/>
+        </div>
+       </div>
+       <div class="fr">
+        <form action="https://blog.profitbricks.com/wp-comments-post.php" id="commentform" method="post">
+         <fieldset class="message">
+          <div>
+           <input id="author" name="author" placeholder="Your Name" type="text"/>
+          </div>
+          <div>
+           <input id="email" name="email" placeholder="Your Email" type="text"/>
+          </div>
+          <div>
+           <input id="url" name="url" placeholder="Your Website" type="text"/>
+          </div>
+          <div class="textarea">
+           <textarea cols="" id="comment" name="comment" placeholder="Your Comments" rows="">
+           </textarea>
+          </div>
+          <div class="submit">
+           <input class="btn" id="submit" name="submit" src="https://blog.profitbricks.com/wp-content/themes/convergence/images/btn-submit.gif" type="image" value="Send"/>
+          </div>
+          <div class="notice">
+           * Name, Email, Comment are Required
+          </div>
+          <input name="comment_post_ID" type="hidden" value="2938"/>
+          <p style="display: none;">
+           <input id="akismet_comment_nonce" name="akismet_comment_nonce" type="hidden" value="7e2be6f891"/>
+          </p>
+          <p style="display: none;">
+           <input id="ak_js" name="ak_js" type="hidden" value="144"/>
+          </p>
+         </fieldset>
+        </form>
+       </div>
+       <div class="fix">
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+    </div>
+    <!--/centercol -->
+    <div id="rightcol">
+     <div class="box list1 widget scfw" id="scfw-2">
+      <div class="wtitle">
+       <h2>
+        Follow ProfitBricks on:
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <ul class="scfw_32px" style="list-style:none;margin:0;padding:0;">
+        <li>
+         <a href="https://www.facebook.com/ProfitBricksUS" target="_blank" title="Connect on Facebook">
+          <img alt="Facebook" height="32px" src="https://blog.profitbricks.com/wp-content/plugins/subscribe-connect-follow-widget/images/32px/facebook.png" width="32px"/>
+         </a>
+        </li>
+        <li>
+         <a href="https://twitter.com/ProfitBricksUSA" target="_blank" title="Follow ProfitBricksUSA on Twitter">
+          <img alt="Twitter" height="32px" src="https://blog.profitbricks.com/wp-content/plugins/subscribe-connect-follow-widget/images/32px/twitter.png" width="32px"/>
+         </a>
+        </li>
+        <li>
+         <a href="http://www.linkedin.com/company/profitbricks" target="_blank" title="LinkedIn">
+          <img alt="LinkedIn" height="32px" src="https://blog.profitbricks.com/wp-content/plugins/subscribe-connect-follow-widget/images/32px/linkedin.png" width="32px"/>
+         </a>
+        </li>
+        <li>
+         <a href="http://www.flickr.com/photos/profitbricksusa/" target="_blank" title="Photos on Flickr">
+          <img alt="Flickr" height="32px" src="https://blog.profitbricks.com/wp-content/plugins/subscribe-connect-follow-widget/images/32px/flickr.png" width="32px"/>
+         </a>
+        </li>
+        <li>
+         <a href="https://plus.google.com//u/0/115039470861670180933/posts" target="_blank" title="Google+">
+          <img alt="Google+" height="32px" src="https://blog.profitbricks.com/wp-content/plugins/subscribe-connect-follow-widget/images/32px/google-plus.png" width="32px"/>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_text" id="text-3">
+      <div class="wtitle">
+       <div class="textwidget">
+        <a href="https://www.profitbricks.com/compare-cloud-pricing/" target="_blank">
+         <img alt="ProfitBricks is Cloud Computing's Price Performance Leader" src="https://blog.profitbricks.com/wp-content/uploads/2014/06/Price-Perfomance-Cloud-Computing-ProfitBricks.gif"/>
+        </a>
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_text" id="text-2">
+      <div class="wtitle">
+       <h2>
+        Recent Tweets
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <div class="textwidget">
+        <a class="twitter-timeline" data-widget-id="368344991749267457" href="https://twitter.com/ProfitBricksUSA">
+         Tweets by @ProfitBricksUSA
+        </a>
+        <script>
+         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_text" id="text-4">
+      <div class="wtitle">
+       <h2>
+        Flickr Photos
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <div class="textwidget">
+        <style type="text/css">
+         .flickr_badge_image {margin:0px;display:inline;}
+.flickr_badge_image img {border: 1px solid #666666 !important; padding:1px; margin:2px;}
+#flickr_badge_wrapper {width:275px;text-align:left}
+        </style>
+        <div id="flickr_badge_wrapper">
+         <script src="https://www.flickr.com/badge_code_v2.gne?count=9&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=87202371@N02" type="text/javascript">
+         </script>
+        </div>
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_recent_entries" id="custom-recent-posts-2">
+      <div class="wtitle">
+       <h2>
+        Recent Posts
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <ul>
+        <li class="crpw-item">
+         <a class="crpw-title" href="https://blog.profitbricks.com/live-webinar-how-msps-are-taking-over-the-public-cloud/" rel="bookmark" title="Permanent link to Live Webinar  How MSPs are taking over the public cloud">
+          Live Webinar  How MSPs are taking over the public cloud
+         </a>
+         <span class="crpw-date">
+          (July 1, 2015)
+         </span>
+        </li>
+        <li class="crpw-item">
+         <a class="crpw-title" href="https://blog.profitbricks.com/49-cloud-server-cloud-infrastructure-implementation-tips/" rel="bookmark" title="Permanent link to 49 Cloud Server &amp; Cloud Infrastructure Implementation Tips">
+          49 Cloud Server &amp; Cloud Infrastructure Implementation Tips
+         </a>
+         <span class="crpw-date">
+          (June 30, 2015)
+         </span>
+        </li>
+        <li class="crpw-item">
+         <a class="crpw-title" href="https://blog.profitbricks.com/ascii-roadshow-event-msp-cloud-infrastructure-interest-accelerates-asciisuccess/" rel="bookmark" title="Permanent link to ASCII Roadshow  MSP Cloud Infrastructure Interest Accelerates  #ASCIISUCCESS">
+          ASCII Roadshow  MSP Cloud Infrastructure Interest Accelerates  #ASCIISUCCESS
+         </a>
+         <span class="crpw-date">
+          (June 26, 2015)
+         </span>
+        </li>
+        <li class="crpw-item">
+         <a class="crpw-title" href="https://blog.profitbricks.com/dockercon-day-2-talks-on-docker-in-production-new-enablement-tools/" rel="bookmark" title="Permanent link to DockerCon Day 2  Talks on Docker in Production &amp; New Enablement Tools">
+          DockerCon Day 2  Talks on Docker in Production &amp; New Enablement Tools
+         </a>
+         <span class="crpw-date">
+          (June 24, 2015)
+         </span>
+        </li>
+        <li class="crpw-item">
+         <a class="crpw-title" href="https://blog.profitbricks.com/dockercon-day-one/" rel="bookmark" title="Permanent link to DockerCon Day 1  News About The Great Container Race To Build A Better Ship">
+          DockerCon Day 1  News About The Great Container Race To Build A Better Ship
+         </a>
+         <span class="crpw-date">
+          (June 23, 2015)
+         </span>
+        </li>
+       </ul>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_cardoza_fb_like" id="fblbx">
+      <div class="wtitle">
+       <h2>
+        Like Us on Facebook
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FProfitBricksUS&amp;width=270&amp;height=330&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;border_color=%23FFFFFF" style="border:1px solid #FFFFFF; overflow:hidden; width:270px; height:330px;">
+       </iframe>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+     <div class="box list1 widget widget_tag_cloud" id="tag_cloud-2">
+      <div class="wtitle">
+       <h2>
+        Browse!
+       </h2>
+      </div>
+      <!--/wtitle -->
+      <div class="hl">
+      </div>
+      <div class="content">
+       <div class="tagcloud">
+        <a class="tag-link-20" href="https://blog.profitbricks.com/tag/ccevent/" style="font-size: 10.47619047619pt;" title="10 topics">
+         #CCEvent
+        </a>
+        <a class="tag-link-36" href="https://blog.profitbricks.com/tag/gdc_online/" style="font-size: 8pt;" title="5 topics">
+         #gdc_online
+        </a>
+        <a class="tag-link-125" href="https://blog.profitbricks.com/tag/application-development/" style="font-size: 14.190476190476pt;" title="26 topics">
+         Application Development
+        </a>
+        <a class="tag-link-95" href="https://blog.profitbricks.com/tag/aws/" style="font-size: 12.571428571429pt;" title="17 topics">
+         AWS
+        </a>
+        <a class="tag-link-39" href="https://blog.profitbricks.com/tag/big-data/" style="font-size: 17.333333333333pt;" title="56 topics">
+         big data
+        </a>
+        <a class="tag-link-80" href="https://blog.profitbricks.com/tag/channel/" style="font-size: 14.380952380952pt;" title="27 topics">
+         Channel
+        </a>
+        <a class="tag-link-7" href="https://blog.profitbricks.com/tag/cloud-computing/" style="font-size: 22pt;" title="176 topics">
+         Cloud Computing
+        </a>
+        <a class="tag-link-109" href="https://blog.profitbricks.com/tag/cloud-computing-2-0/" style="font-size: 12pt;" title="15 topics">
+         Cloud Computing 2.0
+        </a>
+        <a class="tag-link-19" href="https://blog.profitbricks.com/tag/cloudconnect/" style="font-size: 12pt;" title="15 topics">
+         CloudConnect
+        </a>
+        <a class="tag-link-30" href="https://blog.profitbricks.com/tag/cloud-connect/" style="font-size: 9.1428571428571pt;" title="7 topics">
+         Cloud Connect
+        </a>
+        <a class="tag-link-16" href="https://blog.profitbricks.com/tag/cloud-networking/" style="font-size: 18.761904761905pt;" title="81 topics">
+         Cloud Networking
+        </a>
+        <a class="tag-link-141" href="https://blog.profitbricks.com/tag/cloud-pricing/" style="font-size: 13.333333333333pt;" title="21 topics">
+         Cloud Pricing
+        </a>
+        <a class="tag-link-12" href="https://blog.profitbricks.com/tag/cloud-services/" style="font-size: 18.761904761905pt;" title="80 topics">
+         Cloud Services
+        </a>
+        <a class="tag-link-31" href="https://blog.profitbricks.com/tag/conference/" style="font-size: 11.142857142857pt;" title="12 topics">
+         Conference
+        </a>
+        <a class="tag-link-193" href="https://blog.profitbricks.com/tag/data-center/" style="font-size: 8.6666666666667pt;" title="6 topics">
+         Data Center
+        </a>
+        <a class="tag-link-325" href="https://blog.profitbricks.com/tag/data-center-designer/" style="font-size: 9.1428571428571pt;" title="7 topics">
+         Data Center Designer
+        </a>
+        <a class="tag-link-139" href="https://blog.profitbricks.com/tag/devops/" style="font-size: 11.142857142857pt;" title="12 topics">
+         devops
+        </a>
+        <a class="tag-link-388" href="https://blog.profitbricks.com/tag/devops-central/" style="font-size: 9.6190476190476pt;" title="8 topics">
+         DevOps Central
+        </a>
+        <a class="tag-link-37" href="https://blog.profitbricks.com/tag/game-developers-conference/" style="font-size: 8pt;" title="5 topics">
+         game developers conference
+        </a>
+        <a class="tag-link-29" href="https://blog.profitbricks.com/tag/gartner/" style="font-size: 13.904761904762pt;" title="24 topics">
+         Gartner
+        </a>
+        <a class="tag-link-162" href="https://blog.profitbricks.com/tag/gigaom/" style="font-size: 11.142857142857pt;" title="12 topics">
+         GigaOM
+        </a>
+        <a class="tag-link-55" href="https://blog.profitbricks.com/tag/hpc/" style="font-size: 15.714285714286pt;" title="38 topics">
+         HPC
+        </a>
+        <a class="tag-link-3" href="https://blog.profitbricks.com/tag/iaas/" style="font-size: 19.428571428571pt;" title="94 topics">
+         IaaS
+        </a>
+        <a class="tag-link-15" href="https://blog.profitbricks.com/tag/infiniband/" style="font-size: 13.904761904762pt;" title="24 topics">
+         InfiniBand
+        </a>
+        <a class="tag-link-79" href="https://blog.profitbricks.com/tag/infographic/" style="font-size: 14.761904761905pt;" title="30 topics">
+         infographic
+        </a>
+        <a class="tag-link-28" href="https://blog.profitbricks.com/tag/internet-infrastructure/" style="font-size: 17.904761904762pt;" title="65 topics">
+         Internet Infrastructure
+        </a>
+        <a class="tag-link-33" href="https://blog.profitbricks.com/tag/interop/" style="font-size: 11.142857142857pt;" title="12 topics">
+         Interop
+        </a>
+        <a class="tag-link-44" href="https://blog.profitbricks.com/tag/isv/" style="font-size: 14.380952380952pt;" title="27 topics">
+         ISV
+        </a>
+        <a class="tag-link-283" href="https://blog.profitbricks.com/tag/it-channel/" style="font-size: 8.6666666666667pt;" title="6 topics">
+         IT Channel
+        </a>
+        <a class="tag-link-185" href="https://blog.profitbricks.com/tag/managed-service-provider/" style="font-size: 11.142857142857pt;" title="12 topics">
+         Managed Service Provider
+        </a>
+        <a class="tag-link-155" href="https://blog.profitbricks.com/tag/msp/" style="font-size: 14.47619047619pt;" title="28 topics">
+         MSP
+        </a>
+        <a class="tag-link-348" href="https://blog.profitbricks.com/tag/msps/" style="font-size: 8.6666666666667pt;" title="6 topics">
+         MSPs
+        </a>
+        <a class="tag-link-85" href="https://blog.profitbricks.com/tag/partner-program/" style="font-size: 8pt;" title="5 topics">
+         partner program
+        </a>
+        <a class="tag-link-22" href="https://blog.profitbricks.com/tag/performance-benchmarking/" style="font-size: 12pt;" title="15 topics">
+         Performance Benchmarking
+        </a>
+        <a class="tag-link-10" href="https://blog.profitbricks.com/tag/profitbricks/" style="font-size: 18.47619047619pt;" title="74 topics">
+         ProfitBricks
+        </a>
+        <a class="tag-link-21" href="https://blog.profitbricks.com/tag/public-cloud/" style="font-size: 16.952380952381pt;" title="52 topics">
+         Public Cloud
+        </a>
+        <a class="tag-link-41" href="https://blog.profitbricks.com/tag/saas/" style="font-size: 16.285714285714pt;" title="44 topics">
+         SaaS
+        </a>
+        <a class="tag-link-50" href="https://blog.profitbricks.com/tag/software-defined-networking/" style="font-size: 13.714285714286pt;" title="23 topics">
+         software defined networking
+        </a>
+        <a class="tag-link-46" href="https://blog.profitbricks.com/tag/start-up/" style="font-size: 12pt;" title="15 topics">
+         start-up
+        </a>
+        <a class="tag-link-45" href="https://blog.profitbricks.com/tag/startup/" style="font-size: 12pt;" title="15 topics">
+         startup
+        </a>
+        <a class="tag-link-190" href="https://blog.profitbricks.com/tag/var/" style="font-size: 9.1428571428571pt;" title="7 topics">
+         VAR
+        </a>
+        <a class="tag-link-8" href="https://blog.profitbricks.com/tag/virtual-data-center/" style="font-size: 12.285714285714pt;" title="16 topics">
+         Virtual Data Center
+        </a>
+        <a class="tag-link-17" href="https://blog.profitbricks.com/tag/virtualization/" style="font-size: 15.809523809524pt;" title="39 topics">
+         Virtualization
+        </a>
+        <a class="tag-link-9" href="https://blog.profitbricks.com/tag/virtual-server/" style="font-size: 14.190476190476pt;" title="26 topics">
+         Virtual Server
+        </a>
+        <a class="tag-link-98" href="https://blog.profitbricks.com/tag/webinar/" style="font-size: 8pt;" title="5 topics">
+         Webinar
+        </a>
+       </div>
+      </div>
+      <!--/content -->
+     </div>
+     <!--/box -->
+    </div>
+    <!--/rightcol -->
+    <br class="fix"/>
+   </div>
+   <!--/columns -->
+  </div>
+  <!--/page -->
+  <div id="page-bot">
+   <div id="footer">
+    <div class="fl">
+     Copyright  2015  ProfitBricks Blog  All rights reserved
+    </div>
+    <div class="fr">
+    </div>
+   </div>
+   <!--/footer -->
+  </div>
+  <!--/page-bot -->
+  <script type="text/javascript">
+   (function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('035-MXN-498');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+  </script>
+  <!-- BoldChat Visitor Monitor HTML v4.00 (Website=profitbricks.com,ChatButton=Side Chat Button,ChatInvitation=My Invite Ruleset) -->
+  <script type="text/javascript">
+   var _bcvma = _bcvma || [];
+  _bcvma.push(["setAccountID", "895782287380894908"]);
+  _bcvma.push(["setParameter", "WebsiteDefID", "217435981487779334"]);
+  _bcvma.push(["setParameter", "InvitationDefID", "887098996033661238"]);
+  _bcvma.push(["addFloat", {type: "chat", id: "887098995565222415"}]);
+  _bcvma.push(["pageViewed"]);
+  (function(){
+    var vms = document.createElement("script"); vms.type = "text/javascript"; vms.async = true;
+    vms.src = ('https:'==document.location.protocol?'https://':'http://') + "vmss.boldchat.com/aid/895782287380894908/bc.vms4/vms.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vms, s);
+  })();
+  </script>
+  <noscript>
+   <a href="http://www.boldchat.com" target="_blank" title="Live Chat Software">
+    <img alt="Live Chat Software" border="0" height="1" src="https://vms.boldchat.com/aid/895782287380894908/bc.vmi?wdid=217435981487779334" width="1"/>
+   </a>
+  </noscript>
+  <!-- /BoldChat Visitor Monitor HTML v4.00 -->
+  <div class="blueimp-gallery" id="blueimp-gallery">
+   <div class="slides">
+   </div>
+   <h3 class="title">
+   </h3>
+   <a class="prev">
+    
+   </a>
+   <a class="next">
+    
+   </a>
+   <a class="close">
+    
+   </a>
+   <a class="play-pause">
+   </a>
+   <ol class="indicator">
+   </ol>
+  </div>
+  <div class="blueimp-gallery" data-full-screen="true" id="blueimp-gallery-fullscreen">
+   <div class="slides">
+   </div>
+   <h3 class="title">
+   </h3>
+   <a class="prev">
+    
+   </a>
+   <a class="next">
+    
+   </a>
+   <a class="close">
+    
+   </a>
+   <a class="play-pause">
+   </a>
+   <ol class="indicator">
+   </ol>
+  </div>
+  <script type="text/javascript">
+   if (typeof(addthis_share) == "undefined"){ addthis_share = {"passthrough":{"twitter":{"via":"ProfitBricksUSA"}}};}
+
+var addthis_config = {"data_track_clickback":false,"data_ga_property":"31629922","data_ga_social":true,"data_track_addressbar":false,"data_track_textcopy":false,"ui_atversion":"300"};
+var addthis_product = 'wpp-4.0.7';
+  </script>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50c259680b59806c" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.1" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery-indicator.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery-fullscreen.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery-video.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery-vimeo.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/blueimp-gallery-youtube.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://blog.profitbricks.com/wp-content/plugins/blueimp-lightbox/js/jquery.blueimp-gallery.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <!--wp_footer-->
+ </body>
+</html>
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->

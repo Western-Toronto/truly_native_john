@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html class="no-js" itemscope="itemscope" itemtype="http://schema.org/Article" lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <title itemprop="name">
+   The IP headache of 3D printing  | Primary Opinion Blog
+  </title>
+  <link href="http://blog.primaryopinion.com/xmlrpc.php" rel="pingback"/>
+  <link href="https://blog.primaryopinion.com/wp-content/uploads/2014/06/14" rel="icon" type="image/x-icon"/>
+  <meta content="width=device-width" name="viewport"/>
+  <!--[if lt IE 9]&gt;
+    &lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]-->
+  <link href="http://blog.primaryopinion.com/feed/" rel="alternate" title="Primary Opinion Blog  Feed" type="application/rss+xml"/>
+  <link href="http://blog.primaryopinion.com/comments/feed/" rel="alternate" title="Primary Opinion Blog  Comments Feed" type="application/rss+xml"/>
+  <link href="http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/feed/" rel="alternate" title="Primary Opinion Blog  The IP headache of 3D printing Comments Feed" type="application/rss+xml"/>
+  <link href="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/style.css?ver=4.0.1" id="goblog-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+   body { background-color:#ffffff; background-image:url(http://blog.primaryopinion.com/wp-content/themes/primary-opinion/images/bg.png); background-repeat:repeat; background-attachment:scroll; background-position:0 0 }
+	.widgetslider .post-cats span, .tagcloud a:hover, .main-navigation ul li ul li a:hover, .pagination span, .pagination a:hover, .read-more a, .featuredslider .flex-control-nav .flex-active, #subscribe-widget input[type='submit'], #wp-calendar caption, #wp-calendar td#today, #commentform #submit, .wpcf7-submit { background-color:#0d9ed9; }
+	a, a:hover, .title a:hover, .sidebar a:hover, .sidebar-small-widget a:hover, .breadcrumbs a:hover, .meta a:hover, .post-meta a:hover, .reply:hover i, .reply:hover a, .edit-post a, .error-text, #comments .fn a:hover { color:#0d9ed9; }
+	.main-navigation a:hover, .current-menu-item a, .sfHover a, .tagcloud a:hover, .main-navigation .menu ul li:first-child { border-color:#0d9ed9; }
+	.main-navigation .menu &gt; li &gt; ul:before { border-bottom-color:#0d9ed9; }
+	.main-navigation a, #navigation .menu .current-menu-item[class*=' fa-']:before, #navigation .menu [class^='fa-']:before, #navigation .menu [class*=' fa-']:before { color:#000000;}
+	.main-navigation a:hover, .current-menu-item a, #navigation .menu &gt; .sfHover &gt; a.sf-with-ul, #navigation .menu .current-menu-item[class*=' fa-']:before, #navigation .menu [class^='fa-']:hover:before, #navigation .menu [class*=' fa-']:hover:before { color:#0d9ed9;}
+	.sf-arrows .sf-with-ul:after { border-top-color:#000000;} .sf-arrows .sf-with-ul:hover:after { border-top-color:#0d9ed9;} .main-navigation ul li ul li a { background:#ffffff; color:#004359;}
+	#navigation .menu ul [class^='fa-']:before, #navigation .menu ul [class*=' fa-']:before { color:#004359; }
+	#navigation .menu ul [class^='fa-']:hover:before, #navigation .menu ul [class*=' fa-']:hover:before { color:#ffffff; }
+	.main-navigation ul li ul li a:hover { color:#ffffff;} .sf-arrows ul .sf-with-ul:after { border-left-color:#004359;} .btn { color:#0d9ed9;}
+	#wp-calendar th { background: rgba(13,158,217, 0.6) }
+	.post-meta .post-type-audio i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-video i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-standard i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-quote i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-link i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-image i { color:#0d9ed9; border-color:#0d9ed9}
+	.post-meta .post-type-gallery i { color:#0d9ed9; border-color:#0d9ed9}
+	.slides-over { opacity:1.0; }     .stickymenu { position:fixed; z-index:100; left:0; top:0 }                     .header-slider li .center-width { padding: 20px 0 60px; }
+.header-slider li .slider-desc { font-size: 22px; line-height: 40px; }
+
+
+.slider-desc img { position: relative!important; opacity: 1.0!important; }
+.title a:hover { color: #0d9ed9!important; }
+
+.title, .title a, .post header .post-date, .section-heading, .author-box h5 { color: #004359!important; }
+.post-month { color: #004359!important; }
+.read-more a:hover { background: #004359; }
+.footer #subscribe-widget input[type="text"] { background: #fff; color: #004359; }
+#subscribe-widget input[type="submit"]:hover { background: #004359;}
+.btn { text-align: center!important; float: none!important; }
+.sidebar a, .sidebar-small-widget a { color: #004359!important; }
+.sidebar a:hover, .sidebar-small-widget a:hover { color: #0d9ed9!important; }
+.tagcloud a { background: #004359; color: #fff!important; }
+.tagcloud a:hover { color: #fff!important; }
+
+#navigation .menu [class^="fa-"] &gt; a, #navigation .menu [class*=" fa-"] &gt; a { font-family: arial; }
+.header-slider li .slider-desc b { font-size: 22px; padding-left: 10px; }
+
+#menu-item-217 a { color: #fff; }
+#menu-item-218 a { color: #fff; }
+
+#menu-item-49 { padding: 2px 0px 0px; background: url(/wordpress/wp-content/uploads/2014/06/PRI_Twitter_Icon.png) no-repeat; background-position: 4px 12px; }
+#menu-item-49 a { letter-spacing: 2px;  color: #004358;}
+#menu-item-49 a:hover { color: #004358; }
+
+#menu-item-48 { padding: 0px; background: url(/wordpress/wp-content/uploads/2014/06/PRI_LinkedIn_Icon.png
+) no-repeat; background-position: 6px 9px; }
+#menu-item-48 a { text-transform: lowercase; color: #004358; letter-spacing: 2px;}
+#menu-item-48 a:hover { color: #004358; }
+
+
+
+.author-box-avtar { padding: 20px 0px 20px 20px; width: 10%; }
+
+
+@media screen and (max-width: 780px) {
+ .logo-wrap, .header #logo img { width: 100%; } 
+ .sub-menu li a:hover { color: #0d9ed9!important;  }
+ #navigation ul li ul li a { padding: 10px 3% 10px 40px!important; }
+#menu-item-48 a { display: none!important; }
+ #menu-item-49 a { display: none!important; }
+}
+
+
+@media screen and (max-width: 480px) {
+ .logo-wrap, .header #logo img { width: 100%; }   
+}
+  </style>
+  <link href="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/css/font-awesome.css?ver=4.0.1" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/css/magnific-popup.css?ver=4.0.1" id="magnific-popup-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/css/flexslider.css?ver=4.0.1" id="flexslider-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/css/responsive.css?ver=4.0.1" id="responsive-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="http://blog.primaryopinion.com/wp-includes/js/jquery/jquery.js?ver=1.11.1" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" type="text/javascript">
+  </script>
+  <link href="http://blog.primaryopinion.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://blog.primaryopinion.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <link href="http://blog.primaryopinion.com/working-with-67-bricks-for-a-content-enriched-experience-for-readers-of-legal-commentary/" rel="prev" title="Working with 67 Bricks for a content enriched experience for readers of legal commentary"/>
+  <link href="http://blog.primaryopinion.com/plain-packaging-the-new-ip-battleground/" rel="next" title="Plain packaging: the new IP battleground?"/>
+  <meta content="WordPress 4.0.1" name="generator"/>
+  <link href="http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/" rel="canonical"/>
+  <link href="http://blog.primaryopinion.com/?p=180" rel="shortlink"/>
+  <style type="text/css">
+   .sfs-subscriber-count { width: 88px; overflow: hidden; height: 26px; color: #424242; font: 9px Verdana, Geneva, sans-serif; letter-spacing: 1px; }
+.sfs-count { width: 86px; height: 17px; line-height: 17px; margin: 0 auto; background: #ccc; border: 1px solid #909090; border-top-color: #fff; border-left-color: #fff; }
+.sfs-count span { display: inline-block; height: 11px; line-height: 12px; margin: 2px 1px 2px 2px; padding: 0 2px 0 3px; background: #e4e4e4; border: 1px solid #a2a2a2; border-bottom-color: #fff; border-right-color: #fff; }
+.sfs-stats { font-size: 6px; line-height: 6px; margin: 1px 0 0 1px; word-spacing: 2px; text-align: center; text-transform: uppercase; }
+  </style>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49068521-5', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <style class="options-output" title="dynamic-css" type="text/css">
+   .main-header{background-color:#ffffff;}.header-slider, .header-slider li h3{color:#000000;}.header{padding-top:10px;padding-bottom:10px;}.header #logo{margin-top:0;margin-bottom:0;}body{color:#555555;}.post-box, .breadcrumbs, .author-box, .author-desc-box, .post-navigation .post-nav-links, .relatedPosts, #respond, .pagination, .norm-pagination{background-color:#ffffff;}.post-box, .breadcrumbs, .author-box, .author-desc-box, .relatedPosts, #respond, .pagination, .norm-pagination{border-top:1px none #e3e3e3;border-right:1px none #e3e3e3;border-bottom:1px none #e3e3e3;border-left:1px none #e3e3e3;}.post-box, .breadcrumbs, .author-box, .author-desc-box, .relatedPosts, #comments, #respond, .pagination, .norm-pagination{color:#555555;}.post-author, .post-meta, .post-meta a, .breadcrumbs a{color:#777777;}.title, .title a, .post header .post-date, .section-heading, .author-box h5{color:#000000;}.sidebar-widget, #tabs-widget, #tabs li.active a{background-color:transparent;}.sidebar-widget, #tabs-widget{border-top:1px none #e3e3e3;border-right:1px none #e3e3e3;border-bottom:1px none #e3e3e3;border-left:1px none #e3e3e3;}.widget-title, #tabs li a{color:#000000;}.sidebar-widget{color:#555555;}.sidebar a, .sidebar-small-widget a{color:#333333;}.meta, .meta a{color:#999999;}.footer{background-color:#595959;}.footer a{color:#ffffff;}.footer a:hover{color:#f9f9f9;}.footer-widget .widget-title{color:#FFFFFF;}.copyright{background-color:#f7f7f7;}.copyright{color:#666666;}body{font-family:Lato;font-weight:400;font-style:normal;}.header #logo a{font-family:Lato;font-weight:400;font-style:normal;font-size:26px;line-height:32px;color:#ffffff;}h1,h2,h3,h4,h5,h6, .header, .main-navigation a, .read-more, .article-heading, .slidertitle, .carousel, #tabs li a, .social-widget a, .post-navigation, #wp-calendar caption, .comment-reply-link, #comments .fn, #commentform input, #commentform textarea, input[type="submit"], .pagination, .footer-subscribe{font-family:Lato;font-weight:normal;font-style:normal;}.title, .widgettitle{font-family:Lato;font-weight:normal;font-style:normal;}.widget-title{font-family:Lato;font-weight:400;font-style:normal;font-size:13px;line-height:20px;}
+  </style>
+  <link href="http://fonts.googleapis.com/css?family=Lato:400&amp;v=1420738651" id="options-google-fonts" media="all" rel="stylesheet" title="" type="text/css"/>
+ </head>
+ <body class="single single-post postid-180 single-format-standard main" id="blog" itemscope="" itemtype="http://schema.org/WebPage">
+  <div class="main-container">
+   <!-- START HEADER -->
+   <header class="container">
+    <div class="topbar">
+     <a class="logo" href="https://www.primaryopinion.com/">
+      <img alt="Primary Opinion Blog" src="http://blog.primaryopinion.com/wp-content/uploads/2014/07/PrimaryOpinion_logo.png"/>
+     </a>
+     <div class="social-icons">
+      <a class="social-linkedin" href="https://www.linkedin.com/company/primary-opinion" target="_blank">
+       <i class="fa fa-linkedin">
+       </i>
+      </a>
+      <a class="social-twitter" href="https://twitter.com/PrimaryOpinion" target="_blank">
+       <i class="fa fa-twitter">
+       </i>
+      </a>
+      <a class="social-googleplus" href="https://plus.google.com/113077766051336516498" target="_blank">
+       <i class="fa fa-google-plus">
+       </i>
+      </a>
+     </div>
+    </div>
+    <nav class="menubar">
+     <ul class="nav" id="nav">
+      <li>
+       <a class="active" href="https://www.primaryopinion.com/">
+        Home
+       </a>
+      </li>
+      <li>
+       <a href="http://marketing.primaryopinion.com/contributors">
+        Contributors
+       </a>
+      </li>
+      <li>
+       <a href="http://marketing.primaryopinion.com/news" title="">
+        News
+       </a>
+      </li>
+      <li>
+       <a href="http://marketing.primaryopinion.com/company">
+        About us
+       </a>
+      </li>
+      <li class="active">
+       <a href="http://blog.primaryopinion.com/" title="">
+        Blog
+       </a>
+      </li>
+      <li>
+       <a href="http://marketing.primaryopinion.com/contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </header>
+   <!-- END HEADER -->
+   <div class="main-wrapper">
+    <div id="page">
+     <div class="detail-page">
+      <div class="content-area single-content-area">
+       <div class="content-single">
+        <div class="breadcrumbs">
+         <a href="http://blog.primaryopinion.com">
+          <i class="fa fa-home">
+          </i>
+          Home
+         </a>
+         /
+         <a href="http://blog.primaryopinion.com/category/copyright-2/" rel="category tag">
+          Copyright
+         </a>
+         
+         <a href="http://blog.primaryopinion.com/category/design/" rel="category tag">
+          Design
+         </a>
+         
+         <a href="http://blog.primaryopinion.com/category/patents/" rel="category tag">
+          Patents
+         </a>
+         
+         <a href="http://blog.primaryopinion.com/category/trademark/" rel="category tag">
+          Trademark
+         </a>
+         /The IP headache of 3D printing
+        </div>
+        <div class="single-content">
+         <article class="post-180 post type-post status-publish format-standard has-post-thumbnail hentry category-copyright-2 category-design category-patents category-trademark" id="post-180">
+          <div class="post-box">
+           <header>
+            <time datetime="2014-07-24" title="July 24, 2014">
+             <span class="post-date">
+              24
+             </span>
+             <span class="post-month uppercase">
+              July
+             </span>
+            </time>
+            <div class="title-wrap">
+             <h2 class="title title20">
+              The IP headache of 3D printing
+             </h2>
+             <span class="post-author">
+              Written by
+              <a href="http://blog.primaryopinion.com/author/emmajones/" rel="author" title="Posts by Emma Jones">
+               Emma Jones
+              </a>
+             </span>
+            </div>
+            <div class="post-avtar">
+             <img alt="Emma Jones" class="avatar avatar-70 wp-user-avatar wp-user-avatar-70 alignnone photo" height="70" src="http://blog.primaryopinion.com/wp-content/uploads/2014/06/Emmaheadshot_BW.jpg" width="56"/>
+            </div>
+           </header>
+           <!--.header-->
+           <div class="post-meta">
+            <div class="post-type post-type-standard">
+             <i class="fa fa-thumb-tack">
+             </i>
+            </div>
+            <span class="post-cats">
+             <i class="fa fa-tag">
+             </i>
+             <a href="http://blog.primaryopinion.com/category/copyright-2/" rel="category tag">
+              Copyright
+             </a>
+             ,
+             <a href="http://blog.primaryopinion.com/category/design/" rel="category tag">
+              Design
+             </a>
+             ,
+             <a href="http://blog.primaryopinion.com/category/patents/" rel="category tag">
+              Patents
+             </a>
+             ,
+             <a href="http://blog.primaryopinion.com/category/trademark/" rel="category tag">
+              Trademark
+             </a>
+            </span>
+            <span class="post-comments">
+             <i class="fa fa-comments-o">
+             </i>
+             <a class="comments-link" href="http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/#respond" title="Comment on The IP headache of 3D printing">
+              Leave a Comment
+             </a>
+            </span>
+            <span class="edit-post">
+            </span>
+           </div>
+           <!--.post-meta-->
+           <div class="single-post-content">
+            <div class="single-post-content1">
+             <p>
+              <a href="http://blog.primaryopinion.com/wp-content/uploads/2014/07/MakerBot_Replicator2X_high_2.jpg">
+               <img alt="MakerBot_Replicator2X_high_2" class="alignleft wp-image-181" height="200" src="http://blog.primaryopinion.com/wp-content/uploads/2014/07/MakerBot_Replicator2X_high_2.jpg" width="300"/>
+              </a>
+             </p>
+             <p>
+              Not so long ago, it all seemed too futuristic to be possible, and yet, barely a week goes by without one 3D printing story or another hitting the headlines. Already adopted by
+              <a href="http://www.theguardian.com/technology/2014/jul/04/bmw-3d-prints-new-thumbs-for-factory-workers" target="_blank">
+               car manufacturers
+              </a>
+              ,
+              <a href="http://www.theguardian.com/artanddesign/gallery/2014/jul/03/worlds-first-3d-printed-shoe-collection-continuum-fashion-in-pictures" target="_blank">
+               shoe designers
+              </a>
+              ,
+              <a href="http://www.theguardian.com/world/2014/jul/15/vagina-selfie-for-3d-printers-lands-japanese-artist-in-trouble" target="_blank">
+               artists
+              </a>
+              and
+              <a href="http://www.nasa.gov/directorates/spacetech/home/feature_3d_food_prt.htm" target="_blank">
+               space agencies
+              </a>
+              , the technology has started to become accessible to the average Joe with machines going on sale
+              <a href="http://www.bloomberg.com/news/2014-07-14/home-depot-starts-selling-3-d-printers-in-stores-for-first-time.html">
+               this week
+              </a>
+              at Home Depot (UK retailer Maplin made a similar move
+              <a href="http://www.theinquirer.net/inquirer/feature/2282428/maplins-velleman-k8200-3d-printer-demo" target="_blank">
+               last month)
+              </a>
+              . That should mean those responsible for keeping IP legislation up to date have had plenty of time to get prepared. Er, thats right, isnt it guys?
+             </p>
+             <p>
+              Not according to Bay Oak Laws
+              <a href="http://www.bayoaklaw.com/?page_id=1285" target="_blank">
+               <b>
+                Daniel Richardson
+               </b>
+              </a>
+              who takes it as read that
+              <b>
+               : 
+              </b>
+              Just as IP law was ill-prepared for the digital media revolution in the late 1990s, current [US] laws, like the Digital Millennium Copyright Act (DMCA), do not adequately address the challenges 3D printing will present. He goes on to predict that at some point, Congress will address 3D printings impact on IP, possibly by passing laws prohibiting 3D scanning of copyrighted objects, until then, however, companies could protect their IP by using digital rights management software that prevents CAD files from being copied or only allows them to work on certain machines.
+             </p>
+             <p>
+              3D printers may be the next big challenge to the protection of IP rights agrees
+              <a href="http://www.pof.com.au/3d-printing-a-new-challenge-for-ip-law/#page=1" target="_blank">
+               <b>
+                Margaret Ryan
+               </b>
+              </a>
+              from Phillips Ormonde Fitzpatrick, before recalling photocopiers were an early challenge, and adding: The digital age has made things much more difficult for IP owners, with the ease with which music, films and written works can be copied and distributed. 3D printers go a step further, [they] put the tools in the hands of individuals to manufacture products and provide a new way for commercial organisations to copy products.
+             </p>
+             <p>
+              It is the potential rise in counterfeit activity that is also of concern to Finnegans
+              <a href="http://www.finnegan.com/resources/articles/articlesdetail.aspx?news=732bb893-d462-4055-9082-28635d93b6d1" target="_blank">
+               <b>
+                Elizabeth D Ferrill, P Andrew Riley and Benjamin T Sirolly
+               </b>
+              </a>
+              in their article on the implications of 3D printing for car and parts manufacturers: 3D printers shift IP considerations by making infringement happen not only faster but much harder to find. [It] accelerates the time it takes for infringing products to enter the market. For example, a knockoff manufacturer could start making a part before it hits the stores by using a 3D scanner to capture a new car design at a prerelease event like a trade show. [] 3D printing also may exponentially increase the number of potential infringers, thus complicating the task of locating the source of infringing products.
+             </p>
+             <p>
+              Over at IPKat, contributor
+              <a href="http://ipkitten.blogspot.co.uk/2014/04/3d-printing-be-careful-what-you-wish-for.html" target="_blank">
+               <b>
+                Neil Wilkof
+               </b>
+              </a>
+              is interested in the dip in tax revenue that he expects once3D printing turnsevery home into a potential workplace, explaining: Within the confines of the home, [the product] will be made and then consumed, all without generating any taxable revenue. As such, there will be even fewer tradable goods [] both within and between countries. If so, and on one view of 3D printing, the greater the success of 3D printing at the private level, the potentially greater is the harm to the legitimate public coffers.
+             </p>
+             <p>
+              Bird &amp; Birds
+              <a href="http://www.twobirds.com/en/news/articles/2014/global/brandwrites/3d-printing-predictions-for-the-fashion-industry#page=1" target="_blank">
+               <b>
+                Hilary Atherton
+               </b>
+              </a>
+              is most interested in the implications for the fashion sector: Exemptions from some types of IP infringement for personal use, combined with the practical and PR difficulties of pursuing individual consumers, mean that fashion brands are likely to seek to enforce their rights against those higher up the fashion food chain. The fashion industry may look to adopt the strategies of the already disrupted music and film industries, obtaining blocking injunctions requiring ISPs to prevent access to sites offering infringing design files from which 3D prints can be made. [] Online, those brands are looking at creating their own applications for 3D printing to stay ahead, possibly by offering a guarantee of quality through the licensing of design files made available to consumers in online libraries similar to iTunes, and by offering increased personalisation through customisation.
+             </p>
+             <p>
+              In its white paper, Mayer Browns
+              <strong>
+               <a href="http://www.mayerbrown.com/files/uploads/Documents/PDFs/2013/June/Three-Dimensional-Thinking-Brochure_Additive-Manufacturing.pdf" target="_blank">
+                Peter Dickinson
+               </a>
+              </strong>
+              emphasises the benefits as well as the risks: The opportunities are clear to see: speed to market, on-demand production and consequent economic growth in those countries from which creative and innovative engineering solutions originate. But the challenges need careful consideration also. The new world IP risks are enormous and the boundaries of multi-jurisdictional IP law are yet to be tested by what this technology has to offer.
+             </p>
+             <p>
+              Most commentators expect copyright to be the site of the first major 3D printing-generated IP battle, but in its newsletter Burns &amp; Levinsons
+              <a href="http://www.burnslev.com/apps/uploads/publications/BurnsLev_Focus_Spring2014_-_MXS.pdf#page=1" target="_blank">
+               <b>
+                Mark Schonfeld
+               </b>
+              </a>
+              points out: 3D printing is already the subject of patent litigation: Stratasys, a leading manufacturer of 3D printers, has sued Afinia, a popular 3D printer, for patent infringement; 3D Systems has sued Envision Tec and Formlabs for patent infringement. And, he expects patent-driven infringement cases to escalate: The USPTO has received more than 6,800 patent applications related to 3D printing technology, and legal experts expect that there will be many battles in the future between 3D printing companies.
+             </p>
+             <p>
+              Its not just battles between manufacturers that are relevant here points out PatentlyO guest blogger
+              <a href="http://patentlyo.com/patent/2014/04/digital-patent-infringement.html" target="_blank">
+               <strong>
+                Lucas Osborn
+               </strong>
+              </a>
+              : Much as music and movie industries had to battle digital copyright infringement, patent owners may be on the cusp of their own digital patent war. People can create, modify, and transmit 3D CAD files just as easily as they can .mp3 files. Coupled with the internet, 3D printing technology decentralises and largely anonymises the manufacture of tangible objects. If the physical object is only a click away from being produced by a persons 3D printer, should a court hold that the digital file infringes a patent claim to the physical object, either directly or under the doctrine of equivalents? If not, will claims of indirect infringement be an effective tool against the individuals and websites that host and transmit the CAD files? These questions will be of increasing importance in an era of ubiquitous 3D printing technology.
+             </p>
+             <p>
+              What do you think? Have your say by commenting below.
+             </p>
+             <p>
+              Primary Opinion delivers the latest legal insights, direct from lawyers worldwide. Were launching in a few weeks time, for a sneak peak check us out at
+              <a href="http://www.primaryopinion.com" target="_blank">
+               <strong>
+                PrimaryOpinion.com
+               </strong>
+              </a>
+             </p>
+            </div>
+            <!--.single-post-content-->
+           </div>
+           <!--.single-post-content-->
+           <div class="share-buttons">
+            <div class="social-btn-title">
+             Share On
+            </div>
+            <!-- Facebook -->
+            <div class="social-btn social-fb">
+             <a class="fa fa-facebook" href="http://www.facebook.com/share.php?u=http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/&amp;title=The IP headache of 3D printing" target="_blank">
+             </a>
+            </div>
+            <!-- Twitter -->
+            <div class="social-btn social-twitter">
+             <a class="fa fa-twitter" href="http://twitter.com/home?status=The IP headache of 3D printing+http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/" target="_blank">
+             </a>
+            </div>
+            <!-- Google+ -->
+            <div class="social-btn social-gplus">
+             <a class="fa fa-google-plus" href="https://plus.google.com/share?url=http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/" target="_blank">
+             </a>
+            </div>
+            <!-- Pinterest -->
+            <div class="social-btn social-linkedin">
+             <a class="fa fa-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://blog.primaryopinion.com/the-ip-headache-of-3d-printing/&amp;title=The IP headache of 3D printing&amp;source=http://blog.primaryopinion.com">
+             </a>
+            </div>
+           </div>
+          </div>
+          <!--.post-box-->
+         </article>
+         <!--.blog post-->
+        </div>
+        <!--.single-content-->
+        <div class="author-box">
+         <div class="author-box-avtar">
+          <img alt="Emma Jones" class="avatar avatar-140 wp-user-avatar wp-user-avatar-140 alignnone photo" height="140" src="http://blog.primaryopinion.com/wp-content/uploads/2014/06/Emmaheadshot_BW.jpg" width="112"/>
+         </div>
+         <div class="author-info-container">
+          <div class="author-info">
+           <div class="author-head">
+            <h5 class="uppercase">
+             Emma Jones
+            </h5>
+            <div class="author-social">
+             <span class="author-linkedin">
+              <a class="fa fa-linkedin" href="http://uk.linkedin.com/pub/emma-jones/2/b33/622/">
+              </a>
+             </span>
+            </div>
+           </div>
+           <p>
+            I write about intellectual property for Primary Opinion
+           </p>
+          </div>
+         </div>
+        </div>
+        <div class="relatedPosts">
+         <h3 class="section-heading uppercase">
+          <span>
+           Related Posts
+          </span>
+         </h3>
+         <ul class="slides">
+          <li>
+           <a href="http://blog.primaryopinion.com/legal-opinion-round-up-cjeus-ruling-on-registering-3d-object-trademarks/" rel="nofollow" title="Legal opinion round up: CJEUs ruling on registering 3D object trademarks">
+            <div class="relatedthumb">
+             <img alt="1856377" class="attachment-related wp-post-image" height="177" src="http://d2yv0vap5bw3fs.cloudfront.net/wp-content/uploads/2014/09/1856377.jpg" width="240"/>
+            </div>
+           </a>
+           <div class="related-content">
+            <header>
+             <h2 class="title title18">
+              <a href="http://blog.primaryopinion.com/legal-opinion-round-up-cjeus-ruling-on-registering-3d-object-trademarks/" rel="bookmark" title="Legal opinion round up: CJEUs ruling on registering 3D object trademarks">
+               Legal opinion round up: CJEUs ruling on registering 3D object trademarks
+              </a>
+             </h2>
+            </header>
+            <!--.header-->
+            <div class="meta">
+             <time datetime="2014-10-13">
+              October 13, 2014
+             </time>
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="http://blog.primaryopinion.com/ip-round-up-simpler-by-design/" rel="nofollow" title="IP round up: Simpler by design">
+            <div class="relatedthumb">
+             <img alt="7011426" class="attachment-related wp-post-image" height="171" src="http://d2yv0vap5bw3fs.cloudfront.net/wp-content/uploads/2014/09/7011426.jpg" width="240"/>
+            </div>
+           </a>
+           <div class="related-content">
+            <header>
+             <h2 class="title title18">
+              <a href="http://blog.primaryopinion.com/ip-round-up-simpler-by-design/" rel="bookmark" title="IP round up: Simpler by design">
+               IP round up: Simpler by design
+              </a>
+             </h2>
+            </header>
+            <!--.header-->
+            <div class="meta">
+             <time datetime="2014-09-23">
+              September 23, 2014
+             </time>
+            </div>
+           </div>
+          </li>
+          <li>
+           <a href="http://blog.primaryopinion.com/ip-head-to-head-oi-that-pink-belongs-to-me/" rel="nofollow" title="IP head-to-head: Oi, that pink belongs to me!">
+            <div class="relatedthumb">
+             <img alt="3219631_2" class="attachment-related wp-post-image" height="151" src="http://d2yv0vap5bw3fs.cloudfront.net/wp-content/uploads/2014/09/3219631_2.jpg" width="240"/>
+            </div>
+           </a>
+           <div class="related-content">
+            <header>
+             <h2 class="title title18">
+              <a href="http://blog.primaryopinion.com/ip-head-to-head-oi-that-pink-belongs-to-me/" rel="bookmark" title="IP head-to-head: Oi, that pink belongs to me!">
+               IP head-to-head: Oi, that pink belongs to me!
+              </a>
+             </h2>
+            </header>
+            <!--.header-->
+            <div class="meta">
+             <time datetime="2014-09-11">
+              September 11, 2014
+             </time>
+            </div>
+           </div>
+          </li>
+         </ul>
+        </div>
+        <!-- If comments are open, but there are no comments. -->
+        <div class="comment-respond" id="respond">
+         <h3 class="comment-reply-title" id="reply-title">
+          <h4 class="section-heading uppercase">
+           <span>
+            Leave a Reply
+           </span>
+          </h4>
+          <small>
+           <a href="/the-ip-headache-of-3d-printing/#respond" id="cancel-comment-reply-link" rel="nofollow" style="display:none;">
+            Cancel reply
+           </a>
+          </small>
+         </h3>
+         <p class="must-log-in">
+          You must be
+          <a href="http://blog.primaryopinion.com/wp-login.php?redirect_to=http%3A%2F%2Fblog.primaryopinion.com%2Fthe-ip-headache-of-3d-printing%2F">
+           logged in
+          </a>
+          to post a comment.
+         </p>
+        </div>
+        <!-- #respond -->
+       </div>
+      </div>
+      <aside class="sidebar">
+       <div id="sidebar">
+        <div class="widget sidebar-widget widget_text">
+         <div class="textwidget">
+          <p>
+           <b>
+            Primary Opinion
+           </b>
+           is all about delivering legal insights, direct from lawyers worldwide.
+          </p>
+          <p>
+           For a smarter experience - connect, engage, and stay informed with whats important to you.
+          </p>
+         </div>
+        </div>
+        <div class="widget sidebar-widget bp_300_widget">
+         <h3 class="widget-title uppercase">
+          Read more at primary opinion.com
+         </h3>
+         <!-- START WIDGET -->
+         <div class="ad-300-widget">
+          <a href="https://primaryopinion.com/">
+           <img alt="" height="250" src="https://d2yv0vap5bw3fs.cloudfront.net/wp-content/uploads/2014/09/2screenshot.png" width="300"/>
+          </a>
+         </div>
+         <!-- END WIDGET -->
+        </div>
+        <div class="widget sidebar-widget subscribe_widget">
+         <!-- START WIDGET -->
+         <div id="subscribe-widget">
+          <h3 class="widget-title uppercase">
+           Subscribe
+          </h3>
+          <p>
+           We'll keep you posted on our latest legal content marketing articles and news about our service
+          </p>
+          <form _lpchecked="1" action="http://feedburner.google.com/fb/a/mailverify" method="post" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=primaryopinion', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true" style="" target="popupwindow">
+           <input name="email" placeholder="Email Address" type="text" value=""/>
+           <input name="uri" type="hidden" value="primaryopinion"/>
+           <input name="loc" type="hidden" value="en_US"/>
+           <input type="submit" value="Subscribe"/>
+          </form>
+         </div>
+         <!-- END WIDGET -->
+        </div>
+        <div class="widget sidebar-widget widget_nav_menu">
+         <h3 class="widget-title uppercase">
+          Legal Blog categories
+         </h3>
+         <div class="menu-menu-2-container">
+          <ul class="menu" id="menu-menu-2">
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-176" id="menu-item-176">
+            <a href="http://blog.primaryopinion.com/category/copyright-2/">
+             Copyright
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-203" id="menu-item-203">
+            <a href="http://blog.primaryopinion.com/category/design/">
+             Design
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-175" id="menu-item-175">
+            <a href="http://blog.primaryopinion.com/category/patents/">
+             Patents
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-202" id="menu-item-202">
+            <a href="http://blog.primaryopinion.com/category/trademark/">
+             Trademark
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="widget sidebar-widget widget_nav_menu">
+         <h3 class="widget-title uppercase">
+          marketing blog categories
+         </h3>
+         <div class="menu-menu-3-container">
+          <ul class="menu" id="menu-menu-3">
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-322" id="menu-item-322">
+            <a href="http://blog.primaryopinion.com/category/content-marketing/">
+             Content Marketing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-179" id="menu-item-179">
+            <a href="http://blog.primaryopinion.com/category/primary-opinion-news/">
+             Primary Opinion news
+            </a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="widget sidebar-widget bpxl_tweets_widget">
+         <h3 class="widget-title uppercase">
+          Tweets
+         </h3>
+         <!-- START WIDGET -->
+         <div class="tweets-widget">
+          <a class="twitter-timeline" data-border-color="#E8E8E8" data-chrome="noheader nofooter noborders noscrollbar " data-link-color="#179dd9" data-theme="light" data-widget-id="479210296079155200" height="600" width="325">
+          </a>
+          <script>
+           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+         </div>
+         <!-- END WIDGET -->
+        </div>
+        <div class="widget sidebar-widget widget_search">
+         <form action="http://blog.primaryopinion.com" class="searchform search-form" method="get">
+          <fieldset>
+           <input class="s" name="s" placeholder="Search Now" type="text" value=""/>
+           <button class="fa fa-search search-button" type="submit" value="Search">
+           </button>
+          </fieldset>
+         </form>
+        </div>
+       </div>
+      </aside>
+     </div>
+     <!--.detail-page-->
+    </div>
+    <!--#page-->
+   </div>
+   <!--.main-wrapper-->
+   <footer class="footer">
+    <div class="container">
+     <div class="footer-widgets">
+      <div class="footer-widget footer-widget-1">
+       <div class="widget widget_text" id="text-3">
+        <h3 class="widget-title uppercase">
+         ABOUT PRIMARY OPINION
+        </h3>
+        <div class="textwidget">
+         <p>
+          <a href="https://www.primaryopinion.com/" target="_blank">
+           Primary Opinion delivers the latest insights and knowledge, direct from professional advisory firms worldwide.
+          </a>
+         </p>
+         <p>
+          Our content-driven community platform and digital distribution services enable advisory firms to showcase their expertise.
+         </p>
+         <p>
+          Registration is FREE to read and contribute to Primary Opinion.
+         </p>
+        </div>
+       </div>
+      </div>
+      <div class="footer-widget footer-widget-2">
+       <div class="widget popular_posts" id="popular_widget-2">
+        <div class="">
+         <h3 class="widget-title uppercase">
+          Popular Posts
+         </h3>
+        </div>
+        <!-- START WIDGET -->
+        <ul class="popular-posts">
+         <li>
+          <div class="thumbnail">
+           <a class="widgetthumb" href="http://blog.primaryopinion.com/plain-packaging-the-new-ip-battleground/">
+            <img alt="plain_packaging" class="attachment-post-thumbnail wp-post-image" height="100" src="http://blog.primaryopinion.com/wp-content/uploads/2014/08/plain_packaging.jpg" width="150"/>
+           </a>
+          </div>
+          <div class="info">
+           <span class="widgettitle">
+            <a href="http://blog.primaryopinion.com/plain-packaging-the-new-ip-battleground/" title="Plain packaging: the new IP battleground?">
+             Plain packaging: the new IP battleground?
+            </a>
+           </span>
+           <span class="meta">
+            <time datetime="2014-08-5">
+             <i class="fa fa-clock-o">
+             </i>
+             August 5, 2014
+            </time>
+           </span>
+          </div>
+         </li>
+         <li>
+          <div class="thumbnail">
+           <a class="widgetthumb" href="http://blog.primaryopinion.com/social-media-marketing-for-lawyers-and-law-firms/">
+            <img alt="8172771" class="attachment-post-thumbnail wp-post-image" height="100" src="http://d2yv0vap5bw3fs.cloudfront.net/wp-content/uploads/2014/11/8172771.jpeg" width="150"/>
+           </a>
+          </div>
+          <div class="info">
+           <span class="widgettitle">
+            <a href="http://blog.primaryopinion.com/social-media-marketing-for-lawyers-and-law-firms/" title="Social media marketing for lawyers and law firms">
+             Social media marketing for lawyers and law firms
+            </a>
+           </span>
+           <span class="meta">
+            <time datetime="2014-11-27">
+             <i class="fa fa-clock-o">
+             </i>
+             November 27, 2014
+            </time>
+           </span>
+          </div>
+         </li>
+         <li>
+          <div class="thumbnail">
+           <a class="widgetthumb" href="http://blog.primaryopinion.com/the-ip-week-that-was-aereo/">
+            <img alt="7564381_blog2pic" class="attachment-post-thumbnail wp-post-image" height="100" src="http://blog.primaryopinion.com/wp-content/uploads/2014/07/7564381_blog2pic.jpg" width="150"/>
+           </a>
+          </div>
+          <div class="info">
+           <span class="widgettitle">
+            <a href="http://blog.primaryopinion.com/the-ip-week-that-was-aereo/" title="The IP week that was: Aereo">
+             The IP week that was: Aereo
+            </a>
+           </span>
+           <span class="meta">
+            <time datetime="2014-07-1">
+             <i class="fa fa-clock-o">
+             </i>
+             July 1, 2014
+            </time>
+           </span>
+          </div>
+         </li>
+         <li>
+          <div class="thumbnail">
+           <a class="widgetthumb" href="http://blog.primaryopinion.com/ip-round-up-getting-to-grips-with-alice-v-cls/">
+            <img alt="Digital tablet" class="attachment-post-thumbnail wp-post-image" height="98" src="http://blog.primaryopinion.com/wp-content/uploads/2014/07/6881320.jpg" width="150"/>
+           </a>
+          </div>
+          <div class="info">
+           <span class="widgettitle">
+            <a href="http://blog.primaryopinion.com/ip-round-up-getting-to-grips-with-alice-v-cls/" title="IP round up: Getting to grips with Alice v CLS">
+             IP round up: Getting to grips with Alice v CLS
+            </a>
+           </span>
+           <span class="meta">
+            <time datetime="2014-07-10">
+             <i class="fa fa-clock-o">
+             </i>
+             July 10, 2014
+            </time>
+           </span>
+          </div>
+         </li>
+        </ul>
+        <!-- END WIDGET -->
+       </div>
+      </div>
+      <div class="footer-widget footer-widget-3">
+      </div>
+      <div class="footer-widget footer-widget-4 last">
+      </div>
+     </div>
+     <!-- .footer-widgets -->
+    </div>
+    <!-- .container -->
+   </footer>
+   <div class="copyright">
+    <div class="copyright-inner">
+     <div class="copyright-text">
+       Primary Opinion Limited 2014-2015
+     </div>
+    </div>
+   </div>
+   <!-- .copyright -->
+  </div>
+  <!-- .main-container -->
+  <div class="back-to-top">
+   <i class="fa fa-arrow-up">
+   </i>
+  </div>
+  <script src="http://blog.primaryopinion.com/wp-content/plugins/wp-retina-2x/js/retina.js?ver=1.3.0" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-includes/js/comment-reply.min.js?ver=4.0.1" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/js/modernizr.custom.js?ver=2.6.2" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/js/stickymenu.js?ver=1.0" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/js/jquery.flexslider-min.js?ver=2.1" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/js/jquery.magnific-popup.min.js?ver=0.9.9" type="text/javascript">
+  </script>
+  <script src="http://blog.primaryopinion.com/wp-content/themes/primary-opinion/js/theme-scripts.js?ver=1.0" type="text/javascript">
+  </script>
+ </body>
+</html>
